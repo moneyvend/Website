@@ -1,3 +1,4 @@
+import React from 'react';
 import { Layout, Card, Image } from 'antd';
 import AppImages from '../../../utilities/images/images';
 import styles from './comingSoon.module.css';

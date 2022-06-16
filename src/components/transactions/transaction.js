@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Transaction = () => (
   <div style={{ backgroundImage: `url(${process.env.PUBLIC_URL}"https://i.ibb.co/4KK01gk/istockphoto-1364796841-170667a.jpg")` }}>
     <img src={`${process.env.PUBLIC_URL}/assets/images/uc-white.png`} alt="logo" />
