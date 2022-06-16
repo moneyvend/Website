@@ -1,4 +1,4 @@
-# Website-
+# Monievend Website
 #
 
 ## Getting Started
@@ -26,6 +26,12 @@ To get a local copy up and running follow this simple step:
 - Twitter: [@twitterhandle](https://twitter.com/AminaBuhari)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/AminaBuhari/)
 
+
+👤 **Aminat Buhari**
+
+- GitHub: [@isaacpitwa](https://github.com/isaacpitwa)
+- Twitter: [@isaacpitwa](https://twitter.com/isaacpitwa)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/isaac-pitwa)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
