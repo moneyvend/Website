@@ -1,6 +1,6 @@
 import { Card, Col, Row } from 'antd';
 
-const App = () => (
+const CardWidgets = () => (
   <div className="site-card-wrapper">
     <Row gutter={16}>
       <Col span={8}>
@@ -22,4 +22,4 @@ const App = () => (
   </div>
 );
 
-export default App;
+export default CardWidgets;

@@ -1,7 +1,7 @@
-import CardView from '../pageSetup';
+import CardWidget from '../pageSetup';
 
 const ComingSoon = () => (
-  <CardView />
+  <CardWidget />
 );
 
 export default ComingSoon;
