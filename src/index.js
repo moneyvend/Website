@@ -4,6 +4,9 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 // import App from './App';
 import ComingSoon from './components/shared/coming-soon/comingSoon';
+import Transaction from './components/transactions/transaction';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,6 +14,7 @@ root.render(
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       {/* <App /> */}
       <ComingSoon />
+      <Transaction />
     </BrowserRouter>
   </React.StrictMode>,
 );
