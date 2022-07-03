@@ -5,6 +5,7 @@ import './index.css';
 // import App from './App';
 import ComingSoon from './components/shared/coming-soon/comingSoon';
 import Transaction from './components/transactions/transaction';
+import Banner from './components/banner/banner';
 
 
 
@@ -13,8 +14,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       {/* <App /> */}
-      <ComingSoon />
-      <Transaction />
+      {/* <ComingSoon /> */}
+      <Banner />
+      {/* <Transaction /> */}
     </BrowserRouter>
   </React.StrictMode>,
 );

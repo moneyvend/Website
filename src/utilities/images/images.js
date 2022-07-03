@@ -12,5 +12,8 @@ static UPAY = `${process.env.PUBLIC_URL}/assets/logo/upay.svg`;
 static MTN = `${process.env.PUBLIC_URL}/assets/logo/mtn.svg`;
 
 static GOTV = `${process.env.PUBLIC_URL}/assets/logo/gotv.svg`;
+
+static IMAGE_ONE = `${process.env.PUBLIC_URL}/assets/logo/image_1.svg`;
+
 }
 export default AppImages;
