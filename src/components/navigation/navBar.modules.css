@@ -1,3 +1,45 @@
-.image {
-    width: 100px;
-  }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+:root {
+  --white: #fff;
+  --blue: #030A78;
+}
+
+ul{
+  list-style: none;
+  text-decoration: none;
+}
+ 
+a {
+  text-decoration: none;
+}
+.ant-image-img{
+ width: 100px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navList{
+  display: flex;
+  gap: 30px;
+}
+
+.login {
+	width: 100px;
+	height: 50px;
+	background-color: #030A78;
+	color: white;
+	border-radius: 8px;
+}
