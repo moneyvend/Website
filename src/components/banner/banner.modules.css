@@ -1,0 +1,75 @@
+.image {
+    width: 100px;
+  }
+
+.header-text{
+  font-family:'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #030A78;
+}
+
+h1 {
+  font-family:'Mulish', sans-serif;
+  font-size: 90px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #8E07CD 0%, #030A78 48.44%, #1D1E26 100%);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
+  
+}
+
+.payment {
+  background-color: #030A78;
+  color: white;
+  font-family: 'Mulish', sans-serif;
+ font-style: normal;
+ font-weight: 700;
+ font-size: 24px;
+ line-height: 30px;
+ text-align: center;
+}
+
+.merchant {
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #030A78;
+  background-color: white;
+  
+  /* border: 4px solid rgba(3, 10, 120, 1)
+  rgba(43, 9, 144, 1)
+  rgba(142, 7, 205, 1) ; */
+  border-style: solid;
+  border-image: linear-gradient(90deg, #030A78 0%, #2B0990 28.65%, #8E07CD 100%);
+  
+  
+
+
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.text-container {
+  width: 50%;
+}
+
+image-one{
+  width: 1000px;
+}
+
+.logos {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-self: center;
+}
+

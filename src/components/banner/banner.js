@@ -1,25 +1,25 @@
 import React from 'react';
 import { Layout, Image } from 'antd';
-import styles from './banner.module.css';
+import styles from './banner.modules.css';
 import AppImages from '../../utilities/images/images';
 
 const Banner = () => (
   <Layout>
     <div>
-      <div>
-        <div>
-          <p>
-            payment services
+      <div className="header-wrapper">
+        <div className="text-container">
+          <p className="header-text">
+            Pay easy, internet or not
           </p>
           <h1>
-            The simplest way for fast payments
+            The Simplest Way For Fast Payments
           </h1>
-          <button type="button">Bill payments</button>
-          <button type="button">Become a merchant</button>
+          <button type="button" className="payment">Bill payments</button>
+          <button type="button" className="merchant">Become a merchant   ></button>
         </div>
-        <Image src={AppImages.IMAGE_ONE} className={styles.image} alt="Logo" preview={false} />
+        <img src={AppImages.IMAGE_ONE} id="image-one" alt="Logo" preview={false} />
       </div>
-      <ul>
+      <ul className="logos">
         <li>
           <Image src={AppImages.IEDC} className={styles.image} alt="Logo" preview={false} />
         </li>
