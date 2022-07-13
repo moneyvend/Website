@@ -6,8 +6,8 @@ const Body = () => (
   <Layout>
     <section>
       <h2>Why monievend ?</h2>
-      <div>
-        <div>
+      <div className="body-text">
+        <div className="body-para" >
           <h3>Easy, Simple, Quick and Safe</h3>
           <p>
             All customer transactions get the special treatment.
@@ -16,7 +16,7 @@ const Body = () => (
 
           </p>
         </div>
-        <div>
+        <div className="body-para">
           <h3>Guaranteed Fluidity</h3>
           <p>
             With cutting edge and industry leading software and API’s integrated into the system,
