@@ -9,8 +9,6 @@ import Banner from './components/banner/banner';
 import Body from './components/body/body';
 import App from './App';
 
-
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

@@ -10,20 +10,21 @@ body {
 
 :root {
   --white: #fff;
-  --blue: #030A78;
+  --blue: #030a78;
 }
 
-ul{
+ul {
   list-style: none;
   text-decoration: none;
   align-items: center;
 }
- 
+
 a {
   text-decoration: none;
 }
-.ant-image-img{
- width: 100px;
+
+.ant-image-img {
+  width: 100px;
 }
 
 .container {
@@ -37,19 +38,17 @@ a {
   width: 130px;
 }
 
-.navList{
+.navList {
   display: flex;
   gap: 50px;
   font-size: 14px;
   color: black;
-
 }
 
 .login {
-	width: 90px;
-	height: 40px;
-	background-color: #030A78;
-	color: white;
-	border-radius: 5px;
+  width: 90px;
+  height: 40px;
+  background-color: #030a78;
+  color: white;
+  border-radius: 5px;
 }
-

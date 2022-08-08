@@ -1,4 +1,4 @@
-import { Layout, Image } from 'antd';
+import { Layout } from 'antd';
 import AppImages from '../../utilities/images/images';
 import styles from './body.modules.css';
 

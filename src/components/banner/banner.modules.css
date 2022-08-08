@@ -1,78 +1,67 @@
 .image {
-    width: 100px;
-  }
+  width: 100px;
+}
 
-.header-text{
-  font-family:'Poppins', sans-serif;
+.header-text {
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 16px;
-  color: #030A78;
+  color: #030a78;
 }
 
 h1 {
-  font-family:'Mulish', sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-size: 60px;
   font-weight: 800;
   letter-spacing: 3px;
-
-  background: linear-gradient(90deg, #8E07CD 0%, #030A78 48.44%, #1D1E26 100%);
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
- background-clip: text;
-  
+  background: linear-gradient(90deg, #8e07cd 0%, #030a78 48.44%, #1d1e26 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .payment {
-  background-color: #030A78;
+  background-color: #030a78;
   color: white;
   font-family: 'Mulish', sans-serif;
- font-style: normal;
- font-weight: 600;
- font-size: 15px;
- line-height: 30px;
- text-align: center;
- border-radius: 5px;
- border-style: none;
- padding: 7px 30px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  border-style: none;
+  padding: 7px 30px;
 }
 
 .merchant {
   font-family: 'Mulish', sans-serif;
   font-style: normal;
-  font-weight: 6gi00;
+  font-weight: 600;
   border-radius: 5px;
   font-size: 15px;
   padding: 5px 30px;
   line-height: 30px;
   text-align: center;
-  color: #030A78;
+  color: #030a78;
   background-color: white;
   border-color:
-  rgba(3, 10, 120, 1)
-  rgba(43, 9, 144, 1)
-  rgba(142, 7, 205, 1);
+    rgba(3, 10, 120, 1)
+    rgba(43, 9, 144, 1)
+    rgba(142, 7, 205, 1);
   margin-left: 10px;
-  
- 
-
-
-  
-
-
 }
 
 .header-wrapper {
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
- 
 }
 
 .text-container {
   width: 50%;
 }
 
-#image-one{
+#image-one {
   width: 350px;
 }
 
@@ -82,5 +71,3 @@ h1 {
   justify-content: space-between;
   align-self: center;
 }
-
-

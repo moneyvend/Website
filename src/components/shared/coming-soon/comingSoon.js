@@ -3,7 +3,6 @@ import { Layout, Card, Image } from 'antd';
 import AppImages from '../../../utilities/images/images';
 import styles from './comingSoon.module.css';
 
-
 const ComingSoon = () => (
   <Layout className={styles.container}>
     <Image src={AppImages.LOGO_VERT} className={styles.image} alt="Logo" preview={false} />
