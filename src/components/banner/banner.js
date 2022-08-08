@@ -5,7 +5,7 @@ import AppImages from '../../utilities/images/images';
 
 const Banner = () => (
   <Layout>
-    <div >
+    <div>
       <div className="header-wrapper">
         <div className="text-container">
           <p className="header-text">
@@ -40,7 +40,6 @@ const Banner = () => (
           <Image src={AppImages.GOTV} className={styles.image} alt="Logo" preview={false} />
         </li>
       </ul>
-
     </div>
   </Layout>
 );

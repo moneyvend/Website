@@ -50,9 +50,5 @@ static FACEBOOK = `${process.env.PUBLIC_URL}/assets/logo/facebook.svg`;
 static LINKEDIN = `${process.env.PUBLIC_URL}/assets/logo/linkedin..svg`;
 
 static TWITTER = `${process.env.PUBLIC_URL}/assets/logo/twitter.svg`;
-
-
-
-
 }
 export default AppImages;

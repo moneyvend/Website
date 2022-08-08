@@ -4,12 +4,12 @@ import styles from './body.modules.css';
 
 const Body = () => (
   <Layout>
-    <section>
+    <section className="s-4">
       <h2>Why monievend ?</h2>
       <div className="body-text">
         <div className="body-para">
           <h3>Easy, Simple, Quick and Safe</h3>
-          <p>
+          <p className="p-11">
             All customer transactions get the special treatment.
             Cutting edge technology for super fast,
             super safe and an easy to use interface for the best possible experience working with us
@@ -18,36 +18,38 @@ const Body = () => (
         </div>
         <div className="body-para">
           <h3>Guaranteed Fluidity</h3>
-          <p>
+          <p className="p-11">
             With cutting edge and industry leading software and API’s integrated into the system,
             you can always expect the best of the best services always
 
           </p>
         </div>
       </div>
-      <h2>Our Services</h2>
-      <div className="c-2">
-        <div className="cc-2">
-          <img src={AppImages.IMAGE_TWO} className="i" alt="Logo" preview={false} />
-          <h4>Utility Bill Payment</h4>
-          <p className="p-5">Pay for your DSTV, GoTV Startimes and more with our integrated</p>
-        </div>
-        <div className="cc-2">
-          <img src={AppImages.IMAGE_THREE} className="i" alt="Logo" preview={false} />
-          <h4>USSD Enabled Transaction</h4>
-          <p className="p-5">Send and receive payments without the internet</p>
-        </div>
-        <div className="cc-2">
-          <img src={AppImages.IMAGE_FOUR} className="i" alt="Logo" preview={false} />
-          <h4>POS Teminal</h4>
-          <p className="p-5">Send, receive all with easy. With or without the internet. No hassle, no delay</p>
+      <div className="s-5">
+        <h2>Our Services</h2>
+        <div className="c-2">
+          <div className="cc-2">
+            <img src={AppImages.IMAGE_TWO} className="i" alt="Logo" preview={false} />
+            <h4>Utility Bill Payment</h4>
+            <p className="p-5">Pay for your DSTV, GoTV Startimes and more with our integrated</p>
+          </div>
+          <div className="cc-2">
+            <img src={AppImages.IMAGE_THREE} className="i" alt="Logo" preview={false} />
+            <h4>USSD Enabled Transaction</h4>
+            <p className="p-5">Send and receive payments without the internet</p>
+          </div>
+          <div className="cc-2">
+            <img src={AppImages.IMAGE_FOUR} className="i" alt="Logo" preview={false} />
+            <h4>POS Teminal</h4>
+            <p className="p-5">Send, receive all with easy. With or without the internet. No hassle, no delay</p>
+          </div>
         </div>
       </div>
     </section>
     <section className="c-3">
       <div>
         <h2 id="h4">Become a Merchant</h2>
-        <p className="p-6">Getting debited is hard, getting value shouldn&apos;t be.</p>
+        <p id="p-6">Getting debited is hard, getting value shouldn&apos;t be.</p>
         <p id="p-7">
           Our company exists to help merchants sell more.
           We make every decision and measure every
@@ -106,35 +108,35 @@ const Body = () => (
       <h2 id="h-4">Here&apos;s what some users have to say</h2>
       <div className="d-4">
         <div className="c-5">
-          <Image src={AppImages.IMAGE_FIVE} className={styles.image} alt="Logo" preview={false} />
+          <img src={AppImages.IMAGE_FIVE} className="u-i" alt="Logo" preview={false} />
           <p className="p-6">
             &quot;When I started using monievend,
             it has been smooth sailing for all my utility recharges&quot;
           </p>
-          <p>Adegbite Saviour</p>
+          <p className="p-5">Adegbite Saviour</p>
         </div>
         <div className="c-5">
-          <Image src={AppImages.IMAGE_SIX} className={styles.image} alt="Logo" preview={false} />
+          <img src={AppImages.IMAGE_SIX} className="u-i" alt="Logo" preview={false} />
           <p className="p-6">
             &quot;It is alway very surprisig when I pay for light and I suddenly get the token.
             Like I usually have to...&quot;
           </p>
-          <p>Filomina Ezenwata</p>
+          <p className="p-5">Filomina Ezenwata</p>
         </div>
         <div className="c-5">
-          <Image src={AppImages.IMAGE_SEVEN} className={styles.image} alt="Logo" preview={false} />
+          <img src={AppImages.IMAGE_SEVEN} className="u-i" alt="Logo" preview={false} />
           <p className="p-6">
             &quot;Using this service to get my POS transactions done is really comvenient.
             Almost too convenient&quot;
           </p>
-          <p>Austin Babalola</p>
+          <p className="p-5">Austin Babalola</p>
         </div>
         <div className="c-5">
-          <Image src={AppImages.IMAGE_SEVEN} className={styles.image} alt="Logo" preview={false} />
+          <img src={AppImages.IMAGE_SEVEN} className="u-i" alt="Logo" preview={false} />
           <p className="p-6">
             &quot;This is a good service. There’s really no other way to put it&quot;
           </p>
-          <p>Faridah Salih</p>
+          <p className="p-5">Faridah Salih</p>
         </div>
       </div>
     </section>
@@ -145,7 +147,7 @@ const Body = () => (
         <input type="email" id="email" name="email" className="in-1" placeholder="Email Address" />
         <button type="button" className="b-4">Sign-Up</button>
       </form>
-      <div className="f-2"> 
+      <div className="f-2">
         <ul className="p-9">
           <li id="p-8">Resources</li>
           <li>Prices</li>
@@ -167,7 +169,7 @@ const Body = () => (
           <li id="p-8">Developers</li>
           <li>API Documentation</li>
         </ul>
-        <ul className="p-9" >
+        <ul className="p-9">
           <li id="p-8">Contact</li>
           <li>+234 239-334-987</li>
           <li>support@monievend.com</li>
@@ -176,14 +178,14 @@ const Body = () => (
       <div className="f-3">
         <p id="p-10">@Monievend</p>
         <div className="di-1">
-        <p>Terms of service</p>
-        <p>Privacy policy</p>
-        <p>Cookie policy</p>
+          <p>Terms of service</p>
+          <p>Privacy policy</p>
+          <p>Cookie policy</p>
         </div>
         <div className="di-1">
-        <img src={AppImages.FACEBOOK} className="im-2" alt="Logo" preview={false} />
-        <img src={AppImages.LINKEDIN} className="im-2" alt="Logo" preview={false} />
-        <img src={AppImages.TWITTER} className="im-2" alt="Logo" preview={false} />
+          <img src={AppImages.FACEBOOK} className="im-2" alt="Logo" preview={false} />
+          <img src={AppImages.LINKEDIN} className="im-2" alt="Logo" preview={false} />
+          <img src={AppImages.TWITTER} className="im-2" alt="Logo" preview={false} />
         </div>
       </div>
 
