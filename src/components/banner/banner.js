@@ -5,17 +5,17 @@ import AppImages from '../../utilities/images/images';
 
 const Banner = () => (
   <Layout>
-    <div>
+    <div >
       <div className="header-wrapper">
         <div className="text-container">
           <p className="header-text">
             Pay easy, internet or not
           </p>
           <h1>
-            The Simplest Way For Fast Payments
+            The Simplest Way For Fast And Available Payments
           </h1>
           <button type="button" className="payment">Bill payments</button>
-          <button type="button" className="merchant">Become a merchant   ></button>
+          <button type="button" className="merchant">Become a merchant</button>
         </div>
         <img src={AppImages.IMAGE_ONE} id="image-one" alt="Logo" preview={false} />
       </div>

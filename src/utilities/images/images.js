@@ -1,5 +1,5 @@
 class AppImages {
-static LOGO_VERT = `${process.env.PUBLIC_URL}/assets/logo/logo-vert.svg`;
+static LOGO_VERT = `${process.env.PUBLIC_URL}/assets/logo/logo-head.svg`;
 
 static IEDC = `${process.env.PUBLIC_URL}/assets/logo/iedc.svg`;
 

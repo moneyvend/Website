@@ -5,14 +5,16 @@
 .header-text{
   font-family:'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 16px;
   color: #030A78;
 }
 
 h1 {
   font-family:'Mulish', sans-serif;
-  font-size: 90px;
+  font-size: 60px;
   font-weight: 800;
+  letter-spacing: 3px;
+
   background: linear-gradient(90deg, #8E07CD 0%, #030A78 48.44%, #1D1E26 100%);
  -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;
@@ -25,11 +27,11 @@ h1 {
   color: white;
   font-family: 'Mulish', sans-serif;
  font-style: normal;
- font-weight: 500;
+ font-weight: 600;
  font-size: 15px;
  line-height: 30px;
  text-align: center;
- border-radius: 8px;
+ border-radius: 5px;
  border-style: none;
  padding: 7px 30px;
 }
@@ -37,8 +39,8 @@ h1 {
 .merchant {
   font-family: 'Mulish', sans-serif;
   font-style: normal;
-  font-weight: 500;
-  border-radius: 8px;
+  font-weight: 6gi00;
+  border-radius: 5px;
   font-size: 15px;
   padding: 5px 30px;
   line-height: 30px;
@@ -62,6 +64,7 @@ h1 {
 .header-wrapper {
   display: flex;
   justify-content: space-between;
+  padding-top: 30px;
  
 }
 
@@ -69,8 +72,8 @@ h1 {
   width: 50%;
 }
 
-image-one{
-  width: 1000px;
+#image-one{
+  width: 350px;
 }
 
 .logos {
