@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 30px;
+  font-family: 'Lato', sans-serif;
+}
+
+:root {
+  --white: #fff;
+  --blue: #030a78;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ant-image-img {
+  width: 100px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px 0 30px;
+}
+
+.l-1 {
+  width: 130px;
+}
+
+.navList {
+  display: flex;
+  gap: 50px;
+  font-size: 14px;
+  color: black;
+}
+
+.login {
+  width: 90px;
+  height: 40px;
+  background-color: #030a78;
+  color: white;
+  border-radius: 5px;
+}
