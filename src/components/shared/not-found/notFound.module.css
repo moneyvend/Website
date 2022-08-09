@@ -1,0 +1,28 @@
+.container {
+    height: 100vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Mulish", sans-serif;
+    flex-direction: column;
+  }
+  
+  .card {
+    width: 400px;
+    margin: 4% 0 2% 0;
+    text-align: center;
+  }
+  
+  .image {
+    width: 400px;
+  }
+  
+  .backHome {
+    background-color: #030a78;
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    padding: 12px 28px;
+    font-family: 'Mulish', sans-serif;
+  }  
