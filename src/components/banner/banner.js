@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout, Image } from 'antd';
 import { FiChevronRight } from 'react-icons/fi';
-import styles from './banner.modules.css';
+import styles from './banner.modules.scss';
 import AppImages from '../../utilities/images/images';
 
 const Banner = () => (
@@ -45,6 +45,30 @@ const Banner = () => (
         </li>
       </ul>
     </div>
+    <div className="bod">
+    <div class="slider">
+	<div class="slide-track">
+		<div class="slide">
+    <img  className="s-1" src={AppImages.IEDC} alt="Logo" height="100" width="250" preview={false} />
+		</div>
+		<div class="slide">
+			<img className="s-1" src={AppImages.DSTV} height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img  className="s-1" src={AppImages.IKEJA_LOGO} height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src={AppImages.UPAY} className={styles.image} alt="Logo" preview={false} height="100" width="250"/>
+		</div>
+		<div class="slide">
+			<img  src={AppImages.MTN} className={styles.image} alt="Logo" preview={false}  height="100" width="250" />
+		</div>
+		<div class="slide">
+			<img src={AppImages.GOTV} className={styles.image} alt="Logo" preview={false} height="100" width="250"  />
+		</div>
+	</div>
+  </div>
+</div>
   </Layout>
 );
 
