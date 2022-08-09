@@ -1,6 +1,6 @@
 import { Button, Layout } from 'antd';
 import AppImages from '../../utilities/images/images';
-import Styles from './body.modules.css';
+import Styles from './body.modules.css'; // eslint-disable-line no-unused-vars
 
 const Body = () => (
   <Layout>
@@ -57,7 +57,7 @@ const Body = () => (
         </p>
         <div className="b-3">
           <Button className="b-2" type="button">
-            Become a Merchant 
+            Become a Merchant
           </Button>
         </div>
       </div>
@@ -144,11 +144,11 @@ const Body = () => (
     </section>
     <section className="newsletter">
       <h2>Newsletter</h2>
-        <p className="p-7">Sign up for our newsletter to be the first to know about our services</p>
-        <form className="f-1">
-          <input type="email" id="email" name="email" className="in-1" placeholder="Email Address" />
-          <button type="button" className="b-4">Sign-Up</button>
-        </form>
+      <p className="p-7">Sign up for our newsletter to be the first to know about our services</p>
+      <form className="f-1">
+        <input type="email" id="email" name="email" className="in-1" placeholder="Email Address" />
+        <button type="button" className="b-4">Sign-Up</button>
+      </form>
     </section>
     <footer>
       <div className="f-2">
