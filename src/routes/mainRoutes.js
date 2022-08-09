@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import Banner from '../components/banner/banner';
 import Body from '../components/body/body';
 import NavBar from '../components/navigation/navBar';
+import ComingSoon from '../components/shared/coming-soon/comingSoon';
 
 class MainRoutes {
     static routes =
@@ -13,10 +14,10 @@ class MainRoutes {
                                 <Body />
                             </>
         } path="/" />,
-        <Route path="products" element={<Typography>Products Page</Typography>} />,
-        <Route path="merchants" element={<Typography>Merchants Page</Typography>} />,
-        <Route path="about" element={<Typography>About us Page</Typography>} />,
-        <Route path="support" element={<Typography>support Page</Typography>} />,
+        <Route path="products" element={<ComingSoon/>} />,
+        <Route path="merchants" element={<ComingSoon/>} />,
+        <Route path="about" element={<ComingSoon/>} />,
+        <Route path="support" element={<ComingSoon/>} />,
     ]
 }
 export default MainRoutes;

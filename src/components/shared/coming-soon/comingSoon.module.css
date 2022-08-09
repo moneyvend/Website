@@ -4,12 +4,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Mulish", sans-serif;
+  flex-direction: column;
 }
 
 .card {
   width: 400px;
+  margin-top: 4%;
+  text-align: center;
 }
 
 .image {
-  width: 100px;
+  width: 400px;
 }
