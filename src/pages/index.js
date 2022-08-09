@@ -1,1 +1,3 @@
-export { LoginPage,RegisterPage,ForgotPasswordPage,PasswordResetPage} from './auth';
+export {
+  LoginPage, RegisterPage, ForgotPasswordPage, PasswordResetPage,
+} from './auth';

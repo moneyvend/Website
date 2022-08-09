@@ -1,4 +1,4 @@
-import { Typography } from "antd";
+import { Typography } from 'antd';
 
 const Beneficiaries = () => (
   <Typography>Dashboard Beneficiaries Page</Typography>
