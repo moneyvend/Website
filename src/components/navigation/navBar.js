@@ -8,10 +8,10 @@ const NavBar = () => (
     <img src={AppImages.LOGO_VERT} id="logo" className="l-1" alt="Logo" preview={false} />
     <div>
       <ul className="navList">
-        <li><NavLink id="anchora" to="/" className="nav-link">Products</NavLink></li>
-        <li><NavLink id="anchorb" to="/" className="nav-link">Merchants</NavLink></li>
-        <li><NavLink id="anchorc" to="/" className="nav-link">About us</NavLink></li>
-        <li><NavLink id="anchorc" to="/" className="nav-link">Support</NavLink></li>
+        <li><NavLink id="anchora" to="/products" className="nav-link">Products</NavLink></li>
+        <li><NavLink id="anchorb" to="/merchants" className="nav-link">Merchants</NavLink></li>
+        <li><NavLink id="anchorc" to="/about" className="nav-link">About us</NavLink></li>
+        <li><NavLink id="anchorc" to="/support" className="nav-link">Support</NavLink></li>
       </ul>
     </div>
     <button className="login" type="button">Log in</button>
