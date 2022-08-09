@@ -1,5 +1,6 @@
 import React from 'react';
 import { Layout, Image } from 'antd';
+import {FiChevronRight} from 'react-icons/fi';
 import styles from './banner.modules.css';
 import AppImages from '../../utilities/images/images';
 
@@ -15,7 +16,7 @@ const Banner = () => (
             The Simplest Way For Fast And Available Payments
           </h1>
           <button type="button" className="payment">Bill payments</button>
-          <button type="button" className="merchant">Become a merchant</button>
+          <button type="button" className="merchant">Become a merchant <FiChevronRight /></button>
         </div>
         <img src={AppImages.IMAGE_ONE} id="image-one" alt="Logo" preview={false} />
       </div>
