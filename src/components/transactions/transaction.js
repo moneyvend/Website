@@ -1,11 +1,9 @@
+import { Typography } from 'antd';
 import React from 'react';
 
 const Transaction = () => (
-  <div style={{ backgroundImage: `url(${process.env.PUBLIC_URL}"https://i.ibb.co/4KK01gk/istockphoto-1364796841-170667a.jpg")` }}>
-    <img src={`${process.env.PUBLIC_URL}/assets/images/uc-white.png`} alt="logo" />
-    <h1>Website Coming Soon</h1>
-    <p>Its time to pay pay bills seemlessly with less tariff. Stay tuned</p>
-  </div>
+  <Typography>Dashboard Transactions Page</Typography>
+
 );
 
 export default Transaction;
