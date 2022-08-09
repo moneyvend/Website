@@ -2,3 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Mulish&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Mulish&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0 30px;
+  font-family: 'Lato', sans-serif;
+}
+
+:root {
+  --white: #fff;
+  --blue: #030a78;
+}
