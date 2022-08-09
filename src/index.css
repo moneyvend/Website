@@ -13,3 +13,8 @@ body {
   --white: #fff;
   --blue: #030a78;
 }
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}

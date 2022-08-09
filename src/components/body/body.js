@@ -6,7 +6,7 @@ import Styles from './body.modules.css';
 const Body = () => (
   <Layout>
     <section className="s-4">
-      <h2>Why monievend ?</h2>
+      <h2 id="h-2">Why monievend ?</h2>
       <div className="body-text">
         <div className="body-para">
           <h3>Easy, Simple, Quick and Safe</h3>
@@ -27,7 +27,7 @@ const Body = () => (
         </div>
       </div>
       <div className="s-5">
-        <h2>Our Services</h2>
+        <h2 id="h-2">Our Services</h2>
         <div className="c-2">
           <div className="cc-2">
             <img src={AppImages.IMAGE_TWO} className="i" alt="Logo" preview={false} />
@@ -110,7 +110,7 @@ const Body = () => (
       </div>
     </section>
     <section className="s-4">
-      <h2 id="h-4">Here&apos;s what some users have to say</h2>
+      <h2 id="h-2">Here&apos;s what some users have to say</h2>
       <div className="d-4">
         <div className="c-5">
           <img src={AppImages.IMAGE_FIVE} className="u-i" alt="Logo" preview={false} />
@@ -145,13 +145,15 @@ const Body = () => (
         </div>
       </div>
     </section>
-    <footer>
+    <section className="newsletter">
       <h2>Newsletter</h2>
-      <p className="p-7">Sign up for our newsletter to be the first to know about our services</p>
-      <form className="f-1">
-        <input type="email" id="email" name="email" className="in-1" placeholder="Email Address" />
-        <button type="button" className="b-4">Sign-Up</button>
-      </form>
+        <p className="p-7">Sign up for our newsletter to be the first to know about our services</p>
+        <form className="f-1">
+          <input type="email" id="email" name="email" className="in-1" placeholder="Email Address" />
+          <button type="button" className="b-4">Sign-Up</button>
+        </form>
+    </section>
+    <footer>
       <div className="f-2">
         <ul className="p-9">
           <li id="p-8">Resources</li>

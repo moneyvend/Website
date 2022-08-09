@@ -108,10 +108,10 @@ h4 {
   display: flex;
   flex-direction: column;
   margin-top: 100px;
-  padding: 0 36%;
+  padding: 5% 36%;
   gap: 32px;
   align-items: center;
-  height: 350px;
+  height: 450px;
   background: linear-gradient(0deg, #011223, #011223), #fff;
   margin-left: -6%;
   margin-right: -6%;
@@ -245,6 +245,13 @@ h4 {
   align-items: center;
 }
 
+.c-5 .p-6{
+  font-size: 18px;
+}
+.c-5 .p-5{
+  font-size: 14px;
+}
+
 .p-6 {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -289,8 +296,7 @@ h4 {
 
 .f-2 {
   display: flex;
-  justify-content: center;
-  padding-top: 200px;
+  gap: 5vw;
 }
 
 #p-8 {
@@ -318,7 +324,7 @@ h4 {
   display: flex;
   padding: 50px 50px 0 50px;
   gap: 100px;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .im-2 {
@@ -329,6 +335,9 @@ h4 {
   display: flex;
   gap: 30px;
   align-self: center;
+  font-family: 'Mulish', sans-serif;
+  color: #1D1E26;
+  padding-bottom: 18px;
 }
 
 #p-10 {
@@ -342,5 +351,34 @@ h4 {
 }
 
 footer {
-  padding-top: 100px;
+  padding-top: 18vh;
+}
+.newsletter {
+  padding: 8vh 20vw;
+}
+.newsletter input{
+  width: 50%;
+  border: 1px solid rgba(29, 30, 38, 0.25);
+  border-radius: 4px;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+}
+.newsletter form {
+  margin-top: 21px;
+}
+
+.newsletter form button {
+  border : none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-family: "Mulish", sans-serif;
+}
+
+#h-2{
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 4%;
 }
