@@ -1,4 +1,3 @@
-import { Typography } from 'antd';
 import { Route } from 'react-router-dom';
 import Banner from '../components/banner/banner';
 import Body from '../components/body/body';
@@ -8,18 +7,22 @@ import NotFound from '../components/shared/not-found/notFound';
 
 class MainRoutes {
     static routes =
-     [   <Route element={
-                            <>
-                                <NavBar />
-                                <Banner />
-                                <Body />
-                            </>
-        } path="/" />,
-        <Route path="products" element={<ComingSoon/>} />,
-        <Route path="merchants" element={<ComingSoon/>} />,
-        <Route path="about" element={<ComingSoon/>} />,
-        <Route path="support" element={<ComingSoon/>} />,
-        <Route path="*" element={<NotFound/>} />,
-    ]
+     [<Route
+       element={(
+         <>
+           <NavBar />
+           <Banner />
+           <Body />
+         </>
+                          )}
+       path="/"
+       key="indexpage"
+     />,
+       <Route path="products" element={<ComingSoon />} key="products" />,
+       <Route path="merchants" element={<ComingSoon />} key="merchants" />,
+       <Route path="about" element={<ComingSoon />} key="about" />,
+       <Route path="support" element={<ComingSoon />} key="support" />,
+       <Route path="*" element={<NotFound />} key="Notfound" />,
+     ]
 }
 export default MainRoutes;

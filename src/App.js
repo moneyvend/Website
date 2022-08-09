@@ -1,11 +1,11 @@
-
 import {
   Routes,
-} from "react-router-dom";
+} from 'react-router-dom';
 import AppRoutes from './routes';
+
 const App = () => (
   <Routes>
-    {AppRoutes.map(route => route)}
+    {AppRoutes.map((route) => route)}
   </Routes>
 );
 
