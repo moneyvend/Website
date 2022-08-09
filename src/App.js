@@ -1,14 +1,12 @@
-import Banner from './components/banner/banner';
-import Body from './components/body/body';
-import NavBar from './components/navigation/navBar';
 
+import {
+  Routes,
+} from "react-router-dom";
+import AppRoutes from './routes';
 const App = () => (
-  <>
-    <NavBar />
-    <Banner />
-    <Body />
-
-  </>
+  <Routes>
+    {AppRoutes.map(route => route)}
+  </Routes>
 );
 
 export default App;
