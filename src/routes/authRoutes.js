@@ -1,14 +1,14 @@
 import { Typography } from 'antd';
 import { Route } from 'react-router-dom';
+import ComingSoon from '../components/shared/coming-soon/comingSoon';
 
-class DashboardRoutes {
+class AuthRoutes {
     static routes =
       <Route path="auth">
-        <Route path="/login"element={<Typography>This is the Home for dashboard</Typography>} index />
-        <Route path="settings" element={<Settings />} />
-        <Route path="transactions" element={<Transaction />} />
-        <Route path="beneficiaries" element={<Beneficiaries />} />
-        <Route path="payments" element={<PaymentServices />} />
+        <Route path="login"element={<ComingSoon/>} index />
+        <Route path="register" element={<ComingSoon />} />
+        <Route path="forgot-password" element={<ComingSoon />} />
+        <Route path="password-reset" element={<ComingSoon />} />
       </Route>
 }
 export default DashboardRoutes;
