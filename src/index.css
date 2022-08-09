@@ -1,11 +1,11 @@
 /* @import '~antd/dist/antd.css'; */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Mulish&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Mulish&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Mulish&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 body {
   margin: 0;
-  padding: 0 30px;
+  padding: 0 4%;
   font-family: 'Lato', sans-serif;
 }
 

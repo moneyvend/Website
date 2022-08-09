@@ -5,7 +5,7 @@ import AppImages from '../../utilities/images/images';
 
 const Banner = () => (
   <Layout>
-    <div>
+    <div className={styles.landing}>
       <div className="header-wrapper">
         <div className="text-container">
           <p className="header-text">

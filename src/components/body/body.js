@@ -1,6 +1,7 @@
-import { Layout } from 'antd';
+import { Button, Layout } from 'antd';
 import AppImages from '../../utilities/images/images';
-import styles from './body.modules.css';
+import {FiChevronRight} from 'react-icons/fi';
+import Styles from './body.modules.css';
 
 const Body = () => (
   <Layout>
@@ -56,7 +57,11 @@ const Body = () => (
           outcome based on how well it serves our customers.
         </p>
         <div className="b-3">
-          <button className="b-2" type="button">Become a Merchant</button>
+          <Button className="b-2" type="button">
+            Become a Merchant 
+            
+          </Button>
+          <FiChevronRight />
         </div>
       </div>
 

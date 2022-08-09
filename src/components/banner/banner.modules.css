@@ -70,4 +70,9 @@ h1 {
   overflow: hidden;
   justify-content: space-between;
   align-self: center;
+  padding: 20px 0;
+}
+
+.landing {
+  height: 80vh;
 }
