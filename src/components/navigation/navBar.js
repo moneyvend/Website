@@ -14,7 +14,7 @@ const NavBar = () => (
         <li><NavLink id="anchorc" to="/support" className="nav-link">Support</NavLink></li>
       </ul>
     </div>
-    <button className="login" type="button">Log in</button>
+    <button className="login" type="button"><NavLink to={'/auth/login'}>Login</NavLink></button>
   </div>
 );
 
