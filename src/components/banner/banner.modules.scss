@@ -80,9 +80,9 @@ h1 {
 .bod {
 	align-items: center;
 	display: flex;
-	height: 20vh;
-  width: 2000px;
+	height: 10vh;
 	justify-content: center;
+  padding-top: 100px;
 }
 
 $animationSpeed: 40s;
@@ -96,6 +96,7 @@ $animationSpeed: 40s;
 
 // Styling
 .slider {
+	background: white;
 	height: 100px;
 	margin: auto;
 	overflow:hidden;
@@ -106,7 +107,7 @@ $animationSpeed: 40s;
 		content: "";
 		height: 100px;
 		position: absolute;
-		width: 200px;
+		width: 300px;
 		z-index: 2;
 	}
 	
@@ -129,6 +130,27 @@ $animationSpeed: 40s;
 	
 	.slide {
 		height: 100px;
-		width: 250px;
+		width: 300px;
 	}
+}
+
+.se-1 {
+  width: 120px;
+  height: 90px;
+
+}
+
+.se-2{
+  width: 100px; 
+  height: 90px;
+}
+
+.se-3 {
+  height: 90px;
+  width: 200px;
+}
+
+.se-4 {
+  height: 90px;
+  width: 200px;
 }

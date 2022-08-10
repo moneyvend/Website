@@ -50,5 +50,15 @@ static FACEBOOK = `${process.env.PUBLIC_URL}/assets/logo/facebook.svg`;
 static LINKEDIN = `${process.env.PUBLIC_URL}/assets/logo/linkedin..svg`;
 
 static TWITTER = `${process.env.PUBLIC_URL}/assets/logo/twitter.svg`;
+
+static GLO = `${process.env.PUBLIC_URL}/assets/logo/glo-net1.png`;
+
+static GOTVT = `${process.env.PUBLIC_URL}/assets/logo/gootv-.png`;
+
+static ETISALAT = `${process.env.PUBLIC_URL}/assets/logo/etisalat-.png`;
+
+static AIRTEL = `${process.env.PUBLIC_URL}/assets/logo/airtel-.png`;
+
+static STARTIME = `${process.env.PUBLIC_URL}/assets/logo/star-.png`;
 }
 export default AppImages;
