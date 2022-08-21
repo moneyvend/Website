@@ -16,6 +16,10 @@ a {
   width: 100px;
 }
 
+.navBar{
+  display: none;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -46,4 +50,72 @@ a {
 .nav-link {
   font-family: 'Mulish', sans-serif;
   font-size: 16px;
+}
+
+@media only screen and (max-width: 475px) {
+ .container{
+  padding: 0px;
+}
+ #c-1 {
+  display: flex; 
+  justify-content: space-between;
+  padding-top: 40px;
+ }
+.navBar {
+  position: relative;
+  
+}
+
+.navBar button {
+  left: 40px;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  background: transparent;;
+  border: none;
+}
+
+.menuNav {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  background: grey;
+  bottom: 0;
+  height: 0vh;
+  width: 500px;
+  overflow: hidden;
+  max-width: 500px;
+  z-index: 9;
+
+}
+
+.menuNav.showMenu {
+  width: 100%;
+  height: 100vh;
+}
+
+a {
+  display: block;
+  padding: 10px 40px;
+  text-decoration: none;
+  color: #3fffd2;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.menuNav li:first-child {
+  margin-top: 7rem;
+}
+
+.des-1 {
+  display: none;
+}
+  
+.navBar{
+  display: block;
+}
+
+.login {
+  display: none;
+}
 }
