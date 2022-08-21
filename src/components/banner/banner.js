@@ -1,5 +1,4 @@
 import React from 'react';
-import { Image } from 'antd';
 import { FiChevronRight } from 'react-icons/fi';
 import styles from './banner.modules.scss';
 import AppImages from '../../utilities/images/images';
@@ -38,7 +37,7 @@ const Banner = () => (
             <img className="se-3" src={AppImages.STARTIME} alt="Logo" preview={false} height="100" />
           </div>
           <div className="slide">
-            <img className="se-4" src={AppImages.IKEJA_LOGO} height="100" />
+            <img alt="logo" className="se-4" src={AppImages.IKEJA_LOGO} height="100" />
           </div>
           <div className="slide">
             <img className="se-4" src={AppImages.UPAY} alt="Logo" preview={false} height="100" />
