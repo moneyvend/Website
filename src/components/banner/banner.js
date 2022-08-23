@@ -1,7 +1,11 @@
 import React from 'react';
 import { FiChevronRight } from 'react-icons/fi';
-import styles from './banner.modules.scss';
+import styles from './banner.modules.scss'; // eslint-disable-line no-unused-vars
 import AppImages from '../../utilities/images/images';
+
+
+const Banner = () => (
+  <div className="sect">
     <div className="header-wrapper">
       <div className="text-container">
         <p className="header-text">
