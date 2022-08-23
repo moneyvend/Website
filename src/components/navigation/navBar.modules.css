@@ -76,7 +76,7 @@ a {
   }
 
   .navBar button {
-    left: 40px;
+    left: 16px;
     position: absolute;
     z-index: 100;
     cursor: pointer;
@@ -87,14 +87,14 @@ a {
   .menuNav {
     list-style: none;
     position: fixed;
-    top: 0;
-    background: grey;
+    background: #030a78;
     bottom: 0;
     height: 0;
     width: 500px;
     overflow: hidden;
     max-width: 500px;
     z-index: 9;
+    left: 0;
   }
 
   .menuNav.showMenu {
@@ -126,6 +126,27 @@ a {
 
   .login {
     display: none;
+  }
+
+  .showMenu .navList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .showMenu .navList li {
+    width: 100%;
+  }
+
+  .showMenu .navList .nav-link {
+    padding: 0;
+    color: #fff;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    width: 94%;
+    padding-bottom: 8px;
   }
 }
 

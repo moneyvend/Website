@@ -21,19 +21,15 @@ const NavBar = () => {
         </div>
         <div className='navBar'>
           <button type="button" onClick={handleToggle} className={`toggleBtn ${!navbarOpen ? 'd-none' : ''}`}>
-            <MdClose style={{ color:  '#000', width: '21px', height: '21px' }} />
+            <MdClose style={{ color: '#f4f4f4', width: '21px', height: '21px' }} />
           </button>
           <ul className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
-            <li>
-              <NavLink
-                to="/"
-                activeClassName="active-link"
-                onClick={() => closeMenu()}
-                exact
-              >
-                hii
-              </NavLink>
-            </li>
+            <ul className="navList">
+              <li><NavLink id="anchora" to="/products" className="nav-link">Products</NavLink></li>
+              <li><NavLink id="anchorb" to="/merchants" className="nav-link">Merchants</NavLink></li>
+              <li><NavLink id="anchorc" to="/about" className="nav-link">About us</NavLink></li>
+              <li><NavLink id="anchorc" to="/support" className="nav-link">Support</NavLink></li>
+            </ul>
 
           </ul>
         </div>
