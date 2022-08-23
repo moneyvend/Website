@@ -47,9 +47,14 @@ a {
   font-family: 'Mulish', sans-serif;
 }
 
+.login a {
+  color: white;
+}
+
 .nav-link {
   font-family: 'Mulish', sans-serif;
   font-size: 16px;
+  color: #000;
 }
 
 @media only screen and (max-width: 475px) {

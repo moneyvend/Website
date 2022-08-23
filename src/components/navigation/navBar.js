@@ -5,6 +5,7 @@ import { FiMenu } from 'react-icons/fi';
 import AppImages from '../../utilities/images/images';
 import styles from './navBar.modules.css'; // eslint-disable-line no-unused-vars
 
+<<<<<<< HEAD
 const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const handleToggle = () => {
@@ -44,13 +45,13 @@ const NavBar = () => {
       </div>
       <div className="des-1">
         <ul className="navList">
-          <li><NavLink id="anchora" to="/" className="nav-link">Products</NavLink></li>
-          <li><NavLink id="anchorb" to="/" className="nav-link">Merchants</NavLink></li>
-          <li><NavLink id="anchorc" to="/" className="nav-link">About us</NavLink></li>
-          <li><NavLink id="anchorc" to="/" className="nav-link">Support</NavLink></li>
+          <li><NavLink id="anchora" to="/products" className="nav-link">Products</NavLink></li>
+          <li><NavLink id="anchorb" to="/merchants" className="nav-link">Merchants</NavLink></li>
+          <li><NavLink id="anchorc" to="/about" className="nav-link">About us</NavLink></li>
+          <li><NavLink id="anchorc" to="/support" className="nav-link">Support</NavLink></li>
         </ul>
       </div>
-      <button className="login" type="button">Log in</button>
+      <button className="login" type="button"><NavLink to="/auth/login">Login</NavLink></button>
     </div>
   );
 };
