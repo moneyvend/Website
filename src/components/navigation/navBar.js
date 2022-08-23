@@ -2,17 +2,14 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { MdClose } from 'react-icons/md';
 import { FiMenu } from 'react-icons/fi';
-import {BsFacebook, BsLinkedin, BsTwitter} from 'react-icons/bs';
+import { BsFacebook, BsLinkedin, BsTwitter } from 'react-icons/bs';
 import AppImages from '../../utilities/images/images';
-import styles from './navBar.modules.css';
+import styles from './navBar.modules.css'; // eslint-disable-line no-unused-vars
 
 const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const handleToggle = () => {
     setNavbarOpen(!navbarOpen);
-  };
-  const closeMenu = () => {
-    setNavbarOpen(false);
   };
   return (
     <div className="container">
@@ -20,9 +17,9 @@ const NavBar = () => {
         <div>
           <img src={AppImages.LOGO_VERT} id="logo" className="l-1" alt="Logo" preview={false} />
         </div>
-        <div className='navBar'>
+        <div className="navBar">
           <button type="button" onClick={handleToggle} className={`toggleBtn ${!navbarOpen ? 'd-none' : ''}`}>
-            <MdClose style={{ color: '#f4f4f4', fontSize:"24px" }} />
+            <MdClose style={{ color: '#f4f4f4', fontSize: '24px' }} />
           </button>
           <ul className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
             <ul className="navList">
@@ -39,9 +36,9 @@ const NavBar = () => {
                 <p>Cookie policy</p>
               </div>
               <div className="di-1">
-                <BsFacebook/>
-                <BsLinkedin/>
-                <BsTwitter/>
+                <BsFacebook />
+                <BsLinkedin />
+                <BsTwitter />
               </div>
             </div>
           </ul>

@@ -151,7 +151,7 @@ const Body = () => (
         <button type="button" className="b-4">Sign-Up</button>
       </form>
     </section>
-    <Footer/>
+    <Footer />
 
   </Layout>
 );
