@@ -4,7 +4,7 @@ import styles from './banner.modules.scss';
 import AppImages from '../../utilities/images/images';
 
 const Banner = () => (
-  <div className="sect">
+  <div className={styles.sect}>
     <div className="header-wrapper">
       <div className="text-container">
         <p className="header-text">

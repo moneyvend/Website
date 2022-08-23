@@ -3,9 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { MdClose } from 'react-icons/md';
 import { FiMenu } from 'react-icons/fi';
 import AppImages from '../../utilities/images/images';
-import styles from './navBar.modules.css'; // eslint-disable-line no-unused-vars
+import styles from './navBar.modules.css';
 
-<<<<<<< HEAD
 const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const handleToggle = () => {
@@ -20,7 +19,7 @@ const NavBar = () => {
         <div>
           <img src={AppImages.LOGO_VERT} id="logo" className="l-1" alt="Logo" preview={false} />
         </div>
-        <div className="navBar">
+        <div className={styles.navBar}>
           <button type="button" onClick={handleToggle}>
             {navbarOpen ? (
               <MdClose style={{ color: '#333', width: '40px', height: '40px' }} />
