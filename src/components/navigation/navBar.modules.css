@@ -16,6 +16,10 @@ a {
   width: 100px;
 }
 
+.navBar {
+  display: none;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -51,4 +55,131 @@ a {
   font-family: 'Mulish', sans-serif;
   font-size: 16px;
   color: #000;
+}
+
+.toggleBtn {
+  border: 0;
+  background: transparent;
+}
+
+@media only screen and (max-width: 475px) {
+  .container {
+    padding: 0;
+  }
+
+  #c-1 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .navBar button {
+    right: 7%;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+
+  .menuNav {
+    list-style: none;
+    position: fixed;
+    background: #030a78;
+    bottom: 0;
+    height: 0;
+    width: 500px;
+    overflow: hidden;
+    max-width: 500px;
+    z-index: 9;
+    left: 0;
+  }
+
+  .menuNav.showMenu {
+    width: 100%;
+    height: 100vh;
+    padding-left: 28px;
+  }
+
+  a {
+    display: block;
+    padding: 10px 40px;
+    text-decoration: none;
+    color: #3fffd2;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .menuNav li:first-child {
+    margin-top: 7rem;
+  }
+
+  .des-1 {
+    display: none;
+  }
+
+  .navBar {
+    display: flex;
+  }
+
+  .login {
+    display: none;
+  }
+
+  .showMenu .navList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .showMenu .navList li {
+    width: 100%;
+  }
+
+  .showMenu .navList .nav-link {
+    padding: 0;
+    color: #fff;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    width: 94%;
+    padding-bottom: 8px;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.nav-footer {
+  display: flex;
+  align-items: center;
+  padding: 0 2% 32px 2%;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 8vh;
+}
+
+.nav-footer #p-10 {
+  font-size: 14px;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
+.nav-footer .di-1 p {
+  color: #f6f6f6;
+  font-size: 14px;
+}
+
+.nav-footer .di-1 svg {
+  color: #f4f4f4;
+  font-size: 16px;
 }

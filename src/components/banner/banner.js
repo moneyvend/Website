@@ -34,7 +34,10 @@ const Banner = () => (
             <img className="se-1" src={AppImages.DSTV} height="100" width="250" alt="" />
           </div>
           <div className="slide">
-            <img className="se-4" src={AppImages.IKEJA_LOGO} height="100" alt="IKEJA" />
+            <img className="se-3" src={AppImages.STARTIME} alt="Logo" preview={false} height="100" />
+          </div>
+          <div className="slide">
+            <img alt="logo" className="se-4" src={AppImages.IKEJA_LOGO} height="100" />
           </div>
           <div className="slide">
             <img className="se-4" src={AppImages.UPAY} alt="Logo" preview={false} height="100" />
@@ -43,13 +46,10 @@ const Banner = () => (
             <img className="se-2" src={AppImages.MTN} alt="Logo" preview={false} height="100" />
           </div>
           <div className="slide">
-            <img className="se-2" src={AppImages.GOTVT} alt="Logo" preview={false} height="100" />
-          </div>
-          <div className="slide">
             <img className="se-3" src={AppImages.ETISALAT} alt="Logo" preview={false} height="100" />
           </div>
           <div className="slide">
-            <img className="se-3" src={AppImages.STARTIME} alt="Logo" preview={false} height="100" />
+            <img className="se-2" src={AppImages.GOTVT} alt="Logo" preview={false} height="100" />
           </div>
         </div>
       </div>
