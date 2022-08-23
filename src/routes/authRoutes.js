@@ -3,6 +3,7 @@ import {
   ForgotPasswordPage, LoginPage, PasswordResetPage, RegisterPage,
 } from '../pages';
 
+
 class AuthRoutes {
     static routes =
       <Route path="auth">

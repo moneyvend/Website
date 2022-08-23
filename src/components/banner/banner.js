@@ -11,7 +11,7 @@ const Banner = () => (
           Pay easy, internet or not
         </p>
         <b>
-          <h1>
+          <h1 id="H-1">
             The Simplest Way For Fast Payments
           </h1>
         </b>
