@@ -62,6 +62,13 @@ a {
   background: transparent;
 }
 
+#c-2 {
+  display: none;
+}
+.toggleBtn {
+  display: none;
+}
+
 @media only screen and (max-width: 475px) {
   .container {
     padding: 0;
@@ -148,6 +155,10 @@ a {
     width: 94%;
     padding-bottom: 8px;
   }
+  .toggleBtn {
+    display: block;
+  }
+  
 }
 
 .d-none {

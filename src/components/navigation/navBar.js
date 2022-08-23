@@ -14,10 +14,10 @@ const NavBar = () => {
   return (
     <div className="container">
       <div id="c-1">
-        <div>
+        <div id="c-3">
           <img src={AppImages.LOGO_VERT} id="logo" className="l-1" alt="Logo" preview={false} />
         </div>
-        <div className="navBar">
+        <div className="navBar" id="c-2">
           <button type="button" onClick={handleToggle} className={`toggleBtn ${!navbarOpen ? 'd-none' : ''}`}>
             <MdClose style={{ color: '#f4f4f4', fontSize: '24px' }} />
           </button>
