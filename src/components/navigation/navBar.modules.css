@@ -157,3 +157,28 @@ a {
 .ml-auto {
   margin-left: auto;
 }
+
+.nav-footer {
+  display: flex;
+  align-items: center;
+  padding: 0 2% 32px 2%;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 8vh;
+}
+
+.nav-footer #p-10 {
+  font-size: 14px;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
+.nav-footer .di-1 p {
+  color: #f6f6f6;
+  font-size: 14px;
+}
+.nav-footer .di-1 svg {
+  color: #f4f4f4;
+  font-size: 16px;
+}
