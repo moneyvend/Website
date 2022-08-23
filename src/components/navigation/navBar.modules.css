@@ -70,13 +70,13 @@ a {
   #c-1 {
     display: flex;
     justify-content: space-between;
-    padding-top: 40px;
+    padding-top: 16px;
     width: 100%;
     align-items: center;
   }
 
   .navBar button {
-    left: 16px;
+    right: 7%;
     position: absolute;
     z-index: 100;
     cursor: pointer;
@@ -100,6 +100,7 @@ a {
   .menuNav.showMenu {
     width: 100%;
     height: 100vh;
+    padding-left: 28px;
   }
 
   a {
@@ -121,7 +122,6 @@ a {
 
   .navBar {
     display: flex;
-    position: absolute;
   }
 
   .login {

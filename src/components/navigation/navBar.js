@@ -22,7 +22,7 @@ const NavBar = () => {
         </div>
         <div className='navBar'>
           <button type="button" onClick={handleToggle} className={`toggleBtn ${!navbarOpen ? 'd-none' : ''}`}>
-            <MdClose style={{ color: '#f4f4f4', width: '21px', height: '21px' }} />
+            <MdClose style={{ color: '#f4f4f4', fontSize:"24px" }} />
           </button>
           <ul className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
             <ul className="navList">
