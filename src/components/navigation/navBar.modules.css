@@ -59,6 +59,7 @@ a {
 
 .toggleBtn {
   border: 0;
+  background: transparent;
 }
 
 @media only screen and (max-width: 475px) {

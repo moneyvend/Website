@@ -20,8 +20,8 @@ const NavBar = () => {
           <img src={AppImages.LOGO_VERT} id="logo" className="l-1" alt="Logo" preview={false} />
         </div>
         <div className='navBar'>
-          <button type="button" onClick={handleToggle} className={`toggleBtn ${ !navbarOpen? 'd-none':''}`}>
-              <MdClose style={{ color: '#333', width: '40px', height: '40px' }}  />
+          <button type="button" onClick={handleToggle} className={`toggleBtn ${!navbarOpen ? 'd-none' : ''}`}>
+            <MdClose style={{ color:  '#000', width: '21px', height: '21px' }} />
           </button>
           <ul className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
             <li>
@@ -38,12 +38,8 @@ const NavBar = () => {
           </ul>
         </div>
         <button type="button" onClick={handleToggle} className="toggleBtn ">
-            {navbarOpen ? (
-              <MdClose style={{ color: '#333', width: '40px', height: '40px' }}  />
-            ) : (
-              <FiMenu style={{ color: '#7b7b7b', width: '40px', height: '40px' }} />
-            )}
-          </button>
+          <FiMenu style={{ color: '#000', width: '24px', height: '24px' }} />
+        </button>
       </div>
       <div className="des-1">
         <ul className="navList">
