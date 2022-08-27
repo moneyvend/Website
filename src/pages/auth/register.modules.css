@@ -247,13 +247,11 @@ color: #4F54A1;
     }
   
     .haw {
-        display: block;
         display: flex;
         justify-content: flex-end;
-        padding: 2opx;
         gap: 20px;
+        margin-top: 10px;
     }
-
     .bwa {
         height: 27px;
         top: calc(50% - 36.1px/2 - 381.43px);
