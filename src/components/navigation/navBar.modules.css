@@ -31,6 +31,10 @@ a {
   width: 130px;
 }
 
+#h-logo{
+  display: none;
+}
+
 .navList {
   display: flex;
   gap: 50px;
@@ -80,7 +84,7 @@ a {
     align-items: center;
   }
 
-  .navBar button {
+  .navBar #bit{
     right: 7%;
     position: absolute;
     z-index: 100;
@@ -92,7 +96,7 @@ a {
   .menuNav {
     list-style: none;
     position: fixed;
-    background: #030a78;
+    background: #ffff;
     bottom: 0;
     height: 0;
     width: 500px;
@@ -108,6 +112,7 @@ a {
     padding-left: 28px;
   }
 
+ 
   a {
     display: block;
     padding: 10px 40px;
@@ -115,6 +120,16 @@ a {
     color: #3fffd2;
     text-transform: uppercase;
     font-weight: bold;
+  }
+
+  .batt {
+    height: 35px;
+    width: 94%;
+    color: #ffff;
+    background-color: #030A78;
+    border-radius: 8px;
+    border-style: none;
+    
   }
 
   .menuNav li:first-child {
@@ -133,6 +148,26 @@ a {
     display: none;
   }
 
+  .l-1 {
+    display: none;
+  }
+  #logo {
+    display: none;
+  }
+
+  .op{
+    padding-top: 20%;
+    width: 100%;
+    height: 100%;
+  }
+
+  #h-logo {
+    width: 130px;
+    display: block;
+    position: absolute;
+    z-index: 100;
+  }
+
   .showMenu .navList {
     display: flex;
     flex-direction: column;
@@ -148,11 +183,20 @@ a {
 
   .showMenu .navList .nav-link {
     padding: 0;
-    color: #fff;
     border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
     width: 94%;
-    padding-bottom: 8px;
+    padding-bottom: 20px;
+    font-weight: 600;
+font-size: 14px;
+line-height: 18px;
+
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.02em;
+
+color: #000000;
   }
+
   .toggleBtn {
     display: block;
   }
