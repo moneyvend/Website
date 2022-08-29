@@ -22,10 +22,6 @@ const RegisterPage = () => (
       </div>
       <img src={AppImages.HLOGO} id="img-7" alt="Logo" preview={false} />
       <h1 id="H1">Create Account</h1>
-      <p className="pdw">
-        Please sign up by creating a personal account to
-        access all payment services and unique products
-      </p>
       <form id="f-3">
 
         <label className="l-1" htmlFor="name">
@@ -57,13 +53,13 @@ const RegisterPage = () => (
           <a href="google.com" className="l-3"> Forgot Password? </a>
         </div>
         <button type="button" id="b-r">Sign up</button>
-        <div className="fo-1">
-          <p className="fo-p">
-            Already have an account?
-            <a href="google.com" className="l-4">Login</a>
-          </p>
-        </div>
       </form>
+      <div className="fo-1">
+        <p className="fo-p">
+          Already have an account?
+          <a href="google.com" className="l-4">Login</a>
+        </p>
+      </div>
     </div>
   </div>
 );

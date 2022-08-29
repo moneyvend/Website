@@ -1,0 +1,89 @@
+.pdo {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 140%;
+padding: 0 20%;
+
+/* or 20px */
+text-align: center;
+
+color: #4F54A1;
+}
+
+
+.rep {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	width: 303px;
+	height: 63px;
+	margin: 0 auto 25px auto;
+	background: rgba(29, 30, 38, 0.05);
+	border-radius: 8px;
+	/* padding-bottom: ; */
+}
+
+.rp:active, .rp:focus{
+    padding: 0px 12px;
+    height: 30px;
+    background: #030A78;
+    border-radius: 7.59959px;
+    color: #ffff;
+    width: 35%;
+    border-style: none;
+    align-self: center;
+    font-size: 11px;
+}
+
+
+.rp{
+    padding: 0px 12px;
+    height: 30px;
+    color: #030A78;
+    border-radius: 7.59959px;
+    align-self: center;
+    background-color: #ffff;
+    width: 35%;
+    border-style: none;
+    font-size: 11px;
+}
+.pod {
+    display: none;
+}
+
+.fo-2 {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+}
+
+@media only screen and (min-width: 480px) {
+
+    .contr-1{
+        display: flex;
+        padding: 3% 0; 
+        max-width: 70%;
+        margin: auto;
+    }
+        .pod {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 140%;
+            padding: 0 8% 4% 8%;
+            
+            display: block;
+            color: #4F54A1;  
+            text-align: center;
+
+
+
+        }
+    .pdo {
+        display: none;
+    }
+}
+
