@@ -10,7 +10,7 @@ const RegisterPage = () => (
       <h5>Creating payment solutions</h5>
       <p className="pd">
         A product which specializes in creating
-        terminal solution products for customers, SME's and merchats
+        terminal solution products for customers, SME&apos;s and merchats
 
       </p>
 

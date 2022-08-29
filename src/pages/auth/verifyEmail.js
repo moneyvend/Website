@@ -10,7 +10,7 @@ const RecoverPasswordPage = () => (
       <h5>Creating payment solutions</h5>
       <p className="pd">
         A product which specializes in creating
-        terminal solution products for customers, SME's and merchats
+        terminal solution products for customers, SME&apos;s and merchats
 
       </p>
 
@@ -24,14 +24,14 @@ const RecoverPasswordPage = () => (
       <div className="j-c">
         <h1 id="H1">Verify Email</h1>
         <p className="ppw">
-          We've sent a link to your email address: marian@gmail.com
+          We&apos;ve sent a link to your email address: marian@gmail.com
         </p>
         <form id="f-3">
           <button type="button" id="b-r">Sign up</button>
         </form>
         <div className="fo-1">
           <p className="fo-p">
-            Didn't receive an email?
+            Didn&apos;t receive an email?
             <a href="google.com" className="l-4">Resend</a>
           </p>
         </div>

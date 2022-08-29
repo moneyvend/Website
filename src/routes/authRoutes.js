@@ -1,8 +1,7 @@
 import { Route } from 'react-router-dom';
 import {
-  ForgotPasswordPage, LoginPage, PasswordResetPage, RegisterPage, RecoverPasswordPage, VerifyPage
+  ForgotPasswordPage, LoginPage, PasswordResetPage, RegisterPage, RecoverPasswordPage, VerifyPage,
 } from '../pages';
-
 
 class AuthRoutes {
     static routes =

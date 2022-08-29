@@ -32,7 +32,7 @@ const LoginPage = () => {
         <h5>Creating payment solutions</h5>
         <p className="pd">
           A product which specializes in creating
-          terminal solution products for customers, SME's and merchats
+          terminal solution products for customers, SME&apos;s and merchats
 
         </p>
 
@@ -47,7 +47,7 @@ const LoginPage = () => {
           <h1 id="H1">Welcome Back</h1>
           <p className="pdo">Log In with your phone number or Email address</p>
           <p className="pod">Please sign in to your personal account to start access all payment services.</p>
-          
+
         </div>
 
         <div className="rep">
@@ -101,7 +101,7 @@ const LoginPage = () => {
 
         <div className="fo-2">
           <p className="fo-p">
-            Don't have an account?
+            Don&apos;t have an account?
             <a href="google.com" className="l-4">Sign up</a>
           </p>
         </div>

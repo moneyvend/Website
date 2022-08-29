@@ -10,7 +10,7 @@ const RecoverPasswordPage = () => (
       <h5>Creating payment solutions</h5>
       <p className="pd">
         A product which specializes in creating
-        terminal solution products for customers, SME's and merchats
+        terminal solution products for customers, SME&apos;s and merchats
 
       </p>
 
@@ -37,7 +37,7 @@ const RecoverPasswordPage = () => (
         </form>
         <div className="fo-1">
           <p className="fo-p">
-            Don't have an account?
+            Don&apos;t have an account?
             <a href="google.com" className="l-4">Login</a>
           </p>
         </div>
