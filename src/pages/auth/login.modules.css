@@ -61,7 +61,7 @@
 @media only screen and (min-width: 480px) {
   .contr-1 {
     display: flex;
-    padding: 3% 0;
+    padding: 5% 0;
     max-width: 70%;
     margin: auto;
   }
