@@ -3,7 +3,7 @@ body {
 }
 
 #root {
-  background-color: #F0F0F7FF;
+  background-color: #f0f0f7ff;
   min-height: 100vh;
 }
 
@@ -27,12 +27,12 @@ body {
   height: 2px;
   display: block;
   margin-top: 14%;
-  background-color: #F0F0F7FF;
+  background-color: #f0f0f7ff;
 }
 
 a {
   padding: 1rem;
-  font-family: Mulish;
+  font-family: Mulish, sans-serif;
 }
 
 a:active {
@@ -61,5 +61,5 @@ svg {
   height: 2px;
   display: block;
   margin-top: 14%;
-  background-color: #F0F0F7FF;
+  background-color: #f0f0f7ff;
 }

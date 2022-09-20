@@ -12,7 +12,7 @@
   flex: 1;
   display: flex;
   justify-content: space-between;
-  border-right: 1px solid #DFDFE5FF;
+  border-right: 1px solid #dfdfe5ff;
 }
 
 input {
@@ -22,7 +22,7 @@ input {
 
 input::placeholder {
   color: var(--blue);
-  font-family: Inter;
+  font-family: Inter, sans-serif;
 }
 
 .search-icon {
@@ -30,20 +30,21 @@ input::placeholder {
 }
 
 .search-div {
-  border: 2px solid #F0F0F7FF;
+  border: 2px solid #f0f0f7ff;
   padding: 0.6rem 1rem;
   border-radius: 10px;
   display: flex;
 }
 
 svg {
-  color: #DFDFE5FF;
+  color: #dfdfe5ff;
 }
 
 img {
   border-radius: 50%;
 }
 
-.arrow-down, .bell {
+.arrow-down,
+.bell {
   translate: 0 12px;
 }
