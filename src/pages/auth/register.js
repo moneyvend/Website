@@ -1,12 +1,12 @@
 import React from 'react';
-import AppImages from '../../utilities/images/images';
-import Styles from './register.modules.css';
+import { Link } from 'react-router-dom';
+import './register.modules.css';
 
 const RegisterPage = () => (
   <div className="contr">
 
     <div className="dr">
-      <div className="b-r" />
+      {/* <div className="b-r" /> */}
       <h5>Creating payment solutions</h5>
       <p className="pd">
         A product which specializes in creating
@@ -17,10 +17,10 @@ const RegisterPage = () => (
     </div>
     <div id="c--1">
       <div className="haw">
-        <a className="aw" href="google.com">Login</a>
+        <Link className="aw" to="/auth/login">Login</Link>
         <button type="button" className="bwa">Register</button>
       </div>
-      <img src={AppImages.HLOGO} id="img-7" alt="Logo" preview={false} />
+      {/* <img src={AppImages.HLOGO} id="img-7" alt="Logo" preview={false} /> */}
       <h1 id="H1">Create Account</h1>
       <form id="f-3">
 
@@ -57,7 +57,7 @@ const RegisterPage = () => (
       <div className="fo-1">
         <p className="fo-p">
           Already have an account?
-          <a href="google.com" className="l-4">Login</a>
+          <Link to="/auth/login" className="l-4">Login</Link>
         </p>
       </div>
     </div>
