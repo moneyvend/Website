@@ -30,17 +30,17 @@ const Body = () => (
         <h2 id="h-2">Our Services</h2>
         <div className="c-2">
           <div className="cc-2">
-            <img src={AppImages.IMAGE_TWO} className="i" alt="Logo" preview={false} />
+            <img src={AppImages.IMAGE_TWO} className="i" alt="Logo" />
             <h4>Utility Bill Payment</h4>
             <p className="p-5">Pay for your DSTV, GoTV Startimes and more with our integrated</p>
           </div>
           <div className="cc-2">
-            <img src={AppImages.IMAGE_THREE} className="i" alt="Logo" preview={false} />
+            <img src={AppImages.IMAGE_THREE} className="i" alt="Logo" />
             <h4>USSD Enabled Transaction</h4>
             <p className="p-5">Send and receive payments without the internet</p>
           </div>
           <div className="cc-2">
-            <img src={AppImages.IMAGE_FOUR} className="i" alt="Logo" preview={false} />
+            <img src={AppImages.IMAGE_FOUR} className="i" alt="Logo" />
             <h4>POS Teminal</h4>
             <p className="p-5">Send, receive all with easy. With or without the internet. No hassle, no delay</p>
           </div>
@@ -69,39 +69,39 @@ const Body = () => (
         <h2 id="h-2">Utility Billers</h2>
         <div className="c-4">
           <div className="i-2">
-            <img src={AppImages.AEDC} className="i-6" alt="Logo" preview={false} />
+            <img src={AppImages.AEDC} className="i-6" alt="Logo" />
             <h4 id="h-5">AEDC</h4>
           </div>
           <div className="i-2">
-            <img src={AppImages.EEDC} className="i-6" alt="Logo" preview={false} />
+            <img src={AppImages.EEDC} className="i-6" alt="Logo" />
             <h4 id="h-5">EEDC</h4>
           </div>
           <div className="i-2">
-            <img src={AppImages.EKEDC} className="i-6" alt="Logo" preview={false} />
+            <img src={AppImages.EKEDC} className="i-6" alt="Logo" />
             <h4 id="h-5">EKEDC</h4>
           </div>
           <div className="i-2">
-            <img src={AppImages.IKEJA_LOGO} className="i-6" alt="Logo" preview={false} />
+            <img src={AppImages.IKEJA_LOGO} className="i-6" alt="Logo" />
             <h4 id="h-5">IKEDC</h4>
           </div>
           <div className="i-2">
-            <img src={AppImages.IBEDC} className="i-6" alt="Logo" preview={false} />
+            <img src={AppImages.IBEDC} className="i-6" alt="Logo" />
             <h4 id="h-5">IBEDC</h4>
           </div>
           <div className="i-2">
-            <img src={AppImages.JEDC} className="i-6" alt="Logo" preview={false} />
+            <img src={AppImages.JEDC} className="i-6" alt="Logo" />
             <h4 id="h-5">JEDC</h4>
           </div>
           <div className="i-2">
-            <img src={AppImages.KEDC} className="i-6" alt="Logo" preview={false} />
+            <img src={AppImages.KEDC} className="i-6" alt="Logo" />
             <h4 id="h-5">KEDC</h4>
           </div>
           <div className="i-2">
-            <img src={AppImages.KEDCO} className="i-6" alt="Logo" preview={false} />
+            <img src={AppImages.KEDCO} className="i-6" alt="Logo" />
             <h4 id="h-5">KEDCO</h4>
           </div>
           <div className="i-2">
-            <img src={AppImages.PHEDC} className="i-6" alt="Logo" preview={false} />
+            <img src={AppImages.PHEDC} className="i-6" alt="Logo" />
             <h4 id="h-5">PHEDC</h4>
           </div>
         </div>
@@ -111,7 +111,7 @@ const Body = () => (
       <h2 id="h-2">Here&apos;s what some users have to say</h2>
       <div className="d-4">
         <div className="c-5">
-          <img src={AppImages.IMAGE_FIVE} className="u-i" alt="Logo" preview={false} />
+          <img src={AppImages.IMAGE_FIVE} className="u-i" alt="Logo" />
           <p className="p-6">
             &quot;When I started using monievend,
             it has been smooth sailing for all my utility recharges&quot;
@@ -119,7 +119,7 @@ const Body = () => (
           <p className="p-5">Adegbite Saviour</p>
         </div>
         <div className="c-5">
-          <img src={AppImages.IMAGE_SIX} className="u-i" alt="Logo" preview={false} />
+          <img src={AppImages.IMAGE_SIX} className="u-i" alt="Logo" />
           <p className="p-6">
             &quot;It is alway very surprisig when I pay for light and I suddenly get the token.
             Like I usually have to...&quot;
@@ -127,7 +127,7 @@ const Body = () => (
           <p className="p-5">Filomina Ezenwata</p>
         </div>
         <div className="c-5">
-          <img src={AppImages.IMAGE_SEVEN} className="u-i" alt="Logo" preview={false} />
+          <img src={AppImages.IMAGE_SEVEN} className="u-i" alt="Logo" />
           <p className="p-6">
             &quot;Using this service to get my POS transactions done is really comvenient.
             Almost too convenient&quot;
@@ -135,7 +135,7 @@ const Body = () => (
           <p className="p-5">Austin Babalola</p>
         </div>
         <div className="c-5">
-          <img src={AppImages.IMAGE_SEVEN} className="u-i" alt="Logo" preview={false} />
+          <img src={AppImages.IMAGE_SEVEN} className="u-i" alt="Logo" />
           <p className="p-6">
             &quot;This is a good service. There’s really no other way to put it&quot;
           </p>

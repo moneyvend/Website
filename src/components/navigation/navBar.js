@@ -14,20 +14,25 @@ const NavBar = () => {
   return (
     <div className="container">
       <div id="c-1">
-        <div>
-          <img src={AppImages.LOGO_VERT} id="logo" className="l-1" alt="Logo" preview={false} />
+        <div id="c-3">
+          <img src={AppImages.LOGO_VERT} id="logo" className="l-1" alt="Logo" />
+          <img src={AppImages.HLOGO} id="h-logo" alt="Logo" />
         </div>
-        <div className="navBar">
-          <button type="button" onClick={handleToggle} className={`toggleBtn ${!navbarOpen ? 'd-none' : ''}`}>
-            <MdClose style={{ color: '#f4f4f4', fontSize: '24px' }} />
+        <div className="navBar" id="c-2">
+          <button type="button" id="bit" onClick={handleToggle} className={`toggleBtn ${!navbarOpen ? 'd-none' : ''}`}>
+            <MdClose style={{ color: '#000', fontSize: '24px' }} />
           </button>
           <ul className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
             <ul className="navList">
-              <li><NavLink id="anchora" to="/products" className="nav-link">Products</NavLink></li>
-              <li><NavLink id="anchorb" to="/merchants" className="nav-link">Merchants</NavLink></li>
-              <li><NavLink id="anchorc" to="/about" className="nav-link">About us</NavLink></li>
-              <li><NavLink id="anchorc" to="/support" className="nav-link">Support</NavLink></li>
+              <div className="op">
+                <li><NavLink id="anchora" to="/products" className="nav-link">Products</NavLink></li>
+                <li><NavLink id="anchorb" to="/merchants" className="nav-link">Merchants</NavLink></li>
+                <li><NavLink id="anchorc" to="/about" className="nav-link">About us</NavLink></li>
+                <li><NavLink id="anchorc" to="/support" className="nav-link">Support</NavLink></li>
+                <li><button type="button" className="batt">Log in</button></li>
+              </div>
             </ul>
+
             <div className="nav-footer">
               <p id="p-10">@Monievend</p>
               <div className="di-1">

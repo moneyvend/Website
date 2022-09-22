@@ -60,5 +60,9 @@ static ETISALAT = `${process.env.PUBLIC_URL}/assets/logo/etisalat-.png`;
 static AIRTEL = `${process.env.PUBLIC_URL}/assets/logo/airtel-.png`;
 
 static STARTIME = `${process.env.PUBLIC_URL}/assets/logo/star-.png`;
+
+static HLOGO = `${process.env.PUBLIC_URL}/assets/logo/logoHorizontal.svg`;
+
+static VLOGO = `${process.env.PUBLIC_URL}/assets/logo/logo-vert.svg`;
 }
 export default AppImages;

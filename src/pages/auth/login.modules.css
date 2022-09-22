@@ -1,0 +1,86 @@
+.pdo {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  padding: 0 20%;
+
+  /* or 20px */
+  text-align: center;
+  color: #4f54a1;
+}
+
+.rep {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 70%;
+  margin: 0 auto 25px auto;
+  background: rgba(29, 30, 38, 0.05);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.rp {
+  padding: 0 12px;
+  height: 30px;
+  color: #030a78;
+  border-radius: 7.59959px;
+  align-self: center;
+  background-color: #ffff;
+  width: 35%;
+  border-style: none;
+  font-size: 11px;
+}
+
+.rp:active,
+.rp:focus {
+  padding: 0 12px;
+  height: 30px;
+  background: #030a78;
+  border-radius: 7.59959px;
+  color: #ffff;
+  width: 35%;
+  border-style: none;
+  align-self: center;
+  font-size: 11px;
+}
+
+.pod {
+  display: none;
+}
+
+.fo-2 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.haw {
+  padding: 8px 32px;
+}
+
+@media only screen and (min-width: 480px) {
+  .contr-1 {
+    display: flex;
+    padding: 5% 0;
+    max-width: 70%;
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .pod {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4rem;
+    padding: 0 8% 4% 8%;
+    display: block;
+    color: #4f54a1;
+    text-align: center;
+  }
+
+  .pdo {
+    display: none;
+  }
+}
