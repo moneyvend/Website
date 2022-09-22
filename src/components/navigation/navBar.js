@@ -15,8 +15,8 @@ const NavBar = () => {
     <div className="container">
       <div id="c-1">
         <div id="c-3">
-          <img src={AppImages.LOGO_VERT} id="logo" className="l-1" alt="Logo" preview={false} />
-          <img src={AppImages.HLOGO} id="h-logo" alt="Logo" preview={false} />
+          <img src={AppImages.LOGO_VERT} id="logo" className="l-1" alt="Logo" />
+          <img src={AppImages.HLOGO} id="h-logo" alt="Logo"  />
         </div>
         <div className="navBar" id="c-2">
           <button type="button" id="bit" onClick={handleToggle} className={`toggleBtn ${!navbarOpen ? 'd-none' : ''}`}>

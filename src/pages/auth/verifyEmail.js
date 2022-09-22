@@ -20,7 +20,7 @@ const RecoverPasswordPage = () => (
         <a className="aw" href="google.com">Login</a>
         <button type="button" className="bwa">Register</button>
       </div>
-      <img src={AppImages.HLOGO} id="img-7" alt="Logo" preview={false} />
+      <img src={AppImages.HLOGO} id="img-7" alt="Logo"  />
       <div className="j-c">
         <h1 id="H1">Verify Email</h1>
         <p className="ppw">

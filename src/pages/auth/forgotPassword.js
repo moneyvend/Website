@@ -19,7 +19,7 @@ const ForgotPasswordPage = () => (
         <a className="aw" href="google.com">Login</a>
         <button type="button" className="bwa">Register</button>
       </div>
-      <img src={AppImages.HLOGO} id="img-7" alt="Logo" preview={false} />
+      <img src={AppImages.HLOGO} id="img-7" alt="Logo" />
       <h1 id="H1">Reset Password</h1>
       <p className="pdw">
         Enter new details of your password
