@@ -72,6 +72,10 @@
   justify-content: center;
 }
 
+.contr-1 .input {
+  padding-left: 16px;
+}
+
 .l-4 {
   font-style: normal;
   font-weight: 600;

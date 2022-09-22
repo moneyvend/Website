@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import AppImages from '../../utilities/images/images';
 
 import Styles from './login.modules.css';
@@ -28,7 +29,8 @@ const LoginPage = () => {
   return (
     <div className="contr-1">
       <div className="dr">
-        <div className="b-r" />
+        {/* <div className="b-r" /> */}
+        <img src={AppImages.VLOGO}  alt="Logo" width={180} />
         <h5>Creating payment solutions</h5>
         <p className="pd">
           A product which specializes in creating
@@ -39,12 +41,12 @@ const LoginPage = () => {
       </div>
       <div id="c--1">
         <div className="haw">
-          <a className="aw" href="google.com">Login</a>
-          <button type="button" className="bwa">Register</button>
+          <button type="button" className="bwa">Login</button>
+          <Link className="aw" to={'/register'}>Register</Link>
         </div>
         <div>
           <img src={AppImages.HLOGO} id="img-7" alt="Logo" preview={false} />
-          <h1 id="H1">Welcome Back</h1>
+          <h1 id="H1">Welcome Back!</h1>
           <p className="pdo">Log In with your phone number or Email address</p>
           <p className="pod">Please sign in to your personal account to start access all payment services.</p>
 
@@ -102,7 +104,7 @@ const LoginPage = () => {
         <div className="fo-2">
           <p className="fo-p">
             Don&apos;t have an account?
-            <a href="google.com" className="l-4">Sign up</a>
+            <Link to="google.com" className="l-4">Sign up</Link>
           </p>
         </div>
       </div>

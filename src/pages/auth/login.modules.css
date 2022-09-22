@@ -58,12 +58,18 @@
   padding-bottom: 50px;
 }
 
+.haw {
+  padding: 8px 32px;
+}
+
+
 @media only screen and (min-width: 480px) {
   .contr-1 {
     display: flex;
     padding: 5% 0;
     max-width: 70%;
     margin: auto;
+    font-family: 'Lato', sans-serif;
   }
 
   .pod {
