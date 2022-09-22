@@ -14,13 +14,11 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  width: 303px;
-  height: 63px;
+  width: 70%;
   margin: 0 auto 25px auto;
   background: rgba(29, 30, 38, 0.05);
   border-radius: 8px;
-
-  /* padding-bottom: ; */
+  padding: 14px;
 }
 
 .rp {
@@ -62,7 +60,6 @@
   padding: 8px 32px;
 }
 
-
 @media only screen and (min-width: 480px) {
   .contr-1 {
     display: flex;
@@ -75,8 +72,8 @@
   .pod {
     font-style: normal;
     font-weight: 400;
-    font-size: 10px;
-    line-height: 140%;
+    font-size: 14px;
+    line-height: 1.4rem;
     padding: 0 8% 4% 8%;
     display: block;
     color: #4f54a1;

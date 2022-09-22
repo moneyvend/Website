@@ -1,7 +1,7 @@
 #H1 {
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 120%;
   color: #030a78;
   text-align: center;
@@ -20,7 +20,7 @@
   flex-direction: column;
   font-style: normal;
   font-weight: 600;
-  font-size: 11px;
+  font-size: 14px;
   width: 100%;
   line-height: 140%;
   gap: 5px;
@@ -34,7 +34,7 @@
 
 .i-1 {
   font-weight: 400;
-  font-size: 9px;
+  font-size: 14px;
   line-height: 140%;
 
   /* or 21px */
@@ -42,13 +42,14 @@
   color: #4f54a1;
   height: 3vh;
   border: 0.949949px solid #f0f0f7;
-  border-radius: 5px;
+  border-radius: 4px;
+  padding-left: 8px;
 }
 
 .l-3 {
   font-style: normal;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 140%;
   gap: 5px;
   text-transform: capitalize;
@@ -79,7 +80,7 @@
 .l-4 {
   font-style: normal;
   font-weight: 600;
-  font-size: 11px;
+  font-size: 14px;
   padding: 0;
   line-height: 140%;
   gap: 5px;
@@ -91,7 +92,7 @@
 
 .fo-p {
   font-weight: 400;
-  font-size: 11px;
+  font-size: 14px;
   color: #4f54a1;
 }
 
@@ -119,6 +120,10 @@
   display: none;
 }
 
+.dr h5 {
+  font-family: 'Inter', sans-serif;
+}
+
 @media only screen and (min-width: 480px) {
   .contr {
     display: flex;
@@ -144,8 +149,13 @@
   }
 
   .dr {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: #030a78;
+    font-size: 18px;
+    max-width: 50%;
   }
 
   .b-r {
@@ -164,7 +174,7 @@
   }
 
   .i-1 {
-    height: 5vh;
+    height: 40px;
     width: 100%;
   }
 
@@ -194,7 +204,7 @@
     flex-direction: column;
     font-style: normal;
     font-weight: 600;
-    font-size: 11px;
+    font-size: 14px;
     width: 70%;
     line-height: 140%;
     gap: 5px;
@@ -202,13 +212,13 @@
   }
 
   #H1 {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   h5 {
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 21px;
     line-height: 120%;
     text-align: center;
     color: #fff;
@@ -218,7 +228,7 @@
   .pd {
     font-style: normal;
     font-weight: 400;
-    font-size: 10px;
+    font-size: 14px;
     line-height: 140%;
     text-align: center;
     color: #f5f7f9;
@@ -243,10 +253,9 @@
     background-color: #030a78;
     border-radius: 5px;
     border-style: none;
-    padding: 0 20px;
-    font-size: 11px;
+    padding: 2px 20px;
+    font-size: 14px;
     font-weight: 500;
-    margin-right: 50px;
   }
 
   .aw {
@@ -257,6 +266,6 @@
     display: flex;
     align-items: center;
     color: #030a78;
-    font-size: 13px;
+    font-size: 14px;
   }
 }

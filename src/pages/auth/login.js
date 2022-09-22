@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AppImages from '../../utilities/images/images';
 
-import Styles from './login.modules.css';
+import './login.modules.css';
 
 const LoginPage = () => {
   const [isShown, setIsShown] = useState(true);
@@ -30,19 +30,18 @@ const LoginPage = () => {
     <div className="contr-1">
       <div className="dr">
         {/* <div className="b-r" /> */}
-        <img src={AppImages.VLOGO}  alt="Logo" width={180} />
+        {/* <img src={AppImages.VLOGO}  alt="Logo" width={180} /> */}
         <h5>Creating payment solutions</h5>
         <p className="pd">
           A product which specializes in creating
           terminal solution products for customers, SME&apos;s and merchats
-
         </p>
 
       </div>
       <div id="c--1">
         <div className="haw">
           <button type="button" className="bwa">Login</button>
-          <Link className="aw" to={'/register'}>Register</Link>
+          <Link className="aw" to="/auth/register">Register</Link>
         </div>
         <div>
           <img src={AppImages.HLOGO} id="img-7" alt="Logo" preview={false} />
