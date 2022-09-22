@@ -1,6 +1,6 @@
 import React from 'react';
 import AppImages from '../../utilities/images/images';
-import Styles from './verifyEmail.modules.css';
+import './verifyEmail.modules.css';
 
 const RecoverPasswordPage = () => (
   <div className="contr">

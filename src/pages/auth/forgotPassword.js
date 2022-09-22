@@ -1,6 +1,6 @@
 import React from 'react';
 import AppImages from '../../utilities/images/images';
-import Styles from './forgotPassword.modules.css';
+import './forgotPassword.modules.css';
 
 const ForgotPasswordPage = () => (
   <div className="contr-3">
