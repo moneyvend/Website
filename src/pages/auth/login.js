@@ -44,7 +44,7 @@ const LoginPage = () => {
           <Link className="aw" to="/auth/register">Register</Link>
         </div>
         <div>
-          <img src={AppImages.HLOGO} id="img-7" alt="Logo"  />
+          <img src={AppImages.HLOGO} id="img-7" alt="Logo" />
           <h1 id="H1">Welcome Back!</h1>
           <p className="pdo">Log In with your phone number or Email address</p>
           <p className="pod">Please sign in to your personal account to start access all payment services.</p>

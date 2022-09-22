@@ -39,7 +39,7 @@ const Footer = () => (
         <p>Cookie policy</p>
       </div>
       <div className="di-1">
-        <img src={AppImages.FACEBOOK} className="im-2" alt="Logo"  />
+        <img src={AppImages.FACEBOOK} className="im-2" alt="Logo" />
         <img src={AppImages.LINKEDIN} className="im-2" alt="Logo" />
         <img src={AppImages.TWITTER} className="im-2" alt="Logo" />
       </div>
