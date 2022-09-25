@@ -61,21 +61,25 @@ static AIRTEL = `${process.env.PUBLIC_URL}/assets/logo/airtel-.png`;
 
 static STARTIME = `${process.env.PUBLIC_URL}/assets/logo/star-.png`;
 
-static  HOME = `${process.env.PUBLIC_URL}/assets/logo/home-icon.svg`;
+static HOME = `${process.env.PUBLIC_URL}/assets/logo/home-icon.svg`;
 
-static  Notifications = `${process.env.PUBLIC_URL}/assets/logo/notifications.svg`;
+static Notifications = `${process.env.PUBLIC_URL}/assets/logo/notifications.svg`;
 
-static  Profile = `${process.env.PUBLIC_URL}/assets/logo/Profile.svg`;
+static Profile = `${process.env.PUBLIC_URL}/assets/logo/Profile.svg`;
 
-static  Vector = `${process.env.PUBLIC_URL}/assets/logo/Vector.svg`;
+static Vector = `${process.env.PUBLIC_URL}/assets/logo/Vector.svg`;
 
-static  Transactions = `${process.env.PUBLIC_URL}/assets/logo/Activity.svg`;
+static Transactions = `${process.env.PUBLIC_URL}/assets/logo/Activity.svg`;
 
 static Search = `${process.env.PUBLIC_URL}/assets/logo/Search.svg`;
 
+static AICON = `${process.env.PUBLIC_URL}/assets/logo/airtelicon.svg`;
+
+static MICON = `${process.env.PUBLIC_URL}/assets/logo/mtnicon.svg`;
+
 static ICON = `${process.env.PUBLIC_URL}/assets/logo/icon.svg`;
 
-
+static PROFILEA = `${process.env.PUBLIC_URL}/assets/logo/profilea.svg`;
 
 }
 
