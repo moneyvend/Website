@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './Airtime.modules.scss';
+import styles from './electricity.modules.scss';
 import AppImages from '../../utilities/images/images';
 
-const Airtime = () => (
+const Electricity = () => (
   <div className="bgpay">
 
     <div className="sidebar">
@@ -95,25 +95,39 @@ const Airtime = () => (
           <select>
             <option value="Airtel">
               <p>
-                Airtel
+                EKEDC
                 {' '}
-                <img src={AppImages.AICON} id="logo" className="g-1" alt="Logo" />
+                <img src={AppImages.EKEDC} id="logo" className="g-1" alt="Logo" />
               </p>
 
             </option>
-            <option value="MTN">MTN</option>
-            <option value="Etisalat">Etisalat</option>
+            <option value="jos">JOS</option>
+            <option value="lAGOS">lAGOS</option>
           </select>
         </div>
       </div>
       <form className="dataf">
-        <div>
-          <p className="airtelp">Phone number</p>
-          <input type="tel" id="phonenumber" className="airtelin" name="phonenumber" />
+        <div className="elec">
+          <div>
+            <p className="airtelp">Account type</p>
+            <input type="text" id="text" className="airteli" name="text" />
+          </div>
+
+          <div>
+            <p className="airtelp">Meter no</p>
+            <input type="tel" id="mp" className="airtelinn" name="meter" />
+          </div>
+
         </div>
-        <div>
-          <p className="airtelp">Amount</p>
-          <input type="tel" id="phonenumber" className="airtelinn" name="phonenumber" />
+        <div className="elec">
+          <div>
+            <p className="airtelp">Phone number</p>
+            <input type="tel" id="phonenumber" className="airtelinn" name="phonenumber" />
+          </div>
+          <div>
+            <p className="airtelp">Amount</p>
+            <input type="number" id="number" className="airtelinn" name="number" min="100" max="500000" />
+          </div>
         </div>
         <div className="profilea">
           <img src={AppImages.PROFILEA} id="logo" className="g-1" alt="Logo" preview={false} />
@@ -126,4 +140,4 @@ const Airtime = () => (
 
 );
 
-export default Airtime;
+export default Electricity;
