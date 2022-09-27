@@ -7,6 +7,7 @@ import Transaction from '../components/transactions/transaction';
 import Airtime from '../components/payments/Airtime';
 import Electricity from '../components/payments/electricity';
 import Summary from '../components/payments/summary';
+import Method from '../components/payments/method';
 
 class DashboardRoutes {
     static routes =
@@ -19,6 +20,8 @@ class DashboardRoutes {
         <Route path="payments/airtime" element={<Airtime />} />
         <Route path="payments/electricity" element={<Electricity />} />
         <Route path="payments/summary" element={<Summary />} />
+        <Route path="payments/method" element={<Method />} />
       </Route>
+
 }
 export default DashboardRoutes;

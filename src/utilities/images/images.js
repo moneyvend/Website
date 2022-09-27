@@ -86,6 +86,10 @@ static Verve = `${process.env.PUBLIC_URL}/assets/logo/Verve.svg`;
 static Visa = `${process.env.PUBLIC_URL}/assets/logo/Visa.svg`;
 
 static Mastercard = `${process.env.PUBLIC_URL}/assets/logo/Master.svg`;
+
+static Link = `${process.env.PUBLIC_URL}/assets/logo/Link.svg`;
+
+static Homer = `${process.env.PUBLIC_URL}/assets/logo/Homer.svg`;
 }
 
 export default AppImages;
