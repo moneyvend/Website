@@ -106,7 +106,6 @@ const Method = () => (
       </button>
       <button type="button" className="probutton">Proceed</button>
     </div>
-    
   </div>
 
 );
