@@ -80,6 +80,12 @@ static MICON = `${process.env.PUBLIC_URL}/assets/logo/mtnicon.svg`;
 static ICON = `${process.env.PUBLIC_URL}/assets/logo/icon.svg`;
 
 static PROFILEA = `${process.env.PUBLIC_URL}/assets/logo/profilea.svg`;
+
+static Verve = `${process.env.PUBLIC_URL}/assets/logo/Verve.svg`;
+
+static Visa = `${process.env.PUBLIC_URL}/assets/logo/Visa.svg`;
+
+static Mastercard = `${process.env.PUBLIC_URL}/assets/logo/Master.svg`;
 }
 
 export default AppImages;

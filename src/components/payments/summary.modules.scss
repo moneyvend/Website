@@ -1,0 +1,110 @@
+.paylist {
+	background: #F0F0F7;
+	width: 400px;
+	border-radius: 1.89607px;
+	margin: 0px 50px;
+    display: flex;
+}
+
+#l1 {
+    font-family: "Mulish", sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 13.2725px;
+padding-top: 10px;
+p {
+	margin-top: 0;
+	/* margin-bottom: 1em; */
+	text-align: left;
+	padding: 0px 0px 0px 20px;
+}
+line-height: 23px;
+
+/* identical to box height, or 171% */
+
+color: #4F54A1;
+margin-top: 10px;
+padding: 0px;
+
+
+}
+
+#l2 {
+    font-family: "Mulish", sans-serif; 
+font-style: normal;
+font-weight: 700;
+font-size: 13.2725px;
+line-height: 23px;
+margin-top: 10px;
+
+/* identical to box height, or 171% */
+
+color: #030A78;
+p {
+	margin-top: 0;
+	/* margin-bottom: 1em; */
+	text-align: left;
+	padding: 0px 0px 0px 20px;
+}
+line-height: 23px;
+}
+
+.deet {
+    font-weight: 500;
+font-size: 15.1686px;
+line-height: 19px;
+text-align: left;
+padding-left: 50px;
+/* identical to box height */
+
+color: #4F54A1;
+}
+
+.deet1 {
+    font-weight: 500;
+font-size: 12px;
+margin-bottom: -23px;
+line-height: 19px;
+text-align: left;
+
+padding-left: 50px;
+/* identical to box height */
+
+color: #4F54A1;
+}
+
+
+.box {
+	border: 1px solid rgb(79, 84, 161);
+	width: 170px;
+	background: transparent;
+	margin-left: 50px;
+	padding: 0px;
+	height: 40px;
+}
+
+#lm {
+    width: 45px; 
+}
+
+.listserv {
+    display: flex; 
+    gap: 20px; 
+    margin-top: -27px;
+    padding-bottom: 20px;
+   
+}
+
+.confbu {
+    width: 100px; 
+
+background: #4F54A1;
+border-radius: 1.89607px;
+font-weight: 600;
+font-size: 12px;
+border-style: none;
+line-height: 21px;
+text-align: center;
+
+color: #FFFFFF;
+}
