@@ -13,7 +13,7 @@ const SettingsNavbar = () => (
       </div>
       <VscBell className="bell" />
     </div>
-    <img src={profilePicture} alt="profile img" />
+    <img src={profilePicture} alt="profile img" className="img-fi" />
     <BsChevronDown className="arrow-down" />
   </div>
 );
