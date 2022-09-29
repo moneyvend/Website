@@ -8,14 +8,14 @@ const Summary = () => (
     <div className="sidebar">
       <div id="sideimg">
         {' '}
-        <img src={AppImages.LOGO_VERT} id="logo" className="lp-1" alt="Logo" preview={false} />
+        <img src={AppImages.LOGO_VERT} id="logo" className="lp-1" alt="Logo" />
       </div>
       <div id="iconside">
         <ul>
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.HOME} className="g-1" id="logo" alt="Logo" preview={false} />
+              <img src={AppImages.HOME} className="g-1" id="logo" alt="Logo" />
               {' '}
               Payment services
             </button>
@@ -24,7 +24,7 @@ const Summary = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Transactions} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Transactions} id="logo" className="g-1" alt="Logo" />
 
               Transactions
             </button>
@@ -33,7 +33,7 @@ const Summary = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Profile} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Profile} id="logo" className="g-1" alt="Logo" />
 
               Beneficiary
             </button>
@@ -42,7 +42,7 @@ const Summary = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Notifications} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Notifications} id="logo" className="g-1" alt="Logo" />
 
               Notifications
             </button>
@@ -52,7 +52,7 @@ const Summary = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" />
 
               Settings
             </button>
@@ -64,7 +64,7 @@ const Summary = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" />
 
               Help
             </button>
@@ -73,7 +73,7 @@ const Summary = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" />
 
               Logout
             </button>
@@ -112,9 +112,9 @@ const Summary = () => (
       <p className="deet">Confirm Payment Method</p>
       <div className="listserv">
         <div className="box">
-          <img src={AppImages.Mastercard} id="lm" className="g-1" alt="Logo" preview={false} width="20px" />
-          <img src={AppImages.Visa} id="lm" className="g-1" alt="Logo" preview={false} />
-          <img src={AppImages.Verve} id="lm" className="g-1" alt="Logo" preview={false} />
+          <img src={AppImages.Mastercard} id="lm" className="g-1" alt="Logo" width="20px" />
+          <img src={AppImages.Visa} id="lm" className="g-1" alt="Logo" />
+          <img src={AppImages.Verve} id="lm" className="g-1" alt="Logo" />
         </div>
         <div>
           <button type="button" className="confbu">Pay with Bank Transfer</button>

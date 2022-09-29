@@ -9,14 +9,14 @@ const PaymentServices = () => (
     <div className="sidebar">
       <div id="sideimg">
         {' '}
-        <img src={AppImages.LOGO_VERT} id="logo" className="lp-1" alt="Logo" preview={false} />
+        <img src={AppImages.LOGO_VERT} id="logo" className="lp-1" alt="Logo" />
       </div>
       <div id="iconside">
         <ul>
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.HOME} className="g-1" id="logo" alt="Logo" preview={false} />
+              <img src={AppImages.HOME} className="g-1" id="logo" alt="Logo" />
               {' '}
               Payment services
             </button>
@@ -25,7 +25,7 @@ const PaymentServices = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Transactions} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Transactions} id="logo" className="g-1" alt="Logo" />
 
               Transactions
             </button>
@@ -34,7 +34,7 @@ const PaymentServices = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Profile} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Profile} id="logo" className="g-1" alt="Logo" />
 
               Beneficiary
             </button>
@@ -43,7 +43,7 @@ const PaymentServices = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Notifications} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Notifications} id="logo" className="g-1" alt="Logo" />
 
               Notifications
             </button>
@@ -53,7 +53,7 @@ const PaymentServices = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" />
 
               Settings
             </button>
@@ -65,7 +65,7 @@ const PaymentServices = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" />
 
               Help
             </button>
@@ -74,7 +74,7 @@ const PaymentServices = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" />
 
               Logout
             </button>
@@ -96,7 +96,7 @@ const PaymentServices = () => (
           <Col span={7}>
             <Card bordered={false} className="crdpay">
               <div className="antic">
-                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" preview={false} />
+                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" />
                 <div className="consta-1">
                   <p className="ai-1">Airtime</p>
                   <p className="pi-1">About all your personal data</p>
@@ -107,7 +107,7 @@ const PaymentServices = () => (
           <Col span={7}>
             <Card bordered={false} className="crdpay">
               <div className="antic">
-                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" preview={false} />
+                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" />
                 <div className="consta-1">
                   <p className="ai-1">Data Services</p>
                   <p className="pi-1">About all your personal data</p>
@@ -118,7 +118,7 @@ const PaymentServices = () => (
           <Col span={7}>
             <Card bordered={false} className="crdpay">
               <div className="antic">
-                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" preview={false} />
+                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" />
                 <div className="consta-1">
                   <p className="ai-1">Electricity Bill</p>
                   <p className="pi-1">About all your personal data</p>
@@ -133,7 +133,7 @@ const PaymentServices = () => (
           <Col span={7}>
             <Card bordered={false} className="crdpay">
               <div className="antic">
-                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" preview={false} />
+                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" />
                 <div className="consta-1">
                   <p className="ai-1">Cable Tv</p>
                   <p className="pi-1">About all your personal data</p>
@@ -144,7 +144,7 @@ const PaymentServices = () => (
           <Col span={7}>
             <Card bordered={false} className="crdpay">
               <div className="antic">
-                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" preview={false} />
+                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" />
                 <div className="consta-1">
                   <p className="ai-1">Internet Subscription</p>
                   <p className="pi-1">About all your personal data</p>
@@ -155,7 +155,7 @@ const PaymentServices = () => (
           <Col span={7}>
             <Card bordered={false} className="crdpay">
               <div className="antic">
-                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" preview={false} />
+                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" />
                 <div className="consta-1">
                   <p className="ai-1">CDA Dues</p>
                   <p className="pi-1">About all your personal data</p>
@@ -170,7 +170,7 @@ const PaymentServices = () => (
           <Col span={7}>
             <Card bordered={false} className="crdpay">
               <div className="antic">
-                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" preview={false} />
+                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" />
                 <div className="consta-1">
                   <p className="ai-1">Betting</p>
                   <p className="pi-1">About all your personal data</p>
@@ -181,7 +181,7 @@ const PaymentServices = () => (
           <Col span={7}>
             <Card bordered={false} className="crdpay">
               <div className="antic">
-                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" preview={false} />
+                <img src={AppImages.ICON} id="logo" className="ant-1" alt="Logo" />
                 <div className="consta-1">
                   <p className="ai-1">Scratch Card</p>
                   <p className="pi-1">About all your personal data</p>

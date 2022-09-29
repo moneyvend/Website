@@ -26,6 +26,5 @@ class DashboardRoutes {
         <Route path="payments/method" element={<Method />} />
         <Route path="payments/recepient" element={<Recepient />} />
       </Route>
-
 }
 export default DashboardRoutes;

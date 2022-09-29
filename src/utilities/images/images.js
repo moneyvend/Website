@@ -93,12 +93,9 @@ static Homer = `${process.env.PUBLIC_URL}/assets/logo/Homer.svg`;
 
 static Notransact = `${process.env.PUBLIC_URL}/assets/logo/notransact.svg`;
 
-
 static Airtelc= `${process.env.PUBLIC_URL}/assets/logo/airtelc.svg`;
 
-
-static  MTNc= `${process.env.PUBLIC_URL}/assets/logo/mtnc.svg`;
-
+static MTNc= `${process.env.PUBLIC_URL}/assets/logo/mtnc.svg`;
 
 static EKEDCc = `${process.env.PUBLIC_URL}/assets/logo/ekedcc.svg`;
 
@@ -107,7 +104,6 @@ static CALENDAR = `${process.env.PUBLIC_URL}/assets/logo/calendar.svg`;
 static GREEN = `${process.env.PUBLIC_URL}/assets/logo/green.svg`;
 
 static RED = `${process.env.PUBLIC_URL}/assets/logo/red.svg`;
-
 }
 
 export default AppImages;

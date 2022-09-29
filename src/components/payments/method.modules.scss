@@ -1,57 +1,55 @@
 .ai-1 {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 140%;
-    color: #030a78;
-    text-align: left;
-    margin: 0;
-  }
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 140%;
+  color: #030a78;
+  text-align: left;
+  margin: 0;
+}
 
-  .pi-1 {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 8px;
-    line-height: 14px;
-    text-align: left;
-    color: #9a9dc9;
-    margin: 0;
-  }
+.pi-1 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 14px;
+  text-align: left;
+  color: #9a9dc9;
+  margin: 0;
+}
 
 .consta-1 {
   align-self: center;
 }
 
 #pii {
-    color: #4F54A1;
+  color: #4f54a1;
 }
-
 
 .bou {
-	display: flex;
-	border: 1px solid rgb(79, 84, 161);
-	border-radius: 7.58428px;
-	background-color: white;
-	width: 300px;
-	padding: 10px 10px;
-	margin-left: 25px;
-
+  display: flex;
+  border: 1px solid rgb(79, 84, 161);
+  border-radius: 7.58428px;
+  background-color: white;
+  width: 300px;
+  padding: 10px 10px;
+  margin-left: 25px;
 }
 
-.bou:active{
-    background-color: #F0F0F7;
+.bou:active {
+  background-color: #f0f0f7;
 }
 
 .probutton {
-	background-color: #030A78;
-	width: 270px;
-	border-radius: 3px;
-	border-style: none;
-	color: white;
-	font-size: 14px;
-	height: 30px;
-	margin-left: 70px;
-	margin-bottom: 170px;
+  background-color: #030a78;
+  width: 270px;
+  border-radius: 3px;
+  border-style: none;
+  color: white;
+  font-size: 14px;
+  height: 30px;
+  margin-left: 70px;
+  margin-bottom: 170px;
 }

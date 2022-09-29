@@ -1,5 +1,5 @@
 import React from 'react';
-import { Space, Table, Tag } from 'antd';
+import { Table, Tag } from 'antd';
 import styles from './transaction.modules.scss';
 import AppImages from '../../utilities/images/images';
 
@@ -60,7 +60,7 @@ const columns = [
     dataIndex: 'amount',
     key: 'amount',
   },
-  
+
 ];
 const data = [
   {
@@ -68,7 +68,7 @@ const data = [
     id:
   <div className="air">
     {' '}
-    <img src={AppImages.GREEN} id="logo" className="aa-1" alt="Logo" preview={false} />
+    <img src={AppImages.GREEN} id="logo" className="aa-1" alt="Logo" />
     {' '}
     <p className="airp">1</p>
 
@@ -76,7 +76,7 @@ const data = [
     date:
   <div className="air">
     {' '}
-    <img src={AppImages.CALENDAR} id="logo" className="aa-1" alt="Logo" preview={false} />
+    <img src={AppImages.CALENDAR} id="logo" className="aa-1" alt="Logo" />
     {' '}
     <p className="airp">{Date(Date.now()).toString().slice(0, -36)}</p>
 
@@ -85,7 +85,7 @@ const data = [
     biller:
   <div className="air">
     {' '}
-    <img src={AppImages.MTNc} id="logo" className="aa-1" alt="Logo" preview={false} />
+    <img src={AppImages.MTNc} id="logo" className="aa-1" alt="Logo" />
     {' '}
     <p className="airp">Mtn</p>
   </div>,
@@ -98,7 +98,7 @@ const data = [
     id:
   <div className="air">
     {' '}
-    <img src={AppImages.GREEN} id="logo" className="aa-1" alt="Logo" preview={false} />
+    <img src={AppImages.GREEN} id="logo" className="aa-1" alt="Logo" />
     {' '}
     <p className="airp">1</p>
 
@@ -107,7 +107,7 @@ const data = [
     date:
   <div className="air">
     {' '}
-    <img src={AppImages.CALENDAR} id="logo" className="aa-1" alt="Logo" preview={false} />
+    <img src={AppImages.CALENDAR} id="logo" className="aa-1" alt="Logo" />
     {' '}
     <p className="airp">{Date(Date.now()).toString().slice(0, -36)}</p>
 
@@ -116,7 +116,7 @@ const data = [
     biller:
   <div className="air">
     {' '}
-    <img src={AppImages.Airtelc} id="logo" className="aa-1" alt="Logo" preview={false} />
+    <img src={AppImages.Airtelc} id="logo" className="aa-1" alt="Logo" />
     {' '}
     <p className="airp">Airtel</p>
   </div>,
@@ -129,7 +129,7 @@ const data = [
     id:
   <div className="air">
     {' '}
-    <img src={AppImages.RED} id="logo" className="aa-1" alt="Logo" preview={false} />
+    <img src={AppImages.RED} id="logo" className="aa-1" alt="Logo" />
     {' '}
     <p className="airp">1</p>
 
@@ -137,7 +137,7 @@ const data = [
     date:
   <div className="air">
     {' '}
-    <img src={AppImages.CALENDAR} id="logo" className="aa-1" alt="Logo" preview={false} />
+    <img src={AppImages.CALENDAR} id="logo" className="aa-1" alt="Logo" />
     {' '}
     <p className="airp">{Date(Date.now()).toString().slice(0, -36)}</p>
 
@@ -146,7 +146,7 @@ const data = [
     biller:
   <div className="air">
     {' '}
-    <img src={AppImages.EKEDCc} id="logo" className="aa-1" alt="Logo" preview={false} />
+    <img src={AppImages.EKEDCc} id="logo" className="aa-1" alt="Logo" />
     {' '}
     <p className="airp">Ekedc</p>
   </div>,
@@ -159,7 +159,7 @@ const data = [
     id:
   <div className="air">
     {' '}
-    <img src={AppImages.RED} id="logo" className="aa-1" alt="Logo" preview={false} />
+    <img src={AppImages.RED} id="logo" className="aa-1" alt="Logo" />
     {' '}
     <p className="airp">1</p>
 
@@ -167,7 +167,7 @@ const data = [
     date:
   <div className="air">
     {' '}
-    <img src={AppImages.CALENDAR} id="logo" className="aa-1" alt="Logo" preview={false} />
+    <img src={AppImages.CALENDAR} id="logo" className="aa-1" alt="Logo" />
     {' '}
     <p className="airp">{Date(Date.now()).toString().slice(0, -36)}</p>
 
@@ -176,7 +176,7 @@ const data = [
     biller:
   <div className="air">
     {' '}
-    <img src={AppImages.EKEDCc} id="logo" className="aa-1" alt="Logo" preview={false} />
+    <img src={AppImages.EKEDCc} id="logo" className="aa-1" alt="Logo" />
     {' '}
     <p className="airp">Ekedc</p>
   </div>,
@@ -189,7 +189,7 @@ const data = [
     id:
   <div className="air">
     {' '}
-    <img src={AppImages.RED} id="logo" className="aa-1" alt="Logo" preview={false} />
+    <img src={AppImages.RED} id="logo" className="aa-1" alt="Logo" />
     {' '}
     <p className="airp">1</p>
 
@@ -197,7 +197,7 @@ const data = [
     date:
   <div className="air">
     {' '}
-    <img src={AppImages.CALENDAR} id="logo" className="aa-1" alt="Logo" preview={false} />
+    <img src={AppImages.CALENDAR} id="logo" className="aa-1" alt="Logo" />
     {' '}
     <p className="airp">{Date(Date.now()).toString().slice(0, -36)}</p>
 
@@ -206,7 +206,7 @@ const data = [
     biller:
   <div className="air">
     {' '}
-    <img src={AppImages.EKEDCc} id="logo" className="aa-1" alt="Logo" preview={false} />
+    <img src={AppImages.EKEDCc} id="logo" className="aa-1" alt="Logo" />
     {' '}
     <p className="airp">Ekedc</p>
   </div>,
@@ -222,14 +222,14 @@ const Transaction = () => (
     <div className="sidebar">
       <div id="sideimg">
         {' '}
-        <img src={AppImages.LOGO_VERT} id="logo" className="lp-1" alt="Logo" preview={false} />
+        <img src={AppImages.LOGO_VERT} id="logo" className="lp-1" alt="Logo" />
       </div>
       <div id="iconside">
         <ul>
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.HOME} className="g-1" id="logo" alt="Logo" preview={false} />
+              <img src={AppImages.HOME} className="g-1" id="logo" alt="Logo" />
               {' '}
               Payment services
             </button>
@@ -238,7 +238,7 @@ const Transaction = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Transactions} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Transactions} id="logo" className="g-1" alt="Logo" />
 
               Transactions
             </button>
@@ -247,7 +247,7 @@ const Transaction = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Profile} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Profile} id="logo" className="g-1" alt="Logo" />
 
               Beneficiary
             </button>
@@ -256,7 +256,7 @@ const Transaction = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Notifications} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Notifications} id="logo" className="g-1" alt="Logo" />
 
               Notifications
             </button>
@@ -266,7 +266,7 @@ const Transaction = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" />
 
               Settings
             </button>
@@ -278,7 +278,7 @@ const Transaction = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" />
 
               Help
             </button>
@@ -287,7 +287,7 @@ const Transaction = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" />
 
               Logout
             </button>

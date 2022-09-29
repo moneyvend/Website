@@ -8,14 +8,14 @@ const Method = () => (
     <div className="sidebar">
       <div id="sideimg">
         {' '}
-        <img src={AppImages.LOGO_VERT} id="logo" className="lp-1" alt="Logo" preview={false} />
+        <img src={AppImages.LOGO_VERT} id="logo" className="lp-1" alt="Logo" />
       </div>
       <div id="iconside">
         <ul>
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.HOME} className="g-1" id="logo" alt="Logo" preview={false} />
+              <img src={AppImages.HOME} className="g-1" id="logo" alt="Logo" />
               {' '}
               Payment services
             </button>
@@ -24,7 +24,7 @@ const Method = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Transactions} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Transactions} id="logo" className="g-1" alt="Logo" />
 
               Transactions
             </button>
@@ -33,7 +33,7 @@ const Method = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Profile} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Profile} id="logo" className="g-1" alt="Logo" />
 
               Beneficiary
             </button>
@@ -42,7 +42,7 @@ const Method = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Notifications} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Notifications} id="logo" className="g-1" alt="Logo" />
 
               Notifications
             </button>
@@ -52,7 +52,7 @@ const Method = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" />
 
               Settings
             </button>
@@ -64,7 +64,7 @@ const Method = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" />
 
               Help
             </button>
@@ -73,7 +73,7 @@ const Method = () => (
           <li>
 
             <button type="button" className="bi-1">
-              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" preview={false} />
+              <img src={AppImages.Vector} id="logo" className="g-1" alt="Logo" />
 
               Logout
             </button>
@@ -91,14 +91,14 @@ const Method = () => (
     <div className="body-text">
       <h2 id="service">Payment Method</h2>
       <button type="button" className="bou">
-        <img src={AppImages.Link} id="logo" className="g-1" alt="Logo" preview={false} />
+        <img src={AppImages.Link} id="logo" className="g-1" alt="Logo" />
         <div className="consta-1">
           <p className="ai-1">Pay with Card</p>
           <p className="pi-1" id="pii">Pay directly from your DEBIT CARD. Your transaction will be completed as soon as your payment is confirmed.</p>
         </div>
       </button>
       <button type="button" className="bou">
-        <img src={AppImages.Homer} id="logo" className="g-1" alt="Logo" preview={false} />
+        <img src={AppImages.Homer} id="logo" className="g-1" alt="Logo" />
         <div className="consta-1">
           <p className="ai-1">Pay with Text</p>
           <p className="pi-1" id="pii">Make payment with your USSD BANK CODE .Your transaction will be completed as soon as your payment is confirmed.</p>
