@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './recepient.modules.scss';
+import './recepient.modules.scss';
 import AppImages from '../../utilities/images/images';
 
 const Recepient = () => (

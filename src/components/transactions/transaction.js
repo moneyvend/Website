@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table, Tag } from 'antd';
-import styles from './transaction.modules.scss';
+import './transaction.modules.scss';
 import AppImages from '../../utilities/images/images';
 
 const columns = [

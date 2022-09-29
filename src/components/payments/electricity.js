@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './electricity.modules.scss';
+import './electricity.modules.scss';
 import AppImages from '../../utilities/images/images';
 
 const Electricity = () => (
