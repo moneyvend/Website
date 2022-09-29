@@ -104,10 +104,6 @@ static CALENDAR = `${process.env.PUBLIC_URL}/assets/logo/calendar.svg`;
 static GREEN = `${process.env.PUBLIC_URL}/assets/logo/green.svg`;
 
 static RED = `${process.env.PUBLIC_URL}/assets/logo/red.svg`;
-
-static HLOGO = `${process.env.PUBLIC_URL}/assets/logo/logoHorizontal.svg`;
-
-static VLOGO = `${process.env.PUBLIC_URL}/assets/logo/logo-vert.svg`;
 }
 
 export default AppImages;
