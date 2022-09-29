@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './noTransaction.modules.scss';
+import './noTransaction.modules.scss';
 import AppImages from '../../utilities/images/images';
 
 const Notransaction = () => (

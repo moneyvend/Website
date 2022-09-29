@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Airtime.modules.scss';
+import './Airtime.modules.scss';
 import AppImages from '../../utilities/images/images';
 
 const Airtime = () => (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Col, Row } from 'antd';
-import styles from './paymentServices.modules.scss';
+import './paymentServices.modules.scss';
 import AppImages from '../../utilities/images/images';
 
 const PaymentServices = () => (

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './summary.modules.scss';
+import './summary.modules.scss';
 import AppImages from '../../utilities/images/images';
 
 const Summary = () => (
