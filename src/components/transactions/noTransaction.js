@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './transaction.modules.scss';
+import styles from './noTransaction.modules.scss';
 import AppImages from '../../utilities/images/images';
 
-const Transaction = () => (
+const Notransaction= () => (
   <div className="bgpay">
 
     <div className="sidebar">
@@ -89,25 +89,16 @@ const Transaction = () => (
       <input id="inputpay" type="text" name="search" placeholder="Search anything ...." />
     </div>
     <div className="body-text">
-      <h2 id="service">Payment Method</h2>
-      <button type="button" className="bou">
-        <img src={AppImages.Link} id="logo" className="g-1" alt="Logo" preview={false} />
-        <div className="consta-1">
-          <p className="ai-1">Pay with Card</p>
-          <p className="pi-1" id="pii">Pay directly from your DEBIT CARD. Your transaction will be completed as soon as your payment is confirmed.</p>
-        </div>
-      </button>
-      <button type="button" className="bou">
-        <img src={AppImages.Homer} id="logo" className="g-1" alt="Logo" preview={false} />
-        <div className="consta-1">
-          <p className="ai-1">Pay with Text</p>
-          <p className="pi-1" id="pii">Make payment with your USSD BANK CODE .Your transaction will be completed as soon as your payment is confirmed.</p>
-        </div>
-      </button>
-      <button type="button" className="probutton">Proceed</button>
+     
+      <img src={AppImages.Notransact} id="logo" className="lps-1" alt="Logo" preview={false} />
+      <p className="nop">No Transaction yet</p>
+      <p className="nop2">After your first transaction you will be able to view it here</p>
     </div>
+
+
+   
   </div>
 
 );
 
-export default Transaction;
+export default Notransaction;

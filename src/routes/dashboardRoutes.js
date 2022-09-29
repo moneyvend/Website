@@ -9,6 +9,7 @@ import Electricity from '../components/payments/electricity';
 import Summary from '../components/payments/summary';
 import Method from '../components/payments/method';
 import Recepient from '../components/payments/recepient';
+import Notransaction from '../components/transactions/noTransaction';
 
 class DashboardRoutes {
     static routes =
@@ -16,6 +17,7 @@ class DashboardRoutes {
         <Route element={<Typography>This is the Home for dashboard</Typography>} index />
         <Route path="settings" element={<Settings />} />
         <Route path="transactions" element={<Transaction />} />
+        <Route path="noTransactions" element={<Notransaction />} />
         <Route path="beneficiaries" element={<Beneficiaries />} />
         <Route path="payments" element={<PaymentServices />} />
         <Route path="payments/airtime" element={<Airtime />} />

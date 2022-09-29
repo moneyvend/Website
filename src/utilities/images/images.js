@@ -90,6 +90,9 @@ static Mastercard = `${process.env.PUBLIC_URL}/assets/logo/Master.svg`;
 static Link = `${process.env.PUBLIC_URL}/assets/logo/Link.svg`;
 
 static Homer = `${process.env.PUBLIC_URL}/assets/logo/Homer.svg`;
+
+static Notransact = `${process.env.PUBLIC_URL}/assets/logo/notransact.svg`;
+
 }
 
 export default AppImages;
