@@ -1,0 +1,229 @@
+
+.bgpay {
+  background-color: #f0f0f7;
+  padding-bottom: 80px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: absolute;
+  left: 0;
+  margin: auto;
+  top: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.lp-1 {
+  width: 100px;
+  margin-left: 50px;
+}
+
+.sidebar div {
+  padding: 8px;
+  font-size: 24px;
+  display: block;
+}
+
+#body-text {
+  margin-left: 201px;
+  font-size: 18px;
+  padding: 0% !important;
+  background-color: white;
+  border: 0.948035px solid #f0f0f7;
+  border-radius: 2px;
+}
+
+#inputpay {
+  background-image: url("https://i.ibb.co/Qp76JCB/Search.png");
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  padding: 10px 5px 10px 20px;
+  text-indent: 20px;
+  margin: 10px 5px 10px 20px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 2s;
+  transition: all 0.2s;
+  height: 30px;
+  width: 200px;
+  font-family: 'Inter', sans-serif;
+  border: 0.948035px solid #f0f0f7;
+  border-radius: 7.58428px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: #4f54a1;
+}
+
+.body-text {
+  font-size: 18px;
+  margin: 20px 30px 20px 230px !important;
+  border: 0.948035px solid #f0f0f7;
+  border-radius: 2px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+#sideimg {
+  border-bottom: 0.948035px solid #f0f0f7;
+  padding: 20px 0;
+}
+
+#iconside {
+  align-content: center;
+  padding: 50px 0 0 0;
+}
+
+.g-1 {
+  width: 10px;
+  margin-right: 5px;
+}
+
+#logo {
+  align-self: center;
+}
+
+.bi-1 {
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13.2725px;
+  line-height: 140%;
+  background: none;
+  border-style: none;
+  padding: 10px 15px;
+  color: #4f54a1;
+}
+
+.active,
+.bi-1:hover {
+  background-color: #030a78;
+  color: white;
+  border-radius: 7.58428px;
+}
+
+@import '~antd/dist/antd.css';
+
+.site-card-wrapper {
+  padding: 5px 200px 5px 30px;
+}
+
+.crdpay {
+  background-color: #f0f0f7;
+}
+
+.ant-card-body {
+  padding: 0 16px;
+}
+
+#st-crd {
+  padding-bottom: 150px;
+}
+
+ul {
+  padding: 0 0 0 20px;
+}
+
+.antic {
+  display: flex;
+  gap: 8px;
+  padding: 10px 0;
+
+  .ai-1 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 140%;
+    color: #030a78;
+    text-align: left;
+    margin: 0;
+  }
+
+  .pi-1 {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 14px;
+    text-align: left;
+    color: #9a9dc9;
+    margin: 0;
+  }
+}
+
+.consta-1 {
+  align-self: center;
+}
+
+#service {
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 29px;
+
+  /* identical to box height */
+
+  color: #030a78;
+  text-align: left;
+  padding: 15px 0 0 30px;
+  margin: 0;
+}
+
+.page {
+  padding: 0 31px;
+}
+
+.select-dropdown {
+  position: relative;
+  background-color: #cfcce0;
+  opacity: 0.8;
+  border: 0.731316px solid #f0f0f7;
+  width: auto;
+  float: left;
+  max-width: 100%;
+  border-radius: 2px;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  color: #030a78;
+
+  select {
+    font-family: "helvetica neue", sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    max-width: 100%;
+    border-radius: 7.58428px;
+    padding: 5px 17px 5px 10px;
+    border: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:active,
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #aaa;
+  }
+}

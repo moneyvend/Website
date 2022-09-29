@@ -1,0 +1,29 @@
+.air {
+  display: flex;
+  gap: 2px;
+  margin: 0;
+}
+
+.airp {
+  color: #030a78;
+  font-size: 13px;
+  padding-top: 3px;
+  margin: 0;
+}
+
+.ant-table-wrapper {
+  clear: both;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.ant-table-thead > tr > th {
+  position: relative;
+  color: #9a9dc9;
+  font-weight: 500;
+  text-align: left;
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.3s ease;
+  font-size: 15px;
+}

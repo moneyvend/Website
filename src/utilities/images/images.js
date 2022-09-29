@@ -61,8 +61,53 @@ static AIRTEL = `${process.env.PUBLIC_URL}/assets/logo/airtel-.png`;
 
 static STARTIME = `${process.env.PUBLIC_URL}/assets/logo/star-.png`;
 
+static HOME = `${process.env.PUBLIC_URL}/assets/logo/home-icon.svg`;
+
+static Notifications = `${process.env.PUBLIC_URL}/assets/logo/notifications.svg`;
+
+static Profile = `${process.env.PUBLIC_URL}/assets/logo/Profile.svg`;
+
+static Vector = `${process.env.PUBLIC_URL}/assets/logo/Vector.svg`;
+
+static Transactions = `${process.env.PUBLIC_URL}/assets/logo/Activity.svg`;
+
+static Search = `${process.env.PUBLIC_URL}/assets/logo/Search.svg`;
+
+static AICON = `${process.env.PUBLIC_URL}/assets/logo/airtelicon.svg`;
+
+static MICON = `${process.env.PUBLIC_URL}/assets/logo/mtnicon.svg`;
+
+static ICON = `${process.env.PUBLIC_URL}/assets/logo/icon.svg`;
+
+static PROFILEA = `${process.env.PUBLIC_URL}/assets/logo/profilea.svg`;
+
+static Verve = `${process.env.PUBLIC_URL}/assets/logo/Verve.svg`;
+
+static Visa = `${process.env.PUBLIC_URL}/assets/logo/Visa.svg`;
+
+static Mastercard = `${process.env.PUBLIC_URL}/assets/logo/Master.svg`;
+
+static Link = `${process.env.PUBLIC_URL}/assets/logo/Link.svg`;
+
+static Homer = `${process.env.PUBLIC_URL}/assets/logo/Homer.svg`;
+
+static Notransact = `${process.env.PUBLIC_URL}/assets/logo/notransact.svg`;
+
+static Airtelc= `${process.env.PUBLIC_URL}/assets/logo/airtelc.svg`;
+
+static MTNc= `${process.env.PUBLIC_URL}/assets/logo/mtnc.svg`;
+
+static EKEDCc = `${process.env.PUBLIC_URL}/assets/logo/ekedcc.svg`;
+
+static CALENDAR = `${process.env.PUBLIC_URL}/assets/logo/calendar.svg`;
+
+static GREEN = `${process.env.PUBLIC_URL}/assets/logo/green.svg`;
+
+static RED = `${process.env.PUBLIC_URL}/assets/logo/red.svg`;
+
 static HLOGO = `${process.env.PUBLIC_URL}/assets/logo/logoHorizontal.svg`;
 
 static VLOGO = `${process.env.PUBLIC_URL}/assets/logo/logo-vert.svg`;
 }
+
 export default AppImages;
