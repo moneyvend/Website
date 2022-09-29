@@ -1,8 +1,12 @@
-import { Typography } from 'antd';
 import React from 'react';
+import SettingsNavbar from './navbar/settingsNavbar';
+import Sidebar from './sidebar/sidebar';
 
 const Settings = () => (
-  <Typography> Dashoard Settings Page</Typography>
+  <div style={{ display: 'flex' }}>
+    <Sidebar />
+    <SettingsNavbar />
+  </div>
 );
 
 export default Settings;
