@@ -4,26 +4,27 @@ import styles from './banner.modules.scss'; // eslint-disable-line no-unused-var
 import AppImages from '../../utilities/images/images';
 
 const Banner = () => (
-  <div className="sect">
-    <div className="header-wrapper">
-      <div className="text-container">
-        <p className="header-text">
-          Pay easy, internet or not
-        </p>
-        <b>
-          <h1 id="H-1">
-            The Simplest Way For Fast Payments
-          </h1>
-        </b>
-        <button type="button" className="payment">Bill payments</button>
-        <button type="button" className="merchant">
-          Become a merchant
-          <FiChevronRight className="greater" />
-        </button>
+  <div>
+    <div className="sect">
+      <div className="header-wrapper">
+        <div className="text-container">
+          <p className="header-text">
+            Pay easy, internet or not
+          </p>
+          <b>
+            <h1 id="H-1">
+              The Simplest Way For Fast Payments
+            </h1>
+          </b>
+          <button type="button" className="payment">Bill payments</button>
+          <button type="button" className="merchant">
+            Become a merchant
+            <FiChevronRight className="greater" />
+          </button>
+        </div>
+        <img src={AppImages.IMAGE_ONE} id="image-one" alt="Logo" />
       </div>
-      <img src={AppImages.IMAGE_ONE} id="image-one" alt="Logo" />
     </div>
-
     <div className="bod">
       <div className="slider">
         <div className="slide-track">

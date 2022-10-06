@@ -27,7 +27,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
   margin-bottom: 85px;
   margin-top: 40px;
 }
@@ -96,7 +95,8 @@
   display: flex;
   height: 10vh;
   justify-content: center;
-  padding-top: 100px;
+  margin-top: 10em;
+  margin-bottom: 10em;
 }
 
 $animationSpeed: 40s;
@@ -143,32 +143,38 @@ $animationSpeed: 40s;
     animation: scroll $animationSpeed linear infinite;
     display: flex;
     width: calc(250px * 14);
+    background-color: #f0f2f5;
   }
 
   .slide {
     height: 100px;
     width: 300px;
+    background-color: #f0f2f5;
   }
 }
 
 .se-1 {
   width: 120px;
   height: 90px;
+  background-color: #f0f0f7;
 }
 
 .se-2 {
   width: 100px;
   height: 90px;
+  background-color: #f0f0f7;
 }
 
 .se-3 {
   height: 90px;
   width: 200px;
+  background-color: #f0f0f7;
 }
 
 .se-4 {
   height: 90px;
   width: 200px;
+  background-color: #f0f0f7;
 }
 
 @media only screen and (max-width: 475px) {

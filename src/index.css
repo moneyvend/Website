@@ -8,6 +8,7 @@ body {
   /* padding: 0 4%; */
   font-family: 'Lato', sans-serif;
   overflow-x: hidden;
+  background-color: white !important;
 }
 
 :root {
