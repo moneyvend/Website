@@ -24,7 +24,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 2% 32px 2%;
+  padding: 20px 5% 32px 5%;
 }
 
 .l-1 {
@@ -36,6 +36,7 @@ a {
 }
 
 .navList {
+  margin: 0;
   display: flex;
   gap: 50px;
   font-size: 14px;
@@ -44,21 +45,24 @@ a {
 
 .login {
   background-color: #030a78;
-  color: white;
+  color: white !important;
   border-radius: 5px;
   border: 0;
-  padding: 12px 28px;
+  padding: 8px 35px;
   font-family: 'Mulish', sans-serif;
-}
-
-.login a {
-  color: white;
+  font-size: 20px;
 }
 
 .nav-link {
-  font-family: 'Mulish', sans-serif;
-  font-size: 16px;
-  color: #000;
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #000000 !important;
+  padding-inline: 20px;
 }
 
 .toggleBtn {

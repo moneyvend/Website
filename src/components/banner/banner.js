@@ -18,7 +18,7 @@ const Banner = () => (
         <button type="button" className="payment">Bill payments</button>
         <button type="button" className="merchant">
           Become a merchant
-          <FiChevronRight />
+          <FiChevronRight className="greater" />
         </button>
       </div>
       <img src={AppImages.IMAGE_ONE} id="image-one" alt="Logo" />
