@@ -7,7 +7,7 @@ const RegisterPage = () => (
 
     <div className="dr">
       {/* <div className="b-r" /> */}
-      <h5>Creating payment solutions</h5>
+      <h5>Creating payment solution</h5>
       <p className="pd">
         A product which specializes in creating
         terminal solution products for customers, SME&apos;s and merchats
