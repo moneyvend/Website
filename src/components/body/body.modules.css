@@ -72,6 +72,7 @@ h3 {
   align-items: center;
   padding: 8px 15px;
   background-color: #fff;
+  width: 27%;
 }
 
 h4 {
@@ -130,13 +131,13 @@ h4 {
 
 #h4 {
   font-family: 'Mulish';
+    margin-bottom: 1em;
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
     line-height: 56px;
-    color: #030A78;
-    padding-top: 3.1em;
-    margin-bottom: 1em;
+    text-transform: capitalize;
+    color: #FFFFFF;
 }
 
 .c-3 #h4 {
@@ -145,13 +146,13 @@ h4 {
 }
 
 #p-6 {
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 36px;
   text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #FFFFFF;
 }
 
 #p-7 {
@@ -165,12 +166,38 @@ h4 {
 
 .c-3 #p-7 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 13px;
-  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
   text-align: center;
+  color: #FFFFFF;
 }
 
+.be-2{
+  display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 30px 56px !important;
+    background: linear-gradient(90deg, #030A78 0%, #2B0990 28.65%, #8E07CD 100%) !important;
+    border-radius: 8px !important;
+    border: none !important;
+    color: white !important;
+    font-size: 20px !important;
+}
+.logoComp{
+  width: 65%;
+    margin-top: 6em;
+}
+
+.UtilityBillers{
+  height: 684px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .c-3 #p-6 {
   line-height: normal;
   font-weight: 300;
@@ -321,7 +348,7 @@ h4 {
   font-family: 'Mulish', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
   padding-bottom: 20px;
   background: linear-gradient(90deg, #030a78 0%, #2b0990 28.65%, #8e07cd 100%);
   -webkit-background-clip: text;
@@ -340,9 +367,11 @@ h4 {
 
 .f-3 {
   display: flex;
+  padding: 50px 15px;
   padding: 50px 50px 0 50px;
   gap: 100px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .im-2 {
@@ -355,7 +384,7 @@ h4 {
   align-self: center;
   font-family: 'Mulish', sans-serif;
   color: #1d1e26;
-  padding-bottom: 18px;
+  /* padding-bottom: 18px; */
 }
 
 #p-10 {
@@ -374,16 +403,40 @@ footer {
 
 .newsletter {
   padding: 8vh 20vw;
+  margin: 7em 0;
+}
+
+.letter{
+  font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 56px;
+    color: #030A78;
+}
+
+.sign{
+  font-family: 'Mulish';
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 20px !important;
+  line-height: 25px !important;
+  letter-spacing: 0.02em !important;
+  color: #000000;
+  margin-bottom: 3em;
 }
 
 .newsletter input {
-  width: 50%;
-  border: 1px solid rgba(29, 30, 38, 0.25);
-  border-radius: 4px;
-  height: 48px;
   font-size: 14px;
   font-weight: 300;
   font-family: "Poppins", sans-serif;
+  padding: 16px 104px 16px 24px;
+  gap: 16px;
+  width: 70%;
+  height: 73px;
+  background: #FFFFFF;
+  border: 2px solid rgba(29, 30, 38, 0.25);
+  border-radius: 8px;
 }
 
 .newsletter form {
@@ -393,9 +446,23 @@ footer {
 .newsletter form button {
   border: none;
   border-radius: 8px;
-  padding: 8px 20px;
-  font-size: 14px;
+  padding: 8px 50px;
+  font-size: 18px;
   font-family: "Mulish", sans-serif;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footerWith{
+  width: 70%;
+}
+.footerWith2{
+  width: 70%;
 }
 
 .body-text2{

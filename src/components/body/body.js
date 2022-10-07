@@ -59,7 +59,7 @@ const Body = () => (
           outcome based on how well it serves our customers.
         </p>
         <div className="b-3">
-          <Button className="b-2" type="button">
+          <Button className="b-2 be-2" type="button">
             Become a Merchant
           </Button>
         </div>
@@ -67,9 +67,9 @@ const Body = () => (
 
     </section>
     <section>
-      <div>
+      <div className="UtilityBillers">
         <h2 id="h-2">Utility Billers</h2>
-        <div className="c-4">
+        <div className="c-4 logoComp">
           <div className="i-2">
             <img src={AppImages.AEDC} className="i-6" alt="Logo" />
             <h4 id="h-5">AEDC</h4>
@@ -146,8 +146,8 @@ const Body = () => (
       </div>
     </section>
     <section className="newsletter">
-      <h2>Newsletter</h2>
-      <p className="p-7">Sign up for our newsletter to be the first to know about our services</p>
+      <h2 className="letter">Newsletter</h2>
+      <p className="p-7 sign">Sign up for our newsletter to be the first to know about our services</p>
       <form className="f-1">
         <input type="email" id="email" name="email" className="in-1" placeholder="Email Address" />
         <button type="button" className="b-4">Sign-Up</button>

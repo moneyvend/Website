@@ -2,8 +2,8 @@ import AppImages from '../../utilities/images/images';
 import Styles from './body.modules.css'; // eslint-disable-line no-unused-vars
 
 const Footer = () => (
-  <footer>
-    <div className="f-2">
+  <footer className="footer">
+    <div className="f-2 footerWith">
       <ul className="p-9">
         <li id="p-8">Resources</li>
         <li>Prices</li>
@@ -31,7 +31,7 @@ const Footer = () => (
         <li>support@monievend.com</li>
       </ul>
     </div>
-    <div className="f-3">
+    <div className="f-3 footerWith2">
       <p id="p-10">@Monievend</p>
       <div className="di-1">
         <p>Terms of service</p>
