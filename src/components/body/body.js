@@ -6,24 +6,26 @@ import Footer from './footer';
 const Body = () => (
   <Layout>
     <section className="s-4">
-      <h2 id="h-2">Why monievend ?</h2>
-      <div className="body-text">
-        <div className="body-para">
-          <h3>Easy, Simple, Quick and Safe</h3>
-          <p className="p-11">
-            All customer transactions get the special treatment.
-            Cutting edge technology for super fast,
-            super safe and an easy to use interface for the best possible experience working with us
+      <div className="holdWhy">
+        <h2 id="h-2">Why Monievend ?</h2>
+        <div className="body-text2">
+          <div className="body-para">
+            <h3>Easy, Simple, Quick and Safe</h3>
+            <p className="p-11">
+              All customer transactions get the special treatment.
+              Cutting edge technology for super fast,
+              super safe and an easy to use interface for
+              the best possible experience working with us
+            </p>
+          </div>
+          <div className="body-para">
+            <h3>Guaranteed Fluidity</h3>
+            <p className="p-11">
+              With cutting edge and industry leading software and API’s integrated into the system,
+              you can always expect the best of the best services always
 
-          </p>
-        </div>
-        <div className="body-para">
-          <h3>Guaranteed Fluidity</h3>
-          <p className="p-11">
-            With cutting edge and industry leading software and API’s integrated into the system,
-            you can always expect the best of the best services always
-
-          </p>
+            </p>
+          </div>
         </div>
       </div>
       <div className="s-5">
