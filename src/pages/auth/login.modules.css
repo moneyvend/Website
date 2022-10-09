@@ -10,15 +10,19 @@
   color: #4f54a1;
 }
 
+.holdLogin {
+  height: 100vh;
+  display: flex;
+}
+
 .rep {
   display: flex;
   justify-content: center;
   gap: 10px;
   width: 70%;
-  margin: 0 auto 25px auto;
   background: rgba(29, 30, 38, 0.05);
-  border-radius: 8px;
-  padding: 14px;
+  padding: 10px !important;
+  border-radius: 5px;
 }
 
 .rp {
@@ -63,7 +67,8 @@
 @media only screen and (min-width: 480px) {
   .contr-1 {
     display: flex;
-    padding: 5% 0;
+
+    /* padding: 5% 0; */
     max-width: 70%;
     margin: auto;
     font-family: 'Lato', sans-serif;

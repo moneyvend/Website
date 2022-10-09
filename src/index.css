@@ -5,6 +5,7 @@
 
 body {
   margin: 0;
+
   /* padding: 0 4%; */
   font-family: 'Lato', sans-serif;
   overflow-x: hidden;
@@ -19,4 +20,8 @@ body {
 button:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+a:hover {
+  color: #030a78 !important;
 }

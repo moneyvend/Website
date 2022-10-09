@@ -24,12 +24,12 @@ h3 {
 }
 
 .body-para h3 {
-  font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 40px;
-    color: #1D1E26;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: #1d1e26;
 }
 
 .p-11 {
@@ -39,15 +39,15 @@ h3 {
 }
 
 .body-para .p-11 {
-  font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: rgba(29, 30, 38, 0.75);
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(29, 30, 38, 0.75);
 }
 
 .s-4 {
@@ -130,14 +130,14 @@ h4 {
 }
 
 #h4 {
-  font-family: 'Mulish';
-    margin-bottom: 1em;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 56px;
-    text-transform: capitalize;
-    color: #FFFFFF;
+  font-family: 'Mulish', sans-serif;
+  margin-bottom: 1em;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 56px;
+  text-transform: capitalize;
+  color: #fff;
 }
 
 .c-3 #h4 {
@@ -147,12 +147,12 @@ h4 {
 
 #p-6 {
   text-align: center;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 #p-7 {
@@ -171,33 +171,35 @@ h4 {
   font-size: 16px;
   line-height: 26px;
   text-align: center;
-  color: #FFFFFF;
+  color: #fff;
 }
 
-.be-2{
+.be-2 {
   display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding: 30px 56px !important;
-    background: linear-gradient(90deg, #030A78 0%, #2B0990 28.65%, #8E07CD 100%) !important;
-    border-radius: 8px !important;
-    border: none !important;
-    color: white !important;
-    font-size: 20px !important;
-}
-.logoComp{
-  width: 65%;
-    margin-top: 6em;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 30px 56px !important;
+  background: linear-gradient(90deg, #030a78 0%, #2b0990 28.65%, #8e07cd 100%) !important;
+  border-radius: 8px !important;
+  border: none !important;
+  color: white !important;
+  font-size: 20px !important;
 }
 
-.UtilityBillers{
-  height: 684px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.logoComp {
+  width: 65%;
+  margin-top: 6em;
 }
+
+.UtilityBillers {
+  height: 684px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .c-3 #p-6 {
   line-height: normal;
   font-weight: 300;
@@ -231,7 +233,7 @@ h4 {
   font-weight: 700;
   font-size: 45px;
   line-height: 56px;
-  color: #030A78;
+  color: #030a78;
   margin-bottom: 4%;
   margin-bottom: 20px;
 }
@@ -384,6 +386,7 @@ h4 {
   align-self: center;
   font-family: 'Mulish', sans-serif;
   color: #1d1e26;
+
   /* padding-bottom: 18px; */
 }
 
@@ -406,23 +409,23 @@ footer {
   margin: 7em 0;
 }
 
-.letter{
-  font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 56px;
-    color: #030A78;
+.letter {
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 56px;
+  color: #030a78;
 }
 
-.sign{
-  font-family: 'Mulish';
+.sign {
+  font-family: 'Mulish', sans-serif;
   font-style: normal !important;
   font-weight: 600 !important;
   font-size: 20px !important;
   line-height: 25px !important;
   letter-spacing: 0.02em !important;
-  color: #000000;
+  color: #000;
   margin-bottom: 3em;
 }
 
@@ -434,7 +437,7 @@ footer {
   gap: 16px;
   width: 70%;
   height: 73px;
-  background: #FFFFFF;
+  background: #fff;
   border: 2px solid rgba(29, 30, 38, 0.25);
   border-radius: 8px;
 }
@@ -451,28 +454,29 @@ footer {
   font-family: "Mulish", sans-serif;
 }
 
-.footer{
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.footerWith{
-  width: 70%;
-}
-.footerWith2{
+.footerWith {
   width: 70%;
 }
 
-.body-text2{
+.footerWith2 {
+  width: 70%;
+}
+
+.body-text2 {
   font-size: 18px;
-    display: flex;
-    flex-direction: row;
-    width: 54%;
-    margin-top: 30px;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-direction: row;
+  width: 54%;
+  margin-top: 30px;
+  justify-content: center;
+  text-align: center;
 }
 
 @media only screen and (max-width: 475px) {
@@ -490,10 +494,10 @@ footer {
     font-weight: 700;
     font-size: 18px;
   }
+
   .body-text2 {
     flex-direction: column;
   }
-  
 
   .body-para {
     width: 100%;
@@ -630,7 +634,8 @@ footer {
     width: 10px;
   }
 }
-.holdWhy{
+
+.holdWhy {
   display: flex;
   justify-content: center;
   align-items: center;
