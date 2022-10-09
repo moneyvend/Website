@@ -54,7 +54,7 @@ a {
 }
 
 .nav-link {
-  font-family: 'Mulish';
+  font-family: 'Mulish', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
