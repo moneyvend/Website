@@ -5,14 +5,14 @@
   line-height: 120%;
   color: #030a78;
   text-align: center;
-  padding-top: 20px;
 }
 
 #f-3 {
+  
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-top: 5%;
+
 }
 
 .l-1 {
@@ -55,6 +55,7 @@
   text-transform: capitalize;
   align-self: center;
   color: #030a78;
+  padding: 0;
 }
 
 #b-r {
@@ -127,7 +128,6 @@
 @media only screen and (min-width: 480px) {
   .contr {
     display: flex;
-    padding: 2.7% 0;
     max-width: 70%;
     margin: auto;
   }
@@ -199,7 +199,6 @@
 
   .l-2 {
     justify-content: space-between;
-    margin: 10px 0;
     gap: 100px;
     width: 100%;
   }
