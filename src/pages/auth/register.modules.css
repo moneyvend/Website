@@ -8,11 +8,9 @@
 }
 
 #f-3 {
-  
   display: flex;
   flex-direction: column;
   gap: 20px;
-
 }
 
 .l-1 {
@@ -80,15 +78,15 @@
 
 .l-4 {
   font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 0;
-    line-height: 140%;
-    gap: 5px;
-    align-self: center;
-    color: #030a78;
-    display: inline-block;
-    margin-left: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0;
+  line-height: 140%;
+  gap: 5px;
+  align-self: center;
+  color: #030a78;
+  display: inline-block;
+  margin-left: 5px;
 }
 
 .fo-p {
@@ -166,7 +164,7 @@
     justify-self: center;
   }
 
-  .holdWswitch{
+  .holdWswitch {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,7 +178,7 @@
     padding: 0 30px;
   }
 
-  .evenPadding{
+  .evenPadding {
     padding: 0 5em;
   }
 
@@ -229,7 +227,7 @@
 
   input[type=checkbox] {
     margin-right: 10px;
-}
+  }
 
   #H1 {
     font-size: 26px;
