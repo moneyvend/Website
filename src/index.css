@@ -20,3 +20,7 @@ button:hover {
   cursor: pointer;
   opacity: 0.8;
 }
+
+a:hover {
+  color: #030a78 !important;
+}
