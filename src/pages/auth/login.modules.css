@@ -10,7 +10,7 @@
   color: #4f54a1;
 }
 
-.holdLogin{
+.holdLogin {
   height: 100vh;
   display: flex;
 }
@@ -64,11 +64,10 @@
   padding: 8px 32px;
 }
 
-
-
 @media only screen and (min-width: 480px) {
   .contr-1 {
     display: flex;
+
     /* padding: 5% 0; */
     max-width: 70%;
     margin: auto;

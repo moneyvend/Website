@@ -54,14 +54,14 @@ a {
 }
 
 .nav-link {
-  font-family: 'Mulish';
+  font-family: 'Mulish', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
   line-height: 25px;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #000000 !important;
+  color: #000 !important;
   padding-inline: 20px;
 }
 

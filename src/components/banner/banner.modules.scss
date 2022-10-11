@@ -3,7 +3,7 @@
 }
 
 .header-text {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -16,7 +16,7 @@
 }
 
 #H-1 {
-  font-family: "Mulish";
+  font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 90px;
@@ -26,7 +26,6 @@
   background: linear-gradient(90deg, #8e07cd 0%, #030a78 48.44%, #1d1e26 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
   margin-bottom: 85px;
   margin-top: 40px;
 }
@@ -52,7 +51,7 @@
   border-color: rgb(3, 10, 120) rgb(43, 9, 144) rgb(142, 7, 205);
   margin-left: 30px;
   border-width: 5px;
-  font-family: "Mulish";
+  font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -106,6 +105,7 @@ $animationSpeed: 40s;
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(calc(-250px * 7));
   }
