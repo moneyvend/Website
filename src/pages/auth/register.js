@@ -26,7 +26,7 @@ const RegisterPage = () => (
         <form id="f-3">
 
           <label className="l-1" htmlFor="name">
-            Full name*
+            Full name
             <input type="text" className="i-1" name="name" id="name" placeholder="Username" />
           </label>
 

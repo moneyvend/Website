@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import AppImages from '../../utilities/images/images';
 
 import './login.modules.css';
@@ -7,6 +7,7 @@ import './login.modules.css';
 const LoginPage = () => {
   const [isShown, setIsShown] = useState(true);
   const [isEmail, setIsEmail] = useState(false);
+  const navigate = useNavigate();
   const handleClick = (e) => {
     e.preventDefault();
     setIsShown(true);
@@ -98,7 +99,16 @@ const LoginPage = () => {
                 </label>
                 <a href="google.com" className="l-3"> Forgot Password? </a>
               </div>
-              <button type="button" id="b-r">Log in</button>
+              <button
+                type="button"
+                id="b-r"
+                onClick={() => {
+                  navigate('/register');
+                }}
+              >
+                Log in
+
+              </button>
             </form>
           )}
 
