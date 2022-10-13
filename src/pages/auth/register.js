@@ -51,7 +51,7 @@ const RegisterPage = () => (
               <input type="checkbox" name="check" id="check" />
               Remember me
             </label>
-            <a href="google.com" className="l-3"> Forgot Password? </a>
+            <Link to="/auth/password-reset" className="l-3"> Forgot Password? </Link>
           </div>
           <button type="button" id="b-r">Sign up</button>
         </form>

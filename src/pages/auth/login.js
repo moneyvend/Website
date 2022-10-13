@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import AppImages from '../../utilities/images/images';
 
 import './login.modules.css';
@@ -7,7 +7,6 @@ import './login.modules.css';
 const LoginPage = () => {
   const [isShown, setIsShown] = useState(true);
   const [isEmail, setIsEmail] = useState(false);
-  const navigate = useNavigate();
   const handleClick = (e) => {
     e.preventDefault();
     setIsShown(true);
@@ -75,7 +74,7 @@ const LoginPage = () => {
                   <input type="checkbox" name="check" id="check" />
                   Remember me
                 </label>
-                <a href="google.com" className="l-3"> Forgot Password? </a>
+                <Link to="/auth/password-reset" className="l-3"> Forgot Password?</Link>
               </div>
               <button type="button" id="b-r">Log in</button>
             </form>
@@ -97,25 +96,16 @@ const LoginPage = () => {
                   <input type="checkbox" name="check" id="check" />
                   Remember me
                 </label>
-                <a href="google.com" className="l-3"> Forgot Password? </a>
+                <Link to="/auth/password-reset" className="l-3"> Forgot Password? </Link>
               </div>
-              <button
-                type="button"
-                id="b-r"
-                onClick={() => {
-                  navigate('/register');
-                }}
-              >
-                Log in
-
-              </button>
+              <button type="button" id="b-r">Log in</button>
             </form>
           )}
 
           <div className="fo-2 evenPadding">
             <p className="fo-p">
               Don&apos;t have an account?
-              <Link to="google.com" className="l-4">Sign up</Link>
+              <Link to="/auth/register" className="l-4">Sign up</Link>
             </p>
           </div>
         </div>
