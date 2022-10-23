@@ -31,7 +31,7 @@ a:hover {
   display: flex;
 }
 
-.navBar{
+.navBar2{
   width: 20%;
   height: 100vh;
   overflow-y: scroll;
@@ -106,8 +106,8 @@ a:hover {
 .bell{
   font-size: 25px;
     color: gray;
-    margin-right: -14px;
-    margin-top: 3px;
+    margin-right: -11px;
+    margin-top: -8px;
 }
 
 .redDot{
@@ -116,6 +116,7 @@ a:hover {
     background-color: red;
     border-radius: 50%;
     display: flex;
+    z-index: 1;
 }
 
 .holdImage{

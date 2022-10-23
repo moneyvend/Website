@@ -16,7 +16,15 @@
     margin-bottom: 1.5em;
     font-weight: bold;
     color: #0b0978;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.logo .imageLogo{
+    width: 60%;
+}
+
 
 .holdNavList{
     margin: 0;
@@ -37,7 +45,7 @@
     color: #4e4cbf;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: baseline;
     padding: 15px;
     text-decoration: none;
 }

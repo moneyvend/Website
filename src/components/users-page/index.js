@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable quotes */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
@@ -14,6 +15,7 @@ import { HiOutlineBell } from 'react-icons/hi';
 import { Link, Outlet } from 'react-router-dom';
 import IndexStyles from './Index.module.css';
 import manProfile from '../../utilities/images/man.jfif';
+import AppImages from '../../utilities/images/images';
 
 export default function Index() {
     const [navValue, setNavValue] = useState('');
@@ -26,58 +28,60 @@ export default function Index() {
         tabs();
     });
 
-    // const tabs = () => {
-    //     setNavValue(window.location.pathname);
-    //     console.log(navValue);
-    // };
+    const tabs = () => {
+        setNavValue(window.location.pathname);
+        console.log(navValue);
+    };
 
     return (
         <div className='holdAll'>
-            <div className='navBar'>
+            <div className='navBar2'>
                 <div className={IndexStyles.holdNav}>
                     <nav className={IndexStyles.nav}>
-                        <p className={IndexStyles.logo}>LOGO</p>
+                        <p className={IndexStyles.logo}><img src={AppImages.LOGO_VERT} id="logo" className="imageLogo" alt="Logo" /></p>
                         <ul className={IndexStyles.holdNavList}>
-                            <li className={navValue === "/payment" ? IndexStyles.active : ""}>
+                            <li className={navValue === "/payment" ? IndexStyles.active : ""} onClick={tabs}>
                                 <Link to="payments">
                                     <RiHome4Line className={IndexStyles.icon} />
                                     Payment Services
                                 </Link>
                             </li>
-                            <li className={navValue === "/transaction" ? IndexStyles.active : ""}>
+                            <li className={navValue === "/transaction" ? IndexStyles.active : ""} onClick={tabs}>
                                 <Link to="transactions">
                                     <BiTransfer className={IndexStyles.icon} />
                                     Transactions
                                 </Link>
                             </li>
-                            <li className={navValue === "/beneficiary" ? IndexStyles.active : ""}>
+                            <li className={navValue === "/dashboard/beneficiaries" ? IndexStyles.active : ""} onClick={tabs}>
                                 <Link to="beneficiaries">
                                     <BsPerson className={IndexStyles.icon} />
                                     Beneficiary
                                 </Link>
                             </li>
-                            <li className={navValue === "/notification" ? IndexStyles.active : ""}>
+                            <li className={navValue === "/notification" ? IndexStyles.active : ""} onClick={tabs}>
                                 <Link to="notification">
                                     <IoMdNotificationsOutline className={IndexStyles.icon} />
                                     Notification
                                 </Link>
                             </li>
-                            <li className={navValue === "/setting" ? IndexStyles.active : ""}>
+                            <li className={navValue === "/setting" ? IndexStyles.active : ""} onClick={tabs}>
                                 <Link to="settings">
                                     <AiOutlineSetting className={IndexStyles.icon} />
                                     Settings
                                 </Link>
                             </li>
                             <li className={IndexStyles.borderTop}></li>
-                            <li className={navValue === "/help" ? IndexStyles.active : ""}>
+                            <li className={navValue === "/help" ? IndexStyles.active : ""} onClick={tabs}>
                                 <Link to="help">
                                     <AiOutlineQuestionCircle className={IndexStyles.icon} />
                                     Help
                                 </Link>
                             </li>
-                            <li className={navValue === "" ? IndexStyles.active : ""}>
-                                <RiLogoutCircleRLine className={IndexStyles.icon} />
-                                Logout
+                            <li className={navValue === "" ? IndexStyles.active : ""} onClick={tabs}>
+                                <Link to="/">
+                                    <RiLogoutCircleRLine className={IndexStyles.icon} />
+                                    Logout
+                                </Link>
                             </li>
                         </ul>
                     </nav>
