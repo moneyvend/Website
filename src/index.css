@@ -12,38 +12,6 @@ body {
   background-color: white !important;
 }
 
-:root {
-  --white: #fff;
-  --blue: #030a78;
-}
-
-button:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-a:hover {
-  color: #030a78 !important;
-}
-
-.holdAll{
-  width: 100%;
-  display: flex;
-}
-
-.navBar{
-  width: 20%;
-  height: 100vh;
-  overflow-y: scroll;
-}
-
-.mainContent{
-  width: 80%;
-  background-color: #f0f0f7;
-  height: 100vh;
-  overflow-y: scroll,
-}
-
 /* width */
 ::-webkit-scrollbar {
   width: 2px;
@@ -60,83 +28,115 @@ a:hover {
   background: #0b0978;
 }
 
+:root {
+  --white: #fff;
+  --blue: #030a78;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+a:hover {
+  color: #030a78 !important;
+}
+
+.holdAll {
+  width: 100%;
+  display: flex;
+}
+
+.navBar {
+  width: 20%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.mainContent {
+  width: 80%;
+  background-color: #f0f0f7;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #0b0978;
 }
 
-.topProfile{
+.topProfile {
   height: 80px;
-    width: 100%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-}
-
-.topContent{
   width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-}
-
-.holdSearch{
+  background-color: white;
   display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border: 2px solid #dedede;
-    padding: 10px;
-    width: 25%;
-    border-radius: 5px;
+  align-items: center;
 }
 
-.input{
+.topContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.holdSearch {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid #dedede;
+  padding: 10px;
+  width: 25%;
+  border-radius: 5px;
+}
+
+.input {
   width: 100%;
   border: none;
   outline: none;
 }
 
-.holdBell{
+.holdBell {
   display: flex;
   border-right: 2px solid #c8c8c8;
   padding-right: 20px;
 }
 
-.bell{
+.bell {
   font-size: 25px;
-    color: gray;
-    margin-right: -14px;
-    margin-top: 3px;
+  color: gray;
+  margin-right: -14px;
+  margin-top: 3px;
 }
 
-.redDot{
+.redDot {
   width: 12px;
-    height: 12px;
-    background-color: red;
-    border-radius: 50%;
-    display: flex;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
 }
 
-.holdImage{
+.holdImage {
   display: flex;
   align-items: center;
 }
 
-.imageIt{
+.imageIt {
   padding-inline: 20px;
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.imageSelf{
+.imageSelf {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
 
-.drop{
+.drop {
   font-size: 30px;
   color: gray;
 }
