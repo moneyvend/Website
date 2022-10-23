@@ -20,7 +20,6 @@ export default function Index() {
     useEffect(() => {
         const tabs = () => {
             setNavValue(window.location.pathname);
-            console.log(window.location.pathname);
             sessionStorage.setItem('pathLink', window.location.pathname);
         };
         tabs();
