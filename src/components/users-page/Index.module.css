@@ -8,20 +8,20 @@
   padding: 2em 2em;
 }
 
-.logo{
-    margin: 0;
-    padding: 0.7em 0;
-    font-size: 35px;
-    border-bottom: 1px solid #dbdbdb;
-    margin-bottom: 1.5em;
-    font-weight: bold;
-    color: #0b0978;
+.logo {
+  margin: 0;
+  padding: 0.7em 0;
+  font-size: 35px;
+  border-bottom: 1px solid #dbdbdb;
+  margin-bottom: 1.5em;
+  font-weight: bold;
+  color: #0b0978;
 }
 
-.holdNavList{
-    margin: 0;
-    list-style: none;
-    padding: 0;
+.holdNavList {
+  margin: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .holdNavList li {
@@ -31,15 +31,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
-
-.holdNavList li a{
-    color: #4e4cbf;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 15px;
-    text-decoration: none;
 }
 
 .holdNavList li a {
