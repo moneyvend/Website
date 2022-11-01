@@ -75,6 +75,14 @@ h3 {
   width: 27%;
 }
 
+
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+  .cc-2 {
+    width: 100%;
+  }
+}
+
 h4 {
   text-align: center;
   font-family: 'Poppins', sans-serif;

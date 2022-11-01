@@ -8,7 +8,6 @@
   padding: 2em 2em;
 }
 
-<<<<<<< HEAD
 .logo{
     margin: 0;
     padding: 0.7em 0;
@@ -20,16 +19,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-=======
-.logo {
-  margin: 0;
-  padding: 0.7em 0;
-  font-size: 35px;
-  border-bottom: 1px solid #dbdbdb;
-  margin-bottom: 1.5em;
-  font-weight: bold;
-  color: #0b0978;
->>>>>>> 291dde5064e2c5704638444db2338cc9695ff4bd
 }
 
 .holdNavList {
