@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-indent */
 import { Route } from 'react-router-dom';
 import Index from '../components/users-page';
 import Beneficiaries from '../components/beneficiaries/beneficiaries';
 import PaymentServices from '../components/payments/paymentServices';
 import Settings from '../components/settings/settings';
 import Transaction from '../components/transactions/transaction';
+import Services from '../components/payments/services';
 // import Airtime from '../components/payments/Airtime';
 // import Electricity from '../components/payments/electricity';
 // import Summary from '../components/payments/summary';
@@ -15,8 +17,12 @@ class DashboardRoutes {
   static routes =
 
     <Route path="dashboard" element={<Index />}>
+      <Route path="services">
+        <Route index element={<Services />} />
+      </Route>
       <Route path="payments">
         <Route index element={<PaymentServices />} />
+
       </Route>
 
       <Route path="transactions">

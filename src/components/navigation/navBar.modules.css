@@ -20,12 +20,27 @@ a {
   display: none;
 }
 
-.container {
+/* .containers {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 5% 32px 5%;
+} */
+.container2 {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5em;
 }
+
+.logMe{
+  width: 215px !important;
+}
+/* @media (min-width: 1200px){
+  .container2 {
+    width: 100% !important;
+    padding: 20px 5em !important;
+  }
+} */
 
 .l-1 {
   width: 130px;

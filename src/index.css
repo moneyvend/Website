@@ -47,14 +47,9 @@ a:hover {
   display: flex;
 }
 
-.navBar{
-  width: 20%;
-  height: 100vh;
-  overflow-y: scroll;
-}
 
 .mainContent {
-  width: 80%;
+  width: 82%;
   background-color: #f0f0f7;
   height: 100vh;
   overflow-y: scroll;
@@ -106,8 +101,8 @@ a:hover {
 .bell {
   font-size: 25px;
     color: gray;
-    margin-right: -14px;
-    margin-top: 3px;
+    margin-right: -8px;
+    margin-top: -7px;
 }
 
 .redDot {
@@ -139,4 +134,33 @@ a:hover {
 .drop {
   font-size: 30px;
   color: gray;
+}
+
+.navBar2{
+  width: 18%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #030a7830 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(3 10 120 / 17%) !important;
+}
+
+a{
+  text-decoration: none !important;
 }

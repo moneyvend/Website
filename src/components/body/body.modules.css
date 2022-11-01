@@ -116,6 +116,12 @@ h4 {
   padding: 20px;
 }
 
+.holdMach{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .c-3 {
   display: flex;
   flex-direction: column;
@@ -127,6 +133,7 @@ h4 {
   background: linear-gradient(0deg, #011223, #011223), #fff;
   margin-left: -6%;
   margin-right: -6%;
+  width: 100%;
 }
 
 #h4 {

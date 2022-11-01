@@ -1,6 +1,6 @@
 .bgpay {
   background-color: #f0f0f7;
-  padding-bottom: 80px;
+  padding: 2em;
 }
 
 .sidebar {
@@ -56,15 +56,15 @@
   color: #4f54a1;
 }
 
-// .body-text {
-//   font-size: 18px;
-//   margin: 20px 30px 20px 230px !important;
-//   border: 0.948035px solid #f0f0f7;
-//   border-radius: 2px;
-//   background-color: white;
-//   display: flex;
-//   flex-direction: column;
-// }
+.body-text {
+  font-size: 18px;
+  width: 100%;
+  border: 0.948035px solid #f0f0f7;
+  border-radius: 2px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
 
 #sideimg {
   border-bottom: 0.948035px solid #f0f0f7;
@@ -112,6 +112,7 @@
 
 .crdpay {
   background-color: #f0f0f7;
+  cursor: pointer;
 }
 
 .ant-card-body {

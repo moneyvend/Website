@@ -1,0 +1,28 @@
+.waitHeader {
+  text-align: center;
+  width: 100%;
+}
+.joinText {
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: #200e32;
+}
+
+.update {
+  font-size: 13px;
+  color: #9a9dc9;
+}
+
+.submitButin {
+  width: 100%;
+  background-color: #030a78 !important;
+  padding: 10px !important;
+  border: 1px solid #030a78 !important;
+}
+
+.submitButin:focus-visible {
+  background-color: #030a78 !important;
+  border-color: #030a78 !important;
+  outline: 0;
+  box-shadow: #111ba579 !important;
+}
