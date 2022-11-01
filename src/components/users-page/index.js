@@ -28,7 +28,11 @@ export default function Index() {
     });
 
     const tabs = () => {
+<<<<<<< HEAD
         setNavValue(window.location.pathname.slice(11, 14));
+=======
+        setNavValue(window.location.pathname);
+>>>>>>> 291dde5064e2c5704638444db2338cc9695ff4bd
     };
 
     return (

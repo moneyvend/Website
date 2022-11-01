@@ -47,6 +47,11 @@ a:hover {
   display: flex;
 }
 
+.navBar{
+  width: 20%;
+  height: 100vh;
+  overflow-y: scroll;
+}
 
 .mainContent {
   width: 82%;
@@ -101,16 +106,16 @@ a:hover {
 .bell {
   font-size: 25px;
     color: gray;
-    margin-right: -8px;
-    margin-top: -7px;
+    margin-right: -14px;
+    margin-top: 3px;
 }
 
 .redDot {
   width: 12px;
-    height: 12px;
-    background-color: red;
-    border-radius: 50%;
-    display: flex;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
 }
 
 .holdImage {
