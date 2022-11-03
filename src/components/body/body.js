@@ -49,23 +49,25 @@ const Body = () => (
         </div>
       </div>
     </section>
-    <section className="c-3">
-      <div>
-        <h2 id="h4">Become a Merchant</h2>
-        <p id="p-6">Getting debited is hard, getting value shouldn&apos;t be.</p>
-        <p id="p-7">
-          Our company exists to help merchants sell more.
-          We make every decision and measure every
-          outcome based on how well it serves our customers.
-        </p>
-        <div className="b-3">
-          <Button className="b-2 be-2" type="button">
-            Become a Merchant
-          </Button>
+    <div className="holdMach">
+      <section className="c-3">
+        <div>
+          <h2 id="h4">Become a Merchant</h2>
+          <p id="p-6">Getting debited is hard, getting value shouldn&apos;t be.</p>
+          <p id="p-7">
+            Our company exists to help merchants sell more.
+            We make every decision and measure every
+            outcome based on how well it serves our customers.
+          </p>
+          <div className="b-3">
+            <Button className="b-2 be-2" type="button">
+              Become a Merchant
+            </Button>
+          </div>
         </div>
-      </div>
 
-    </section>
+      </section>
+    </div>
     <section>
       <div className="UtilityBillers">
         <h2 id="h-2">Utility Billers</h2>

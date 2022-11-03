@@ -12,10 +12,10 @@ const NavBar = () => {
     setNavbarOpen(!navbarOpen);
   };
   return (
-    <div className="container">
+    <div className="container2">
       <div id="c-1">
         <div id="c-3">
-          <img src={AppImages.LOGO_VERT} id="logo" className="l-1" alt="Logo" />
+          <img src={AppImages.LOGO_VERT} id="logo" className="l-1 logMe" alt="Logo" />
           <img src={AppImages.HLOGO} id="h-logo" alt="Logo" />
         </div>
         <div className="navBar" id="c-2">

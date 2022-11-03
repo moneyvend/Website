@@ -128,6 +128,9 @@
     display: flex;
     max-width: 70%;
     margin: auto;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
   }
 
   .pdw {
@@ -154,6 +157,7 @@
     background-color: #030a78;
     font-size: 18px;
     max-width: 50%;
+    height: 90vh;
   }
 
   .b-r {

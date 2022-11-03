@@ -12,6 +12,22 @@ body {
   background-color: white !important;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 50px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0b0978;
+}
+
 :root {
   --white: #fff;
   --blue: #030a78;
@@ -22,6 +38,134 @@ button:hover {
   opacity: 0.8;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 a:hover {
   color: #030a78 !important;
+}
+
+.holdAll {
+  width: 100%;
+  display: flex;
+}
+
+.navBar {
+  width: 20%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.mainContent {
+  width: 82%;
+  background-color: #f0f0f7;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0b0978;
+}
+
+.topProfile {
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.topContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.holdSearch {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid #dedede;
+  padding: 10px;
+  width: 25%;
+  border-radius: 5px;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.holdBell {
+  display: flex;
+  border-right: 2px solid #c8c8c8;
+  padding-right: 20px;
+}
+
+.bell {
+  font-size: 25px;
+  color: gray;
+  margin-right: -14px;
+  margin-top: 3px;
+}
+
+.redDot {
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+}
+
+.holdImage {
+  display: flex;
+  align-items: center;
+}
+
+.imageIt {
+  padding-inline: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.imageSelf {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.drop {
+  font-size: 30px;
+  color: gray;
+}
+
+.navBar2 {
+  width: 18%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #030a7830 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(3 10 120 / 17%) !important;
 }
