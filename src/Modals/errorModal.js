@@ -5,7 +5,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-props-no-spreading */
 import { Button, Modal } from 'react-bootstrap';
-import { RiCloseCircleLine } from 'react-icons/ri';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
+import errStyle from './errorModal.module.scss';
 // import errStyle {}
 
 function ErrorModal(props) {
@@ -18,16 +19,15 @@ function ErrorModal(props) {
         >
             <Modal.Body style={{ textAlign: 'center' }}>
                 <div>
-                    <RiCloseCircleLine style={{ fontSize: '22px', color: 'red' }} />
+                    <AiOutlineCloseCircle className={errStyle.close} />
                 </div>
-                <p style={{ fontSize: '22px', color: 'red' }}>
+                <p className={errStyle.errText}>
                     {props.errorMsg}
                 </p>
 
                 <Button
                     type="button"
-                    style={{ backgroundColor: 'red', borderColor: 'red' }}
-                    className="login"
+                    className={errStyle.closeButin}
                     onClick={props.onHide}
                 >
                     Close

@@ -47,7 +47,7 @@ export default function JoinWaitlist(props) {
             .catch((err) => {
                 setLoad(false);
                 setModalShow2(true);
-                setErrorMsg2(err.message);
+                setErrorMsg2(err.response.data.message);
             });
     };
     return (
@@ -56,6 +56,7 @@ export default function JoinWaitlist(props) {
                 {...props}
                 onHide={props.onHide}
                 backdrop="static"
+                size="lg"
                 keyboard={false}
                 centered
             >
