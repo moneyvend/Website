@@ -27,14 +27,15 @@ a {
 } */
 .container2 {
   display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5em;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5em;
 }
 
-.logMe{
+.logMe {
   width: 215px !important;
 }
+
 /* @media (min-width: 1200px){
   .container2 {
     width: 100% !important;

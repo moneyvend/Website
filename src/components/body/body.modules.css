@@ -75,9 +75,8 @@ h3 {
   width: 27%;
 }
 
-
-@media only screen and (max-width: 425px){
-	/*Small smartphones [325px -> 425px]*/
+@media only screen and (max-width: 425px) {
+  /* Small smartphones [325px -> 425px] */
   .cc-2 {
     width: 100%;
   }
@@ -124,7 +123,7 @@ h4 {
   padding: 20px;
 }
 
-.holdMach{
+.holdMach {
   display: flex;
   justify-content: center;
   align-items: center;
