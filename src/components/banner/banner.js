@@ -23,7 +23,7 @@ function Banner() {
                 The Simplest Way For Fast Payments
               </h1>
             </b>
-            <button type="button" className="payment" onClick={waitModal}>Bill payments</button>
+            <button type="button" className="payment" onClick={waitModal}>Join waitlist</button>
             <button type="button" className="merchant">
               Become a merchant
               <FiChevronRight className="greater" />

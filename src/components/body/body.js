@@ -125,7 +125,7 @@ const Body = () => (
         <div className="c-5">
           <img src={AppImages.IMAGE_SIX} className="u-i" alt="Logo" />
           <p className="p-6">
-            &quot;It is alway very surprisig when I pay for light and I suddenly get the token.
+            &quot;It is alway very surprising when I pay for light and I suddenly get the token.
             Like I usually have to...&quot;
           </p>
           <p className="p-5">Filomina Ezenwata</p>
@@ -133,7 +133,7 @@ const Body = () => (
         <div className="c-5">
           <img src={AppImages.IMAGE_SEVEN} className="u-i" alt="Logo" />
           <p className="p-6">
-            &quot;Using this service to get my POS transactions done is really comvenient.
+            &quot;Using this service to get my POS transactions done is really convenient.
             Almost too convenient&quot;
           </p>
           <p className="p-5">Austin Babalola</p>
