@@ -1,7 +1,7 @@
 import { Typography } from 'antd';
 
 const Beneficiaries = () => (
-  <Typography>Dashboard Beneficiaries Page</Typography>
+  <Typography>Dashboard Beneficiarias Page</Typography>
 );
 
 export default Beneficiaries;

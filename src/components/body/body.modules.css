@@ -655,3 +655,10 @@ footer {
   align-items: center;
   flex-direction: column;
 }
+
+@media only screen and (max-width: 800px) {
+  .logoComp {
+    width: 65%;
+    margin-top: 0;
+  }
+}

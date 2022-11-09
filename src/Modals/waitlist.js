@@ -63,7 +63,7 @@ export default function JoinWaitlist(props) {
                 <Modal.Header closeButton>
                     <Modal.Title className={waitListStyle.waitHeader}>
                         <h1 className={waitListStyle.joinText}>Join waiting list</h1>
-                        <p className={waitListStyle.update}>Join waitng list to get new updates once launched</p>
+                        <p className={waitListStyle.update}>Join waiting list to get new updates once launched</p>
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
