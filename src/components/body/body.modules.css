@@ -659,6 +659,6 @@ footer {
 @media only screen and (max-width: 800px) {
   .logoComp {
     width: 65%;
-    margin-top: 0em;
+    margin-top: 0;
   }
 }
