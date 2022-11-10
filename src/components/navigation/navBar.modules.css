@@ -93,17 +93,19 @@ a {
 
 @media only screen and (max-width: 800px) {
   .container2 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 6px 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 1em;
   }
+
   .navBar {
-      width: 20%;
-      height: fit-content;
-      overflow-y: scroll;
+    width: 20%;
+    height: unset;
+    overflow-y: scroll;
   }
 }
+
 @media only screen and (max-width: 475px) {
   .container {
     padding: 0;
