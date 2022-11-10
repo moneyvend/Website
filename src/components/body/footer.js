@@ -6,37 +6,37 @@ const Footer = () => (
     <div className="f-2 footerWith">
       <ul className="p-9">
         <li id="p-8">Resources</li>
-        <li>Prices</li>
-        <li>Integrations</li>
-        <li>Support</li>
-        <li>Merchant Service Policies</li>
+        <li id="res">Prices</li>
+        <li id="res">Integrations</li>
+        <li id="res">Support</li>
+        <li id="res">Merchant Service Policies</li>
       </ul>
       <ul className="p-9">
         <li id="p-8">Our Services</li>
-        <li>POS Transactions</li>
-        <li>Utility Bill Payment</li>
+        <li id="res">POS Transactions</li>
+        <li id="res">Utility Bill Payment</li>
       </ul>
       <ul className="p-9">
         <li id="p-8">Pages</li>
-        <li>Merchant Page</li>
-        <li>Bill Payment</li>
+        <li id="res">Merchant Page</li>
+        <li id="res">Bill Payment</li>
       </ul>
       <ul className="p-9">
         <li id="p-8">Developers</li>
-        <li>API Documentation</li>
+        <li id="res">API Documentation</li>
       </ul>
       <ul className="p-9">
         <li id="p-8">Contact</li>
-        <li>+234 239-334-987</li>
-        <li>support@monievend.com</li>
+        <li id="res">+234 239-334-987</li>
+        <li id="res">support@monievend.com</li>
       </ul>
     </div>
     <div className="f-3 footerWith2">
       <p id="p-10">@Monievend</p>
       <div className="di-1">
-        <p>Terms of service</p>
-        <p>Privacy policy</p>
-        <p>Cookie policy</p>
+        <p id="res">Terms of service</p>
+        <p id="res">Privacy policy</p>
+        <p id="res">Cookie policy</p>
       </div>
       <div className="di-1">
         <img src={AppImages.FACEBOOK} className="im-2" alt="Logo" />

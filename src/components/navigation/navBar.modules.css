@@ -12,6 +12,10 @@ a {
   text-decoration: none;
 }
 
+#anchorc{
+  padding: 2px 7px;
+}
+
 .ant-image-img {
   width: 100px;
 }

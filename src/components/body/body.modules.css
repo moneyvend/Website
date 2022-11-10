@@ -364,11 +364,15 @@ h4 {
   font-family: 'Mulish', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
-  padding-bottom: 20px;
+  font-size: 22px;
+  padding-bottom: 15px;
   background: linear-gradient(90deg, #030a78 0%, #2b0990 28.65%, #8e07cd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+#res {
+  font-size: 15px;
+  padding: 10px 0;
 }
 
 .p-9 {
@@ -408,7 +412,7 @@ h4 {
   font-family: 'Mulish', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 22px;
   background: linear-gradient(90deg, #030a78 0%, #2b0990 28.65%, #8e07cd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -473,14 +477,27 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
+}
+.footerWith {
+  width: 100%;
+  padding: 1em 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .footerWith {
-  width: 70%;
+  width: 100%;
+  padding: 2em 5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .footerWith2 {
-  width: 70%;
+  width: 100%;
+    padding: 2em 7em;
 }
 
 .body-text2 {
@@ -645,7 +662,7 @@ footer {
   }
 
   .im-2 {
-    width: 10px;
+    width: 25px;
   }
 }
 
@@ -661,4 +678,29 @@ footer {
     width: 65%;
     margin-top: 0em;
   }
+}
+
+@media only screen and (max-width: 900px) {
+  .footerWith {
+    width: 100%;
+    padding: 1em 4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+footer {
+  padding-top: 3vh;
+}
+.footerWith2 {
+  width: 100%;
+  padding: 2em 0em;
+}
 }
