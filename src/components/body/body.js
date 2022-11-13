@@ -34,17 +34,17 @@ const Body = () => (
           <div className="cc-2">
             <img src={AppImages.IMAGE_TWO} className="i" alt="Logo" />
             <h4>Utility Bill Payment</h4>
-            <p className="p-5">Pay for your DSTV, GoTV Startimes and more with our integrated</p>
+            <p className="p-5Me">Pay for your DSTV, GoTV Startimes and more with our integrated</p>
           </div>
           <div className="cc-2">
             <img src={AppImages.IMAGE_THREE} className="i" alt="Logo" />
             <h4>USSD Enabled Transaction</h4>
-            <p className="p-5">Send and receive payments without the internet</p>
+            <p className="p-5Me">Send and receive payments without the internet</p>
           </div>
           <div className="cc-2">
             <img src={AppImages.IMAGE_FOUR} className="i" alt="Logo" />
             <h4>POS Teminal</h4>
-            <p className="p-5">Send, receive all with easy. With or without the internet. No hassle, no delay</p>
+            <p className="p-5Me">Send, receive all with easy. With or without the internet. No hassle, no delay</p>
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@ const Body = () => (
             &quot;When I started using monievend,
             it has been smooth sailing for all my utility recharges&quot;
           </p>
-          <p className="p-5">Adegbite Saviour</p>
+          <p className="p-5Me">Adegbite Saviour</p>
         </div>
         <div className="c-5">
           <img src={AppImages.IMAGE_SIX} className="u-i" alt="Logo" />
@@ -128,7 +128,7 @@ const Body = () => (
             &quot;It is alway very surprising when I pay for light and I suddenly get the token.
             Like I usually have to...&quot;
           </p>
-          <p className="p-5">Filomina Ezenwata</p>
+          <p className="p-5Me">Filomina Ezenwata</p>
         </div>
         <div className="c-5">
           <img src={AppImages.IMAGE_SEVEN} className="u-i" alt="Logo" />
@@ -136,14 +136,14 @@ const Body = () => (
             &quot;Using this service to get my POS transactions done is really convenient.
             Almost too convenient&quot;
           </p>
-          <p className="p-5">Austin Babalola</p>
+          <p className="p-5Me">Austin Babalola</p>
         </div>
         <div className="c-5">
           <img src={AppImages.IMAGE_SEVEN} className="u-i" alt="Logo" />
           <p className="p-6">
             &quot;This is a good service. There’s really no other way to put it&quot;
           </p>
-          <p className="p-5">Faridah Salih</p>
+          <p className="p-5Me">Faridah Salih</p>
         </div>
       </div>
     </section>

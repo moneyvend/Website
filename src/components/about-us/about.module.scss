@@ -1,0 +1,168 @@
+.holdAllAbout {
+  padding: 20px 4em;
+}
+
+.aboutHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85vh;
+}
+
+.aboutImage {
+  height: 35vh;
+}
+
+.holdHeadText {
+  width: 50%;
+}
+
+.aboutHeadText {
+  font-size: 60px;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  background: linear-gradient(90deg, #8e07cd 0%, #030a78 48.44%, #1d1e26 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+.aboutHeadP {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #1d1e26;
+}
+
+.holdMotto {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.holdText {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: #030a78;
+}
+
+.holdMotoList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70%;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.motoList {
+  width: 45%;
+}
+
+.achievementsBox {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  gap: 16px;
+  width: 359px;
+  height: 480px;
+  background: #fff;
+  border: 4px solid rgba(29, 30, 38, 0.05);
+  border-radius: 8px;
+}
+
+.achivImage {
+  width: 100%;
+}
+
+.holdAcivText {
+  text-align: center;
+}
+
+.acivHeadText {
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+  font-weight: 600;
+}
+
+.serveText {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: #000;
+}
+
+.holdAchievements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-top: 50px;
+}
+
+/* Small smartphones [325px -> 425px] */
+@media only screen and (max-width: 900px) {
+  .aboutHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .holdAllAbout {
+    padding: 20px 1em;
+  }
+
+  .holdHeadText {
+    width: 100%;
+  }
+
+  .aboutHeadText {
+    font-size: 35px;
+  }
+
+  .holdMotto {
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .holdText {
+    font-size: 30px;
+  }
+
+  .holdMotoList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 33px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .motoList {
+    width: 100%;
+  }
+
+  .holdAchievements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

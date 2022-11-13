@@ -12,6 +12,10 @@ a {
   text-decoration: none;
 }
 
+#anchorc {
+  padding: 2px 7px;
+}
+
 .ant-image-img {
   width: 100px;
 }
@@ -29,11 +33,11 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5em;
+  padding: 20px 4em;
 }
 
 .logMe {
-  width: 215px !important;
+  width: 160px !important;
 }
 
 /* @media (min-width: 1200px){
@@ -64,9 +68,9 @@ a {
   color: white !important;
   border-radius: 5px;
   border: 0;
-  padding: 8px 35px;
+  padding: 5px 20px;
   font-family: 'Mulish', sans-serif;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .nav-link {

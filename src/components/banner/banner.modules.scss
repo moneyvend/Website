@@ -6,28 +6,28 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 17px;
   text-align: left;
   color: #030a78;
   flex: none;
   order: 0;
   flex-grow: 0;
+  margin: 0;
 }
 
 #H-1 {
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 90px;
-  line-height: 113px;
+  font-size: 72px;
+  line-height: 93px;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   background: linear-gradient(90deg, #8e07cd 0%, #030a78 48.44%, #1d1e26 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 85px;
-  margin-top: 40px;
+  margin-bottom: 35px;
+  margin-top: 26px;
 }
 
 .payment {
@@ -41,12 +41,12 @@
   text-align: center;
   border-radius: 5px;
   border-style: none;
-  padding: 15px 60px;
+  padding: 10px 40px;
 }
 
 .merchant {
   border-radius: 5px;
-  padding: 10px 30px;
+  padding: 9px 20px;
   background-color: white;
   border-color: rgb(3, 10, 120) rgb(43, 9, 144) rgb(142, 7, 205);
   margin-left: 30px;
@@ -54,7 +54,7 @@
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 15px;
   color: #030a78;
 }
 
@@ -69,7 +69,7 @@
 }
 
 #image-one {
-  width: 475px;
+  width: 350px;
 }
 
 .logos {

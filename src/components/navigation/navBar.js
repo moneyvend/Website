@@ -27,7 +27,7 @@ const NavBar = () => {
               <div className="op">
                 <li><NavLink id="anchora" to="/products" className="nav-link">Products</NavLink></li>
                 <li><NavLink id="anchorb" to="/merchants" className="nav-link">Merchants</NavLink></li>
-                <li><NavLink id="anchorc" to="/about" className="nav-link">About us</NavLink></li>
+                <li><NavLink id="anchorc" to="about" className="nav-link">About us</NavLink></li>
                 <li><NavLink id="anchorc" to="/support" className="nav-link">Support</NavLink></li>
                 <li><button type="button" className="batt">Log in</button></li>
               </div>
