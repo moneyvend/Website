@@ -112,11 +112,11 @@ h4 {
 
 .cc-2 .p-5Me {
   font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: #1d1e26bf;
-    font-weight: 400;
-    max-width: 80%;
-    padding: 10px !important;
+  font-size: 14px;
+  color: #1d1e26bf;
+  font-weight: 400;
+  max-width: 80%;
+  padding: 10px !important;
 }
 
 .i {
@@ -245,11 +245,11 @@ h4 {
 
 #h-2 {
   font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 56px;
-    color: #030a78;
-    margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 56px;
+  color: #030a78;
+  margin-bottom: 10px;
 }
 
 .u-i {
@@ -372,6 +372,7 @@ h4 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 #res {
   font-size: 15px;
   padding: 10px 0;
@@ -440,13 +441,13 @@ footer {
 
 .sign {
   font-family: 'Mulish', sans-serif;
-    font-style: normal !important;
-    font-weight: 500 !important;
-    font-size: 15px !important;
-    line-height: 25px !important;
-    letter-spacing: 0.02em !important;
-    color: #000;
-    margin-bottom: 2em;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  line-height: 25px !important;
+  letter-spacing: 0.02em !important;
+  color: #000;
+  margin-bottom: 2em;
 }
 
 .newsletter input {
@@ -481,13 +482,6 @@ footer {
   flex-direction: column;
   width: 100%;
 }
-.footerWith {
-  width: 100%;
-  padding: 1em 4em;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
 
 .footerWith {
   width: 100%;
@@ -499,17 +493,17 @@ footer {
 
 .footerWith2 {
   width: 100%;
-    padding: 2em 6em;
+  padding: 2em 6em;
 }
 
 .body-text2 {
   font-size: 18px;
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-    margin-top: 10px;
-    justify-content: space-between;
-    text-align: center;
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  margin-top: 10px;
+  justify-content: space-between;
+  text-align: center;
 }
 
 @media only screen and (max-width: 475px) {
@@ -689,20 +683,23 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-}
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  text-align: center;
-}
-footer {
-  padding-top: 3vh;
-}
-.footerWith2 {
-  width: 100%;
-  padding: 2em 0em;
-}
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  footer {
+    padding-top: 3vh;
+  }
+
+  .footerWith2 {
+    width: 100%;
+    padding: 2em 0;
+  }
 }
