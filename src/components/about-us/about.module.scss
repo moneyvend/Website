@@ -1,5 +1,5 @@
 .holdAllAbout {
-  padding: 20px 5em;
+  padding: 20px 4em;
 }
 
 .aboutHead {
@@ -18,7 +18,7 @@
 }
 
 .aboutHeadText {
-  font-size: 70px;
+  font-size: 60px;
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -48,7 +48,7 @@
 .holdText {
   font-style: normal;
   font-weight: 700;
-  font-size: 45px;
+  font-size: 40px;
   line-height: 56px;
   color: #030a78;
 }
@@ -70,11 +70,10 @@
 .achievementsBox {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 24px 16px;
   gap: 16px;
   width: 359px;
-  height: 518px;
+  height: 480px;
   background: #ffffff;
   border: 4px solid rgba(29, 30, 38, 0.05);
   border-radius: 8px;
@@ -89,7 +88,7 @@
 }
 
 .acivHeadText {
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   color: #000000;
   font-weight: 600;

@@ -20,14 +20,14 @@ h3 {
 }
 
 .body-para {
-  width: 50%;
+  width: 48%;
 }
 
 .body-para h3 {
   font-family: 'Mulish', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 20px;
   line-height: 40px;
   color: #1d1e26;
 }
@@ -42,7 +42,7 @@ h3 {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 26px;
   display: flex;
   align-items: center;
@@ -98,7 +98,7 @@ h4 {
   font-weight: 600;
 }
 
-.p-5 {
+.p-5Me {
   text-align: center;
   max-width: 200px;
   font-family: 'Poppins', sans-serif;
@@ -106,16 +106,17 @@ h4 {
   font-weight: 400;
   font-size: 10px;
   line-height: 22px;
-  padding: 0 20px;
+  padding: 0 20px !important;
   color: #000;
 }
 
-.cc-2 .p-5 {
+.cc-2 .p-5Me {
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  color: #1d1e26bf;
-  font-weight: 400;
-  max-width: 80%;
+    font-size: 14px;
+    color: #1d1e26bf;
+    font-weight: 400;
+    max-width: 80%;
+    padding: 10px !important;
 }
 
 .i {
@@ -133,7 +134,7 @@ h4 {
   display: flex;
   flex-direction: column;
   margin-top: 100px;
-  padding: 5% 36%;
+  padding: 5% 27%;
   gap: 32px;
   align-items: center;
   height: 450px;
@@ -201,7 +202,7 @@ h4 {
 }
 
 .logoComp {
-  width: 65%;
+  width: 80%;
   margin-top: 6em;
 }
 
@@ -244,16 +245,16 @@ h4 {
 
 #h-2 {
   font-style: normal;
-  font-weight: 700;
-  font-size: 45px;
-  line-height: 56px;
-  color: #030a78;
-  margin-bottom: 4%;
-  margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 56px;
+    color: #030a78;
+    margin-bottom: 10px;
 }
 
 .u-i {
   width: 50px;
+  margin-bottom: 20px;
 }
 
 .c-4 {
@@ -295,8 +296,9 @@ h4 {
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   grid-row-gap: 50px;
-  padding: 0 300px;
+  padding: 0 240px;
   grid-column-gap: 100px;
+  margin-top: 25px;
 }
 
 .c-5 {
@@ -330,7 +332,7 @@ h4 {
   font-size: 18px;
 }
 
-.c-5 .p-5 {
+.c-5 .p-5Me {
   font-size: 14px;
 }
 
@@ -357,14 +359,14 @@ h4 {
 
 .f-2 {
   display: flex;
-  gap: 5vw;
+  gap: 3vw;
 }
 
 #p-8 {
   font-family: 'Mulish', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 17px;
   padding-bottom: 15px;
   background: linear-gradient(90deg, #030a78 0%, #2b0990 28.65%, #8e07cd 100%);
   -webkit-background-clip: text;
@@ -438,23 +440,23 @@ footer {
 
 .sign {
   font-family: 'Mulish', sans-serif;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 20px !important;
-  line-height: 25px !important;
-  letter-spacing: 0.02em !important;
-  color: #000;
-  margin-bottom: 3em;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    line-height: 25px !important;
+    letter-spacing: 0.02em !important;
+    color: #000;
+    margin-bottom: 2em;
 }
 
 .newsletter input {
   font-size: 14px;
   font-weight: 300;
   font-family: "Poppins", sans-serif;
-  padding: 16px 104px 16px 24px;
+  padding: 10px;
   gap: 16px;
   width: 70%;
-  height: 73px;
+  height: 60px;
   background: #fff;
   border: 2px solid rgba(29, 30, 38, 0.25);
   border-radius: 8px;
@@ -474,7 +476,7 @@ footer {
 
 .footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -489,7 +491,7 @@ footer {
 
 .footerWith {
   width: 100%;
-  padding: 2em 5em;
+  padding: 2em 4em;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -497,17 +499,17 @@ footer {
 
 .footerWith2 {
   width: 100%;
-    padding: 2em 7em;
+    padding: 2em 6em;
 }
 
 .body-text2 {
   font-size: 18px;
-  display: flex;
-  flex-direction: row;
-  width: 54%;
-  margin-top: 30px;
-  justify-content: center;
-  text-align: center;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin-top: 10px;
+    justify-content: space-between;
+    text-align: center;
 }
 
 @media only screen and (max-width: 475px) {
@@ -595,7 +597,7 @@ footer {
     width: 90%;
   }
 
-  .c-5 .p-5 {
+  .c-5 .p-5Me {
     margin: 0;
   }
 

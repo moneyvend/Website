@@ -7,6 +7,7 @@ import ComingSoon from '../components/shared/coming-soon/comingSoon';
 import NotFound from '../components/shared/not-found/notFound';
 import Settings from '../components/settings/settings';
 import About from '../components/about-us/about';
+import ProductPage from '../components/product-page/product-page';
 
 class MainRoutes {
   static routes =
@@ -21,7 +22,7 @@ class MainRoutes {
       path="/"
       key="indexpage"
     />,
-    <Route path="products" element={<ComingSoon />} key="products" />,
+    <Route path="products" element={<ProductPage />} key="products" />,
     <Route path="merchants" element={<ComingSoon />} key="merchants" />,
     <Route path="about" element={<About />} key="about" />,
     <Route path="support" element={<ComingSoon />} key="support" />,
