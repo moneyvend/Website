@@ -10,7 +10,7 @@
   flex-direction: column;
 
   h1 {
-    font-family: "Mulish";
+    font-family: "Mulish", sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 66px;
@@ -18,19 +18,20 @@
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    background: linear-gradient(
-      90deg,
-      #8e07cd 0%,
-      #030a78 48.44%,
-      #1d1e26 100%
-    );
+    background:
+      linear-gradient(
+        90deg,
+        #8e07cd 0%,
+        #030a78 48.44%,
+        #1d1e26 100%
+      );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    background-clip: unset;
   }
+
   p {
-    font-family: "Mulish";
+    font-family: "Mulish", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -39,6 +40,7 @@
     color: #1d1e26;
     margin: 40px;
   }
+
   button {
     padding: 15px 55px;
     gap: 10px;
@@ -57,7 +59,7 @@
   flex-direction: column;
 
   h1 {
-    font-family: "Mulish";
+    font-family: "Mulish", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
@@ -68,7 +70,7 @@
   }
 
   p {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -97,22 +99,25 @@
     align-items: flex-start;
     flex-direction: column;
     height: 50%;
+
     h1 {
-      font-family: "Mulish";
+      font-family: "Mulish", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 45px;
       line-height: 56px;
-      color: #000000;
+      color: #000;
     }
+
     p {
-      font-family: "Poppins";
+      font-family: "Poppins", sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
       line-height: 26px;
       color: rgba(29, 30, 38, 0.75);
     }
+
     button {
       padding: 12px 40px;
       background: #030a78;
@@ -121,6 +126,7 @@
     }
   }
 }
+
 .airtimeRecharge2 {
   height: 100vh;
   display: flex;
@@ -139,22 +145,25 @@
     align-items: flex-start;
     flex-direction: column;
     height: 50%;
+
     h1 {
-      font-family: "Mulish";
+      font-family: "Mulish", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 45px;
       line-height: 56px;
-      color: #000000;
+      color: #000;
     }
+
     p {
-      font-family: "Poppins";
+      font-family: "Poppins", sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
       line-height: 26px;
       color: rgba(29, 30, 38, 0.75);
     }
+
     button {
       padding: 12px 40px;
       background: #030a78;
@@ -168,6 +177,7 @@
   .holdAll {
     padding: 20px 1em;
   }
+
   .holdHeader {
     height: auto;
     display: flex;
@@ -179,8 +189,9 @@
       font-size: 40px;
       line-height: 55px;
     }
+
     p {
-      font-family: "Mulish";
+      font-family: "Mulish", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 18px;
@@ -189,6 +200,7 @@
       color: #1d1e26;
       margin: 10px;
     }
+
     button {
       padding: 10px 35px;
       background: #030a78;
@@ -197,6 +209,7 @@
       font-size: 15px;
     }
   }
+
   .ourProducts {
     height: auto;
     display: flex;
@@ -206,7 +219,7 @@
     margin-top: 50px;
 
     h1 {
-      font-family: "Mulish";
+      font-family: "Mulish", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 30px;
@@ -217,7 +230,7 @@
     }
 
     p {
-      font-family: "Poppins";
+      font-family: "Poppins", sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 18px;
@@ -227,6 +240,7 @@
       text-align: center;
     }
   }
+
   .airtimeRecharge {
     height: auto;
     display: flex;
@@ -251,22 +265,25 @@
       height: auto;
       text-align: center;
       margin: 30px 0;
+
       h1 {
-        font-family: "Mulish";
+        font-family: "Mulish", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 30px;
         line-height: 56px;
-        color: #000000;
+        color: #000;
       }
+
       p {
-        font-family: "Poppins";
+        font-family: "Poppins", sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
         line-height: 26px;
         color: rgba(29, 30, 38, 0.75);
       }
+
       button {
         padding: 12px 40px;
         background: #030a78;
@@ -275,6 +292,7 @@
       }
     }
   }
+
   .airtimeRecharge2 {
     height: auto;
     display: flex;
@@ -299,22 +317,25 @@
       height: auto;
       text-align: center;
       margin: 30px 0;
+
       h1 {
-        font-family: "Mulish";
+        font-family: "Mulish", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 30px;
         line-height: 56px;
-        color: #000000;
+        color: #000;
       }
+
       p {
-        font-family: "Poppins";
+        font-family: "Poppins", sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
         line-height: 26px;
         color: rgba(29, 30, 38, 0.75);
       }
+
       button {
         padding: 12px 40px;
         background: #030a78;
