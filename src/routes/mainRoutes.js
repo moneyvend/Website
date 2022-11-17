@@ -3,12 +3,13 @@ import { Route } from 'react-router-dom';
 import Banner from '../components/banner/banner';
 import Body from '../components/body/body';
 import NavBar from '../components/navigation/navBar';
-import ComingSoon from '../components/shared/coming-soon/comingSoon';
+// import ComingSoon from '../components/shared/coming-soon/comingSoon';
 import NotFound from '../components/shared/not-found/notFound';
 import Settings from '../components/settings/settings';
 import About from '../components/about-us/about';
 import ProductPage from '../components/product-page/product-page';
 import MerchantsPage from '../components/merchants-page/merchants-page';
+import SupportPage from '../components/support-page/support-page';
 
 class MainRoutes {
   static routes =
@@ -26,7 +27,7 @@ class MainRoutes {
     <Route path="products" element={<ProductPage />} key="products" />,
     <Route path="merchants" element={<MerchantsPage />} key="merchants" />,
     <Route path="about" element={<About />} key="about" />,
-    <Route path="support" element={<ComingSoon />} key="support" />,
+    <Route path="support" element={<SupportPage />} key="support" />,
     <Route path="*" element={<NotFound />} key="Notfound" />,
     <Route path="settings" element={<Settings />} key="setting" />,
     ]
