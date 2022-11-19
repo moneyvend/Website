@@ -1,0 +1,153 @@
+.holdAll {
+  padding: 20px 4em;
+}
+
+.holdHeader {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-family: "Mulish", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 77px;
+    line-height: 90px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    background:
+      linear-gradient(
+        90deg,
+        #8e07cd 0%,
+        #030a78 48.44%,
+        #1d1e26 100%
+      );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: unset;
+  }
+
+  button {
+    padding: 15px 55px;
+    gap: 10px;
+    background: #030a78;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    margin-top: 2em;
+  }
+}
+
+.holdWhat {
+  h1 {
+    font-family: "Mulish", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 56px;
+    text-align: center;
+    color: #030a78;
+    margin-bottom: 50px;
+  }
+
+  .whatContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+
+    .holdCon {
+      width: 45%;
+
+      h1 {
+        text-align: left;
+        color: black;
+      }
+
+      .holdCon2 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .imaDiv {
+          border: 2px solid gray;
+          border-radius: 5px;
+          height: 275px;
+          width: 30%;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .holdAll {
+    padding: 20px 1em;
+  }
+
+  .holdHeader {
+    height: auto;
+
+    h1 {
+      font-size: 45px;
+      line-height: 63px;
+    }
+
+    button {
+      padding: 15px 15px;
+      font-size: 18px;
+      margin-top: 2em;
+      margin-bottom: 2em;
+      width: 100%;
+    }
+  }
+
+  .holdWhat {
+    h1 {
+      font-size: 30px;
+      margin: 0;
+    }
+
+    .whatContent {
+      height: auto;
+      flex-direction: column;
+
+      .holdCon {
+        width: 100%;
+
+        h1 {
+          font-size: 30px;
+          text-align: center;
+          margin-top: 2em;
+          line-height: 1.5;
+          margin-bottom: 20px;
+        }
+
+        .holdCon2 {
+          width: 100%;
+          justify-content: center;
+
+          .imaDiv {
+            border: 2px solid gray;
+            border-radius: 5px;
+            height: 275px;
+            width: 30%;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
