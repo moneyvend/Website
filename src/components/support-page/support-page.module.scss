@@ -7,7 +7,7 @@
   text-align: center;
 
   h1 {
-    font-family: "Mulish";
+    font-family: "Mulish", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -15,8 +15,9 @@
     text-align: center;
     color: #030a78;
   }
+
   p {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -35,6 +36,7 @@
   .holdForm {
     width: 50%;
   }
+
   .holdText {
     width: 30%;
   }
@@ -50,6 +52,7 @@
     justify-content: flex-start;
     align-items: center;
   }
+
   .icon {
     color: black;
   }
@@ -59,6 +62,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+
   .holdFQ {
     width: 70%;
     height: auto;
@@ -78,6 +82,7 @@
   .holdAll {
     padding: 20px 1em;
   }
+
   .holdFormAndText {
     flex-direction: column-reverse;
 
@@ -88,6 +93,7 @@
       border-radius: 5px;
       margin-top: 2em;
     }
+
     .holdText {
       width: 100%;
     }
@@ -99,6 +105,7 @@
       border-radius: 8px;
     }
   }
+
   .holdFQAll {
     .holdFQ {
       width: 100%;
