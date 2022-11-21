@@ -23,7 +23,7 @@ export default function MerchantsPage(props) {
                     <h1>What you get!</h1>
                     <div className={merchantStyle.whatContent}>
                         <div className={merchantStyle.holdCon}>
-                            <h1>One-in-All access to our services</h1>
+                            <h1>One-In-All Access To Our Services</h1>
                             <p>
                                 Our services are have been tested in the real world.
                                 Serving over a thousand clients in the past year,
@@ -42,11 +42,10 @@ export default function MerchantsPage(props) {
                     </div>
                     <div className={merchantStyle.whatContent}>
                         <div className={merchantStyle.holdCon}>
-                            <h1>On-The-Go customer service</h1>
+                            <h1>On-The-Go Customer Service</h1>
                             <p>
-                                Our services are have been tested in the real world.
-                                Serving over a thousand clients in the past year,
-                                you can be rest assured that you are in good hands.
+                                Our users journey with an all round customer service
+                                enables our product to be the go to platform
                             </p>
                         </div>
                         <div className={merchantStyle.holdCon}>
@@ -62,11 +61,11 @@ export default function MerchantsPage(props) {
                     </div>
                     <div className={merchantStyle.whatContent}>
                         <div className={merchantStyle.holdCon}>
-                            <h1>OAround the clock on time</h1>
+                            <h1>Around The Clock On Time</h1>
                             <p>
-                                Our services are have been tested in the real world.
-                                Serving over a thousand clients in the past year,
-                                you can be rest assured that you are in good hands.
+                                Customer service is our priority as we stay all round the clock to
+                                fill our un-ending needs of our users.
+                                The best way is the Monievend experience.
                             </p>
                         </div>
                         <div className={merchantStyle.holdCon}>
