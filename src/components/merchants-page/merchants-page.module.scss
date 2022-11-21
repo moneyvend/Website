@@ -18,16 +18,7 @@
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    background:
-      linear-gradient(
-        90deg,
-        #8e07cd 0%,
-        #030a78 48.44%,
-        #1d1e26 100%
-      );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: unset;
+    color: #030a78;
   }
 
   button {
