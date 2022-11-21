@@ -61,7 +61,7 @@ export default function SupportPage() {
                         </p>
                         <p className={supportStyle.address}>
                             <IoLocationSharp className={supportStyle.icon} />
-                            <span>2464 Royal Ln. Mesa, New Jersey 45463</span>
+                            <span>Address. No 1, Providence close coker estate shasha lagos</span>
                         </p>
                         <p className={supportStyle.address}>
                             <MdEmail className={supportStyle.icon} />
@@ -135,7 +135,7 @@ export default function SupportPage() {
                                         </div>
                                     </Accordion.Header>
                                     <Accordion.Body>
-                                        Monievend allows clients to quickly connect, start vending for products and services online, conveniently anywhere in the world.
+                                        Monievend allows clients to quickly connect, start vending for products and services online, conveniently anywhere in the world
                                         satisfaction.
                                     </Accordion.Body>
                                 </Accordion.Item>

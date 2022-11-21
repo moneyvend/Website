@@ -1,5 +1,6 @@
 import { Button, Layout } from 'antd';
 import AppImages from '../../utilities/images/images';
+import landpage from '../../utilities/images/landpage.png';
 import Styles from './body.modules.css'; // eslint-disable-line no-unused-vars
 import Footer from './footer';
 
@@ -139,7 +140,7 @@ const Body = () => (
           <p className="p-5Me">Austin Babalola</p>
         </div>
         <div className="c-5">
-          <img src={AppImages.IMAGE_SEVEN} className="u-i" alt="Logo" />
+          <img src={landpage} className="u-i" alt="Logo" />
           <p className="p-6">
             &quot;This is a good service. There’s really no other way to put it&quot;
           </p>
