@@ -1,5 +1,6 @@
+/* eslint-disable react/jsx-indent-props */
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { MdClose } from 'react-icons/md';
 import { FiMenu } from 'react-icons/fi';
 import { BsFacebook, BsLinkedin, BsTwitter } from 'react-icons/bs';
@@ -10,6 +11,10 @@ const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const handleToggle = () => {
     setNavbarOpen(!navbarOpen);
+  };
+  const navigate = useNavigate();
+  const customRoute = (index) => {
+    navigate(index);
   };
   return (
     <div className="container2">
@@ -29,7 +34,7 @@ const NavBar = () => {
                 <li><NavLink id="anchorb" to="/merchants" className="nav-link">Merchants</NavLink></li>
                 <li><NavLink id="anchorc" to="about" className="nav-link">About us</NavLink></li>
                 <li><NavLink id="anchorc" to="/support" className="nav-link">Support</NavLink></li>
-                <li><button type="button" className="batt">Log in</button></li>
+                <li><button type="button" className="batt" disabled>Log in</button></li>
               </div>
             </ul>
 
@@ -60,7 +65,16 @@ const NavBar = () => {
           <li><NavLink id="anchorc" to="/support" className="nav-link">Support</NavLink></li>
         </ul>
       </div>
-      <NavLink to="/auth/login" className="login">Login</NavLink>
+      <button
+        type="button"
+        className="login"
+        onClick={() => {
+          customRoute('/auth/login');
+        }}
+        disabled
+      >
+        Login
+      </button>
     </div>
   );
 };
