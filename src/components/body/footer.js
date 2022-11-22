@@ -39,9 +39,15 @@ const Footer = () => (
         <p id="res">Cookie policy</p>
       </div>
       <div className="di-1">
-        <img src={AppImages.FACEBOOK} className="im-2" alt="Logo" />
-        <img src={AppImages.LINKEDIN} className="im-2" alt="Logo" />
-        <img src={AppImages.TWITTER} className="im-2" alt="Logo" />
+        <a href="https://twitter.com/monievend" target="_blank" rel="noreferrer">
+          <img src={AppImages.FACEBOOK} className="im-2" alt="Logo" />
+        </a>
+        <a href="https://www.linkedin.com/company/monievend/people/" target="_blank" rel="noreferrer">
+          <img src={AppImages.LINKEDIN} className="im-2" alt="Logo" />
+        </a>
+        <a href="https://www.instagram.com/monievend/" target="_blank" rel="noreferrer">
+          <img src={AppImages.TWITTER} className="im-2" alt="Logo" />
+        </a>
       </div>
     </div>
 
