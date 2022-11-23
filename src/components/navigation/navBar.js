@@ -38,6 +38,9 @@ const NavBar = () => {
                   <button
                     type="button"
                     className="batt"
+                    onClick={() => {
+                      customRoute('/auth/login');
+                    }}
                   >
                     Log in
                   </button>
