@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './register.modules.css';
+import AppImages from '../../utilities/images/images';
 
 const RegisterPage = () => (
   <div className="holdLogin">
@@ -22,31 +23,32 @@ const RegisterPage = () => (
           <button type="button" className="bwa">Register</button>
         </div>
         {/* <img src={AppImages.HLOGO} id="img-7" alt="Logo" preview={false} /> */}
+        <img src={AppImages.LOGO_VERT} id="img-7" alt="Logo" />
         <h1 id="H1">Create Account</h1>
         <form id="f-3">
 
-          <label className="l-1" htmlFor="name">
+          <label className="l-1 formInput" htmlFor="name">
             Full name
             <input type="text" className="i-1" name="name" id="name" placeholder="Username" />
           </label>
 
-          <label className="l-1" htmlFor="phone">
+          <label className="l-1 formInput" htmlFor="phone">
             Phone number
             <input type="phone" className="i-1" name="phone" id="phone" placeholder="Phone number" />
           </label>
-          <label className="l-1" htmlFor="email">
+          <label className="l-1 formInput" htmlFor="email">
             Email
             <input type="email" className="i-1" name="email" id="email" placeholder="Email" />
           </label>
-          <label className="l-1" htmlFor="password">
+          <label className="l-1 formInput" htmlFor="password">
             Password
             <input type="password" className="i-1" name="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
           </label>
-          <label className="l-1" htmlFor="re-password">
+          <label className="l-1 formInput" htmlFor="re-password">
             Re-type Password*
             <input type="password" className="i-1" name="re-password" id="re-password" placeholder="Re-type Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
           </label>
-          <div className="l-2">
+          <div className="l-2 check">
             <label className="l-3" htmlFor="check">
               <input type="checkbox" name="check" id="check" />
               Remember me

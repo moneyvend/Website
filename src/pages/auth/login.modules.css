@@ -10,6 +10,12 @@
   color: #4f54a1;
 }
 
+/* #loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px !important;
+} */
+
 .holdLogin {
   height: 100vh;
   display: flex;
@@ -19,7 +25,7 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  width: 70%;
+  width: 100%;
   background: rgba(29, 30, 38, 0.05);
   padding: 10px !important;
   border-radius: 5px;
@@ -67,22 +73,22 @@
 @media only screen and (min-width: 480px) {
   .contr-1 {
     display: flex;
-
+    justify-content: center;
+    align-items: center;
     /* padding: 5% 0; */
     max-width: 70%;
     margin: auto;
     font-family: "Lato", sans-serif;
+    height: 90vh;
+    overflow: hidden;
   }
 
   .pod {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.4rem;
-    padding: 0 8% 4% 8%;
-    display: block;
+    font-size: 10px;
     color: #4f54a1;
     text-align: center;
+    display: block;
+    margin-bottom: 10px;
   }
 
   .pdo {
@@ -96,5 +102,59 @@
     display: flex;
     justify-content: center;
     padding-top: 30px;
+  }
+  .contr-1 {
+    background-color: white;
+    padding: 15px;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px #dddddd, -5px -5px 5px #dddddd;
+  }
+  .holdWswitch {
+    margin: 20px 0;
+  }
+  .rp {
+    width: 45%;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .i-1 {
+    height: 5vh;
+  }
+  #b-r {
+    font-size: 15px;
+    height: 5vh;
+    margin: 10px 0;
+  }
+  .fo-p {
+    display: flex;
+    justify-content: center;
+  }
+  .l-4 {
+    text-transform: lowercase;
+  }
+  #img-7 {
+    margin: auto;
+    display: block;
+    padding-top: 20px;
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  .MobileInput {
+    margin-bottom: 20px !important;
+  }
+
+  .mobileIn {
+    height: 5vh !important;
+  }
+
+  .mobileLogin {
+    width: 100%;
+    height: 5vh !important;
+    font-size: 15px !important;
+  }
+  #img-7 {
+    width: 50% !important;
+    margin-bottom: 20px !important;
   }
 }
