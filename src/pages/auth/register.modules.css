@@ -10,7 +10,14 @@
 #f-3 {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+}
+
+.formInput {
+  margin-bottom: 10px !important;
+}
+
+.checkMe {
+  margin: 10px 0 !important;
 }
 
 .l-1 {
@@ -77,22 +84,19 @@
 }
 
 .l-4 {
-  font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   padding: 0;
-  line-height: 140%;
-  gap: 5px;
-  align-self: center;
   color: #030a78;
-  display: inline-block;
-  margin-left: 5px;
+  padding-left: 5px;
 }
 
 .fo-p {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   color: #4f54a1;
+  margin: 0;
+  text-align: center;
 }
 
 #img-7 {
@@ -120,7 +124,7 @@
 }
 
 .dr h5 {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 @media only screen and (min-width: 480px) {
@@ -131,6 +135,10 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+  }
+
+  .checkMe {
+    margin: 10px 0 !important;
   }
 
   .pdw {
@@ -157,7 +165,7 @@
     background-color: #030a78;
     font-size: 18px;
     max-width: 50%;
-    height: 90vh;
+    height: 100%;
   }
 
   .b-r {
@@ -180,11 +188,12 @@
     background-color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
     padding: 0 30px;
+    height: 100%;
   }
 
-  .evenPadding {
+  /* .evenPadding {
     padding: 0 5em;
-  }
+  } */
 
   .i-1 {
     height: 40px;
@@ -208,28 +217,25 @@
   #b-r {
     width: 100%;
     align-self: center;
-    margin-top: 0;
+    margin: 15px 0;
     padding: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 17px;
-    margin-bottom: 15px;
   }
 
   .l-1 {
     display: flex;
     flex-direction: column;
-    font-style: normal;
     font-weight: 600;
     font-size: 14px;
     width: 100%;
-    line-height: 140%;
-    gap: 5px;
     color: #030a78;
+    margin-bottom: 20px;
   }
 
-  input[type=checkbox] {
+  input[type="checkbox"] {
     margin-right: 10px;
   }
 
@@ -290,5 +296,23 @@
     align-items: center;
     color: #030a78;
     font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .contr {
+    height: auto;
+    background-color: white;
+    padding: 10px;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px gainsboro, -5px -5px 5px gainsboro;
+  }
+  .i-1 {
+    height: 5vh;
+  }
+  #b-r {
+    font-size: 15px;
+    height: 5vh;
   }
 }
