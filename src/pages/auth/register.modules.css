@@ -16,7 +16,7 @@
   margin-bottom: 10px !important;
 }
 
-check {
+.checkMe {
   margin: 10px 0 !important;
 }
 
@@ -137,7 +137,7 @@ check {
     align-items: center;
   }
 
-  check {
+  .checkMe {
     margin: 10px 0 !important;
   }
 

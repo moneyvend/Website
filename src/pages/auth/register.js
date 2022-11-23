@@ -48,7 +48,7 @@ const RegisterPage = () => (
             Re-type Password*
             <input type="password" className="i-1" name="re-password" id="re-password" placeholder="Re-type Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
           </label>
-          <div className="l-2 check">
+          <div className="l-2 checkMe">
             <label className="l-3" htmlFor="check">
               <input type="checkbox" name="check" id="check" />
               Remember me
