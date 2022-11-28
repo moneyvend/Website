@@ -17,8 +17,9 @@
 } */
 
 .holdLogin {
-  height: 100vh;
+  height: auto;
   display: flex;
+  justify-content: center;
 }
 
 .rep {
