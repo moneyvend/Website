@@ -1,71 +1,198 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './register.modules.css';
+/* eslint-disable prefer-template */
+/* eslint-disable max-len */
+/* eslint-disable indent */
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { Form, Button } from 'react-bootstrap';
+import { register, reset } from '../../features/authentication/signupSlice';
+import registerStyle from './register.module.scss';
 import AppImages from '../../utilities/images/images';
+import ErrorModal from '../../Modals/errorModal';
+import Loader from '../../Loader/Loader';
 
-const RegisterPage = () => (
-  <div className="holdLogin">
-    <div className="contr">
+export default function RegisterPage() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [match, setMatch] = useState('');
+  const [errorModal, setErrorModal] = useState(false);
+  const [formDate, setFormDate] = useState({
+    fullname: '',
+    phone: '+',
+    email: '',
+    password: '',
+    password2: '',
+    frontendUrl: 'https://monievend.netlify.app/',
+  });
 
-      <div className="dr">
-        {/* <div className="b-r" /> */}
-        <h5>Creating payment solution</h5>
-        <p className="pd">
-          A product which specializes in creating
-          terminal solution products for customers, SME&apos;s and merchats
+  const {
+    fullname,
+    phone,
+    email,
+    password,
+    password2,
+  } = formDate;
 
-        </p>
+  const {
+    user,
+    isLoading,
+    isError,
+    isSuccess,
+    message,
+  } = useSelector((state) => state.auth);
 
-      </div>
-      <div id="c--1">
-        <div className="haw">
-          <Link className="aw" to="/auth/login">Login</Link>
-          <button type="button" className="bwa">Register</button>
-        </div>
-        {/* <img src={AppImages.HLOGO} id="img-7" alt="Logo" preview={false} /> */}
-        <img src={AppImages.LOGO_VERT} id="img-7" alt="Logo" />
-        <h1 id="H1">Create Account</h1>
-        <form id="f-3">
+  useEffect(() => {
+    if (isError) {
+      setErrorModal(true);
+    }
+    if (isSuccess || user) {
+      navigate('/dashboard/services');
+    }
 
-          <label className="l-1 formInput" htmlFor="name">
-            Full name
-            <input type="text" className="i-1" name="name" id="name" placeholder="Username" />
-          </label>
+    dispatch(reset());
+  }, [user, isError, isSuccess, message, navigate, dispatch]);
 
-          <label className="l-1 formInput" htmlFor="phone">
-            Phone number
-            <input type="phone" className="i-1" name="phone" id="phone" placeholder="Phone number" />
-          </label>
-          <label className="l-1 formInput" htmlFor="email">
-            Email
-            <input type="email" className="i-1" name="email" id="email" placeholder="Email" />
-          </label>
-          <label className="l-1 formInput" htmlFor="password">
-            Password
-            <input type="password" className="i-1" name="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
-          </label>
-          <label className="l-1 formInput" htmlFor="re-password">
-            Re-type Password*
-            <input type="password" className="i-1" name="re-password" id="re-password" placeholder="Re-type Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
-          </label>
-          <div className="l-2 checkMe">
-            <label className="l-3" htmlFor="check">
-              <input type="checkbox" name="check" id="check" />
-              Remember me
-            </label>
-            <Link to="/auth/password-reset" className="l-3"> Forgot Password? </Link>
+  const onChange = (e) => {
+    setFormDate((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (password !== password2) {
+      setMatch('Password do not match');
+    } else {
+      const userData = {
+        fullname,
+        email,
+        phone: '+234' + phone,
+        password,
+        frontendUrl: 'https://monievend.netlify.app/',
+      };
+      dispatch(register(userData));
+      setMatch('');
+    }
+  };
+
+  return (
+    <section className={registerStyle.holdAll}>
+      <div className={registerStyle.holdFormNText}>
+        <div className={registerStyle.holdText}>
+          <div className={registerStyle.holdImage}>
+            <img src={AppImages.LOGO_VERT} alt="Logo" />
           </div>
-          <button type="button" id="b-r">Sign up</button>
-        </form>
-        <div className="fo-1">
-          <p className="fo-p">
-            Already have an account?
-            <Link to="/auth/login" className="l-4">Login</Link>
-          </p>
+          <div>
+            <h3>Creating payment solutions</h3>
+            <p>A product which specializes in creating terminal solution products for customers, SME&apos;s and merchants. </p>
+          </div>
+        </div>
+        <div className={registerStyle.holdForm}>
+          <div className={registerStyle.holdImage}>
+            <img src={AppImages.LOGO_VERT} alt="Logo" />
+          </div>
+          <div className={registerStyle.headerText}>
+            <h3>Create Account</h3>
+            <p>Please sign up by creating a personal account to  access all payment services and unique products</p>
+          </div>
+          <Form onSubmit={onSubmit}>
+            <Form.Group className="mb-3" controlId="formBasicFullName">
+              <Form.Label>Full name</Form.Label>
+              <Form.Control type="text" placeholder="Full name" name="fullname" value={fullname} onChange={onChange} />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control type="email" placeholder="Enter email" name="email" value={email} onChange={onChange} />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicPhoneNumber">
+              <Form.Label>Phone number</Form.Label>
+              <Form.Control type="number" placeholder="Phone number" name="phone" value={phone} onChange={onChange} />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" placeholder="Password" name="password" value={password} onChange={onChange} />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicPassword2">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" placeholder="Password" name="password2" value={password2} onChange={onChange} />
+              <Form.Text className="text-muted">
+                {match}
+              </Form.Text>
+            </Form.Group>
+
+            <p className={registerStyle.already}>
+              Already have an account?
+              <Link to="/auth/login">Login</Link>
+            </p>
+
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
         </div>
       </div>
-    </div>
-  </div>
-);
+      {isError ? <ErrorModal show={errorModal} onHide={() => setErrorModal(false)} errorMsg={message} /> : null}
+      {isLoading ? <Loader /> : null}
+    </section>
+    // <div className="holdRegister">
+    //   <div className="contr">
 
-export default RegisterPage;
+    //     <div className="dr">
+    //       {/* <div className="b-r" /> */}
+    //       <h5>Creating payment solution</h5>
+    //       <p className="pd">
+    //         A product which specializes in creating
+    //         terminal solution products for customers, SME&apos;s and merchats
+
+    //       </p>
+
+    //     </div>
+    //     <div id="c--1">
+    //       <div className="haw">
+    //         <Link className="aw" to="/auth/login">Login</Link>
+    //         <button type="button" className="bwa">Register</button>
+    //       </div>
+    //       <img src={AppImages.HLOGO} id="img-7" alt="Logo" />
+    //       <img src={AppImages.LOGO_VERT} id="img-7" alt="Logo" />
+    //       <h1 id="H1">Create Account</h1>
+    //       <form id="f-3">
+
+    //         <label className="l-1 formInput" htmlFor="name">
+    //           Full name
+    //           <input type="text" className="i-1" name="name" placeholder="Username" value={name} onChange={onChange} />
+    //         </label>
+
+    //         <label className="l-1 formInput" htmlFor="phone">
+    //           Phone number
+    //           <input type="phone" className="i-1" name="phone" id="phone" value={phone} placeholder="Phone number" />
+    //         </label>
+    //         <label className="l-1 formInput" htmlFor="email">
+    //           Email
+    //           <input type="email" className="i-1" name="email" id="email" placeholder="Email" value={email} />
+    //         </label>
+    //         <label className="l-1 formInput" htmlFor="password">
+    //           Password
+    //           <input type="password" className="i-1" name="password" id="password" placeholder="Password" value={password} required />
+    //         </label>
+    //         <label className="l-1 formInput" htmlFor="re-password">
+    //           Re-type Password*
+    //           <input type="password" className="i-1" name="re-password" id="re-password" placeholder="Re-type Password" required />
+    //         </label>
+    //         <button type="button" id="b-r">Sign up</button>
+    //       </form>
+    //       <div className="fo-1">
+    //         <p className="fo-p">
+    //           Already have an account?
+    //           <Link to="/auth/login" className="l-4">Login</Link>
+    //         </p>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
+  );
+}

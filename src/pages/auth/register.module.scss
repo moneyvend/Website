@@ -95,8 +95,8 @@
   font-weight: 400;
   font-size: 12px;
   color: #4f54a1;
-  margin: 0;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 #img-7 {
@@ -131,10 +131,10 @@
   .contr {
     display: flex;
     max-width: 70%;
-    margin: auto;
-    height: 100vh;
+    height: auto;
     justify-content: center;
     align-items: center;
+    margin: 3em 0;
   }
 
   .checkMe {
@@ -318,3 +318,135 @@
     height: 5vh;
   }
 }
+
+// My Registration Styles Starts Here
+
+.holdAll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.holdFormNText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 80%;
+}
+
+.holdText {
+  width: 45%;
+  height: 100%;
+  background-color: #030a78;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+
+  img {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  h3 {
+    color: white;
+    margin: 20px 0;
+  }
+}
+
+.holdForm {
+  width: 45%;
+  height: 100%;
+  background-color: white;
+  padding: 20px;
+  overflow-y: scroll;
+
+  .holdImage {
+    display: none;
+  }
+
+  .headerText {
+    text-align: center;
+    color: #030a78;
+
+    h3 {
+      color: #030a78;
+    }
+  }
+
+  .already {
+    text-align: center;
+    font-size: 13px;
+    a {
+      padding: 0 5px;
+      color: #030968 !important;
+      font-weight: bold;
+    }
+  }
+  Button {
+    width: 100% !important;
+    background-color: #030968 !important;
+    border-color: #030968 !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .holdAll {
+    display: flex;
+    justify-content: center;
+    height: auto;
+  }
+
+  .holdFormNText {
+    height: auto;
+    width: 100%;
+    margin: 2em 0;
+  }
+
+  .holdText {
+    display: none;
+  }
+
+  .holdForm {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    box-shadow: 5px 5px 5px #c5c5c5, -5px -5px 5px #c5c5c5;
+    border-radius: 5px;
+
+    .holdImage {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      img {
+        height: 50px;
+      }
+    }
+
+    .headerText {
+      text-align: center;
+      color: #030a78;
+
+      p {
+        font-size: 13px;
+      }
+    }
+
+    .already {
+      display: flex;
+      justify-content: center;
+      a {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+// My Registration Styles Ends Here

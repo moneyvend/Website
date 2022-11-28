@@ -28,7 +28,7 @@ const LoginPage = () => {
 
   return (
     <div className="holdLogin">
-      <div className="contr-1">
+      <div className="contr-1 loginContent">
         <div className="dr">
           {/* <div className="b-r" /> */}
           {/* <img src={AppImages.VLOGO} alt="Logo" width={180} /> */}
