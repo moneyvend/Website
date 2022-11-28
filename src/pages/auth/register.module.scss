@@ -383,13 +383,15 @@
   .already {
     text-align: center;
     font-size: 13px;
+
     a {
       padding: 0 5px;
       color: #030968 !important;
       font-weight: bold;
     }
   }
-  Button {
+
+  button {
     width: 100% !important;
     background-color: #030968 !important;
     border-color: #030968 !important;
@@ -442,6 +444,7 @@
     .already {
       display: flex;
       justify-content: center;
+
       a {
         text-transform: capitalize;
       }
