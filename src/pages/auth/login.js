@@ -1,114 +1,64 @@
-import React, { useState } from 'react';
+/* eslint-disable prefer-template */
+/* eslint-disable max-len */
+/* eslint-disable indent */
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { Form, Button } from 'react-bootstrap';
+import loginStyle from './login.module.scss';
 import AppImages from '../../utilities/images/images';
 
-import './login.modules.css';
-
-const LoginPage = () => {
-  const [isShown, setIsShown] = useState(true);
-  const [isEmail, setIsEmail] = useState(false);
-  const handleClick = (e) => {
-    e.preventDefault();
-    setIsShown(true);
-    if (setIsShown(true)) {
-      setIsEmail(false);
-    } else {
-      setIsEmail(false);
-    }
-  };
-  const handleEmail = (e) => {
-    e.preventDefault();
-    setIsEmail(true);
-    if (setIsEmail(true)) {
-      setIsShown(false);
-    } else {
-      setIsShown(false);
-    }
-  };
-
+export default function RegisterPage() {
   return (
-    <div className="holdLogin">
-      <div className="contr-1 loginContent">
-        <div className="dr">
-          {/* <div className="b-r" /> */}
-          {/* <img src={AppImages.VLOGO} alt="Logo" width={180} /> */}
-          <h5>Creating payment solutions</h5>
-          <p className="pd">
-            A product which specializes in creating
-            terminal solution products for customers, SME&apos;s and merchats
-          </p>
-
+    <section className={loginStyle.holdAll}>
+      <div className={loginStyle.holdFormNText}>
+        <div className={loginStyle.holdText}>
+          <div className={loginStyle.holdImage}>
+            <img src={AppImages.LOGO_VERT} alt="Logo" />
+          </div>
+          <div>
+            <h3>Creating payment solutions</h3>
+            <p>A product which specializes in creating terminal solution products for customers, SME&apos;s and merchants. </p>
+          </div>
         </div>
-        <div id="c--1">
-          <div className="haw">
-            <button type="button" className="bwa">Login</button>
-            <Link className="aw" to="/auth/register">Register</Link>
+        <div className={loginStyle.holdForm}>
+          <div className={loginStyle.holdImage}>
+            <img src={AppImages.LOGO_VERT} alt="Logo" />
           </div>
-          <div className="evenPadding">
-            <img src={AppImages.LOGO_VERT} id="img-7" alt="Logo" />
-            <h1 id="H1">Welcome Back!</h1>
-            {isEmail ? <p className="pod">Log In with your phone number or Email address</p> : <p className="pod">Please sign in to your personal account to start access all payment services.</p>}
-
+          <div className={loginStyle.headerText}>
+            <h3>Welcome Back!</h3>
+            <p>Please sign in to your personal account to start access all payment services.</p>
           </div>
 
-          <div className="holdWswitch">
-            <div className="rep evenPadding">
-              <button type="button" onClick={handleClick} className="rp">Phone Number</button>
-              <button type="button" onClick={handleEmail} className="rp">Email</button>
+          <Form>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="email" placeholder="Enter email" name="email" />
+            </Form.Group>
+
+            <Form.Group className="mb-2" controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" placeholder="Password" name="password" />
+            </Form.Group>
+
+            <div className={loginStyle.holdRemember}>
+              <Form.Group controlId="formBasicCheckbox">
+                <Form.Check type="checkbox" label="Remember me" />
+              </Form.Group>
+              <Link to="/auth/forgot-password">Forgot Password?</Link>
             </div>
-          </div>
 
-          {isShown && (
-            <form id="f-3 loginForm" className="evenPadding">
+            <p className={loginStyle.already}>
+              Don&apos;t have an account?
+              <Link to="/auth/register">Sign up</Link>
+            </p>
 
-              <label className="l-1 MobileInput" htmlFor="phone">
-                Phone number
-                <input type="phone" className="i-1 mobileIn" name="phone" id="phone" placeholder="Phone number" />
-              </label>
-              <label className="l-1 MobileInput" htmlFor="password">
-                Password
-                <input type="password" className="i-1 mobileIn" name="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
-              </label>
-              <div className="l-2">
-                <label className="l-3" htmlFor="check">
-                  <input type="checkbox" name="check mobileIn" id="check" />
-                  Remember me
-                </label>
-                <Link to="/auth/password-reset" className="l-3"> Forgot Password?</Link>
-              </div>
-              <button type="button" id="b-r" className="mobileLogin">Log in</button>
-            </form>
-          )}
-
-          {isEmail && (
-            <form id="f-3 loginForm" className="evenPadding">
-
-              <label className="l-1 MobileInput" htmlFor="email">
-                Email
-                <input type="email" className="i-1 mobileIn" name="email" id="email" placeholder="Email" />
-              </label>
-              <label className="l-1" htmlFor="password">
-                Password
-                <input type="password" className="i-1" name="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
-              </label>
-              <div className="l-2">
-                <label className="l-3" htmlFor="check">
-                  <input type="checkbox" name="check" id="check" />
-                  Remember me
-                </label>
-                <Link to="/auth/password-reset" className="l-3"> Forgot Password? </Link>
-              </div>
-              <button type="button" id="b-r mobileLogin">Log in</button>
-            </form>
-          )}
-          <p className="fo-p">
-            Don&apos;t have an account?
-            <Link to="/auth/register" className="l-4">Sign up</Link>
-          </p>
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
         </div>
       </div>
-    </div>
+      {/* {isLoading ? <Loader /> : null} */}
+    </section>
   );
-};
-
-export default LoginPage;
+}
