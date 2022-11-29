@@ -1,43 +1,48 @@
+/* eslint-disable prefer-template */
+/* eslint-disable max-len */
+/* eslint-disable indent */
 import React from 'react';
+import { Link } from 'react-router-dom';
+// import { useSelector, useDispatch } from 'react-redux';
+import { Button } from 'react-bootstrap';
+import verifyEmailStyle from './verifyEmail.module.scss';
 import AppImages from '../../utilities/images/images';
-import './verifyEmail.modules.css';
+// import ErrorModal from '../../Modals/errorModal';
+// import Loader from '../../Loader/Loader';
 
-const RecoverPasswordPage = () => (
-  <div className="contr">
-
-    <div className="dr">
-      <div className="b-r" />
-      <h5>Creating payment solutions</h5>
-      <p className="pd">
-        A product which specializes in creating
-        terminal solution products for customers, SME&apos;s and merchats
-
-      </p>
-
-    </div>
-    <div id="c--2">
-      <div className="haw">
-        <a className="aw" href="google.com">Login</a>
-        <button type="button" className="bwa">Register</button>
-      </div>
-      <img src={AppImages.HLOGO} id="img-7" alt="Logo" />
-      <div className="j-c">
-        <h1 id="H1">Verify Email</h1>
-        <p className="ppw">
-          We&apos;ve sent a link to your email address: marian@gmail.com
-        </p>
-        <form id="f-3">
-          <button type="button" id="b-r">Sign up</button>
-        </form>
-        <div className="fo-1">
-          <p className="fo-p">
-            Didn&apos;t receive an email?
-            <a href="google.com" className="l-4">Resend</a>
+export default function RecoverPasswordPage() {
+  // const [errorModal, setErrorModal] = useState(false);
+  return (
+    <section className={verifyEmailStyle.holdAll}>
+      <div className={verifyEmailStyle.holdFormNText}>
+        <div className={verifyEmailStyle.holdText}>
+          <div className={verifyEmailStyle.holdImage}>
+            <img src={AppImages.LOGO_VERT} alt="Logo" />
+          </div>
+          <div>
+            <h3>Creating payment solutions</h3>
+            <p>A product which specializes in creating terminal solution products for customers, SME&apos;s and merchants. </p>
+          </div>
+        </div>
+        <div className={verifyEmailStyle.holdForm}>
+          <div className={verifyEmailStyle.holdImage}>
+            <img src={AppImages.LOGO_VERT} alt="Logo" />
+          </div>
+          <div className={verifyEmailStyle.headerText}>
+            <h3>Email Verification Sent</h3>
+            <p>We&apos;ve sent a link to your email address: marian@gmail.com</p>
+          </div>
+          <Button variant="primary" type="submit">
+            Login
+          </Button>
+          <p className={verifyEmailStyle.already}>
+            Didn&apos;t receive an email ?
+            <Link to=" ">Resend</Link>
           </p>
         </div>
       </div>
-    </div>
-  </div>
-);
-
-export default RecoverPasswordPage;
+      {/* {isError ? <ErrorModal show={errorModal} onHide={() => setErrorModal(false)} errorMsg={message} /> : null} */}
+      {/* {isLoading ? <Loader /> : null} */}
+    </section>
+  );
+}

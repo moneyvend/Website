@@ -1,0 +1,455 @@
+#H1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  color: #030a78;
+  text-align: center;
+}
+
+#f-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.formInput {
+  margin-bottom: 10px !important;
+}
+
+.checkMe {
+  margin: 10px 0 !important;
+}
+
+.l-1 {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  width: 100%;
+  line-height: 140%;
+  gap: 5px;
+  color: #030a78;
+}
+
+.l-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.i-1 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+
+  /* or 21px */
+
+  color: #4f54a1;
+  height: 3vh;
+  border: 0.949949px solid #f0f0f7;
+  border-radius: 4px;
+  padding-left: 8px;
+}
+
+.l-3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  gap: 5px;
+  text-transform: capitalize;
+  align-self: center;
+  color: #030a78;
+  padding: 0;
+}
+
+#b-r {
+  background: #030a78;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  font-size: 12px;
+  height: 3vh;
+  border-style: none;
+  margin-top: 20px;
+}
+
+.fo-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.contr-1 .input {
+  padding-left: 16px;
+}
+
+.l-4 {
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0;
+  color: #030a78;
+  padding-left: 5px;
+}
+
+.fo-p {
+  font-weight: 400;
+  font-size: 12px;
+  color: #4f54a1;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#img-7 {
+  margin: auto;
+  display: block;
+  padding-top: 20px;
+  width: 20%;
+}
+
+#c--1 {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.pdw {
+  display: none;
+}
+
+.dr {
+  display: none;
+}
+
+.haw {
+  display: none;
+}
+
+.dr h5 {
+  font-family: "Inter", sans-serif;
+}
+
+@media only screen and (min-width: 480px) {
+  .contr {
+    display: flex;
+    max-width: 70%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 3em 0;
+  }
+
+  .checkMe {
+    margin: 10px 0 !important;
+  }
+
+  .pdw {
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 140%;
+    text-align: center;
+    color: #4f54a1;
+    margin: auto;
+    padding: 0% 20% 5% 20%;
+  }
+
+  #f-3 {
+    align-items: center;
+  }
+
+  .dr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #030a78;
+    font-size: 18px;
+    max-width: 50%;
+    height: 100%;
+  }
+
+  .b-r {
+    width: 100px;
+    background-color: #ffff;
+    height: 100px;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .holdWswitch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+
+  #c--1 {
+    flex: 70%;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    padding: 0 30px;
+    height: 100%;
+  }
+
+  /* .evenPadding {
+    padding: 0 5em;
+  } */
+
+  .i-1 {
+    height: 40px;
+    width: 100%;
+  }
+
+  .ll1 {
+    text-align: start;
+  }
+
+  #fn {
+    text-align: start;
+  }
+
+  .l-2 {
+    justify-content: space-between;
+    gap: 100px;
+    width: 100%;
+  }
+
+  #b-r {
+    width: 100%;
+    align-self: center;
+    margin: 15px 0;
+    padding: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+  }
+
+  .l-1 {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 14px;
+    width: 100%;
+    color: #030a78;
+    margin-bottom: 20px;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  #H1 {
+    font-size: 26px;
+  }
+
+  h5 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 120%;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .pd {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    color: #f5f7f9;
+    margin: 0;
+    padding: 0 10%;
+  }
+
+  #img-7 {
+    display: none;
+  }
+
+  .haw {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 10px;
+    align-items: center;
+  }
+
+  .bwa {
+    background-color: #030a78;
+    border-radius: 5px;
+    border-style: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 25px;
+    font-family: Mulish, sans-serif;
+    color: white !important;
+  }
+
+  .aw {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    color: #030a78;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .contr {
+    height: auto;
+    background-color: white;
+    padding: 10px;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px gainsboro, -5px -5px 5px gainsboro;
+  }
+
+  .i-1 {
+    height: 5vh;
+  }
+
+  #b-r {
+    font-size: 15px;
+    height: 5vh;
+  }
+}
+
+// My Registration Styles Starts Here
+
+.holdAll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.holdFormNText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 80%;
+}
+
+.holdText {
+  width: 45%;
+  height: 100%;
+  background-color: #030a78;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+
+  img {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  h3 {
+    color: white;
+    margin: 20px 0;
+  }
+}
+
+.holdForm {
+  width: 45%;
+  height: 100%;
+  background-color: white;
+  padding: 20px;
+  overflow-y: scroll;
+
+  .holdImage {
+    display: none;
+  }
+
+  .headerText {
+    text-align: center;
+    color: #030a78;
+
+    h3 {
+      color: #030a78;
+    }
+  }
+
+  .already {
+    text-align: center;
+    font-size: 13px;
+
+    a {
+      padding: 0 5px;
+      color: #030968 !important;
+      font-weight: bold;
+    }
+  }
+
+  button {
+    width: 100% !important;
+    background-color: #030968 !important;
+    border-color: #030968 !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .holdAll {
+    display: flex;
+    justify-content: center;
+    height: auto;
+  }
+
+  .holdFormNText {
+    height: auto;
+    width: 100%;
+    margin: 2em 0;
+  }
+
+  .holdText {
+    display: none;
+  }
+
+  .holdForm {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    box-shadow: 5px 5px 5px #c5c5c5, -5px -5px 5px #c5c5c5;
+    border-radius: 5px;
+
+    .holdImage {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      img {
+        height: 50px;
+      }
+    }
+
+    .headerText {
+      text-align: center;
+      color: #030a78;
+
+      p {
+        font-size: 13px;
+      }
+    }
+
+    .already {
+      display: flex;
+      justify-content: center;
+
+      a {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+// My Registration Styles Ends Here
