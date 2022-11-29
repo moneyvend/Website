@@ -46,7 +46,7 @@ export default function RegisterPage() {
       setErrorModal(true);
     }
     if (isSuccess || user) {
-      navigate('/dashboard/services');
+      navigate('/auth/verify-email');
     }
 
     dispatch(reset());
@@ -109,7 +109,7 @@ export default function RegisterPage() {
 
             <Form.Group className="mb-3" controlId="formBasicPhoneNumber">
               <Form.Label>Phone number</Form.Label>
-              <Form.Control type="number" placeholder="Phone number" name="phone" value={phone} onChange={onChange} />
+              <Form.Control type="number" placeholder="8011-222-333" name="phone" value={phone} onChange={onChange} />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -118,7 +118,7 @@ export default function RegisterPage() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword2">
-              <Form.Label>Password</Form.Label>
+              <Form.Label>Re-type password</Form.Label>
               <Form.Control type="password" placeholder="Password" name="password2" value={password2} onChange={onChange} />
               <Form.Text className="text-muted">
                 {match}
@@ -139,60 +139,5 @@ export default function RegisterPage() {
       {isError ? <ErrorModal show={errorModal} onHide={() => setErrorModal(false)} errorMsg={message} /> : null}
       {isLoading ? <Loader /> : null}
     </section>
-    // <div className="holdRegister">
-    //   <div className="contr">
-
-    //     <div className="dr">
-    //       {/* <div className="b-r" /> */}
-    //       <h5>Creating payment solution</h5>
-    //       <p className="pd">
-    //         A product which specializes in creating
-    //         terminal solution products for customers, SME&apos;s and merchats
-
-    //       </p>
-
-    //     </div>
-    //     <div id="c--1">
-    //       <div className="haw">
-    //         <Link className="aw" to="/auth/login">Login</Link>
-    //         <button type="button" className="bwa">Register</button>
-    //       </div>
-    //       <img src={AppImages.HLOGO} id="img-7" alt="Logo" />
-    //       <img src={AppImages.LOGO_VERT} id="img-7" alt="Logo" />
-    //       <h1 id="H1">Create Account</h1>
-    //       <form id="f-3">
-
-    //         <label className="l-1 formInput" htmlFor="name">
-    //           Full name
-    //           <input type="text" className="i-1" name="name" placeholder="Username" value={name} onChange={onChange} />
-    //         </label>
-
-    //         <label className="l-1 formInput" htmlFor="phone">
-    //           Phone number
-    //           <input type="phone" className="i-1" name="phone" id="phone" value={phone} placeholder="Phone number" />
-    //         </label>
-    //         <label className="l-1 formInput" htmlFor="email">
-    //           Email
-    //           <input type="email" className="i-1" name="email" id="email" placeholder="Email" value={email} />
-    //         </label>
-    //         <label className="l-1 formInput" htmlFor="password">
-    //           Password
-    //           <input type="password" className="i-1" name="password" id="password" placeholder="Password" value={password} required />
-    //         </label>
-    //         <label className="l-1 formInput" htmlFor="re-password">
-    //           Re-type Password*
-    //           <input type="password" className="i-1" name="re-password" id="re-password" placeholder="Re-type Password" required />
-    //         </label>
-    //         <button type="button" id="b-r">Sign up</button>
-    //       </form>
-    //       <div className="fo-1">
-    //         <p className="fo-p">
-    //           Already have an account?
-    //           <Link to="/auth/login" className="l-4">Login</Link>
-    //         </p>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
