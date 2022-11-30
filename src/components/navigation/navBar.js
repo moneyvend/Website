@@ -41,7 +41,7 @@ const NavBar = () => {
                     onClick={() => {
                       customRoute('/auth/login');
                     }}
-                  // disabled
+                    disabled
                   >
                     Log in
                   </button>
@@ -82,7 +82,7 @@ const NavBar = () => {
         onClick={() => {
           customRoute('/auth/login');
         }}
-      // disabled
+        disabled
       >
         Login
       </button>

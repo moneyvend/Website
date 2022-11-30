@@ -28,7 +28,6 @@ export default function RegisterPage() {
             <h3>Welcome Back!</h3>
             <p>Please sign in to your personal account to start access all payment services.</p>
           </div>
-
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email</Form.Label>
