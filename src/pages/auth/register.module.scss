@@ -396,6 +396,12 @@
     background-color: #030968 !important;
     border-color: #030968 !important;
   }
+
+  .dont {
+    font-size: 12px;
+    margin-left: 10px;
+    color: gray;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -408,7 +414,7 @@
   .holdFormNText {
     height: auto;
     width: 100%;
-    margin: 2em 0;
+    margin: 15px 0;
   }
 
   .holdText {
@@ -416,7 +422,7 @@
   }
 
   .holdForm {
-    width: 90%;
+    width: 95%;
     height: auto;
     padding: 20px;
     box-shadow: 5px 5px 5px #c5c5c5, -5px -5px 5px #c5c5c5;

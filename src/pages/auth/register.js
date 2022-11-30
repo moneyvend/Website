@@ -15,10 +15,10 @@ export default function RegisterPage() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [match, setMatch] = useState('');
+  const [phone, setPhone] = useState('');
   const [errorModal, setErrorModal] = useState(false);
   const [formDate, setFormDate] = useState({
     fullname: '',
-    phone: '+',
     email: '',
     password: '',
     password2: '',
@@ -27,11 +27,14 @@ export default function RegisterPage() {
 
   const {
     fullname,
-    phone,
     email,
     password,
     password2,
   } = formDate;
+
+  if (phone.charAt(0) === '0') {
+    setPhone(phone.replace('0', ''));
+  }
 
   const {
     user,
@@ -108,8 +111,11 @@ export default function RegisterPage() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPhoneNumber">
-              <Form.Label>Phone number</Form.Label>
-              <Form.Control type="number" placeholder="8011-222-333" name="phone" value={phone} onChange={onChange} />
+              <Form.Label>
+                Phone number
+                <span className={registerStyle.dont}>(Please don&apos;t include the first 0 of your phone number)</span>
+              </Form.Label>
+              <Form.Control type="number" placeholder="Phone number" value={phone} onChange={(e) => setPhone(e.target.value)} />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
