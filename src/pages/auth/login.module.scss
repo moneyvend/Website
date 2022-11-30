@@ -216,6 +216,18 @@
   align-items: center;
   flex-direction: column;
 
+  .already {
+    text-align: center;
+    font-size: 13px;
+
+    a {
+      padding: 0 5px;
+      color: #030968 !important;
+      font-weight: bold;
+      text-transform: initial;
+    }
+  }
+
   form {
     width: 100%;
 
@@ -243,18 +255,6 @@
 
     h3 {
       color: #030a78;
-    }
-  }
-
-  .already {
-    text-align: center;
-    font-size: 13px;
-
-    a {
-      padding: 0 5px;
-      color: #030968 !important;
-      font-weight: bold;
-      text-transform: initial;
     }
   }
 
