@@ -40,9 +40,6 @@ export default function RegisterPage() {
             </Form.Group>
 
             <div className={loginStyle.holdRemember}>
-              <Form.Group controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Remember me" />
-              </Form.Group>
               <Link to="/auth/forgot-password">Forgot Password?</Link>
             </div>
 

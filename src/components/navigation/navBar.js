@@ -30,6 +30,7 @@ const NavBar = () => {
           <ul className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
             <ul className="navList">
               <div className="op">
+                <li><NavLink id="anchora" to="/" className="nav-link">Home</NavLink></li>
                 <li><NavLink id="anchora" to="/products" className="nav-link">Products</NavLink></li>
                 <li><NavLink id="anchorb" to="/merchants" className="nav-link">Merchants</NavLink></li>
                 <li><NavLink id="anchorc" to="about" className="nav-link">About us</NavLink></li>
@@ -70,6 +71,7 @@ const NavBar = () => {
       </div>
       <div className="des-1">
         <ul className="navList">
+          <li><NavLink id="anchora" to="/" className="nav-link">Home</NavLink></li>
           <li><NavLink id="anchora" to="/products" className="nav-link">Products</NavLink></li>
           <li><NavLink id="anchorb" to="/merchants" className="nav-link">Merchants</NavLink></li>
           <li><NavLink id="anchorc" to="/about" className="nav-link">About us</NavLink></li>
