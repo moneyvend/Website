@@ -216,6 +216,31 @@
   align-items: center;
   flex-direction: column;
 
+  .holdSwichButin {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+
+    .acti {
+      padding: 7px !important;
+      border: 2px solid transparent !important;
+      background-color: #030968 !important;
+      color: white !important;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .actiNot {
+      padding: 7px;
+      border: 2px solid #030968 !important;
+      background-color: white !important;
+      color: #030968;
+      font-weight: bold;
+      font-size: 15px;
+    }
+  }
+
   .already {
     text-align: center;
     font-size: 13px;
