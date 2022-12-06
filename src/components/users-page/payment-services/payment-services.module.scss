@@ -1,0 +1,62 @@
+.holdAll {
+  text-align: left;
+  background-color: white;
+  padding: 1em;
+  border-radius: 5px;
+
+  .service {
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 29px;
+    color: #030a78;
+    margin-bottom: 20px;
+  }
+
+  .holdAllContent {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .holdContin {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: #f0f0f7;
+      padding: 10px;
+      cursor: pointer;
+
+      .holdIcon {
+        background-color: #030a78;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        padding: 5px;
+        margin-right: 10px;
+      }
+    }
+
+    .holdText {
+      text-align: left;
+
+      .head {
+        text-align: left;
+        margin: 0;
+        color: #030a78;
+      }
+      .desc {
+        text-align: left;
+        margin: 2px 0;
+        color: #9a9dc9;
+      }
+    }
+  }
+}

@@ -104,7 +104,9 @@ export default function Index() {
                         </div>
                     </div>
                 </div>
-                <Outlet />
+                <div className={IndexStyles.out}>
+                    <Outlet />
+                </div>
             </div>
         </div>
     );
