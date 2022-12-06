@@ -5,7 +5,7 @@
 }
 
 .nav {
-  padding: 2em 2em;
+  padding: 2em 1em;
 }
 
 .logo {
@@ -41,7 +41,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-  padding: 15px;
+  padding: 10px;
   text-decoration: none;
 }
 
