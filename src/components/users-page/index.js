@@ -7,7 +7,7 @@
 /* eslint-disable indent */
 import React, { useState, useEffect } from 'react';
 import { RiHome4Line, RiLogoutCircleRLine, RiArrowDropDownLine } from 'react-icons/ri';
-import { BsPerson } from 'react-icons/bs';
+// import { BsPerson } from 'react-icons/bs';
 import { AiOutlineQuestionCircle, AiOutlineSetting } from 'react-icons/ai';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import { BiTransfer, BiSearch } from 'react-icons/bi';
@@ -48,12 +48,6 @@ export default function Index() {
                                 <Link to="transactions" className={navValue === "tra" ? IndexStyles.active : ""}>
                                     <BiTransfer className={IndexStyles.icon} />
                                     Transactions
-                                </Link>
-                            </li>
-                            <li className={navValue === "ben" ? IndexStyles.active : ""} onClick={tabs}>
-                                <Link to="beneficiaries" className={navValue === "ben" ? IndexStyles.active : ""}>
-                                    <BsPerson className={IndexStyles.icon} />
-                                    <span>Beneficiary</span>
                                 </Link>
                             </li>
                             <li className={navValue === "not" ? IndexStyles.active : ""} onClick={tabs}>

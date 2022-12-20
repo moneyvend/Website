@@ -10,7 +10,7 @@ export default function NoTransaction() {
     return (
         <div>
             <div className={NoTransactionStyle.body.text}>
-                <img src={AppImages.Notransact} id="logo" className={NoTransactionStyle.lps - 1} alt="Logo" />
+                <img src={AppImages.Notransact} id="logo" className={NoTransactionStyle.lps} alt="Logo" />
                 <p className={NoTransactionStyle.nop}>No Transaction yet</p>
                 <p className={NoTransactionStyle.nop2}>After your first transaction you will be able to view it here</p>
             </div>
