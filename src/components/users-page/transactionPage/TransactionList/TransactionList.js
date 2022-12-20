@@ -1,231 +1,77 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable react/self-closing-comp */
+/* eslint-disable max-len */
 /* eslint-disable no-undef */
 /* eslint-disable space-infix-ops */
 /* eslint-disable indent */
 /* eslint-disable react/jsx-indent */
-import React from 'react';
-import { Table, Tag } from 'antd';
+import { Table } from 'react-bootstrap';
+import { AiOutlineCheck } from 'react-icons/ai';
+import { BiCalendar } from 'react-icons/bi';
 import TransactionListStyle from './TransactionList.module.scss';
-import AppImages from '../../../../utilities/images/images';
+import airtel from '../../../../utilities/images/Airtelc.svg';
 
-const columns = [
-    {
-        title: 'id',
-        dataIndex: 'id',
-        key: 'id',
-        render: (number) => <a href="google.com">{number}</a>,
-    },
-    {
-        title: '  Date',
-        dataIndex: 'date',
-        key: 'date',
-    },
-    {
-        title: 'Service',
-        dataIndex: 'service',
-        key: 'service',
-    },
-    {
-        title: 'Biller',
-        dataIndex: 'biller',
-        key: 'biller',
-    },
-    {
-        title: 'Status',
-        key: 'tags',
-        dataIndex: 'tags',
-        render: (_, { tags }) => (
-            <>
-                {tags.map((tag) => {
-                    let color = tag.length > 5 ? 'green' : 'red';
-
-                    if (tag === 'Failed') {
-                        color = 'volcano';
-                    }
-                    if (tag === 'Pending') {
-                        color = 'gold';
-                    }
-
-                    return (
-                        <Tag color={color} key={tag}>
-                            {tag.toUpperCase(1)}
-                        </Tag>
-                    );
-                })}
-            </>
-        ),
-    },
-    {
-        title: 'Payment Method',
-        dataIndex: 'payment',
-        key: 'payment',
-    },
-    {
-        title: 'Amount',
-        dataIndex: 'amount',
-        key: 'amount',
-    },
-
-];
-const data = [
-    {
-        key: '1',
-        id:
-            <div className="air">
-                {' '}
-                <img src={AppImages.GREEN} id="logo" className="aa-1" alt="Logo" />
-                {' '}
-                <p className="airp">1</p>
-
-            </div>,
-        date:
-            <div className="air">
-                {' '}
-                <img src={AppImages.CALENDAR} id="logo" className="aa-1" alt="Logo" />
-                {' '}
-                <p className="airp">{Date(Date.now()).toString().slice(0, -36)}</p>
-
-            </div>,
-        service: <p className="airp">Airtime</p>,
-        biller:
-            <div className="air">
-                {' '}
-                <img src={AppImages.MTNc} id="logo" className="aa-1" alt="Logo" />
-                {' '}
-                <p className="airp">Mtn</p>
-            </div>,
-        tags: ['successful'],
-        payment: <p className="airp">Card ****8275</p>,
-        amount: <p className="airp">N500</p>,
-    },
-    {
-        key: '2',
-        id:
-            <div className="air">
-                {' '}
-                <img src={AppImages.GREEN} id="logo" className="aa-1" alt="Logo" />
-                {' '}
-                <p className="airp">1</p>
-
-            </div>,
-
-        date:
-            <div className="air">
-                {' '}
-                <img src={AppImages.CALENDAR} id="logo" className="aa-1" alt="Logo" />
-                {' '}
-                <p className="airp">{Date(Date.now()).toString().slice(0, -36)}</p>
-
-            </div>,
-        service: <p className="airp">Aitime</p>,
-        biller:
-            <div className="air">
-                {' '}
-                <img src={AppImages.Airtelc} id="logo" className="aa-1" alt="Logo" />
-                {' '}
-                <p className="airp">Airtel</p>
-            </div>,
-        tags: ['Failed'],
-        payment: <p className="airp">Transfer</p>,
-        amount: <p className="airp">N500</p>,
-    },
-    {
-        key: '3',
-        id:
-            <div className="air">
-                {' '}
-                <img src={AppImages.RED} id="logo" className="aa-1" alt="Logo" />
-                {' '}
-                <p className="airp">1</p>
-
-            </div>,
-        date:
-            <div className="air">
-                {' '}
-                <img src={AppImages.CALENDAR} id="logo" className="aa-1" alt="Logo" />
-                {' '}
-                <p className="airp">{Date(Date.now()).toString().slice(0, -36)}</p>
-
-            </div>,
-        service: <p className="airp">Aitime</p>,
-        biller:
-            <div className="air">
-                {' '}
-                <img src={AppImages.EKEDCc} id="logo" className="aa-1" alt="Logo" />
-                {' '}
-                <p className="airp">Ekedc</p>
-            </div>,
-        tags: ['Pending'],
-        payment: <p className="airp">Card ****8275</p>,
-        amount: <p className="airp">N500</p>,
-    },
-    {
-        key: '4',
-        id:
-            <div className="air">
-                {' '}
-                <img src={AppImages.RED} id="logo" className="aa-1" alt="Logo" />
-                {' '}
-                <p className="airp">1</p>
-
-            </div>,
-        date:
-            <div className="air">
-                {' '}
-                <img src={AppImages.CALENDAR} id="logo" className="aa-1" alt="Logo" />
-                {' '}
-                <p className="airp">{Date(Date.now()).toString().slice(0, -36)}</p>
-
-            </div>,
-        service: <p className="airp">Airtime</p>,
-        biller:
-            <div className="air">
-                {' '}
-                <img src={AppImages.EKEDCc} id="logo" className="aa-1" alt="Logo" />
-                {' '}
-                <p className="airp">Ekedc</p>
-            </div>,
-        tags: ['Failed'],
-        payment: <p className="airp">Ussd Transfer</p>,
-        amount: <p className="airp">N500</p>,
-    },
-    {
-        key: '4',
-        id:
-            <div className="air">
-                {' '}
-                <img src={AppImages.RED} id="logo" className="aa-1" alt="Logo" />
-                {' '}
-                <p className="airp">1</p>
-
-            </div>,
-        date:
-            <div className="air">
-                {' '}
-                <img src={AppImages.CALENDAR} id="logo" className="aa-1" alt="Logo" />
-                {' '}
-                <p className="airp">{Date(Date.now()).toString().slice(0, -36)}</p>
-
-            </div>,
-        service: <p className="airp">Airtime</p>,
-        biller:
-            <div className="air">
-                {' '}
-                <img src={AppImages.EKEDCc} id="logo" className="aa-1" alt="Logo" />
-                {' '}
-                <p className="airp">Ekedc</p>
-            </div>,
-        tags: ['Failed'],
-        payment: <p className="airp">Ussd Transfer</p>,
-        amount: <p className="airp">N500</p>,
-    },
-];
-
-export default function Transaction() {
+export default function TransactionList() {
     return (
         <div className={TransactionListStyle.bgpay}>
-            <div className={TransactionListStyle.body - text}>
+            <div className={TransactionListStyle.body}>
                 <h2 id={TransactionListStyle.service}>Transaction</h2>
-                <Table columns={columns} dataSource={data} />
+                <Table hover size="sm">
+                    <thead>
+                        <tr>
+                            <th className={TransactionListStyle.tableHeader}>ID</th>
+                            <th className={TransactionListStyle.tableHeader}>Date</th>
+                            <th className={TransactionListStyle.tableHeader}>Service</th>
+                            <th className={TransactionListStyle.tableHeader}>Bller</th>
+                            <th className={TransactionListStyle.tableHeader}>Payment Method</th>
+                            <th className={TransactionListStyle.tableHeader}>Amount</th>
+                            <th className={TransactionListStyle.tableHeader}>Status</th>
+                            <th className={TransactionListStyle.tableHeader}></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    <span>
+                                        <AiOutlineCheck className={TransactionListStyle.successIcon} />
+                                    </span>
+                                    <span className={TransactionListStyle.textSize}>#8089089</span>
+                                </div>
+                            </td>
+                            <td className={TransactionListStyle.textSize}>
+                                <span><BiCalendar className={TransactionListStyle.calende} /></span>
+                                <span>Mar 16, 2022</span>
+                            </td>
+                            <td className={TransactionListStyle.textSize}>Airtime</td>
+                            <td className={TransactionListStyle.textSize}>
+                                <span>
+                                    <img src={airtel} alt="airtel" className={TransactionListStyle.calende} />
+                                </span>
+                                <span>Airtel</span>
+                            </td>
+                            <td className={TransactionListStyle.textSize}>Ussd transfer</td>
+                            <td className={TransactionListStyle.textSize}>N550</td>
+                            <td className={TransactionListStyle.textSize}>
+                                <button type="button" className={TransactionListStyle.successText}>Successful</button>
+                            </td>
+                            <td className={TransactionListStyle.textSize}>
+                                <button type="button" className={TransactionListStyle.viewMe}>View</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td colSpan={2}>Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </Table>
             </div>
         </div>
     );

@@ -2,13 +2,16 @@
 /* eslint-disable indent */
 /* eslint-disable no-trailing-spaces */
 import React from 'react';
-// import NoTransaction from './NoTransaction/NoTransaction';
-import TransferList from 'antd/lib/transfer/list';
+import TransactionList from './TransactionList/TransactionList';
+import NoTransaction from './NoTransaction/NoTransaction';
 
 export default function TransactionIndex() {
     return (
         <section>
-            <TransferList />
+            {
+                false ? <NoTransaction /> : <TransactionList />
+            }
+
         </section>
     );
 }

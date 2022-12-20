@@ -1,18 +1,22 @@
+.holdText {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  border-radius: 5px;
+}
+
 .lps {
-  width: 150px;
-  padding-top: 90px;
+  width: 270px;
 }
 
 .nop2 {
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
-  margin: -20px 0 0 0;
-  padding-bottom: 180px;
-
-  /* identical to box height, or 143% */
-
+  font-size: 15px;
   color: #030a78;
 }
 

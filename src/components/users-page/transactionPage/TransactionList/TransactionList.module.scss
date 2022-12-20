@@ -27,3 +27,53 @@
   transition: background 0.3s ease;
   font-size: 15px;
 }
+
+.successIcon {
+  font-size: 15px;
+  color: #52c41a;
+  background-color: #eef9e8;
+  padding: 2px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.textSize {
+  color: #030a78;
+  font-weight: 400;
+  font-family: "Mulish";
+  font-size: 13px;
+}
+
+.tableHeader {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13.2806px;
+  line-height: 140%;
+  color: #9a9dc9;
+}
+
+.calende {
+  font-size: 19px;
+  color: #030a78;
+  margin-right: 10px;
+}
+
+.successText {
+  font-size: 13px;
+  color: #52c41a;
+  background-color: #eef9e8;
+  border: 2px solid #eef9e8;
+  border-radius: 5px;
+  cursor: text !important;
+}
+
+.viewMe {
+  background-color: #0b0977;
+  color: white;
+  border-radius: 5px;
+}
+
+table tbody tr td {
+  padding: 10px !important;
+}
