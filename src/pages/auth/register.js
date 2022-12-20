@@ -8,8 +8,8 @@ import { Form, Button } from 'react-bootstrap';
 import { register, reset } from '../../features/authentication/signupSlice';
 import registerStyle from './register.module.scss';
 import AppImages from '../../utilities/images/images';
-import ErrorModal from '../../Modals/errorModal';
-import Loader from '../../Loader/Loader';
+import ErrorModal from '../../components/Modals/errorModal';
+import Loader from '../../components/Loader/Loader';
 
 export default function RegisterPage() {
   const navigate = useNavigate();
