@@ -3,14 +3,14 @@
 /* eslint-disable no-trailing-spaces */
 import React from 'react';
 import TransactionList from './TransactionList/TransactionList';
-import NoTransaction from './NoTransaction/NoTransaction';
+// import NoTransaction from './NoTransaction/NoTransaction';
 
 export default function TransactionIndex() {
     return (
         <section>
-            {
-                false ? <NoTransaction /> : <TransactionList />
-            }
+            {/* <NoTransaction /> */}
+            <TransactionList />
+
 
         </section>
     );
