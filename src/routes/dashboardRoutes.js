@@ -6,6 +6,7 @@ import PaymentService from '../components/users-page/payment-services/payment-se
 import TransactionIndex from '../components/users-page/transactionPage/transaction';
 import SettingsPage from '../components/users-page/setting/setting';
 import Notification from '../components/users-page/notification/notification';
+import HelpPage from '../components/users-page/help/help';
 
 class DashboardRoutes {
   static routes =
@@ -24,6 +25,10 @@ class DashboardRoutes {
 
       <Route path="settings">
         <Route index={true} element={<SettingsPage />} />
+      </Route>
+
+      <Route path="help">
+        <Route index={true} element={<HelpPage />} />
       </Route>
     </Route>
 }
