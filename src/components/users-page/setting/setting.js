@@ -8,6 +8,7 @@ import React, { useState } from 'react';
 import { BsPerson, BsShieldCheck, BsCreditCard2Back } from 'react-icons/bs';
 import IndexSetting from './setting.module.css';
 import Layout1 from './Layouts/Layout1';
+import Personal from './Layouts/Personal';
 
 function Setting() {
     const [sich, setSich] = useState(0);
@@ -63,7 +64,7 @@ function Setting() {
                     </div>
                 </div>
                 <div className={IndexSetting.step2}>
-                    {sich === 0 ? 'Personal Info' : ''}
+                    {sich === 0 ? <Personal /> : ''}
                     {sich === 1 ? <Layout1 /> : ''}
                     {sich === 2 ? 'Payment Method' : ''}
                 </div>
