@@ -1,22 +1,57 @@
+/* eslint-disable react/jsx-indent-props */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-indent */
 /* eslint-disable indent */
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
 import {
     Form,
     Col,
     Row,
     Button,
 } from 'react-bootstrap';
+import {
+    AiFillEdit,
+    AiOutlinePlusCircle,
+} from 'react-icons/ai';
 import PersonalInfo from './Personal.module.scss';
+import profile from '../../../../utilities/images/man.jfif';
 
 function Personal(props) {
+    const [selectedFile, setSelectedFile] = useState();
+    const [isFilePicked, setIsFilePicked] = useState(false);
+    const [imgfile, setUploadimg] = useState([profile]);
+
+    const changeHandler = (event) => {
+        setSelectedFile(event.target.files[0]);
+        setIsFilePicked(true);
+        setUploadimg(URL.createObjectURL(event.target.files[0]));
+    };
     return (
         <section>
             <div className={PersonalInfo.holdAll}>
                 <div className={PersonalInfo.holdAlls}>
                     <div className={PersonalInfo.holdImage}>
-                        <input type="file" accept="image/png" alt="Profile" />
+                        <div className="holdCamera">
+                            <div>
+                                <span>
+                                    <img src={imgfile} className={PersonalInfo.disImage} alt="profile" />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={PersonalInfo.cameraFile}>
+                        <label htmlFor="files" className="btn">
+                            <AiFillEdit className={PersonalInfo.editMe} />
+                        </label>
+                        <input
+                            type="file"
+                            name="files"
+                            accept="image/*"
+                            id="files"
+                            style={{ visibility: 'hidden' }}
+                            onChange={changeHandler}
+                        />
                     </div>
                 </div>
                 <div className={PersonalInfo.holdForm}>

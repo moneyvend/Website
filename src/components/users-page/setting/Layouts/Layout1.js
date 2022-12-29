@@ -12,6 +12,8 @@ import { MdOutlineEmail } from 'react-icons/md';
 import { FaMobileAlt } from 'react-icons/fa';
 import Layout1Style from './Layout1.module.css';
 import Layout2 from './Layout2';
+import Layout3 from './Layout3';
+import Layout4 from './Layout4';
 
 function Layout1() {
     const [con, setCon] = useState(0)
@@ -100,9 +102,9 @@ function Layout1() {
                     </div>
                 </div>
             </div>
-            {con === 1 ? <Layout2 /> : ''}
-            {con === 2 ? 'Change Emmail Address' : ''}
-            {con === 3 ? 'Payment Method' : ''}
+            {con === 1 ? <Layout4 /> : ''}
+            {con === 2 ? <Layout3 /> : ''}
+            {con === 3 ? <Layout2 /> : ''}
         </div>
     );
 }

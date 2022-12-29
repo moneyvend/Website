@@ -7,12 +7,24 @@ import TransactionIndex from '../components/users-page/transactionPage/transacti
 import SettingsPage from '../components/users-page/setting/setting';
 import Notification from '../components/users-page/notification/notification';
 import HelpPage from '../components/users-page/help/help';
+import ChooseAirtime from '../components/users-page/payment-services/Layout/ChooseAirtime';
+import ConfirmSummary from '../components/users-page/payment-services/Layout/ConfirmSummary';
+import PaymentMethod from '../components/users-page/payment-services/Layout/PaymentMethod';
 
 class DashboardRoutes {
   static routes =
     <Route path="dashboard" element={<Index />}>
       <Route path="services">
         <Route index={true} element={<PaymentService />} />
+        <Route path="airtime">
+          <Route index={true} element={<ChooseAirtime />} />
+        </Route>
+        <Route path="summary">
+          <Route index={true} element={<ConfirmSummary />} />
+        </Route>
+        <Route path="payment-method">
+          <Route index={true} element={<PaymentMethod />} />
+        </Route>
       </Route>
 
       <Route path="transactions">
