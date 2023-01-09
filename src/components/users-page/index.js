@@ -100,9 +100,8 @@ export default function Index() {
                 </div>
                 <div className='topProfile'>
                     <div className='topContent'>
-                        <div className='holdSearch'>
+                        <div>
                             <HiMenu />
-                            <input type="search" placeholder='Search for anything' className='input' />
                         </div>
                         <div className='holdImage'>
                             <h3>Payment Services</h3>
