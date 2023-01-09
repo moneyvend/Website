@@ -11,7 +11,7 @@ import { RiHome4Line, RiLogoutCircleRLine, RiArrowDropDownLine } from 'react-ico
 import { AiOutlineQuestionCircle, AiOutlineSetting } from 'react-icons/ai';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import { BiTransfer, BiSearch } from 'react-icons/bi';
-import { HiOutlineBell } from 'react-icons/hi';
+import { HiOutlineBell, HiMenu } from 'react-icons/hi';
 import { Link, Outlet } from 'react-router-dom';
 import IndexStyles from './Index.module.css';
 import manProfile from '../../utilities/images/man.jfif';
@@ -95,6 +95,17 @@ export default function Index() {
                                 <img src={manProfile} alt='SearchUsersItem' className='imageSelf' />
                                 <RiArrowDropDownLine className='drop' />
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='topProfile'>
+                    <div className='topContent'>
+                        <div className='holdSearch'>
+                            <HiMenu />
+                            <input type="search" placeholder='Search for anything' className='input' />
+                        </div>
+                        <div className='holdImage'>
+                            <h3>Payment Services</h3>
                         </div>
                     </div>
                 </div>

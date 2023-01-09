@@ -197,3 +197,12 @@ input[type="number"] {
   --bs-btn-disabled-bg: #0b0978 !important;
   --bs-btn-disabled-border-color: #0b0978 !important;
 }
+
+@media only screen and (max-width: 1200px) {
+  .mainContent {
+    width: 100%;
+  }
+  .navBar2 {
+    display: none;
+  }
+}

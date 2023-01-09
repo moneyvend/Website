@@ -4,7 +4,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import { useSelector, useDispatch } from 'react-redux';
-import { Button } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import verifyEmailStyle from './verifyEmail.module.scss';
 import AppImages from '../../utilities/images/images';
 // import ErrorModal from '../../Modals/errorModal';
@@ -34,9 +34,16 @@ export default function RecoverPasswordPage() {
             <h3>Email Verification Sent</h3>
             <p>We&apos;ve sent a link to your email address: marian@gmail.com</p>
           </div>
-          <Button variant="primary" type="submit">
-            Login
-          </Button>
+          <Form>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="email" placeholder="Enter email" name="email" />
+            </Form.Group>
+
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
           <p className={verifyEmailStyle.already}>
             Didn&apos;t receive an email ?
             <Link to=" ">Resend</Link>
