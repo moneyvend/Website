@@ -71,6 +71,12 @@
 }
 
 @media only screen and (max-width: 1200px) {
+  .imageLogoMe {
+    width: 85%;
+  }
+  .holdNavList li {
+    font-size: 10px;
+  }
   .out {
     padding: 10px;
   }

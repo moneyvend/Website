@@ -12,6 +12,7 @@ import { AiOutlineQuestionCircle, AiOutlineSetting } from 'react-icons/ai';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import { BiTransfer, BiSearch } from 'react-icons/bi';
 import { HiOutlineBell, HiMenu } from 'react-icons/hi';
+import { GrFormClose } from 'react-icons/gr';
 import { Link, Outlet } from 'react-router-dom';
 import IndexStyles from './Index.module.css';
 import manProfile from '../../utilities/images/man.jfif';
@@ -19,6 +20,7 @@ import AppImages from '../../utilities/images/images';
 
 export default function Index() {
     const [navValue, setNavValue] = useState('');
+    const [thug, setThug] = useState(false);
     useEffect(() => {
         const tabs = () => {
             setNavValue(window.location.pathname.slice(11, 14));
@@ -31,52 +33,59 @@ export default function Index() {
         setNavValue(window.location.pathname.slice(11, 14));
     };
 
+    const toogle = () => {
+        setThug(!thug);
+    };
+
     return (
         <div className='holdAll'>
-            <div className='navBar2'>
-                <div className={IndexStyles.holdNav}>
-                    <nav className={IndexStyles.nav}>
-                        <p className={IndexStyles.logo}><img src={AppImages.LOGO_VERT} id="logo" className="imageLogo" alt="Logo" /></p>
-                        <ul className={IndexStyles.holdNavList}>
-                            <li className={navValue === "ser" ? IndexStyles.active : ""} onClick={tabs}>
-                                <Link to="services" className={navValue === "ser" ? IndexStyles.active : ""}>
-                                    <RiHome4Line className={IndexStyles.icon} />
-                                    Payment Services
-                                </Link>
-                            </li>
-                            <li className={navValue === "tra" ? IndexStyles.active : ""} onClick={tabs}>
-                                <Link to="transactions" className={navValue === "tra" ? IndexStyles.active : ""}>
-                                    <BiTransfer className={IndexStyles.icon} />
-                                    Transactions
-                                </Link>
-                            </li>
-                            <li className={navValue === "not" ? IndexStyles.active : ""} onClick={tabs}>
-                                <Link to="notification" className={navValue === "not" ? IndexStyles.active : ""}>
-                                    <IoMdNotificationsOutline className={IndexStyles.icon} />
-                                    Notification
-                                </Link>
-                            </li>
-                            <li className={navValue === "set" ? IndexStyles.active : ""} onClick={tabs}>
-                                <Link to="settings" className={navValue === "set" ? IndexStyles.active : ""}>
-                                    <AiOutlineSetting className={IndexStyles.icon} />
-                                    Settings
-                                </Link>
-                            </li>
-                            <li className={IndexStyles.borderTop}></li>
-                            <li className={navValue === "hel" ? IndexStyles.active : ""} onClick={tabs}>
-                                <Link to="help" className={navValue === "hel" ? IndexStyles.active : ""}>
-                                    <AiOutlineQuestionCircle className={IndexStyles.icon} />
-                                    Help
-                                </Link>
-                            </li>
-                            <li className={navValue === "" ? IndexStyles.active : ""} onClick={tabs}>
-                                <Link to="/">
-                                    <RiLogoutCircleRLine className={IndexStyles.icon} />
-                                    Logout
-                                </Link>
-                            </li>
-                        </ul>
-                    </nav>
+            <div className={thug ? 'activeMe' : 'notActiveMe'}>
+                <div className='navBar2'>
+                    <div className={IndexStyles.holdNav}>
+                        <nav className={IndexStyles.nav}>
+                            <p className={thug ? 'close' : 'close2'} onClick={toogle}><GrFormClose /></p>
+                            <p className={IndexStyles.logo}><img src={AppImages.LOGO_VERT} className="imageLogoMe" alt="Logo" /></p>
+                            <ul className={IndexStyles.holdNavList}>
+                                <li className={navValue === "ser" ? IndexStyles.active : ""} onClick={tabs}>
+                                    <Link to="services" className={navValue === "ser" ? IndexStyles.active : ""}>
+                                        <RiHome4Line className={IndexStyles.icon} />
+                                        Payment Services
+                                    </Link>
+                                </li>
+                                <li className={navValue === "tra" ? IndexStyles.active : ""} onClick={tabs}>
+                                    <Link to="transactions" className={navValue === "tra" ? IndexStyles.active : ""}>
+                                        <BiTransfer className={IndexStyles.icon} />
+                                        Transactions
+                                    </Link>
+                                </li>
+                                <li className={navValue === "not" ? IndexStyles.active : ""} onClick={tabs}>
+                                    <Link to="notification" className={navValue === "not" ? IndexStyles.active : ""}>
+                                        <IoMdNotificationsOutline className={IndexStyles.icon} />
+                                        Notification
+                                    </Link>
+                                </li>
+                                <li className={navValue === "set" ? IndexStyles.active : ""} onClick={tabs}>
+                                    <Link to="settings" className={navValue === "set" ? IndexStyles.active : ""}>
+                                        <AiOutlineSetting className={IndexStyles.icon} />
+                                        Settings
+                                    </Link>
+                                </li>
+                                <li className={IndexStyles.borderTop}></li>
+                                <li className={navValue === "hel" ? IndexStyles.active : ""} onClick={tabs}>
+                                    <Link to="help" className={navValue === "hel" ? IndexStyles.active : ""}>
+                                        <AiOutlineQuestionCircle className={IndexStyles.icon} />
+                                        Help
+                                    </Link>
+                                </li>
+                                <li className={navValue === "" ? IndexStyles.active : ""} onClick={tabs}>
+                                    <Link to="/">
+                                        <RiLogoutCircleRLine className={IndexStyles.icon} />
+                                        Logout
+                                    </Link>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
             <div className='mainContent'>
@@ -98,10 +107,11 @@ export default function Index() {
                         </div>
                     </div>
                 </div>
-                <div className='topProfile'>
+
+                <div className='topProfileMe'>
                     <div className='topContent'>
                         <div>
-                            <HiMenu />
+                            <HiMenu className='burger' onClick={toogle} />
                         </div>
                         <div className='holdImage'>
                             <h3>Payment Services</h3>

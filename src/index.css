@@ -77,6 +77,10 @@ a:hover {
   align-items: center;
 }
 
+.topProfileMe {
+  display: none;
+}
+
 .topContent {
   width: 100%;
   display: flex;
@@ -146,7 +150,7 @@ a:hover {
 }
 
 .navBar2 {
-  width: 18%;
+  width: 100%;
   height: 100vh;
   overflow-y: scroll;
 }
@@ -198,11 +202,54 @@ input[type="number"] {
   --bs-btn-disabled-border-color: #0b0978 !important;
 }
 
+.close2 {
+  display: none;
+}
 @media only screen and (max-width: 1200px) {
+  .activeMe {
+    display: block;
+  }
+  .notActiveMe {
+    display: none;
+  }
+  .close {
+    margin-bottom: -7px;
+    margin-top: -10px;
+    text-align: right;
+    font-size: 23px;
+  }
+  .imageLogoMe {
+    width: 85%;
+  }
+  .burger {
+    font-size: 25px;
+    margin-right: 3em;
+  }
+  .topContent {
+    width: 100%;
+    display: flex;
+    justify-content: initial;
+    align-items: initial;
+    padding: 15px;
+  }
+  .topProfile {
+    display: none;
+  }
+  .topProfileMe {
+    height: 60px;
+    width: 100%;
+    background-color: #030a78;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
   .mainContent {
     width: 100%;
   }
   .navBar2 {
-    display: none;
+    width: 50%;
+    height: 100vh;
+    overflow-y: scroll;
+    position: absolute;
   }
 }
