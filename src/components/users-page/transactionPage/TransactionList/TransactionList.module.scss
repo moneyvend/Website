@@ -40,12 +40,10 @@
 .textSize {
   color: #030a78;
   font-weight: 400;
-  font-family: "Mulish";
   font-size: 13px;
 }
 
 .tableHeader {
-  font-family: "Mulish";
   font-style: normal;
   font-weight: 500;
   font-size: 13.2806px;
@@ -116,4 +114,14 @@ table tbody tr td {
   border: 1px solid lightgray;
   padding: 10px;
   border-radius: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .tabMe {
+    width: 870px !important;
+  }
+
+  .holdTransaction {
+    overflow-x: scroll;
+  }
 }

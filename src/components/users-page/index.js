@@ -31,6 +31,7 @@ export default function Index() {
 
     const tabs = () => {
         setNavValue(window.location.pathname.slice(11, 14));
+        setThug(false);
     };
 
     const toogle = () => {

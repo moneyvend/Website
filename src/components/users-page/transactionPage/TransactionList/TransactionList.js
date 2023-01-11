@@ -37,7 +37,7 @@ export default function TransactionList() {
                         <option value="Data service">Data service</option>
                     </Form.Select>
                 </div>
-                <Table hover size="sm">
+                <Table hover size="sm" className={TransactionListStyle.tabMe}>
                     <thead>
                         <tr>
                             <th className={TransactionListStyle.tableHeader}>ID</th>

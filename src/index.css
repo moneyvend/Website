@@ -15,6 +15,7 @@ body {
 /* width */
 ::-webkit-scrollbar {
   width: 2px;
+  height: 2px;
   border-radius: 50px;
 }
 
@@ -196,7 +197,8 @@ input[type="number"] {
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #0b0978 !important;
   --bs-btn-active-border-color: #0b0978 !important;
-  --bs-btn-active-shadow: inset 0 3px 5pxrgba (0, 0, 0, 0.125);
+
+  /* --bs-btn-active-shadow: inset 0 3px 5pxrgba (0, 0, 0, 0.125); */
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #0b0978 !important;
   --bs-btn-disabled-border-color: #0b0978 !important;
@@ -205,26 +207,32 @@ input[type="number"] {
 .close2 {
   display: none;
 }
+
 @media only screen and (max-width: 1200px) {
   .activeMe {
     display: block;
   }
+
   .notActiveMe {
     display: none;
   }
+
   .close {
     margin-bottom: -7px;
     margin-top: -10px;
     text-align: right;
     font-size: 23px;
   }
+
   .imageLogoMe {
     width: 85%;
   }
+
   .burger {
     font-size: 25px;
     margin-right: 3em;
   }
+
   .topContent {
     width: 100%;
     display: flex;
@@ -232,9 +240,11 @@ input[type="number"] {
     align-items: initial;
     padding: 15px;
   }
+
   .topProfile {
     display: none;
   }
+
   .topProfileMe {
     height: 60px;
     width: 100%;
@@ -243,9 +253,11 @@ input[type="number"] {
     align-items: center;
     color: white;
   }
+
   .mainContent {
     width: 100%;
   }
+
   .navBar2 {
     width: 50%;
     height: 100vh;

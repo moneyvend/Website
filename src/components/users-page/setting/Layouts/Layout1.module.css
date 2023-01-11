@@ -1,82 +1,83 @@
-.pageHeader{
-    font-size: 25px;
-    margin: 0;
-    color: #0b0978;
-    padding: 10px;
-    margin-bottom: 5px;
+.pageHeader {
+  font-size: 25px;
+  margin: 0;
+  color: #0b0978;
+  padding: 10px;
+  margin-bottom: 5px;
 }
 
-.option{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px 5px;
-    background-color: white;
-    border-bottom: 1px solid #cecece;
+.option {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 5px;
+  background-color: white;
+  border-bottom: 1px solid #cecece;
 }
 
-.option2{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px 5px;
-    background-color: white;
+.option2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 5px;
+  background-color: white;
 }
 
-.iconMe{
-    font-size: 30px;
-    background-color: #f0f0f7;
-    color: #0b0978;
-    border-radius: 50%;
-    margin-right: 20px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.iconMe {
+  font-size: 30px;
+  background-color: #f0f0f7;
+  color: #0b0978;
+  border-radius: 50%;
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.icon{
-    font-size: 30px;
-}
-.info{
-    margin: 0;
-    color: #0b0978;
-    font-size: 15px;
+.icon {
+  font-size: 30px;
 }
 
-.data{
-    color: #0b0978;
-    margin: 10px 0;
-    font-size: 12px;
+.info {
+  margin: 0;
+  color: #0b0978;
+  font-size: 15px;
 }
 
-.changeFlow{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+.data {
+  color: #0b0978;
+  margin: 10px 0;
+  font-size: 12px;
 }
 
-.button{
-    padding: 8px 20px;
-    border: 2px solid #0b0978;
-    border-radius: 8px;
-    background-color: white;
-    font-size: 12px;
-    cursor: pointer;
+.changeFlow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.hold{
-    padding: 20px;
-    border: 1px solid #cecece;
-    border-radius: 8px;
+.button {
+  padding: 8px 20px;
+  border: 2px solid #0b0978;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 12px;
+  cursor: pointer;
 }
 
-.holdOne{
-    padding: 20px;
+.hold {
+  padding: 20px;
+  border: 1px solid #cecece;
+  border-radius: 8px;
 }
 
-.move{
-    display: none;
+.holdOne {
+  padding: 20px;
+}
+
+.move {
+  display: none;
 }

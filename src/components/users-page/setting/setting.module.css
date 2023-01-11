@@ -37,6 +37,7 @@
   background-color: #f0f0f7;
   cursor: pointer;
 }
+
 .option {
   display: flex;
   justify-content: flex-start;
@@ -75,10 +76,10 @@
 .icon {
   font-size: 20px;
 }
+
 .info {
   margin: 0;
   text-align: left;
-  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
