@@ -1,0 +1,42 @@
+.holdAll {
+  width: 100%;
+  padding: 10px;
+}
+
+.holdImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.holdForm {
+  margin-top: 1em;
+  padding: 2em;
+}
+
+.holdButin {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.disImage {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.editMe {
+  background-color: #0b0978;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.cameraFile {
+  text-align: right;
+  margin-right: -40px;
+  margin-top: -30px;
+}

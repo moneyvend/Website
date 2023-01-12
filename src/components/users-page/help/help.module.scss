@@ -1,0 +1,121 @@
+.holdAll {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 20px 4em;
+}
+
+.holdHeader {
+  margin: 10px 0;
+  text-align: center;
+
+  h1 {
+    font-family: "Mulish", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    color: #030a78;
+  }
+
+  p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(29, 30, 38, 0.75);
+    transform: rotate(-0.05deg);
+  }
+}
+
+.holdFormAndText {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 3em 0;
+
+  .holdForm {
+    width: 50%;
+  }
+
+  .holdText {
+    width: 30%;
+  }
+
+  .butin {
+    padding: 12px 50px;
+    background: #030a78;
+    border-radius: 8px;
+  }
+
+  .address {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .icon {
+    color: black;
+  }
+}
+
+.holdFQAll {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .holdFQ {
+    width: 70%;
+    height: auto;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    padding: 10px;
+
+    h1 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .holdAll {
+    padding: 20px 1em;
+  }
+
+  .holdFormAndText {
+    flex-direction: column-reverse;
+
+    .holdForm {
+      width: 100%;
+      border: 1px solid gray;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 2em;
+    }
+
+    .holdText {
+      width: 100%;
+    }
+
+    .butin {
+      width: 100%;
+      padding: 12px 50px;
+      background: #030a78;
+      border-radius: 8px;
+    }
+  }
+
+  .holdFQAll {
+    .holdFQ {
+      width: 100%;
+
+      h1 {
+        font-size: 17px;
+      }
+    }
+  }
+}

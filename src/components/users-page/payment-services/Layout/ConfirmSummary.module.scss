@@ -1,0 +1,58 @@
+.holdAll {
+  height: 80vh;
+  width: 100%;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.hold2F {
+  width: 40%;
+
+  h3 {
+    color: #030a78;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15.1686px;
+    line-height: 19px;
+    color: #4f54a1;
+  }
+
+  .holdDetail {
+    background-color: #d2d1e8;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .detail {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+
+    .detailContent {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 23px;
+      color: #4f54a1;
+    }
+
+    .detailContents {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 23px;
+      color: #030a78;
+    }
+  }
+
+  .holdBankCard {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}

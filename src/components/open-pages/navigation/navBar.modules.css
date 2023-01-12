@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+#anchorc {
+  padding: 2px 7px;
+}
+
+.ant-image-img {
+  width: 100px;
+}
+
+.navBar {
+  display: none;
+}
+
+/* .containers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 4em;
+}
+
+.logMe {
+  width: 160px !important;
+}
+
+/* @media (min-width: 1200px){
+  .container2 {
+    width: 100% !important;
+    padding: 20px 5em !important;
+  }
+} */
+
+.l-1 {
+  width: 130px;
+}
+
+#h-logo {
+  display: none;
+}
+
+.navList {
+  margin: 0;
+  display: flex;
+  gap: 50px;
+  font-size: 14px;
+  color: black;
+}
+
+.login {
+  background-color: #030a78;
+  color: white !important;
+  border-radius: 5px;
+  border: 0;
+  padding: 5px 20px;
+  font-family: "Mulish", sans-serif;
+  font-size: 15px;
+}
+
+.nav-link {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #000 !important;
+  padding-inline: 20px;
+}
+
+.toggleBtn {
+  display: none;
+  border: 0;
+  background: transparent;
+}
+
+@media only screen and (max-width: 800px) {
+  .container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 1em;
+  }
+
+  .navBar {
+    width: 20%;
+    height: unset;
+    overflow-y: scroll;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .container {
+    padding: 0;
+  }
+
+  #c-1 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .navBar #bit {
+    right: 7%;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+
+  .menuNav {
+    list-style: none;
+    position: fixed;
+    background: #ffff;
+    bottom: 0;
+    height: 0;
+    width: 500px;
+    overflow: hidden;
+    max-width: 500px;
+    z-index: 9;
+    left: 0;
+  }
+
+  .menuNav.showMenu {
+    width: 100%;
+    height: 100vh;
+    padding-left: 28px;
+  }
+
+  a {
+    display: block;
+    padding: 10px 40px;
+    text-decoration: none;
+    color: #3fffd2;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .batt {
+    height: 35px;
+    width: 94%;
+    color: #ffff;
+    background-color: #030a78;
+    border-radius: 8px;
+    border-style: none;
+  }
+
+  .menuNav li:first-child {
+    margin-top: 7rem;
+  }
+
+  .des-1 {
+    display: none;
+  }
+
+  .navBar {
+    display: flex;
+  }
+
+  .login {
+    display: none;
+  }
+
+  .l-1 {
+    display: none;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .op {
+    padding-top: 20%;
+    width: 100%;
+    height: 100%;
+  }
+
+  #h-logo {
+    width: 130px;
+    display: block;
+    position: absolute;
+    z-index: 100;
+  }
+
+  .showMenu .navList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .showMenu .navList li {
+    width: 100%;
+  }
+
+  .showMenu .navList .nav-link {
+    padding: 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    width: 94%;
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #000;
+  }
+
+  .toggleBtn {
+    display: block;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.nav-footer {
+  display: flex;
+  align-items: center;
+  padding: 0 2% 32px 2%;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 8vh;
+}
+
+.nav-footer #p-10 {
+  font-size: 14px;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
+.nav-footer .di-1 p {
+  color: #f6f6f6;
+  font-size: 14px;
+}
+
+.nav-footer .di-1 svg {
+  color: #f4f4f4;
+  font-size: 16px;
+}

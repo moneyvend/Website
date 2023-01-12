@@ -1,55 +1,57 @@
+/* eslint-disable max-len */
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Button, Form } from 'react-bootstrap';
 import AppImages from '../../utilities/images/images';
-import './forgotPassword.modules.css';
+import resetStyle from './passwordReset.module.scss';
+// import resetStyle from './passwordReset.module.scss';
 
 export default function PasswordResetPage() {
-  const navigate = useNavigate();
+  // export default function PasswordResetPage() {
   return (
-    <div className="contr-3">
-      <div className="dr1">
-        <div className="b-r" />
-        <h5>Creating payment solutions</h5>
-        <p className="pd">Enter new details of your password</p>
-      </div>
-      <div id="c--2">
-        <div className="haw emil">
-          <button
-            type="button"
-            className="aw but"
-            onClick={() => {
-              navigate('/auth/login');
-            }}
-          >
-            Login
-          </button>
-          <button
-            type="button"
-            className="bwa"
-            onClick={() => {
-              navigate('/auth/register');
-            }}
-          >
-            Register
-          </button>
+    <section className={resetStyle.holdAll}>
+      <div className={resetStyle.holdFormNText}>
+        <div className={resetStyle.holdText}>
+          <div className={resetStyle.holdImage}>
+            <img src={AppImages.LOGO_VERT} alt="Logo" />
+          </div>
+          <div>
+            <h3>Creating payment solutions</h3>
+            <p>A product which specializes in creating terminal solution products for customers, SME&apos;s and merchants. </p>
+          </div>
         </div>
-        <img src={AppImages.HLOGO} id="img-7" alt="Logo" />
-        <h1 id="H1">Recover Password</h1>
-        <p className="pdw">Please sign in to your personal account to start access all payment services.</p>
-        <form id="f-3">
-          <label className="l-1" htmlFor="Enter email">
-            Email *
-            <input type="password" className="i-1" name="Enter email" id="Enter email" placeholder="Enter email" required />
-          </label>
-          <button type="button" id="b-r">Sign up</button>
-        </form>
-        <div className="fo-1">
-          <p className="fo-p">
-            Don’t have an account?
-            <a href="/auth/register" className="l-4">Sign up</a>
-          </p>
+        <div className={resetStyle.holdForm}>
+          <div className={resetStyle.holdImage}>
+            <img src={AppImages.LOGO_VERT} alt="Logo" />
+          </div>
+          <div className={resetStyle.headerText}>
+            <h3>Reset Password</h3>
+            <p>Enter new details of your password</p>
+          </div>
+          <Form>
+
+            <Form.Group className="mb-2" controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" placeholder="Password" name="password" />
+            </Form.Group>
+
+            <Form.Group className="mb-2" controlId="formBasicPassword2">
+              <Form.Label>Re-type Password</Form.Label>
+              <Form.Control type="password" placeholder="Password" name="password2" />
+            </Form.Group>
+
+            <p className={resetStyle.already}>
+              Don&apos;t have an account?
+              <Link to="/auth/register">Sign up</Link>
+            </p>
+
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
         </div>
       </div>
-    </div>
+      {/* {isLoading ? <Loader /> : null} */}
+    </section>
   );
 }

@@ -8,30 +8,35 @@ import { Form, Button } from 'react-bootstrap';
 import { register, reset } from '../../features/authentication/signupSlice';
 import registerStyle from './register.module.scss';
 import AppImages from '../../utilities/images/images';
-import ErrorModal from '../../Modals/errorModal';
-import Loader from '../../Loader/Loader';
+import ErrorModal from '../../components/Modals/errorModal';
+import Loader from '../../components/Loader/Loader';
 
 export default function RegisterPage() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [match, setMatch] = useState('');
+  const [phone, setPhone] = useState('');
   const [errorModal, setErrorModal] = useState(false);
   const [formDate, setFormDate] = useState({
     fullname: '',
-    phone: '+',
     email: '',
     password: '',
     password2: '',
     frontendUrl: 'https://monievend.netlify.app/',
   });
 
+  // console.log(window.location.hostname);
+
   const {
     fullname,
-    phone,
     email,
     password,
     password2,
   } = formDate;
+
+  if (phone.charAt(0) === '0') {
+    setPhone(phone.replace('0', ''));
+  }
 
   const {
     user,
@@ -108,8 +113,11 @@ export default function RegisterPage() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPhoneNumber">
-              <Form.Label>Phone number</Form.Label>
-              <Form.Control type="number" placeholder="8011-222-333" name="phone" value={phone} onChange={onChange} />
+              <Form.Label>
+                Phone number
+                <span className={registerStyle.dont}>(Please don&apos;t include the first 0 of your phone number)</span>
+              </Form.Label>
+              <Form.Control type="number" placeholder="Phone number" value={phone} onChange={(e) => setPhone(e.target.value)} />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">

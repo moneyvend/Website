@@ -1,0 +1,67 @@
+.holdSerachMe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  h5 {
+    color: #030a78;
+    font-size: 17px;
+  }
+
+  .holdSelecter {
+    display: flex;
+
+    div {
+      margin-right: 10px;
+    }
+
+    .holdSearch {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: white;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+      padding-inline: 10px;
+    }
+
+    .searchMe {
+      border: none !important;
+    }
+  }
+}
+
+.holdNotification {
+  margin-top: 10px;
+
+  .kokoNoto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dcdcdc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .imagePart {
+    display: flex;
+    align-items: center;
+  }
+
+  .imge {
+    height: 50px;
+    margin-right: 20px;
+  }
+
+  .imagText {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  h5 {
+    font-size: 12px !important;
+  }
+}

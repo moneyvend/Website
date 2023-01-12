@@ -1,0 +1,127 @@
+.air {
+  display: flex;
+  gap: 2px;
+  margin: 0;
+}
+
+.airp {
+  color: #030a78;
+  font-size: 13px;
+  padding-top: 3px;
+  margin: 0;
+}
+
+.ant-table-wrapper {
+  clear: both;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.ant-table-thead > tr > th {
+  position: relative;
+  color: #9a9dc9;
+  font-weight: 500;
+  text-align: left;
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.3s ease;
+  font-size: 15px;
+}
+
+.successIcon {
+  font-size: 15px;
+  color: #52c41a;
+  background-color: #eef9e8;
+  padding: 2px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.textSize {
+  color: #030a78;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.tableHeader {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13.2806px;
+  line-height: 140%;
+  color: #9a9dc9;
+}
+
+.calende {
+  font-size: 19px;
+  color: #030a78;
+  margin-right: 10px;
+}
+
+.successText {
+  font-size: 13px;
+  color: #52c41a;
+  background-color: #eef9e8;
+  border: 2px solid #eef9e8;
+  border-radius: 5px;
+  cursor: text !important;
+}
+
+.viewMe {
+  background-color: #0b0977;
+  color: white;
+  border-radius: 5px;
+}
+
+table tbody tr td {
+  padding: 10px 0 !important;
+}
+
+.download {
+  background-color: #0b0977;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.deta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  color: gray;
+}
+
+.holdSelecter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #dadada;
+  padding: 10px 0;
+  margin-bottom: 17px;
+}
+
+.service {
+  color: #0b0977;
+  margin-right: 15px;
+}
+
+.sele {
+  width: fit-content !important;
+}
+
+.holdTransaction {
+  background-color: white;
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .tabMe {
+    width: 870px !important;
+  }
+
+  .holdTransaction {
+    overflow-x: scroll;
+  }
+}
