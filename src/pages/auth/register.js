@@ -25,7 +25,7 @@ export default function RegisterPage() {
     frontendUrl: 'https://monievend.netlify.app/',
   });
 
-  console.log(window.location.hostname);
+  // console.log(window.location.hostname);
 
   const {
     fullname,

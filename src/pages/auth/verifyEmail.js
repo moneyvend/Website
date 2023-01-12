@@ -12,8 +12,8 @@ import AppImages from '../../utilities/images/images';
 
 export default function RecoverPasswordPage() {
   // const [errorModal, setErrorModal] = useState(false);
-  const signupToken = JSON.parse(sessionStorage.getItem('user'));
-  console.log(signupToken.data.verification.link.slice(56, 400));
+  // const signupToken = JSON.parse(sessionStorage.getItem('user'));
+  // console.log(signupToken.data.verification.link.slice(56, 400));
   return (
     <section className={verifyEmailStyle.holdAll}>
       <div className={verifyEmailStyle.holdFormNText}>
