@@ -10,9 +10,11 @@
 .hold2F {
   width: 40%;
 
-  h3 {
+  h4 {
     color: #030a78;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
   }
 
   p {
@@ -55,5 +57,39 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
+  }
+}
+
+.activeMe {
+  background: #f0f0f7;
+  border: 1.5px solid #4f54a1;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.notActiveMe {
+  background: white;
+  border: 1.5px solid #f0f0f7;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.iconMe {
+  margin: 12px;
+}
+
+@media only screen and (max-width: 900px) {
+  .hold2F {
+    width: 100%;
   }
 }

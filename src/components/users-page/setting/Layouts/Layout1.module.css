@@ -81,3 +81,13 @@
 .move {
   display: none;
 }
+
+@media only screen and (max-width: 1200px) {
+  .hold {
+    padding: 2px;
+  }
+
+  .holdOne {
+    padding: 5px;
+  }
+}

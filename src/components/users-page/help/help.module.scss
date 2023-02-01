@@ -41,7 +41,7 @@
   }
 
   .holdText {
-    width: 30%;
+    width: 40%;
   }
 
   .butin {
@@ -58,6 +58,8 @@
 
   .icon {
     color: black;
+    font-size: 17px;
+    margin-right: 10px !important;
   }
 }
 
@@ -69,7 +71,7 @@
   .holdFQ {
     width: 70%;
     height: auto;
-    border: 2px solid lightgray;
+    border: 2px solid #f2f2f2;
     border-radius: 8px;
     padding: 10px;
 

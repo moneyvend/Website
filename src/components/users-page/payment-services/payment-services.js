@@ -32,7 +32,12 @@ export default function PaymentService() {
                             <p className={paymentStyle.desc}>About all your personal data</p>
                         </div>
                     </div>
-                    <div className={paymentStyle.holdContin}>
+                    <div
+                        className={paymentStyle.holdContin}
+                        onClick={() => {
+                            change('data-services');
+                        }}
+                    >
                         <div>
                             <BsPerson className={paymentStyle.holdIcon} />
                         </div>
@@ -41,7 +46,12 @@ export default function PaymentService() {
                             <p className={paymentStyle.desc}>About all your personal data</p>
                         </div>
                     </div>
-                    <div className={paymentStyle.holdContin}>
+                    <div
+                        className={paymentStyle.holdContin}
+                        onClick={() => {
+                            change('data-services');
+                        }}
+                    >
                         <div>
                             <BsPerson className={paymentStyle.holdIcon} />
                         </div>

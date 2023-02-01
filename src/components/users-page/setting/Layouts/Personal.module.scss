@@ -40,3 +40,16 @@
   margin-right: -40px;
   margin-top: -30px;
 }
+
+@media only screen and (max-width: 1200px) {
+  .holdForm {
+    margin-top: 1em;
+    padding: 0;
+  }
+
+  .cameraFile {
+    text-align: right;
+    margin-right: -184px;
+    margin-top: -30px;
+  }
+}
