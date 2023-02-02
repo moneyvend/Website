@@ -10,6 +10,7 @@
 .hold2F2 {
   width: 40%;
 }
+
 .hold2F {
   width: 100%;
 
@@ -19,7 +20,6 @@
 }
 
 .Selectpreferredplan {
-  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 15.1686px;
@@ -43,8 +43,8 @@
 .holdPlan {
   width: 150px;
   height: 180px;
-  background: #ffffff;
-  box-shadow: 0px 3.65807px 3.65807px rgba(255, 255, 238, 0.25);
+  background: #fff;
+  box-shadow: 0 3px 3px #ffffee40;
 }
 
 .holdPlan2 {
@@ -64,17 +64,16 @@
 .holdPrice {
   padding: 10px;
 }
+
 .monthly {
-  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 9.14518px;
   line-height: 12px;
-  color: #333333;
+  color: #333;
 }
 
 .price {
-  font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
   font-size: 14.6323px;
@@ -82,13 +81,16 @@
   text-decoration-line: underline;
   color: #030a78;
 }
+
 @media only screen and (max-width: 900px) {
   .hold2F {
     width: 100%;
   }
+
   .hold2F2 {
     width: 100%;
   }
+
   .holdDataPlanList {
     justify-content: center;
   }
