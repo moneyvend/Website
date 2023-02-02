@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable react/jsx-indent-props */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
@@ -5,25 +6,32 @@
 /* eslint-disable max-len */
 /* eslint-disable indent */
 import React, { useState } from 'react';
-import { BsPerson, BsShieldCheck, BsCreditCard2Back } from 'react-icons/bs';
+import {
+    BsPerson,
+    BsShieldCheck,
+    BsCreditCard2Back,
+    BsArrowLeftShort,
+} from 'react-icons/bs';
 import IndexSetting from './setting.module.css';
 import Layout1 from './Layouts/Layout1';
 import Personal from './Layouts/Personal';
 
 function Setting() {
     const [sich, setSich] = useState(0);
+    const [sich2, setSich2] = useState(0);
     const change = (index) => {
         setSich(index);
     };
     return (
         <div className={IndexSetting.holdSetting}>
             <div className={IndexSetting.steps}>
-                <div className={IndexSetting.step1}>
+                <div className={sich2 === 0 ? `${IndexSetting.step1} ${IndexSetting.showNana}` : IndexSetting.noShowNana}>
                     <h2 className={IndexSetting.pageHeader}>Settings</h2>
                     <div
                         className={sich === 0 ? IndexSetting.optionActive : IndexSetting.option}
                         onClick={() => {
                             change(0);
+                            setSich2(1);
                         }}
                     >
                         <div className={sich === 0 ? IndexSetting.iconMeActive : IndexSetting.iconMe}>
@@ -38,6 +46,7 @@ function Setting() {
                         className={sich === 1 ? IndexSetting.optionActive : IndexSetting.option}
                         onClick={() => {
                             change(1);
+                            setSich2(1);
                         }}
                     >
                         <div className={sich === 1 ? IndexSetting.iconMeActive : IndexSetting.iconMe}>
@@ -52,6 +61,7 @@ function Setting() {
                         className={sich === 2 ? IndexSetting.optionActive : IndexSetting.option}
                         onClick={() => {
                             change(2);
+                            setSich2(1);
                         }}
                     >
                         <div className={sich === 2 ? IndexSetting.iconMeActive : IndexSetting.iconMe}>
@@ -63,7 +73,15 @@ function Setting() {
                         </div>
                     </div>
                 </div>
-                <div className={IndexSetting.step2}>
+                <div className={sich2 === 1 ? `${IndexSetting.step2} ${IndexSetting.showNana}` : IndexSetting.noShowNana}>
+                    <p
+                        onClick={() => {
+                            setSich2(0);
+                        }}
+                        className={IndexSetting.arrowBack}
+                    >
+                        <BsArrowLeftShort />
+                    </p>
                     {sich === 0 ? <Personal /> : ''}
                     {sich === 1 ? <Layout1 /> : ''}
                     {sich === 2 ? 'Payment Method' : ''}

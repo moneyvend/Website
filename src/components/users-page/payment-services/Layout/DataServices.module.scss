@@ -1,0 +1,97 @@
+.holdAll {
+  height: auto;
+  width: 100%;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.hold2F2 {
+  width: 40%;
+}
+
+.hold2F {
+  width: 100%;
+
+  h3 {
+    color: #030a78;
+  }
+}
+
+.Selectpreferredplan {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.1686px;
+  line-height: 140%;
+  color: #4f54a1;
+}
+
+.holdDataPlanList {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #f6f6f9;
+  padding: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.holdPlan {
+  width: 150px;
+  height: 180px;
+  background: #fff;
+  box-shadow: 0 3px 3px #ffffee40;
+}
+
+.holdPlan2 {
+  width: 100%;
+  color: white;
+  padding: 10px;
+  background: #030a78;
+  border-radius: 5.48711px 5.48711px 18.2904px 18.2904px;
+
+  p {
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+
+.holdPrice {
+  padding: 10px;
+}
+
+.monthly {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9.14518px;
+  line-height: 12px;
+  color: #333;
+}
+
+.price {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14.6323px;
+  line-height: 20px;
+  text-decoration-line: underline;
+  color: #030a78;
+}
+
+@media only screen and (max-width: 900px) {
+  .hold2F {
+    width: 100%;
+  }
+
+  .hold2F2 {
+    width: 100%;
+  }
+
+  .holdDataPlanList {
+    justify-content: center;
+  }
+}

@@ -10,6 +10,8 @@ import HelpPage from '../components/users-page/help/help';
 import ChooseAirtime from '../components/users-page/payment-services/Layout/ChooseAirtime';
 import ConfirmSummary from '../components/users-page/payment-services/Layout/ConfirmSummary';
 import PaymentMethod from '../components/users-page/payment-services/Layout/PaymentMethod';
+import DataServices from '../components/users-page/payment-services/Layout/DataServices';
+import Electricity from '../components/users-page/payment-services/Layout/Electricity';
 
 class DashboardRoutes {
   static routes =
@@ -24,6 +26,12 @@ class DashboardRoutes {
         </Route>
         <Route path="payment-method">
           <Route index={true} element={<PaymentMethod />} />
+        </Route>
+        <Route path="data-services">
+          <Route index={true} element={<DataServices />} />
+        </Route>
+        <Route path="electricity">
+          <Route index={true} element={<Electricity />} />
         </Route>
       </Route>
 

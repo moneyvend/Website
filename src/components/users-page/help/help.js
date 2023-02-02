@@ -57,11 +57,11 @@ export default function HelpPage() {
                             <span>+234 8100 65 222, +234 546 78 941</span>
                         </p>
                         <p className={helpStyle.address}>
-                            <IoLocationSharp className={helpStyle.icon} />
+                            <IoLocationSharp className={helpStyle.icon} style={{ fontSize: '30px' }} />
                             <span>Address. No 1, Providence close coker estate shasha lagos</span>
                         </p>
                         <p className={helpStyle.address}>
-                            <MdEmail className={helpStyle.icon} />
+                            <MdEmail className={helpStyle.icon} style={{ fontSize: '20px' }} />
                             <span>Support@monievend.com</span>
                         </p>
                     </div>
