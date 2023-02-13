@@ -1,8 +1,8 @@
 /* eslint-disable prefer-template */
 /* eslint-disable max-len */
 /* eslint-disable indent */
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import loginStyle from './login.module.scss';
 import AppImages from '../../utilities/images/images';
@@ -15,10 +15,19 @@ export default function RegisterPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const emailLogin = () => {
+  const usenavigate = useNavigate();
+
+  // const history = useHistory();
+
+  useEffect(() => {
+    if (localStorage.getItem('user-info')) {
+      // usenavigate('./dashboard');
+    }
+  });
+   const emailLogin = () => {
     // console.warn(email, password);
     const item = { email, password };
-    let result = fetch('/auth/login/email', {
+    let result = fetch('https://monievend.herokuapp.com/api/auth/login/email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -28,6 +37,7 @@ export default function RegisterPage() {
     });
     result = result.json();
     localStorage.setItem('user-info', JSON.stringify(result));
+    usenavigate('./dashboard');
   };
 
   const handleToggle = (index) => {
@@ -96,7 +106,7 @@ export default function RegisterPage() {
                   <Link to="/auth/register">Sign up</Link>
                 </p>
 
-                <Button variant="primary" type="submit" onClick={emailLogin}>
+                <Button variant="primary" type="button" onClick={emailLogin}>
                   Submit
                 </Button>
               </Form>
