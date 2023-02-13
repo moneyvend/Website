@@ -10,6 +10,26 @@ import AppImages from '../../utilities/images/images';
 export default function RegisterPage() {
   const [switchMe, setSwitchMe] = useState('Login with email');
 
+  // Email Login API integration
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const emailLogin = () => {
+    // console.warn(email, password);
+    const item = { email, password };
+    let result = fetch('/auth/login/email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        // 'Accept': 'application/json',
+      },
+      body: JSON.stringify(item),
+    });
+    result = result.json();
+    localStorage.setItem('user-info', JSON.stringify(result));
+  };
+
   const handleToggle = (index) => {
     setSwitchMe(index);
   };
@@ -59,12 +79,12 @@ export default function RegisterPage() {
                 <p className={loginStyle.inSwi}>{switchMe}</p>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" name="email" />
+                  <Form.Control type="email" placeholder="Enter email" name="email" onChange={(e) => setEmail(e.target.value)} />
                 </Form.Group>
 
                 <Form.Group className="mb-2" controlId="formBasicPassword">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" name="password" />
+                  <Form.Control type="password" placeholder="Password" name="password" onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
 
                 <div className={loginStyle.holdRemember}>
@@ -76,7 +96,7 @@ export default function RegisterPage() {
                   <Link to="/auth/register">Sign up</Link>
                 </p>
 
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" onClick={emailLogin}>
                   Submit
                 </Button>
               </Form>
