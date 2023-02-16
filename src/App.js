@@ -1,14 +1,13 @@
-// import {
-// Routes,
-// } from 'react-router-dom';
-// import AppRoutes from './routes';
-import Register from './pages/auth/register';
+import {
+Routes,
+} from 'react-router-dom';
+import AppRoutes from './routes';
+// import Login from './pages/auth/login';
 
 const App = () => (
-  <Register />
-  // {<Routes>}
-  // {  {AppRoutes.map((route) => route)}}
-  // {</Routes>}
+  <Routes>
+    {AppRoutes.map((route) => route)}
+  </Routes>
 );
 
 export default App;
