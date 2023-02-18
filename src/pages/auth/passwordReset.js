@@ -19,12 +19,12 @@ export default function PasswordResetPage() {
     })
         .then(result => {
         console.log(result);
-        alert('Password Reset success');
+        alert('Password reset was completed successfully');
         usenavigate('#');
       })
     .catch(error => {
       console.log(error);
-      alert('failed please try again!');
+      alert('Passwords do not match');
     });
 };
 
