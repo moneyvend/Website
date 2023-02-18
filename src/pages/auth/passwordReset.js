@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Form } from 'react-bootstrap';
 import AppImages from '../../utilities/images/images';
@@ -9,18 +9,22 @@ import resetStyle from './passwordReset.module.scss';
 export default function PasswordResetPage() {
   // export default function PasswordResetPage() {
 
-  const emailVerification = () => {
+  const [password, setPassword] = useState('');
+  const [password2, setPassword2] = useState('');
+
+  const passwordReset = () => {
     axios.post('https://monievend.herokuapp.com/api/auth/forgot-password', {
-      email: 'email',
+      password: 'password',
+      confirmPassword: 'password2'
     })
         .then(result => {
         console.log(result);
-        alert('Password Reset Email sent successfully! please visit your email');
+        alert('Password Reset success');
         usenavigate('#');
       })
     .catch(error => {
       console.log(error);
-      alert('email address not found');
+      alert('failed please try again!');
     });
 };
 
@@ -48,12 +52,12 @@ export default function PasswordResetPage() {
 
             <Form.Group className="mb-2" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" name="password" />
+              <Form.Control value={password} type="password" placeholder="Password" name="password" onChange={(e) => setPassword(e.target.value)} />
             </Form.Group>
 
             <Form.Group className="mb-2" controlId="formBasicPassword2">
               <Form.Label>Re-type Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" name="password2" />
+              <Form.Control value={password2} type="password" placeholder="Password" name="password2" onChange={(e) => setPassword2(e.target.value)} />
             </Form.Group>
 
             <p className={resetStyle.already}>
@@ -61,7 +65,7 @@ export default function PasswordResetPage() {
               <Link to="/auth/register">Sign up</Link>
             </p>
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" onClick={passwordReset}>
               Submit
             </Button>
           </Form>
