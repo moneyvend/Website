@@ -8,6 +8,22 @@ import resetStyle from './passwordReset.module.scss';
 
 export default function PasswordResetPage() {
   // export default function PasswordResetPage() {
+
+  const emailVerification = () => {
+    axios.post('https://monievend.herokuapp.com/api/auth/forgot-password', {
+      email: 'email',
+    })
+        .then(result => {
+        console.log(result);
+        alert('Password Reset Email sent successfully! please visit your email');
+        usenavigate('#');
+      })
+    .catch(error => {
+      console.log(error);
+      alert('email address not found');
+    });
+};
+
   return (
     <section className={resetStyle.holdAll}>
       <div className={resetStyle.holdFormNText}>

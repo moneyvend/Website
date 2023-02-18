@@ -1,13 +1,16 @@
 /* eslint-disable react/jsx-indent */
 /* eslint-disable indent */
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import airtimeStyle from './ChooseAirtime.module.scss';
 
 function ChooseAirtime() {
-
     const [phone, setPhone] = useState('');
     const [amount, setAmount] = useState('');
+
+    const usenavigate = useNavigate;
 
     const handlePayment = () => {
         axios.post('https://api.staging.baxibap.com/services/airtime/request', {
