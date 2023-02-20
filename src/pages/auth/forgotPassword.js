@@ -1,29 +1,28 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import { Button, Form } from 'react-bootstrap';
 import AppImages from '../../utilities/images/images';
 import forgetStyle from './forgotPassword.module.scss';
 
 export default function ForgotPasswordPage() {
-
   const [email, setEmail] = useState('');
   const usenavigate = useNavigate;
 
   const handleSubmit = () => {
     axios.post('https://monievend.herokuapp.com/api/auth/forgot-password', {
       email: 'email',
+    }).then(result => {
+      console.log(result);
+      alert('Password Reset Email sent successfully');
+      usenavigate('#');
     })
-        .then(result => {
-        console.log(result);
-        alert('Password Reset Email sent successfully');
-        usenavigate('#');
-      })
-    .catch(error => {
-      console.log(error);
-      alert('User with email provided does not exist');
-    });
-};
+      .catch(error => {
+        console.log(error);
+        alert('User with email provided does not exist');
+      });
+  };
 
   return (
     <section className={forgetStyle.holdAll}>

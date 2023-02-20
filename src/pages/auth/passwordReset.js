@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import { Button, Form } from 'react-bootstrap';
 import AppImages from '../../utilities/images/images';
 import resetStyle from './passwordReset.module.scss';
@@ -12,21 +13,23 @@ export default function PasswordResetPage() {
   const [password, setPassword] = useState('');
   const [password2, setPassword2] = useState('');
 
+  const usenavigate = useNavigate;
+
   const passwordReset = () => {
     axios.post('https://monievend.herokuapp.com/api/auth/reset-password', {
       password: 'password',
-      confirmPassword: 'password2'
+      confirmPassword: 'password2',
     })
-        .then(result => {
+      .then(result => {
         console.log(result);
         alert('Password reset was completed successfully');
         usenavigate('#');
       })
-    .catch(error => {
-      console.log(error);
-      alert('Passwords do not match');
-    });
-};
+      .catch(error => {
+        console.log(error);
+        alert('Passwords do not match');
+      });
+  };
 
   return (
     <section className={resetStyle.holdAll}>
