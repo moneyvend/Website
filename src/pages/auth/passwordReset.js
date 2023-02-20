@@ -13,7 +13,7 @@ export default function PasswordResetPage() {
   const [password2, setPassword2] = useState('');
 
   const passwordReset = () => {
-    axios.post('https://monievend.herokuapp.com/api/auth/forgot-password', {
+    axios.post('https://monievend.herokuapp.com/api/auth/reset-password', {
       password: 'password',
       confirmPassword: 'password2'
     })
