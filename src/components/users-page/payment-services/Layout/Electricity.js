@@ -10,17 +10,17 @@ import {
     Col,
     Row,
 } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import electrictyStyle from './Electricity.module.scss';
 
 function Electricity(props) {
-
     const [accounttype, setAccounttype] = useState('');
     const [meterno, setMeterno] = useState('');
     const [phone, setphone] = useState('');
     const [amount, setAmount] = useState('');
 
-
-    const handleSubmit = () => {
+    const usenavigate = useNavigate;
+    const handleSubmit = (e) => {
         axios.post('https://monievend.herokuapp.com/api/services/power/validate', {
             accounttype: 'accounttype',
             meterno: 'meterno',
@@ -28,14 +28,15 @@ function Electricity(props) {
             amount: 'amount',
         }).then(result => {
             console.log(result);
-            alert('email verified successfully');
+            alert('paymnt ma successfully');
             usenavigate('#');
-          })
-          .catch(error => {
-            console.log(error);
-            alert('email verification Failed please try again');
-          });
-    }
+        })
+            .catch(error => {
+                console.log(error);
+                alert('paymnt Failed please try again');
+            });
+    };
+
     return (
         <section>
             <div className={electrictyStyle.holdAll}>

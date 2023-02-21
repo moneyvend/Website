@@ -5,20 +5,50 @@
 /* eslint-disable indent */
 /* eslint-disable react/jsx-indent */
 /* eslint-disable indent */
-import React from 'react';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import airtimeStyle from './DataServices.module.scss';
 
 function DataService() {
+    const [serviceProvider, setServiceProvider] = useState('');
+    const [phone, setPhone] = useState('');
+
+    const usenavigate = useNavigate;
+
+    const handleSubmit = async () => {
+        const providerApi = 'https://api.staging.baxibap.com/services/databundle/providers';
+        const dataServiceApi = 'https://api.staging.baxibap.com/services/databundle/request';
+
+        const postProviderApi = axios.get(providerApi);
+        const postDataServiceApi = axios.post(dataServiceApi);
+
+        axios.all([postProviderApi, postDataServiceApi]).then(
+            axios.spread((...allData) => {
+                const service = allData.serviceProvider;
+                const phoneNumber = allData.phone;
+
+                setPhone(phoneNumber);
+                setServiceProvider(service);
+                alert('success');
+                usenavigate('/');
+            }).catch(error => {
+                console.log(error);
+                alert('failed!');
+            }),
+        );
+    };
+
     return (
         <section>
             <div className={airtimeStyle.holdAll}>
                 <div className={airtimeStyle.hold2F}>
                     <h3>Choose a biller</h3>
                     <div className="mt-4">
-                        <Form>
+                        <Form onSubmit={handleSubmit}>
                             <div className={airtimeStyle.hold2F2}>
-                                <Form.Select aria-label="Default select example" className="mb-3">
+                                <Form.Select value={serviceProvider} aria-label="Default select example" className="mb-3" onChange={(e) => setServiceProvider(e.target.value)}>
                                     <option value="MTN">MTN</option>
                                     <option value="Airtel">Airtel</option>
                                     <option value="Glo">Glo</option>
@@ -26,7 +56,7 @@ function DataService() {
                                 </Form.Select>
                                 <Form.Group className="mb-3" controlId="formBasicPhoneNumber">
                                     <Form.Label>Phone Number</Form.Label>
-                                    <Form.Control type="number" placeholder="Phone Number" />
+                                    <Form.Control value={phone} type="number" placeholder="Phone Number" onChange={(e) => setPhone(e.target.value)} />
                                 </Form.Group>
                             </div>
                             <p className={airtimeStyle.Selectpreferredplan}>Select preferred plan</p>
