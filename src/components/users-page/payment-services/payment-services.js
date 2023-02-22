@@ -13,6 +13,7 @@ export default function PaymentService() {
     const change = (index) => {
         navigate(index);
     };
+
     return (
         <section>
             <div className={paymentStyle.holdAll}>
@@ -49,7 +50,7 @@ export default function PaymentService() {
                     <div
                         className={paymentStyle.holdContin}
                         onClick={() => {
-                            change('data-services');
+                            change('electricity');
                         }}
                     >
                         <div>
@@ -60,7 +61,12 @@ export default function PaymentService() {
                             <p className={paymentStyle.desc}>About all your personal data</p>
                         </div>
                     </div>
-                    <div className={paymentStyle.holdContin}>
+                    <div
+                        className={paymentStyle.holdContin}
+                        onClick={() => {
+                            change('cabletv');
+                        }}
+                    >
                         <div>
                             <BsPerson className={paymentStyle.holdIcon} />
                         </div>
