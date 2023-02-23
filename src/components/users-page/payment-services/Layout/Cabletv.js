@@ -10,7 +10,7 @@ import {
     Col,
     Row,
 } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import electrictyStyle from './Electricity.module.scss';
 
 // "smartcard_number": "1020833447",
@@ -18,7 +18,6 @@ import electrictyStyle from './Electricity.module.scss';
 // "product_monthsPaidFor": 1,
 // "service_type": "dstv",
 // "phone": "08189392459",
-
 function Electricity(props) {
     const [service, setService] = useState('');
     const [amount, setAmount] = useState('');
@@ -26,8 +25,23 @@ function Electricity(props) {
     const [cardNumber, setCardNumber] = useState('');
     const [phone, setPhone] = useState('');
 
-    const handleSubmit = async () => {
+    const navigate = useNavigate();
 
+    const handleSubmit = async () => {
+        const item = {
+            service, amount, month, cardNumber, phone,
+        };
+        let result = await fetch('https://api.staging.baxibap.com/services/multichoice/request', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
+            body: JSON.stringify(item),
+        });
+        result = await result.json();
+        localStorage.setItem(JSON.stringify(result));
+        navigate('/');
     };
 
     return (
@@ -48,23 +62,23 @@ function Electricity(props) {
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="formGridEmail">
                                     <Form.Label>Card Number</Form.Label>
-                                    <Form.Control type="text" placeholder="Smart Card Number" />
+                                    <Form.Control type="text" placeholder="Smart Card Number" onChange={(e) => setCardNumber(e.target.value)} />
                                 </Form.Group>
 
                                 <Form.Group as={Col} controlId="formGridPassword">
                                     <Form.Label>Number of Months Paid for</Form.Label>
-                                    <Form.Control type="number" placeholder="Months" />
+                                    <Form.Control type="number" placeholder="Months" onChange={(e) => setMonth(e.target.value)} />
                                 </Form.Group>
                             </Row>
                             <Row className="mb-3">
                                 <Form.Group as={Col} controlId="formGridEmail">
                                     <Form.Label>Phone Number</Form.Label>
-                                    <Form.Control type="tel" placeholder="Phone number" />
+                                    <Form.Control type="tel" placeholder="Phone number" onChange={(e) => setPhone(e.target.value)} />
                                 </Form.Group>
 
                                 <Form.Group as={Col} controlId="formGridPassword">
                                     <Form.Label>Amount</Form.Label>
-                                    <Form.Control type="text" placeholder="Amount" />
+                                    <Form.Control type="text" placeholder="Amount" onChange={(e) => setAmount(e.target.value)} />
                                 </Form.Group>
                             </Row>
 
