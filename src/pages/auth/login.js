@@ -49,12 +49,12 @@ export default function RegisterPage() {
       phone: 'phone',
       password: 'password',
     })
-    .then(result => {
+    .then((result) => {
       console.log(result);
       alert('Logined successfully');
       usenavigate('/dashboard');
     })
-    .catch(error => {
+    .catch((error) => {
       console.log(error);
       alert('wrong credentials. please try again!');
     });

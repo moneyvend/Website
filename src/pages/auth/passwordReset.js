@@ -20,12 +20,12 @@ export default function PasswordResetPage() {
       password: 'password',
       confirmPassword: 'password2',
     })
-      .then(result => {
+      .then((result) => {
         console.log(result);
         alert('Password reset was completed successfully');
         usenavigate('#');
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
         alert('Passwords do not match');
       });

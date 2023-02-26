@@ -26,12 +26,12 @@ function Electricity(props) {
             meterno: 'meterno',
             phone: 'phone',
             amount: 'amount',
-        }).then(result => {
+        }).then((result) => {
             console.log(result);
             alert('paymnt ma successfully');
             usenavigate('#');
         })
-            .catch(error => {
+            .catch((error) => {
                 console.log(error);
                 alert('paymnt Failed please try again');
             });

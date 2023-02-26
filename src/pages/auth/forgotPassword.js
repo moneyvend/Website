@@ -13,12 +13,12 @@ export default function ForgotPasswordPage() {
   const handleSubmit = () => {
     axios.post('https://monievend.herokuapp.com/api/auth/forgot-password', {
       email: 'email',
-    }).then(result => {
+    }).then((result) => {
       console.log(result);
       alert('Password Reset Email sent successfully');
       usenavigate('#');
     })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
         alert('User with email provided does not exist');
       });

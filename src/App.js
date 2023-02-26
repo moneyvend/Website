@@ -1,5 +1,5 @@
 import {
-Routes,
+  Routes,
 } from 'react-router-dom';
 import AppRoutes from './routes';
 // import Login from './pages/auth/login';

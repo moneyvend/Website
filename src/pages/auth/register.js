@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
-import { register, reset } from '../../features/authentication/signupSlice';
+import { reset } from '../../features/authentication/signupSlice';
 import registerStyle from './register.module.scss';
 import AppImages from '../../utilities/images/images';
 import ErrorModal from '../../components/Modals/errorModal';
@@ -79,20 +79,21 @@ export default function RegisterPage() {
       // dispatch(register(userData));
       // setMatch('');
 
-      const item = { fullname, email, phone, password };
+      const item = {
+ fullname, email, phone, password,
+};
       let result = fetch('https://monievend.herokuapp.com/api/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
+          Accept: 'application/json',
         },
         body: JSON.stringify(item),
       });
       result = item.JSON();
-      localStorage.setItem("user-info", JSON.stringify(result));
+      localStorage.setItem('user-info', JSON.stringify(result));
       navigate('./verifyEmail');
     }
-
   };
 
   // regeter api integration

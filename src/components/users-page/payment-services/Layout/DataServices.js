@@ -6,7 +6,7 @@
 /* eslint-disable react/jsx-indent */
 /* eslint-disable indent */
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import airtimeStyle from './DataServices.module.scss';
@@ -33,7 +33,7 @@ function DataService() {
                 setServiceProvider(service);
                 alert('success');
                 usenavigate('/');
-            }).catch(error => {
+            }).catch((error) => {
                 console.log(error);
                 alert('failed!');
             }),

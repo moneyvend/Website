@@ -22,12 +22,12 @@ export default function RecoverPasswordPage() {
     axios.post('https://monievend.herokuapp.com/api/auth/verify-email', {
       email: 'email',
     })
-      .then(result => {
+      .then((result) => {
         console.log(result);
         alert('email verified successfully');
         usenavigate('#');
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
         alert('email verification Failed please try again');
       });

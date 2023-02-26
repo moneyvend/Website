@@ -17,12 +17,12 @@ function ChooseAirtime() {
             phone: 'phone',
             amount: 'amount',
         })
-            .then(result => {
+            .then((result) => {
                 console.log(result);
                 alert('payment made successfully');
                 usenavigate('/dashboard');
             })
-            .catch(error => {
+            .catch((error) => {
                 console.log(error);
                 alert('Payment Failed please try again');
             });
