@@ -42,7 +42,6 @@ const NavBar = () => {
                     onClick={() => {
                       customRoute('/auth/login');
                     }}
-                    disabled
                   >
                     Log in
                   </button>

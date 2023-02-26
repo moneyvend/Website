@@ -6,7 +6,7 @@ import {
   RegisterPage,
   RecoverPasswordPage,
   VerifyPage,
-} from '../pages';
+} from '../pages/index';
 
 class AuthRoutes {
   static routes =
