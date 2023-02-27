@@ -25,11 +25,11 @@ export default function RecoverPasswordPage() {
       .then((result) => {
         console.log(result);
         alert('email verified successfully');
-        usenavigate('#');
+        usenavigate('/');
       })
       .catch((error) => {
-        console.log(error);
-        alert('email verification Failed please try again');
+        // console.log(error);
+        alert('email verification Failed please try again', error);
       });
   };
 
