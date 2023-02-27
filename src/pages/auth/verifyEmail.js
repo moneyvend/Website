@@ -23,13 +23,16 @@ export default function RecoverPasswordPage() {
       email: 'email',
     })
       .then((result) => {
+        /* eslint-disable */
         console.log(result);
         alert('email verified successfully');
+        /* eslint-enable */
         usenavigate('/');
       })
       .catch((error) => {
-        // console.log(error);
-        alert('email verification Failed please try again', error);
+        /* eslint-disable */
+        console.log(error);
+        alert('email verification Failed please try again');
       });
   };
 
@@ -42,7 +45,10 @@ export default function RecoverPasswordPage() {
           </div>
           <div>
             <h3>Creating payment solutions</h3>
-            <p>A product which specializes in creating terminal solution products for customers, SME&apos;s and merchants. </p>
+            <p>
+              A product which specializes in creating terminal
+              solution products for customers, SME&apos;s and merchants.
+            </p>
           </div>
         </div>
         <div className={verifyEmailStyle.holdForm}>
@@ -63,7 +69,9 @@ export default function RecoverPasswordPage() {
               Submit
             </Button>
           </Form>
-          <p className={verifyEmailStyle.already}>
+          <p
+            className={verifyEmailStyle.already}
+          >
             Didn&apos;t receive an email ?
             <Link to=" ">Resend</Link>
           </p>

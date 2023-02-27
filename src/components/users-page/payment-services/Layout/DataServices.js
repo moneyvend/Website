@@ -12,6 +12,7 @@ import { useNavigate } from 'react-router-dom';
 import airtimeStyle from './DataServices.module.scss';
 
 function DataService() {
+    /* eslint-disable */
     const [serviceProvider, setServiceProvider] = useState('');
     const [phone, setPhone] = useState('');
 

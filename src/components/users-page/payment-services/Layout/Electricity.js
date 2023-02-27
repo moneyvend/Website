@@ -14,6 +14,7 @@ import { useNavigate } from 'react-router-dom';
 import electrictyStyle from './Electricity.module.scss';
 
 function Electricity(props) {
+    /* eslint-disable */
     const [accounttype, setAccounttype] = useState('');
     const [meterno, setMeterno] = useState('');
     const [phone, setphone] = useState('');

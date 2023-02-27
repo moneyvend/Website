@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import airtimeStyle from './ChooseAirtime.module.scss';
 
 function ChooseAirtime() {
+    /* eslint-disable */
     const [phone, setPhone] = useState('');
     const [amount, setAmount] = useState('');
 

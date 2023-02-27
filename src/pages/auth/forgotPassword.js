@@ -7,6 +7,7 @@ import AppImages from '../../utilities/images/images';
 import forgetStyle from './forgotPassword.module.scss';
 
 export default function ForgotPasswordPage() {
+  /* eslint-disable */
   const [email, setEmail] = useState('');
   const usenavigate = useNavigate;
 

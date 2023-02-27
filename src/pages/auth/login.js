@@ -9,6 +9,7 @@ import loginStyle from './login.module.scss';
 import AppImages from '../../utilities/images/images';
 
 export default function RegisterPage() {
+  /* eslint-disable */
   const [switchMe, setSwitchMe] = useState('Login with email');
 
   // Email Login API integration

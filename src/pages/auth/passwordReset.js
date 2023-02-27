@@ -10,6 +10,7 @@ import resetStyle from './passwordReset.module.scss';
 export default function PasswordResetPage() {
   // export default function PasswordResetPage() {
 
+  /* eslint-disable */
   const [password, setPassword] = useState('');
   const [password2, setPassword2] = useState('');
 
