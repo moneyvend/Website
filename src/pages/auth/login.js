@@ -1,24 +1,36 @@
 /* eslint-disable prefer-template */
 /* eslint-disable max-len */
 /* eslint-disable indent */
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
+import axios from 'axios';
 import loginStyle from './login.module.scss';
 import AppImages from '../../utilities/images/images';
 
 export default function RegisterPage() {
+  /* eslint-disable */
   const [switchMe, setSwitchMe] = useState('Login with email');
 
   // Email Login API integration
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [phone, setPhone] = useState('');
 
-  const emailLogin = () => {
+  const usenavigate = useNavigate();
+
+  // const history = useHistory();
+
+  useEffect(() => {
+    if (localStorage.getItem('user-info')) {
+      // usenavigate('./dashboard');
+    }
+  });
+   const emailLogin = () => {
     // console.warn(email, password);
     const item = { email, password };
-    let result = fetch('/auth/login/email', {
+    let result = fetch('https://monievend.herokuapp.com/api/auth/login/email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -28,6 +40,25 @@ export default function RegisterPage() {
     });
     result = result.json();
     localStorage.setItem('user-info', JSON.stringify(result));
+    usenavigate('./dashboard');
+  };
+
+  // Phone Login Api integration
+  const handleSubmit = () => {
+    // console.log('success');
+    axios.post('https://monievend.herokuapp.com/api/auth/login/phone', {
+      phone: 'phone',
+      password: 'password',
+    })
+    .then((result) => {
+      console.log(result);
+      alert('Logined successfully');
+      usenavigate('/dashboard');
+    })
+    .catch((error) => {
+      console.log(error);
+      alert('wrong credentials. please try again!');
+    });
   };
 
   const handleToggle = (index) => {
@@ -102,11 +133,11 @@ export default function RegisterPage() {
               </Form>
             )
             : (
-              <Form>
+              <Form onSubmit={handleSubmit}>
                 <p className={loginStyle.inSwi}>{switchMe}</p>
                 <Form.Group className="mb-3">
                   <Form.Label>Phone number</Form.Label>
-                  <Form.Control type="phone" placeholder="Phone number" name="Phone number" />
+                  <Form.Control type="phone" placeholder="Phone number" name="Phone number" value={phone} onChange={(e) => setPhone(e.target.value)} />
                 </Form.Group>
 
                 <Form.Group className="mb-2">

@@ -12,6 +12,7 @@ import ConfirmSummary from '../components/users-page/payment-services/Layout/Con
 import PaymentMethod from '../components/users-page/payment-services/Layout/PaymentMethod';
 import DataServices from '../components/users-page/payment-services/Layout/DataServices';
 import Electricity from '../components/users-page/payment-services/Layout/Electricity';
+import Cabletv from '../components/users-page/payment-services/Layout/Cabletv';
 
 class DashboardRoutes {
   static routes =
@@ -32,6 +33,9 @@ class DashboardRoutes {
         </Route>
         <Route path="electricity">
           <Route index={true} element={<Electricity />} />
+        </Route>
+        <Route path="cabletv">
+          <Route index={true} element={<Cabletv />} />
         </Route>
       </Route>
 

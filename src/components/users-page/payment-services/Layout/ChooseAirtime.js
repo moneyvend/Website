@@ -1,10 +1,34 @@
 /* eslint-disable react/jsx-indent */
 /* eslint-disable indent */
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import airtimeStyle from './ChooseAirtime.module.scss';
 
 function ChooseAirtime() {
+    /* eslint-disable */
+    const [phone, setPhone] = useState('');
+    const [amount, setAmount] = useState('');
+
+    const usenavigate = useNavigate;
+
+    const handlePayment = () => {
+        axios.post('https://api.staging.baxibap.com/services/airtime/request', {
+            phone: 'phone',
+            amount: 'amount',
+        })
+            .then((result) => {
+                console.log(result);
+                alert('payment made successfully');
+                usenavigate('/dashboard');
+            })
+            .catch((error) => {
+                console.log(error);
+                alert('Payment Failed please try again');
+            });
+    };
+
     return (
         <section>
             <div className={airtimeStyle.holdAll}>
@@ -20,15 +44,15 @@ function ChooseAirtime() {
                             </Form.Select>
                             <Form.Group className="mb-3" controlId="formBasicPhoneNumber">
                                 <Form.Label>Phone Number</Form.Label>
-                                <Form.Control type="number" placeholder="Phone Number" />
+                                <Form.Control value={phone} type="number" placeholder="Phone Number" onChange={(e) => setPhone(e.target.value)} />
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicAmount">
                                 <Form.Label>Amount</Form.Label>
-                                <Form.Control type="number" placeholder="Amount" />
+                                <Form.Control value={amount} type="number" placeholder="Amount" onChange={(e) => setAmount(e.target.value)} />
                             </Form.Group>
                             <div>
-                                <Button variant="primary" type="submit" class="btn btn-primary" style={{ width: '100%' }}>
+                                <Button variant="primary" type="submit" onClick={handlePayment} class="btn btn-primary" style={{ width: '100%' }}>
                                     Proceed
                                 </Button>
                             </div>

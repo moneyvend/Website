@@ -1,8 +1,9 @@
 /* eslint-disable prefer-template */
 /* eslint-disable max-len */
 /* eslint-disable indent */
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 // import { useSelector, useDispatch } from 'react-redux';
 import { Button, Form } from 'react-bootstrap';
 import verifyEmailStyle from './verifyEmail.module.scss';
@@ -14,6 +15,27 @@ export default function RecoverPasswordPage() {
   // const [errorModal, setErrorModal] = useState(false);
   // const signupToken = JSON.parse(sessionStorage.getItem('user'));
   // console.log(signupToken.data.verification.link.slice(56, 400));
+  const [email, setEmail] = useState('');
+  const usenavigate = useNavigate;
+
+  const emailVerification = () => {
+    axios.post('https://monievend.herokuapp.com/api/auth/verify-email', {
+      email: 'email',
+    })
+      .then((result) => {
+        /* eslint-disable */
+        console.log(result);
+        alert('email verified successfully');
+        /* eslint-enable */
+        usenavigate('/');
+      })
+      .catch((error) => {
+        /* eslint-disable */
+        console.log(error);
+        alert('email verification Failed please try again');
+      });
+  };
+
   return (
     <section className={verifyEmailStyle.holdAll}>
       <div className={verifyEmailStyle.holdFormNText}>
@@ -23,7 +45,10 @@ export default function RecoverPasswordPage() {
           </div>
           <div>
             <h3>Creating payment solutions</h3>
-            <p>A product which specializes in creating terminal solution products for customers, SME&apos;s and merchants. </p>
+            <p>
+              A product which specializes in creating terminal
+              solution products for customers, SME&apos;s and merchants.
+            </p>
           </div>
         </div>
         <div className={verifyEmailStyle.holdForm}>
@@ -37,14 +62,16 @@ export default function RecoverPasswordPage() {
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" name="email" />
+              <Form.Control value={email} type="email" placeholder="Enter email" name="email" onChange={(e) => setEmail(e.target.value)} />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" onClick={emailVerification}>
               Submit
             </Button>
           </Form>
-          <p className={verifyEmailStyle.already}>
+          <p
+            className={verifyEmailStyle.already}
+          >
             Didn&apos;t receive an email ?
             <Link to=" ">Resend</Link>
           </p>
