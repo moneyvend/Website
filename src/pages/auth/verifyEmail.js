@@ -27,7 +27,7 @@ export default function RecoverPasswordPage() {
         console.log(result);
         alert('email verified successfully');
         /* eslint-enable */
-        usenavigate('/');
+        usenavigate('/auth/login');
       })
       .catch((error) => {
         /* eslint-disable */
