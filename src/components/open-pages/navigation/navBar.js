@@ -16,6 +16,11 @@ const NavBar = () => {
   const customRoute = (index) => {
     navigate(index);
   };
+
+  const loginModule = () => {
+    // console.log('clicked');
+    navigate('/auth/login');
+  };
   return (
     <div className="container2">
       <div id="c-1">
@@ -39,9 +44,7 @@ const NavBar = () => {
                   <button
                     type="button"
                     className="batt"
-                    onClick={() => {
-                      customRoute('/auth/login');
-                    }}
+                    onClick={loginModule}
                   >
                     Log in
                   </button>
@@ -83,7 +86,6 @@ const NavBar = () => {
         onClick={() => {
           customRoute('/auth/login');
         }}
-        disabled
       >
         Login
       </button>
