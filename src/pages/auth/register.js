@@ -23,7 +23,7 @@ export default function RegisterPage() {
     password: '',
     password2: '',
     phone: '',
-    frontendUrl: 'https://monievend.netlify.app/',
+    frontendUrl: 'https://monievend.herokuapp.com/api/auth/signup',
   });
 
   // console.log(window.location.hostname);
