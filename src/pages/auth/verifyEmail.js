@@ -77,8 +77,9 @@ export default function RecoverPasswordPage() {
           </p>
         </div>
       </div>
-      {/* {isError ? <ErrorModal show={errorModal} onHide={() => setErrorModal(false)} errorMsg={message} /> : null} */}
-      {/* {isLoading ? <Loader /> : null} */}
+      {
+        /* {isError ? <ErrorModal show={errorModal} onHide={() => setErrorModal(false)} errorMsg={message} /> : null} */
+      }
     </section>
   );
 }
