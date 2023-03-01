@@ -1,11 +1,11 @@
 /* eslint-disable prefer-template */
 /* eslint-disable max-len */
 /* eslint-disable indent */
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-// import axios from 'axios';
+import axios from 'axios';
 // import { useSelector, useDispatch } from 'react-redux';
-// import { Button, Form } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import verifyEmailStyle from './verifyEmail.module.scss';
 import AppImages from '../../utilities/images/images';
 // import ErrorModal from '../../Modals/errorModal';
@@ -15,31 +15,25 @@ export default function RecoverPasswordPage() {
   // const [errorModal, setErrorModal] = useState(false);
   // const signupToken = JSON.parse(sessionStorage.getItem('user'));
   // console.log(signupToken.data.verification.link.slice(56, 400));
-  // const [email, setEmail] = useState('');
-  // const usenavigate = useNavigate;
+  const [email, setEmail] = useState('');
+  const usenavigate = useNavigate;
 
-  // const emailVerification = () => {
-  // axios.post('https://monievend.herokuapp.com/api/auth/verify-email', {
-  // email: 'email',
-  // })
-  // .then((result) => {
-  // /* eslint-disable */
-  // console.log(result);
-  // alert('email verified successfully');
-  // /* eslint-enable */
-  // usenavigate('/auth/login');
-  // })
-  // .catch((error) => {
-  /* eslint-disable */
-  // console.log(error);
-  // alert('email verification Failed please try again');
-  // });
-  // };
-
-  const navigate = useNavigate();
-
-  const proceedLogin = () => {
-    navigate('./auth/login');
+  const emailVerification = () => {
+    axios.post('https://monievend.herokuapp.com/api/auth/verify-email', {
+      email: 'email',
+    })
+      .then((result) => {
+        /* eslint-disable */
+        console.log(result);
+        alert('email verified successfully');
+        /* eslint-enable */
+        usenavigate('/auth/login');
+      })
+      .catch((error) => {
+        /* eslint-disable */
+        console.log(error);
+        alert('email verification Failed please try again');
+      });
   };
 
   return (
@@ -65,9 +59,16 @@ export default function RecoverPasswordPage() {
             <h3>Email Verification Sent</h3>
             <p>We&apos;ve sent a link to your email address: marian@gmail.com</p>
           </div>
-          <div>
-            <button type="button" onClick={proceedLogin}>Proceed</button>
-          </div>
+          <Form>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control value={email} type="email" placeholder="Enter email" name="email" onChange={(e) => setEmail(e.target.value)} />
+            </Form.Group>
+
+            <Button variant="primary" type="submit" onClick={emailVerification}>
+              Submit
+            </Button>
+          </Form>
           <p
             className={verifyEmailStyle.already}
           >
@@ -76,8 +77,9 @@ export default function RecoverPasswordPage() {
           </p>
         </div>
       </div>
-      {/* {isError ? <ErrorModal show={errorModal} onHide={() => setErrorModal(false)} errorMsg={message} /> : null} */}
-      {/* {isLoading ? <Loader /> : null} */}
+      {
+        /* {isError ? <ErrorModal show={errorModal} onHide={() => setErrorModal(false)} errorMsg={message} /> : null} */
+      }
     </section>
   );
 }
