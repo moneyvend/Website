@@ -17,7 +17,7 @@ export default function ForgotPasswordPage() {
     }).then((result) => {
       console.log(result);
       alert('Password Reset Email sent successfully');
-      usenavigate('#');
+      usenavigate('/auth/login');
     })
       .catch((error) => {
         console.log(error);

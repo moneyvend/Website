@@ -16,10 +16,9 @@ export default function RecoverPasswordPage() {
   // const signupToken = JSON.parse(sessionStorage.getItem('user'));
   // console.log(signupToken.data.verification.link.slice(56, 400));
   const [email, setEmail] = useState('');
-  const usenavigate = useNavigate;
-
-  const emailVerification = () => {
-    axios.post('https://monievend.herokuapp.com/api/auth/verify-email', {
+  const usenavigate = useNavigate();
+  const emailVerification = async () => {
+    await axios.post('https://monievend.herokuapp.com/api/auth/verify-email', {
       email: 'email',
     })
       .then((result) => {
