@@ -27,20 +27,23 @@ export default function RegisterPage() {
       // usenavigate('./dashboard');
     }
   });
-   const emailLogin = () => {
-    // console.warn(email, password);
-    const item = { email, password };
-    let result = fetch('https://monievend.herokuapp.com/api/auth/login/email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        // 'Accept': 'application/json',
-      },
-      body: JSON.stringify(item),
+
+  // email login api
+  const emailLogin = () => {
+    // console.log('success');
+    axios.post('https://monievend.herokuapp.com/api/auth/login/email', {
+      email: 'email',
+      password: 'password',
+    })
+    .then((result) => {
+      console.log(result);
+      alert('Logined successfully');
+      usenavigate('/dashboard');
+    })
+    .catch((error) => {
+      console.log(error);
+      alert('wrong credentials. please try again!');
     });
-    result = result.json();
-    localStorage.setItem('user-info', JSON.stringify(result));
-    usenavigate('./dashboard');
   };
 
   // Phone Login Api integration
@@ -86,7 +89,7 @@ export default function RegisterPage() {
           </div>
           <div className={loginStyle.holdSwichButin}>
             <button
-              type="button"
+              type="submit"
               className={switchMe === 'Login with email' ? loginStyle.acti : loginStyle.actiNot}
               onClick={() => {
                 handleToggle('Login with email');
@@ -95,7 +98,7 @@ export default function RegisterPage() {
               Login with email
             </button>
             <button
-              type="button"
+              type="submit"
               className={switchMe === 'Login with phone number' ? loginStyle.acti : loginStyle.actiNot}
               onClick={() => {
                 handleToggle('Login with phone number');
@@ -106,16 +109,16 @@ export default function RegisterPage() {
           </div>
           {switchMe === 'Login with email'
             ? (
-              <Form>
+              <Form onSubmit={emailLogin}>
                 <p className={loginStyle.inSwi}>{switchMe}</p>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" name="email" onChange={(e) => setEmail(e.target.value)} />
+                  <Form.Control value={email} type="email" placeholder="Enter email" name="email" onChange={(e) => setEmail(e.target.value)} />
                 </Form.Group>
 
                 <Form.Group className="mb-2" controlId="formBasicPassword">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" name="password" onChange={(e) => setPassword(e.target.value)} />
+                  <Form.Control value={password} type="password" placeholder="Password" name="password" onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
 
                 <div className={loginStyle.holdRemember}>
@@ -127,7 +130,7 @@ export default function RegisterPage() {
                   <Link to="/auth/register">Sign up</Link>
                 </p>
 
-                <Button variant="primary" type="submit" onClick={emailLogin}>
+                <Button variant="primary" type="submit">
                   Submit
                 </Button>
               </Form>
