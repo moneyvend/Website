@@ -24,27 +24,43 @@ export default function RegisterPage() {
 
   useEffect(() => {
     if (localStorage.getItem('user-info')) {
-      // usenavigate('./dashboard');
+      usenavigate('./dashboard');
     }
-  });
+  }, []);
+
+  async function emailLogin() {
+    console.warn("data", email, password);
+    let item = { email, password };
+    let result = await fetch('https://monievend.herokuapp.com/api/auth/login/email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(item)
+    });
+    result = result.json();
+    localStorage.setItem('user-info', JSON.stringify(result));
+    usenavigate('/dashboard');
+  }
 
   // email login api
-  const emailLogin = () => {
-    // console.log('success');
-    axios.post('https://monievend.herokuapp.com/api/auth/login/email', {
-      email: 'email',
-      password: 'password',
-    })
-    .then((result) => {
-      console.log(result);
-      alert('Logined successfully');
-      usenavigate('/dashboard');
-    })
-    .catch((error) => {
-      console.log(error);
-      alert('wrong credentials. please try again!');
-    });
-  };
+  // const emailLogin = () => {
+  // e.preventDefault();
+  // axios.post('https://monievend.herokuapp.com/api/auth/login/email', {
+  // email: 'email',
+  // password: 'password',
+  // })
+  // .then((result) => {
+  // console.log(result.data);
+  // alert('Logined successfully');
+  // usenavigate('/dashboard');
+  // })
+  // .catch((error) => {
+  // console.log(error);
+  // alert('wrong credentials. please try again!');
+  // });
+  // };
 
   // Phone Login Api integration
   const handleSubmit = () => {
@@ -53,15 +69,15 @@ export default function RegisterPage() {
       phone: 'phone',
       password: 'password',
     })
-    .then((result) => {
-      console.log(result);
-      alert('Logined successfully');
-      usenavigate('/dashboard');
-    })
-    .catch((error) => {
-      console.log(error);
-      alert('wrong credentials. please try again!');
-    });
+      .then((result) => {
+        console.log(result);
+        alert('Logined successfully');
+        usenavigate('/dashboard');
+      })
+      .catch((error) => {
+        console.log(error);
+        alert('wrong credentials. please try again!');
+      });
   };
 
   const handleToggle = (index) => {
