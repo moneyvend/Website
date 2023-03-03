@@ -1,7 +1,7 @@
 /* eslint-disable prefer-template */
 /* eslint-disable max-len */
 /* eslint-disable indent */
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
@@ -22,11 +22,11 @@ export default function RegisterPage() {
 
   // const history = useHistory();
 
-  useEffect(() => {
-    if (localStorage.getItem('user-info')) {
-      usenavigate('./dashboard');
-    }
-  }, []);
+ // useEffect(() => {
+  //  if (localStorage.getItem('user-info')) {
+   //   usenavigate('./dashboard');
+  //  }
+  //}, []);
 
   async function emailLogin() {
     console.warn("data", email, password);
