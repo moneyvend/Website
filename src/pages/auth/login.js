@@ -14,35 +14,56 @@ export default function RegisterPage() {
 
   // Email Login API integration
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
+  const [formData, seFormData] = useState({
+    email: '',
+    password: '',
+});
+
+const onChange = (e) => {
+  seFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+  }));
+};
+
+const { email, password } = formData;
 
   const usenavigate = useNavigate();
 
   // const history = useHistory();
+  const emailLogin = (e) => {
+    e.preventDefault();
+    axios({
+      method: 'post',
+      url: 'https://monievend.herokuapp.com/api/auth/login/email',
+      data: formData,
+    })
+      .then((response) => {
+        usenavigate('/dashboard');
+      })
+      .catch((err) => {
+        alert('error');
+      });
+  };
 
- // useEffect(() => {
-  //  if (localStorage.getItem('user-info')) {
-   //   usenavigate('./dashboard');
-  //  }
-  //}, []);
-
-  async function emailLogin() {
-    console.warn("data", email, password);
-    let item = { email, password };
-    let result = await fetch('https://monievend.herokuapp.com/api/auth/login/email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(item)
-    });
-    result = result.json();
-    localStorage.setItem('user-info', JSON.stringify(result));
-    usenavigate('/dashboard');
-  }
+  // async function emailLogin() {
+  // console.warn("data", email, password);
+  // let item = { email, password };
+  // let result = await fetch('https://monievend.herokuapp.com/api/auth/login/email', {
+  // method: 'POST',
+  // headers: {
+  // 'Content-Type': 'application/json',
+  // 'Accept': 'application/json'
+  // },
+  // body: JSON.stringify(item)
+  // });
+  // result = result.json();
+  // localStorage.setItem('user-info', JSON.stringify(result));
+  // usenavigate('/dashboard');
+  // }
 
   // email login api
   // const emailLogin = () => {
@@ -129,12 +150,12 @@ export default function RegisterPage() {
                 <p className={loginStyle.inSwi}>{switchMe}</p>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control value={email} type="email" placeholder="Enter email" name="email" onChange={(e) => setEmail(e.target.value)} />
+                  <Form.Control value={email} type="email" placeholder="Enter email" name="email" onChange={onChange} />
                 </Form.Group>
 
                 <Form.Group className="mb-2" controlId="formBasicPassword">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control value={password} type="password" placeholder="Password" name="password" onChange={(e) => setPassword(e.target.value)} />
+                  <Form.Control value={password} type="password" placeholder="Password" name="password" onChange={onChange} />
                 </Form.Group>
 
                 <div className={loginStyle.holdRemember}>
@@ -161,7 +182,7 @@ export default function RegisterPage() {
 
                 <Form.Group className="mb-2">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" name="password" />
+                  <Form.Control type="password" placeholder="Password" name="password" onChange={onChange} />
                 </Form.Group>
 
                 <div className={loginStyle.holdRemember}>
