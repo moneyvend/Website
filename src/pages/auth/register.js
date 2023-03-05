@@ -71,29 +71,14 @@ export default function RegisterPage() {
       setMatch('Password do not match');
     } else {
       const userData = {
-      fullname,
-      email,
-      phone: '+234' + phone,
-      password,
-      frontendUrl: 'https://monievend.herokuapp.com/api/auth/signup',
+        fullname,
+        email,
+        phone: '+234' + phone,
+        password,
+        frontendUrl: 'https://monievend.herokuapp.com/api/auth/signup',
       };
       dispatch(register(userData));
       setMatch('');
-
-      // const item = {
-      // fullname, email, phone, password,
-      // };
-      // let result = fetch('https://monievend.herokuapp.com/api/auth/signup', {
-      // method: 'POST',
-      // headers: {
-      // 'Content-Type': 'application/json',
-      // Accept: 'application/json',
-      // },
-      // body: JSON.stringify(item),
-      // });
-      // result = item.JSON();
-      // localStorage.setItem('user-info', JSON.stringify(result));
-      // navigate('./verifyEmail');
     }
   };
 
