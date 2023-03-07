@@ -1,7 +1,7 @@
 /* eslint-disable prefer-template */
 /* eslint-disable max-len */
 /* eslint-disable indent */
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 // import { useSelector, useDispatch } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
@@ -18,28 +18,28 @@ export default function RegisterPage() {
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
   const navigate = useNavigate();
-  const onChange = (e) => {
-    seFormData((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value,
-    }));
-  };
+  // const onChange = (e) => {
+  // seFormData((prevState) => ({
+  // ...prevState,
+  // [e.target.name]: e.target.value,
+  // }));
+  // };
 
   //Email Login Api
-  useEffect(() => {
-    if(localStorage.getItem('user-info')){
-      navigate('/dashboard');
-    }
-  }, []);
+  // useEffect(() => {
+  // if(localStorage.getItem('user-info')){
+  // navigate('/dashboard');
+  // }
+  // }, []);
 
-  async function emailLogin(){
+  async function emailLogin() {
     //alert(email, password);
-    let item = {email, password};
+    let item = { email, password };
     let result = await fetch('https://monievend.herokuapp.com/api/auth/login/email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Accept':'application/json'
+        'Accept': 'application/json'
       },
       body: JSON.stringify(item)
     });
@@ -112,7 +112,7 @@ export default function RegisterPage() {
           </div>
           {switchMe === 'Login with email'
             ? (
-              <Form onSubmit={emailLogin}>
+              <Form onSubmit={emailLogin} method="POST">
                 <p className={loginStyle.inSwi}>{switchMe}</p>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email</Form.Label>
@@ -139,7 +139,7 @@ export default function RegisterPage() {
               </Form>
             )
             : (
-              <Form onSubmit={handleSubmit}>
+              <Form onSubmit={handleSubmit} method="POST">
                 <p className={loginStyle.inSwi}>{switchMe}</p>
                 <Form.Group className="mb-3">
                   <Form.Label>Phone number</Form.Label>
@@ -148,7 +148,7 @@ export default function RegisterPage() {
 
                 <Form.Group className="mb-2">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" name="password" onChange={onChange} />
+                  <Form.Control type="password" value={password} placeholder="Password" name="password" onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
 
                 <div className={loginStyle.holdRemember}>
