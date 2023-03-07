@@ -1,12 +1,13 @@
 /* eslint-disable prefer-template */
 /* eslint-disable max-len */
-/* eslint-disable indent */
-import React, { useState } from 'react';
+/* eslint-disable */
+import React, { useRef, useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 // import { useSelector, useDispatch } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 // import { login, reset } from '../../features/authentication/signupSlice';
+import AuthContext from '../../features/authentication/loginPhoneService';
 import loginStyle from './login.module.scss';
 import AppImages from '../../utilities/images/images';
 
@@ -14,40 +15,75 @@ export default function RegisterPage() {
   /* eslint-disable */
   const [switchMe, setSwitchMe] = useState('Login with email');
 
+  const { setAuth } = useContext(AuthContext);
   const [email, setEmail] = useState('');
+  const userRef = useRef();
+  const errRef = useRef();
+  const [errMsg, setErrMsg] = useState('');
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
   const navigate = useNavigate();
-  // const onChange = (e) => {
-  // seFormData((prevState) => ({
-  // ...prevState,
-  // [e.target.name]: e.target.value,
-  // }));
-  // };
 
-  //Email Login Api
-  // useEffect(() => {
-  // if(localStorage.getItem('user-info')){
+  // try start
+  useEffect(() => {
+    userRef.current?.focus();
+  }, [])
+
+  useEffect(() => {
+    setErrMsg('');
+  }, [email, password])
+
+  const emailLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('https://monievend.herokuapp.com/api/auth/login/email',
+        JSON.stringify({ email, password }),
+        {
+          headers: { 'Content-Type': 'application/json' },
+          withCredentials: true
+        }
+      );
+      console.log(JSON.stringify(response?.data));
+      //console.log(JSON.stringify(response));
+      const accessToken = response?.data?.accessToken;
+      const roles = response?.data?.roles;
+      setAuth({ email, password, roles, accessToken });
+      setEmail('');
+      setPassword('');
+      navigate('/dashboard');
+    } catch (err) {
+      if (!err?.response) {
+        setErrMsg('No Server Response');
+      } else if (err.response?.status === 400) {
+        setErrMsg('Missing Username or Password');
+      } else if (err.response?.status === 401) {
+        setErrMsg('Unauthorized');
+      } else {
+        setErrMsg('Login Failed');
+      }
+      errRef.current?.focus();
+    }
+  }
+
+  //tyr end
+
+  // async function emailLogin() {
+  // alert(email, password);
+  // let item = { email, password };
+  // let result = await fetch('https://monievend.herokuapp.com/api/auth/login/email', {
+  // method: 'POST',
+  // headers: {
+  // 'Content-Type': 'application/json',
+  // 'Accept': 'application/json'
+  // },
+  // body: JSON.stringify(item)
+  // });
+  // result = await result.json();
+  // 
+  // localStorage.setItem(JSON.stringify(result))
   // navigate('/dashboard');
   // }
-  // }, []);
-
-  async function emailLogin() {
-    //alert(email, password);
-    let item = { email, password };
-    let result = await fetch('https://monievend.herokuapp.com/api/auth/login/email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(item)
-    });
-    result = await result.json();
-
-    localStorage.setItem(JSON.stringify(result))
-    navigate('/dashboard');
-  }
 
   // Phone Login Api integration
   function handleSubmit() {
@@ -72,6 +108,7 @@ export default function RegisterPage() {
   };
   return (
     <section className={loginStyle.holdAll}>
+    <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
       <div className={loginStyle.holdFormNText}>
         <div className={loginStyle.holdText}>
           <div className={loginStyle.holdImage}>
