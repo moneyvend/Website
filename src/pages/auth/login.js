@@ -112,7 +112,7 @@ export default function RegisterPage() {
           </div>
           {switchMe === 'Login with email'
             ? (
-              <Form onSubmit={emailLogin} method="POST">
+              <Form onSubmit={emailLogin}>
                 <p className={loginStyle.inSwi}>{switchMe}</p>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email</Form.Label>
@@ -139,7 +139,7 @@ export default function RegisterPage() {
               </Form>
             )
             : (
-              <Form onSubmit={handleSubmit} method="POST">
+              <Form onSubmit={handleSubmit}>
                 <p className={loginStyle.inSwi}>{switchMe}</p>
                 <Form.Group className="mb-3">
                   <Form.Label>Phone number</Form.Label>
