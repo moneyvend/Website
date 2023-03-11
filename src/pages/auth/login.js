@@ -86,14 +86,15 @@ export default function RegisterPage() {
   // }
 
   // Phone Login Api integration
-  function handleSubmit() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     // console.log('success');
     axios.post('https://monievend.herokuapp.com/api/auth/login/phone', {
-      phone: 'phone',
-      password: 'password',
+      'phone': phone,
+      'password': password,
     })
-      .then((result) => {
-        console.log(result);
+      .then((resp) => {
+        console.log(resp);
         alert('Logined successfully');
         navigate('/dashboard');
       })
@@ -108,7 +109,7 @@ export default function RegisterPage() {
   };
   return (
     <section className={loginStyle.holdAll}>
-    <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+      <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
       <div className={loginStyle.holdFormNText}>
         <div className={loginStyle.holdText}>
           <div className={loginStyle.holdImage}>
