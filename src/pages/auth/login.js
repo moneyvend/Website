@@ -76,7 +76,8 @@ export default function RegisterPage() {
     })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data)
+      navigate('/dashboard');
+      console.log(data);
     })
     .catch((err) => {
       alert('wrong credentials');
