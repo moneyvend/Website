@@ -1,5 +1,3 @@
-/* eslint-disable prefer-template */
-/* eslint-disable max-len */
 /* eslint-disable */
 import React, { useRef, useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -24,7 +22,7 @@ export default function RegisterPage() {
   const [phone, setPhone] = useState('');
   const navigate = useNavigate();
 
-  // try start
+  // Email Login api integration
   useEffect(() => {
     userRef.current?.focus();
   }, [])
@@ -45,7 +43,6 @@ export default function RegisterPage() {
         }
       );
       console.log(JSON.stringify(response?.data));
-      //console.log(JSON.stringify(response));
       const accessToken = response?.data?.accessToken;
       const roles = response?.data?.roles;
       setAuth({ email, password, roles, accessToken });
@@ -66,42 +63,34 @@ export default function RegisterPage() {
     }
   }
 
-  //tyr end
-
-  // async function emailLogin() {
-  // alert(email, password);
-  // let item = { email, password };
-  // let result = await fetch('https://monievend.herokuapp.com/api/auth/login/email', {
-  // method: 'POST',
-  // headers: {
-  // 'Content-Type': 'application/json',
-  // 'Accept': 'application/json'
-  // },
-  // body: JSON.stringify(item)
-  // });
-  // result = await result.json();
-  // 
-  // localStorage.setItem(JSON.stringify(result))
-  // navigate('/dashboard');
-  // }
+  const postLogin = () => {
+    fetch('https://monievend.herokuapp.com/api/auth/login/phone', {
+      method: 'POST',
+      body: JSON.stringify({
+        phone,
+        password,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      navigate('/dashboard');
+      console.log(data);
+    })
+    .catch((err) => {
+      alert('wrong credentials');
+      console.error(err)
+    });
+  }
 
   // Phone Login Api integration
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log('success');
-    axios.post('https://monievend.herokuapp.com/api/auth/login/phone', {
-      'phone': phone,
-      'password': password,
-    })
-      .then((resp) => {
-        console.log(resp);
-        alert('Logined successfully');
-        navigate('/dashboard');
-      })
-      .catch((error) => {
-        console.log(error);
-        alert('wrong credentials. please try again!');
-      });
+    postLogin();
+    setPassword('');
+    setPhone('');
   };
 
   const handleToggle = (index) => {
