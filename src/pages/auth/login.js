@@ -46,9 +46,9 @@ export default function RegisterPage() {
       const accessToken = response?.data?.accessToken;
       const roles = response?.data?.roles;
       setAuth({ email, password, roles, accessToken });
+      navigate('/dashboard');
       setEmail('');
       setPassword('');
-      navigate('/dashboard');
     } catch (err) {
       if (!err?.response) {
         setErrMsg('No Server Response');
