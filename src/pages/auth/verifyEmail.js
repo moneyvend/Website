@@ -1,7 +1,7 @@
 /* eslint-disable prefer-template */
 /* eslint-disable max-len */
 /* eslint-disable indent */
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 // import axios from 'axios';
@@ -39,6 +39,7 @@ export default function RecoverPasswordPage() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   // const [match, setMatch] = useState('');
+  const userRef = useRef();
   const [errorModal, setErrorModal] = useState(false);
   const [formDate, setFormDate] = useState({
     email: '',
@@ -54,6 +55,10 @@ export default function RecoverPasswordPage() {
     isSuccess,
     message,
   } = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    userRef.current?.focus();
+  }, []);
   useEffect(() => {
     if (isError) {
       setErrorModal(true);
