@@ -19,6 +19,7 @@ export default function RecoverPasswordPage() {
 
   const [email, setEmail] = useState('');
   const usenavigate = useNavigate();
+  // const { userEmail } = useParams()
   const emailVerification = async (e) => {
     /* eslint-disable */
     e.preventDefault();
@@ -29,13 +30,13 @@ export default function RecoverPasswordPage() {
         /* eslint-disable */
         console.log(result);
         alert('email verified successfully');
-        /* eslint-enable */
         usenavigate('/auth/login');
       })
       .catch((error) => {
         /* eslint-disable */
         console.log(error);
-        alert('email verification Failed please try again');
+        // alert('email verification Failed please try again');
+        usenavigate('/auth/login');
       });
   };
 
@@ -60,7 +61,7 @@ export default function RecoverPasswordPage() {
           </div>
           <div className={verifyEmailStyle.headerText}>
             <h3>Email Verification Sent</h3>
-            <p>We&apos;ve sent a link to your email address: marian@gmail.com</p>
+            <p>We&apos;ve sent a link to your email address: {email}</p>
           </div>
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
