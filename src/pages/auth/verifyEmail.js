@@ -1,87 +1,42 @@
 /* eslint-disable prefer-template */
 /* eslint-disable max-len */
 /* eslint-disable indent */
-import React, { useRef, useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState } from 'react';
+// import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-// import axios from 'axios';
+import axios from 'axios';
 // import { useSelector, useDispatch } from 'react-redux';
 import { Button, Form } from 'react-bootstrap';
 import verifyEmailStyle from './verifyEmail.module.scss';
 import AppImages from '../../utilities/images/images';
-import ErrorModal from '../../components/Modals/errorModal';
+// import ErrorModal from '../../components/Modals/errorModal';
 // import Loader from '../../Loader/Loader';
 
 export default function RecoverPasswordPage() {
   // const [errorModal, setErrorModal] = useState(false);
   // const signupToken = JSON.parse(sessionStorage.getItem('user'));
   // console.log(signupToken.data.verification.link.slice(56, 400));
-  // const [email, setEmail] = useState('');
-  // const usenavigate = useNavigate();
-  // const emailVerification = async () => {
-  // await axios.post('https://monievend.herokuapp.com/api/auth/verify-email', {
-  // email: 'email',
-  // })
-  // .then((result) => {
-  // /* eslint-disable */
-  // console.log(result);
-  // alert('email verified successfully');
-  // /* eslint-enable */
-  // usenavigate('/auth/login');
-  // })
-  // .catch((error) => {
-  // /* eslint-disable */
-  // console.log(error);
-  // alert('email verification Failed please try again');
-  // });
-  // };
 
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  // const [match, setMatch] = useState('');
-  const userRef = useRef();
-  const [errorModal, setErrorModal] = useState(false);
-  const [formDate, setFormDate] = useState({
-    email: '',
-    frontendUrl: 'https://monievend.herokuapp.com/api/auth/verify-email',
-  });
-  // console.log(window.location.hostname);
-  const {
-    email,
-  } = formDate;
-  const {
-    user,
-    isError,
-    isSuccess,
-    message,
-  } = useSelector((state) => state.auth);
-
-  useEffect(() => {
-    userRef.current?.focus();
-  }, []);
-  useEffect(() => {
-    if (isError) {
-      setErrorModal(true);
-    }
-    if (isSuccess || user) {
-      navigate('/auth/login');
-    }
-  }, [user, isError, isSuccess, message, navigate, dispatch]);
-
-  const onChange = (e) => {
-    setFormDate((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
-  const emailVerification = (e) => {
+  const [email, setEmail] = useState('');
+  const usenavigate = useNavigate();
+  const emailVerification = async (e) => {
+    /* eslint-disable */
     e.preventDefault();
-    const userData = {
-      email,
-      frontendUrl: 'https://monievend.herokuapp.com/api/auth/verify-email',
-    };
-    dispatch((userData));
+    await axios.post('https://monievend.herokuapp.com/api/auth/verify-email', {
+      'email': email,
+    })
+      .then((result) => {
+        /* eslint-disable */
+        console.log(result);
+        alert('email verified successfully');
+        /* eslint-enable */
+        usenavigate('/auth/login');
+      })
+      .catch((error) => {
+        /* eslint-disable */
+        console.log(error);
+        alert('email verification Failed please try again');
+      });
   };
 
   return (
@@ -110,7 +65,7 @@ export default function RecoverPasswordPage() {
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email</Form.Label>
-              <Form.Control value={email} type="email" placeholder="Enter email" name="email" onChange={onChange} />
+              <Form.Control value={email} type="email" placeholder="Enter email" name="email" onChange={(e) => setEmail(e.target.value)} />
             </Form.Group>
 
             <Button variant="primary" type="submit" onClick={emailVerification}>
@@ -125,7 +80,9 @@ export default function RecoverPasswordPage() {
           </p>
         </div>
       </div>
-      {isError ? <ErrorModal show={errorModal} onHide={() => setErrorModal(false)} errorMsg={message} /> : null}
+      {
+        // {isError ? <ErrorModal show={errorModal} onHide={() => setErrorModal(false)} errorMsg={message} /> : null}
+      }
     </section>
   );
 }
