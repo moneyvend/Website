@@ -14,8 +14,6 @@ import Loader from '../../components/Loader/Loader';
 export default function RegisterPage() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  // const location = useLocation();
-  // const href = window.location.hostname;
   const [match, setMatch] = useState('');
   const [phone, setPhone] = useState('');
   const [errorModal, setErrorModal] = useState(false);
@@ -25,10 +23,8 @@ export default function RegisterPage() {
     password: '',
     password2: '',
     phone: '',
-    frontendUrl: 'https://monievend.herokuapp.com',
+    frontendUrl: window.location.href,
   });
-
-  // console.log(window.location.hostname);
 
   const {
     fullname,
@@ -77,7 +73,7 @@ export default function RegisterPage() {
         email,
         phone: '+234' + phone,
         password,
-        frontendUrl: 'https://monievend.herokuapp.com',
+        frontendUrl: window.location.href,
       };
       // console.log(window.location.href);
       dispatch(register(userData));

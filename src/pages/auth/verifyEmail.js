@@ -13,13 +13,8 @@ import AppImages from '../../utilities/images/images';
 // import Loader from '../../Loader/Loader';
 
 export default function RecoverPasswordPage() {
-  // const [errorModal, setErrorModal] = useState(false);
-  // const signupToken = JSON.parse(sessionStorage.getItem('user'));
-  // console.log(signupToken.data.verification.link.slice(56, 400));
-
   const [email, setEmail] = useState('');
   const usenavigate = useNavigate();
-  // const { userEmail } = useParams()
   const emailVerification = async (e) => {
     /* eslint-disable */
     e.preventDefault();
@@ -35,8 +30,7 @@ export default function RecoverPasswordPage() {
       .catch((error) => {
         /* eslint-disable */
         console.log(error);
-        // alert('email verification Failed please try again');
-        usenavigate('/auth/login');
+        alert('email verification Failed please try again');
       });
   };
 
