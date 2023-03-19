@@ -21,7 +21,7 @@ export default function RecoverPasswordPage() {
   const [email, setEmail] = useState('');
   const usenavigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-  const { token } = searchParams;
+  const token = searchParams.get('token');
 
   const emailVerification = async (e) => {
     e.preventDefault();
