@@ -63,7 +63,7 @@ export default function RecoverPasswordPage() {
               {email}
             </p>
           </div>
-          <Form>
+          {/* <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email</Form.Label>
               <Form.Control value={email} type="email" placeholder="Enter email" name="email" onChange={(e) => setEmail(e.target.value)} />
@@ -72,7 +72,7 @@ export default function RecoverPasswordPage() {
             <Button variant="primary" type="submit" onClick={emailVerification}>
               Submit
             </Button>
-          </Form>
+          </Form> */}
           <p
             className={verifyEmailStyle.already}
           >

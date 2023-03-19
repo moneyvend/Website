@@ -1,4 +1,5 @@
 import { Route } from 'react-router-dom';
+import VerifyFromEmail from '../pages/auth/verify-success';
 import {
   ForgotPasswordPage,
   LoginPage,
@@ -16,7 +17,7 @@ class AuthRoutes {
       <Route path="forgot-password" element={<ForgotPasswordPage />} />
       <Route path="password-reset" element={<PasswordResetPage />} />
       <Route path="recover-password" element={<RecoverPasswordPage />} />
-      <Route path="verify-email/*" element={<VerifyPage />} />
+      <Route path="verify-email/*" element={<VerifyFromEmail />} />
 
     </Route>
 }
