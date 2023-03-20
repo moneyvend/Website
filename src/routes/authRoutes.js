@@ -18,7 +18,7 @@ class AuthRoutes {
       <Route path="password-reset" element={<PasswordResetPage />} />
       <Route path="recover-password" element={<RecoverPasswordPage />} />
       <Route path="verify-email/*" element={<VerifyFromEmail />} />
-      <Route path="register/complete/:email" element={<VerifyPage />} />
+      <Route path="complete/:email" element={<VerifyPage />} />
 
     </Route>
 }
