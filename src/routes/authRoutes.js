@@ -13,11 +13,12 @@ class AuthRoutes {
   static routes =
     <Route path="auth">
       <Route path="login" element={<LoginPage />} index />
-      <Route path="register" element={<RegisterPage />} />
+      <Route path="register" element={<RegisterPage />} exact />
       <Route path="forgot-password" element={<ForgotPasswordPage />} />
       <Route path="password-reset" element={<PasswordResetPage />} />
       <Route path="recover-password" element={<RecoverPasswordPage />} />
       <Route path="verify-email/*" element={<VerifyFromEmail />} />
+      <Route path="register/complete/:email" element={<VerifyPage />} />
 
     </Route>
 }

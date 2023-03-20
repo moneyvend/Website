@@ -14,27 +14,8 @@ import AppImages from '../../utilities/images/images';
 // import Loader from '../../Loader/Loader';
 
 export default function RecoverPasswordPage() {
-  // const [errorModal, setErrorModal] = useState(false);
-  // const signupToken = JSON.parse(sessionStorage.getItem('user'));
-  // console.log(signupToken.data.verification.link.slice(56, 400));
-
   const [email, setEmail] = useState('');
   const usenavigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const token = searchParams.get('token');
-
-  const emailVerification = async (e) => {
-    e.preventDefault();
-    await axios.post('https://monievend.herokuapp.com/api/auth/verify-email', {
-      token,
-    })
-      .then((result) => {
-        usenavigate('/auth/login');
-      })
-      .catch((error) => {
-        usenavigate('/auth/login');
-      });
-  };
 
   return (
     <section className={verifyEmailStyle.holdAll}>
@@ -63,16 +44,6 @@ export default function RecoverPasswordPage() {
               {email}
             </p>
           </div>
-          {/* <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control value={email} type="email" placeholder="Enter email" name="email" onChange={(e) => setEmail(e.target.value)} />
-            </Form.Group>
-
-            <Button variant="primary" type="submit" onClick={emailVerification}>
-              Submit
-            </Button>
-          </Form> */}
           <p
             className={verifyEmailStyle.already}
           >

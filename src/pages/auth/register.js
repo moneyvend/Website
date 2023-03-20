@@ -53,7 +53,7 @@ export default function RegisterPage() {
       setErrorModal(true);
     }
     if (isSuccess || user) {
-      navigate(`/auth/verify-email/${email}`);
+      navigate(`/auth/register/complete/${email}`);
     }
 
     dispatch(reset());
