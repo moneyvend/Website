@@ -52,9 +52,6 @@ export default function RecoverPasswordPage() {
           </p>
         </div>
       </div>
-      {
-        //verify-success.jsx {isError ? <ErrorModal show={errorModal} onHide={() => setErrorModal(false)} errorMsg={message} /> : null}
-      }
     </section>
   );
 }

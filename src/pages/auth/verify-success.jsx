@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
+/* eslint-disable*/
 
 const VerifyFromEmail = () => {
   const usenavigate = useNavigate();
