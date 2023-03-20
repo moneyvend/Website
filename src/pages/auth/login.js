@@ -23,75 +23,75 @@ export default function RegisterPage() {
   const navigate = useNavigate();
 
   // Email Login api integration
-  // useEffect(() => {
-  // userRef.current?.focus();
-  // }, [])
-  // 
-  // useEffect(() => {
-  // setErrMsg('');
-  // }, [email, password])
-  // 
-  // const emailLogin = async (e) => {
-  // e.preventDefault();
-  // 
-  // try {
-  // const response = await axios.post('https://monievend.herokuapp.com/api/auth/login/email',
-  // JSON.stringify({ email, password }),
-  // {
-  // headers: { 'Content-Type': 'application/json' },
-  // withCredentials: true
-  // }
-  // );
-  // console.log(JSON.stringify(response?.data));
-  // const accessToken = response?.data?.accessToken;
-  // const roles = response?.data?.roles;
-  // setAuth({ email, password, roles, accessToken });
-  // navigate('/dashboard');
-  // setEmail('');
-  // setPassword('');
-  // } catch (err) {
-  // if (!err?.response) {
-  // setErrMsg('No Server Response');
-  // } else if (err.response?.status === 400) {
-  // setErrMsg('Missing Username or Password');
-  // } else if (err.response?.status === 401) {
-  // setErrMsg('Unauthorized');
-  // } else {
-  // setErrMsg('Login Failed');
-  // }
-  // errRef.current?.focus();
-  // }
-  // }
+  useEffect(() => {
+    userRef.current?.focus();
+  }, [])
+
+  useEffect(() => {
+    setErrMsg('');
+  }, [email, password])
+
+  const emailLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('https://monievend.herokuapp.com/api/auth/login/email',
+        JSON.stringify({ email, password }),
+        {
+          headers: { 'Content-Type': 'application/json' },
+          withCredentials: true
+        }
+      );
+      console.log(JSON.stringify(response?.data));
+      const accessToken = response?.data?.accessToken;
+      const roles = response?.data?.roles;
+      setAuth({ email, password, roles, accessToken });
+      navigate('/dashboard');
+      setEmail('');
+      setPassword('');
+    } catch (err) {
+      if (!err?.response) {
+        setErrMsg('No Server Response');
+      } else if (err.response?.status === 400) {
+        setErrMsg('Missing Username or Password');
+      } else if (err.response?.status === 401) {
+        setErrMsg('Unauthorized');
+      } else {
+        setErrMsg('Login Failed');
+      }
+      errRef.current?.focus();
+    }
+  }
 
   // email verification
-  const myLogin = () => {
-    fetch('https://monievend.herokuapp.com/api/auth/login/email', {
-      method: 'POST',
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        navigate('/dashboard');
-        console.log(data);
-      })
-      .catch((err) => {
-        alert('wrong credentials');
-        console.error(err)
-      });
-  }
+  // const myLogin = () => {
+  // fetch('https://monievend.herokuapp.com/api/auth/login/email', {
+  // method: 'POST',
+  // body: JSON.stringify({
+  // email,
+  // password,
+  // }),
+  // headers: {
+  // 'Content-Type': 'application/json',
+  // },
+  // })
+  // .then((res) => res.json())
+  // .then((data) => {
+  // navigate('/dashboard');
+  // console.log(data);
+  // })
+  // .catch((err) => {
+  // alert('wrong credentials');
+  // console.error(err)
+  // });
+  // }
   // Phone Login Api integration
-  const emailLogin = (e) => {
-    e.preventDefault();
-    myLogin();
-    setPassword('');
-    setEmail('');
-  };
+  // const emailLogin = (e) => {
+  // e.preventDefault();
+  // myLogin();
+  // setPassword('');
+  // setEmail('');
+  // };
 
   const postLogin = () => {
     fetch('https://monievend.herokuapp.com/api/auth/login/phone', {
