@@ -3,7 +3,7 @@
 /* eslint-disable indent */
 import React, { useState } from 'react';
 // import { useSelector, useDispatch } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 // import { useSelector, useDispatch } from 'react-redux';
 import { Button, Form } from 'react-bootstrap';
@@ -13,12 +13,13 @@ import AppImages from '../../utilities/images/images';
 // import Loader from '../../Loader/Loader';
 
 export default function RecoverPasswordPage() {
+  const params = useParams();
   const [email, setEmail] = useState('');
   const usenavigate = useNavigate();
   const emailVerification = async (e) => {
     /* eslint-disable */
     e.preventDefault();
-    await axios.post('https://monievend.herokuapp.com/api/auth/verify-email', {
+    await axios.post(`https://monievend.herokuapp.com/api/auth/verify-email/${params.token}`, {
       'email': email,
     })
       .then((result) => {
@@ -55,7 +56,7 @@ export default function RecoverPasswordPage() {
           </div>
           <div className={verifyEmailStyle.headerText}>
             <h3>Email Verification Sent</h3>
-            <p>We&apos;ve sent a link to your email address: {email}</p>
+            <p>We&apos;ve sent a link to your email address: {params.email}</p>
           </div>
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
