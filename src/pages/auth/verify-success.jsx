@@ -25,6 +25,7 @@ const VerifyFromEmail = () => {
   return (
     <div>
       <h1>Verify Success</h1>
+      <button onClick={emailVerification}>Proceed</button>
     </div>
   );
 };
