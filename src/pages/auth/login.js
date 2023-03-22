@@ -63,36 +63,6 @@ export default function RegisterPage() {
     }
   }
 
-  // email verification
-  // const myLogin = () => {
-  // fetch('https://monievend.herokuapp.com/api/auth/login/email', {
-  // method: 'POST',
-  // body: JSON.stringify({
-  // email,
-  // password,
-  // }),
-  // headers: {
-  // 'Content-Type': 'application/json',
-  // },
-  // })
-  // .then((res) => res.json())
-  // .then((data) => {
-  // navigate('/dashboard');
-  // console.log(data);
-  // })
-  // .catch((err) => {
-  // alert('wrong credentials');
-  // console.error(err)
-  // });
-  // }
-  // Phone Login Api integration
-  // const emailLogin = (e) => {
-  // e.preventDefault();
-  // myLogin();
-  // setPassword('');
-  // setEmail('');
-  // };
-
   const postLogin = () => {
     fetch('https://monievend.herokuapp.com/api/auth/login/phone', {
       method: 'POST',

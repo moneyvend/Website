@@ -23,7 +23,7 @@ const VerifyFromEmail = () => {
     emailVerification();
   }, []);
   return (
-    <div>
+    <div className='card'>
       <h1>Verify Success</h1>
       <button onClick={emailVerification}>Proceed</button>
     </div>
