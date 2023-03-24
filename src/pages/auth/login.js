@@ -24,7 +24,7 @@ export default function RegisterPage() {
 
   // Email Login api integration
   useEffect(() => {
-    userRef.current?.focus();
+    userRef.current.focus();
   }, [])
 
   useEffect(() => {
@@ -33,7 +33,6 @@ export default function RegisterPage() {
 
   const emailLogin = async (e) => {
     e.preventDefault();
-
     try {
       const response = await axios.post('https://monievend.herokuapp.com/api/auth/login/email',
         JSON.stringify({ email, password }),
@@ -48,41 +47,56 @@ export default function RegisterPage() {
       setAuth({ email, password, roles, accessToken });
       setEmail('');
       setPassword('');
-      navigate('/dashboard')
+      navigate('/dashboard');
     } catch (err) {
       alert('wrong user credentials');
     }
   }
-
-  const postLogin = () => {
-    fetch('https://monievend.herokuapp.com/api/auth/login/phone', {
-      method: 'POST',
-      body: JSON.stringify({
-        phone,
-        password,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        navigate('/dashboard');
-        console.log(data);
-      })
-      .catch((err) => {
-        alert('wrong credentials');
-        console.error(err)
-      });
-  }
-
+  // 
+  // const postLogin = () => {
+  // fetch('https://monievend.herokuapp.com/api/auth/login/phone', {
+  // method: 'POST',
+  // body: JSON.stringify({
+  // phone,
+  // password,
+  // }),
+  // headers: {
+  // 'Content-Type': 'application/json',
+  // },
+  // })
+  // .then((res) => res.json())
+  // .then((data) => {
+  // navigate('/dashboard');
+  // console.log(data);
+  // })
+  // .catch((err) => {
+  // alert('wrong credentials');
+  // console.error(err)
+  // });
+  // }
+  // 
   // Phone Login Api integration
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    postLogin();
-    setPassword('');
-    setPhone('');
-  };
+    try {
+      const response = await axios.post('https://monievend.herokuapp.com/api/auth/login/phone',
+        JSON.stringify({ email, password }),
+        {
+          headers: { 'Content-Type': 'application/json' },
+          withCredentials: true
+        }
+      );
+      console.log(JSON.stringify(response?.data));
+      const accessToken = response?.data?.accessToken;
+      const roles = response?.data?.roles;
+      setAuth({ phone, password, roles, accessToken });
+      setPhone('');
+      setPassword('');
+      navigate('/dashboard');
+    } catch (err) {
+      alert('wrong user credentials');
+    }
+  }
 
   const handleToggle = (index) => {
     setSwitchMe(index);
@@ -134,12 +148,27 @@ export default function RegisterPage() {
                 <p className={loginStyle.inSwi}>{switchMe}</p>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control value={email} type="email" placeholder="Enter email" name="email" onChange={(e) => setEmail(e.target.value)} />
+                  <Form.Control
+                    value={email}
+                    type="email"
+                    placeholder="Enter email"
+                    id="email"
+                    autoComplete='off'
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
                 </Form.Group>
 
                 <Form.Group className="mb-2" controlId="formBasicPassword">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control value={password} type="password" placeholder="Password" name="password" onChange={(e) => setPassword(e.target.value)} />
+                  <Form.Control
+                    value={password}
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
                 </Form.Group>
 
                 <div className={loginStyle.holdRemember}>
