@@ -24,7 +24,7 @@ export default function RegisterPage() {
 
   // Email Login api integration
   useEffect(() => {
-    userRef.current.focus();
+    userRef.current?.focus();
   }, [])
 
   useEffect(() => {
@@ -52,30 +52,6 @@ export default function RegisterPage() {
       alert('wrong user credentials');
     }
   }
-  // 
-  // const postLogin = () => {
-  // fetch('https://monievend.herokuapp.com/api/auth/login/phone', {
-  // method: 'POST',
-  // body: JSON.stringify({
-  // phone,
-  // password,
-  // }),
-  // headers: {
-  // 'Content-Type': 'application/json',
-  // },
-  // })
-  // .then((res) => res.json())
-  // .then((data) => {
-  // navigate('/dashboard');
-  // console.log(data);
-  // })
-  // .catch((err) => {
-  // alert('wrong credentials');
-  // console.error(err)
-  // });
-  // }
-  // 
-  // Phone Login Api integration
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
