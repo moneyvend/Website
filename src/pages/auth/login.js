@@ -68,10 +68,9 @@ export default function RegisterPage() {
     e.preventDefault();
     try {
       const response = await axios.post('https://monievend.herokuapp.com/api/auth/login/phone',
-        { mode: "no-cors" },
         JSON.stringify({ email, password }),
         {
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
           withCredentials: true
         }
       );
