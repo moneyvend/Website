@@ -31,6 +31,17 @@ export default function RegisterPage() {
     setErrMsg('');
   }, [email, password])
 
+  async function loginUser(credentials) {
+    return fetch('https://monievend.herokuapp.com/api/auth/login/email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(credentials)
+    })
+      .then(data => data.json())
+  }
+
   const emailLogin = async (e) => {
     e.preventDefault();
     try {
@@ -43,6 +54,7 @@ export default function RegisterPage() {
       );
       console.log(JSON.stringify(response?.data));
       const accessToken = response?.data?.accessToken;
+      console.log('device token is:', accessToken)
       const roles = response?.data?.roles;
       setAuth({ email, password, roles, accessToken });
       setEmail('');
@@ -56,6 +68,7 @@ export default function RegisterPage() {
     e.preventDefault();
     try {
       const response = await axios.post('https://monievend.herokuapp.com/api/auth/login/phone',
+        { mode: "no-cors" },
         JSON.stringify({ email, password }),
         {
           headers: { 'Content-Type': 'application/json' },
@@ -128,7 +141,7 @@ export default function RegisterPage() {
                     value={email}
                     type="email"
                     placeholder="Enter email"
-                    id="email"
+                    name="email"
                     autoComplete='off'
                     onChange={(e) => setEmail(e.target.value)}
                     required
