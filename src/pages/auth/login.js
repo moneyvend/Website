@@ -1,13 +1,23 @@
 /* eslint-disable */
 import React, { useRef, useState, useEffect, useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import AuthContext from '../../features/authentication/loginPhoneService';
 import loginStyle from './login.module.scss';
 import AppImages from '../../utilities/images/images';
 
-export default function RegisterPage() {
+async function LoginUser(credentials) {
+  return fetch('http://localhost:8080/login',{
+      method: 'POST',
+      header: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(credentials)
+  }).then(data => data.json())
+}
+
+export default function RegisterPage({setToken}) {
   /* eslint-disable */
   const [switchMe, setSwitchMe] = useState('Login with email');
 
@@ -20,6 +30,8 @@ export default function RegisterPage() {
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
   const [success, setSuccess] = useState(false);
+  // const [searchParams, setSearchParams] = useSearchParams();
+  // const deviceToken = "yt7757r6yyh";
   const navigate = useNavigate();
 
   // Email Login api integration
@@ -28,39 +40,56 @@ export default function RegisterPage() {
   }, [])
 
   useEffect(() => {
-    setErrMsg('');
-  }, [email, password])
+    if (localStorage.getItem('user-data')) {
+      navigate('/dashboard');
+    }
+  }, [])
 
   const emailLogin = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post('https://monievend.herokuapp.com/api/auth/login/email',
-        JSON.stringify({ email, password }),
-        {
-          headers: { 'Content-Type': 'application/json' },
-          withCredentials: true,
-        }
-      );
-      console.log(JSON.stringify(response?.data));
-      const accessToken = response?.data?.accessToken;
-      const roles = response?.data?.roles;
-      setAuth({ email, password, roles, accessToken });
-      setEmail('');
-      setPassword('');
-      setSuccess(true);
-    } catch (err) {
-      if (!err?.response) {
-        setErrMsg('No Server Response');
-      } else if (err.response?.status === 400) {
-        setErrMsg('Missing Username or Password');
-      } else if (err.response?.status === 401) {
-        setErrMsg('Unauthorized');
-      } else {
-        setErrMsg('Login Failed');
-      }
-      errRef.current.focus();
-    }
+    // console.log(email, password);
+    let item = { email, password };
+    let result = await fetch('https://monievend.herokuapp.com/api/auth/login/email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(item)
+    })
   }
+
+  // const emailLogin = async (e) => {
+  // e.preventDefault();
+  // try {
+  // const response = await axios.post('https://monievend.herokuapp.com/api/auth/login/email',
+  // JSON.stringify({ email, password }),
+  // {
+  // headers: { 'Content-Type': 'application/json' },
+  // withCredentials: true,
+  // }
+  // );
+  // console.log(JSON.stringify(response?.data));
+  // const accessToken = response?.data?.accessToken;
+  // const roles = response?.data?.roles;
+  // setAuth({ email, password, roles, accessToken });
+  // navigate('/dashboard')
+  // 
+  // setEmail('');
+  // setPassword('');
+  // } catch (err) {
+  // if (!err?.response) {
+  // setErrMsg('No Server Response');
+  // } else if (err.response?.status === 400) {
+  // setErrMsg('Missing Username or Password');
+  // } else if (err.response?.status === 401) {
+  // setErrMsg('Unauthorized');
+  // } else {
+  // setErrMsg('Login Failed');
+  // }
+  // errRef.current.focus();
+  // }
+  // }
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -87,16 +116,6 @@ export default function RegisterPage() {
     setSwitchMe(index);
   };
   return (
-    <div>
-      {success ? (
-        <section>
-          <h1>You are logged in!</h1>
-          <br />
-          <p>
-            <a href="/dashboard">Go to Home</a>
-          </p>
-        </section>
-      ) : (
         <section className={loginStyle.holdAll}>
           <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
           <div className={loginStyle.holdFormNText}>
@@ -209,7 +228,6 @@ export default function RegisterPage() {
             </div>
           </div>
           {/* {isLoading ? <Loader /> : null} */}
-        </section>)}
-    </div>
+        </section>
   );
 }
