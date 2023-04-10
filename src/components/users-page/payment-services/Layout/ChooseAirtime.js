@@ -8,15 +8,18 @@ import airtimeStyle from './ChooseAirtime.module.scss';
 
 function ChooseAirtime() {
     /* eslint-disable */
+    const [provider, setProvider] = useState('');
     const [phone, setPhone] = useState('');
     const [amount, setAmount] = useState('');
 
     const usenavigate = useNavigate;
 
-    const handlePayment = () => {
+    const handlePayment = (e) => {
+        e.preventDefault();
         axios.post('https://api.staging.baxibap.com/services/airtime/request', {
-            phone: 'phone',
-            amount: 'amount',
+            'provider': provider,
+            'phone': phone,
+            'amount': amount,
         })
             .then((result) => {
                 console.log(result);
@@ -36,7 +39,7 @@ function ChooseAirtime() {
                     <h3>Choose a biller</h3>
                     <div className="mt-4">
                         <Form>
-                            <Form.Select aria-label="Default select example" className="mb-3">
+                            <Form.Select aria-label="Default select example" className="mb-3" value={provider} onChange={(e) => setProvider(e.target.value)}>
                                 <option value="MTN">MTN</option>
                                 <option value="Airtel">Airtel</option>
                                 <option value="Glo">Glo</option>

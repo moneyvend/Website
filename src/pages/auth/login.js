@@ -58,11 +58,12 @@ export default function RegisterPage({ setToken }) {
       body: JSON.stringify(item)
     }).then((response) => response.json())
       .then(() => {
-        // result = await result.json();
+        result = result.json();
         localStorage.setItem('user-info', JSON.stringify(result));
         navigate('/dashboard');
       }).catch(error => {
         alert('failed wrong credentials');
+        console.log(deviceToken);
       })
   }
 

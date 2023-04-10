@@ -11,9 +11,10 @@ export default function ForgotPasswordPage() {
   const [email, setEmail] = useState('');
   const usenavigate = useNavigate;
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     axios.post('https://monievend.herokuapp.com/api/auth/forgot-password', {
-      email: 'email',
+      'email': email,
     }).then((result) => {
       console.log(result);
       alert('Password Reset Email sent successfully');
@@ -67,3 +68,6 @@ export default function ForgotPasswordPage() {
     </section>
   );
 }
+
+//http://vasresellertestapi.up-ng.com:3000/v1/secure/pay/unified
+//http://vasresellertestapi.up-ng.com:3000/v1/secure/pay/unified
