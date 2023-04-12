@@ -23,7 +23,7 @@ function Electricity(props) {
     const usenavigate = useNavigate;
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('https://api.staging.baxibap.com/services/electricity/request', {
+        axios.post('https://vasreseller.gitbook.io/vas-reseller-docs/purchase/electricity', {
             'accounttype': accounttype,
             'meterno': meterno,
             'phone': phone,

@@ -15,7 +15,8 @@ export default function ForgotPasswordPage() {
     e.preventDefault();
     axios.post('https://monievend.herokuapp.com/api/auth/forgot-password', {
       'email': email,
-    }).then((result) => {
+    })
+    .then((result) => {
       console.log(result);
       alert('Password Reset Email sent successfully');
       usenavigate('/auth/login');

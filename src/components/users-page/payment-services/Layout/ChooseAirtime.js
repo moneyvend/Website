@@ -16,7 +16,7 @@ function ChooseAirtime() {
 
     const handlePayment = (e) => {
         e.preventDefault();
-        axios.post('https://api.staging.baxibap.com/services/airtime/request', {
+        axios.post('https://vasreseller.gitbook.io/vas-reseller-docs/purchase/airtime', {
             'provider': provider,
             'phone': phone,
             'amount': amount,
