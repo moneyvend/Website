@@ -27,11 +27,12 @@ function Electricity(props) {
 
     const navigate = useNavigate();
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         const item = {
             service, amount, month, cardNumber, phone,
         };
-        let result = await fetch('https://api.staging.baxibap.com/services/multichoice/request', {
+        let result = await fetch('https://vasreseller.gitbook.io/vas-reseller-docs/purchase/cable', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

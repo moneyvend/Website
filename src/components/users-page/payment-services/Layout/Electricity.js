@@ -22,15 +22,16 @@ function Electricity(props) {
 
     const usenavigate = useNavigate;
     const handleSubmit = (e) => {
-        axios.post('https://monievend.herokuapp.com/api/services/power/validate', {
-            accounttype: 'accounttype',
-            meterno: 'meterno',
-            phone: 'phone',
-            amount: 'amount',
+        e.preventDefault();
+        axios.post('https://vasreseller.gitbook.io/vas-reseller-docs/purchase/electricity', {
+            'accounttype': accounttype,
+            'meterno': meterno,
+            'phone': phone,
+            'amount': amount,
         }).then((result) => {
             console.log(result);
-            alert('paymnt ma successfully');
-            usenavigate('#');
+            alert('payment made successfully');
+            usenavigate('/dashboard');
         })
             .catch((error) => {
                 console.log(error);

@@ -1,52 +1,88 @@
 /* eslint-disable */
 import React, { useRef, useState, useEffect, useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-// import { useSelector, useDispatch } from 'react-redux';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
-// import { login, reset } from '../../features/authentication/signupSlice';
 import AuthContext from '../../features/authentication/loginPhoneService';
 import loginStyle from './login.module.scss';
 import AppImages from '../../utilities/images/images';
 
-export default function RegisterPage() {
+async function LoginUser(credentials) {
+  return fetch('http://localhost:8080/login', {
+    method: 'POST',
+    header: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(credentials)
+  }).then(data => data.json())
+}
+
+export default function RegisterPage({ setToken }) {
   /* eslint-disable */
   const [switchMe, setSwitchMe] = useState('Login with email');
 
   const { setAuth } = useContext(AuthContext);
-  const [email, setEmail] = useState('');
   const userRef = useRef();
   const errRef = useRef();
+
+  const [email, setEmail] = useState('');
   const [errMsg, setErrMsg] = useState('');
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
+  const [success, setSuccess] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const deviceToken = searchParams.get('token');
   const navigate = useNavigate();
 
   // Email Login api integration
-  // useEffect(() => {
-  // userRef.current?.focus();
-  // }, [])
-  // 
-  // useEffect(() => {
-  // setErrMsg('');
-  // }, [email, password])
-  // 
+  useEffect(() => {
+    userRef.current?.focus();
+  }, [])
+
+  useEffect(() => {
+    if (localStorage.getItem('user-data')) {
+      navigate('/dashboard');
+    }
+  }, [])
+
+  const emailLogin = async (e) => {
+    e.preventDefault();
+    // console.log(email, password);
+    let item = { email, password };
+    let result = await fetch('https://monievend.herokuapp.com/api/auth/login/email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(item)
+    }).then((response) => response.json())
+      .then(() => {
+        result = result.json();
+        localStorage.setItem('user-info', JSON.stringify(result));
+        navigate('/dashboard');
+      }).catch(error => {
+        alert('failed wrong credentials');
+        console.log(deviceToken);
+      })
+  }
+
   // const emailLogin = async (e) => {
   // e.preventDefault();
-  // 
   // try {
   // const response = await axios.post('https://monievend.herokuapp.com/api/auth/login/email',
   // JSON.stringify({ email, password }),
   // {
   // headers: { 'Content-Type': 'application/json' },
-  // withCredentials: true
+  // withCredentials: true,
   // }
   // );
   // console.log(JSON.stringify(response?.data));
   // const accessToken = response?.data?.accessToken;
   // const roles = response?.data?.roles;
   // setAuth({ email, password, roles, accessToken });
-  // navigate('/dashboard');
+  // navigate('/dashboard')
+  // 
   // setEmail('');
   // setPassword('');
   // } catch (err) {
@@ -59,69 +95,30 @@ export default function RegisterPage() {
   // } else {
   // setErrMsg('Login Failed');
   // }
-  // errRef.current?.focus();
+  // errRef.current.focus();
   // }
   // }
-
-  // email verification
-  const myLogin = () => {
-    fetch('https://monievend.herokuapp.com/api/auth/login/email', {
-      method: 'POST',
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        navigate('/dashboard');
-        console.log(data);
-      })
-      .catch((err) => {
-        alert('wrong credentials');
-        console.error(err)
-      });
-  }
-  // Phone Login Api integration
-  const emailLogin = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    myLogin();
-    setPassword('');
-    setEmail('');
-  };
-
-  const postLogin = () => {
-    fetch('https://monievend.herokuapp.com/api/auth/login/phone', {
-      method: 'POST',
-      body: JSON.stringify({
-        phone,
-        password,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        navigate('/dashboard');
-        console.log(data);
-      })
-      .catch((err) => {
-        alert('wrong credentials');
-        console.error(err)
-      });
+    try {
+      const response = await axios.post('https://monievend.herokuapp.com/api/auth/login/phone',
+        JSON.stringify({ email, password }),
+        {
+          headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+          withCredentials: true
+        }
+      );
+      console.log(JSON.stringify(response?.data));
+      const accessToken = response?.data?.accessToken;
+      const roles = response?.data?.roles;
+      setAuth({ phone, password, roles, accessToken });
+      setPhone('');
+      setPassword('');
+      navigate('/dashboard');
+    } catch (err) {
+      alert('wrong user credentials');
+    }
   }
-
-  // Phone Login Api integration
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    postLogin();
-    setPassword('');
-    setPhone('');
-  };
 
   const handleToggle = (index) => {
     setSwitchMe(index);
@@ -173,12 +170,26 @@ export default function RegisterPage() {
                 <p className={loginStyle.inSwi}>{switchMe}</p>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control value={email} type="email" placeholder="Enter email" name="email" onChange={(e) => setEmail(e.target.value)} />
+                  <Form.Control
+                    value={email}
+                    type="email"
+                    placeholder="Enter email"
+                    name="email"
+                    autoComplete='off'
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
                 </Form.Group>
 
                 <Form.Group className="mb-2" controlId="formBasicPassword">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control value={password} type="password" placeholder="Password" name="password" onChange={(e) => setPassword(e.target.value)} />
+                  <Form.Control
+                    value={password}
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
                 </Form.Group>
 
                 <div className={loginStyle.holdRemember}>
