@@ -14,22 +14,23 @@ function ChooseAirtime() {
 
     const usenavigate = useNavigate;
 
-    const handlePayment = (e) => {
+    const handlePayment = async (e) => {
         e.preventDefault();
-        axios.post('https://vasreseller.gitbook.io/vas-reseller-docs/purchase/airtime', {
-            'provider': provider,
-            'phone': phone,
-            'amount': amount,
-        })
-            .then((result) => {
-                console.log(result);
-                alert('payment made successfully');
-                usenavigate('/dashboard');
-            })
-            .catch((error) => {
-                console.log(error);
-                alert('Payment Failed please try again');
-            });
+        const item = {
+            provider, phone, amount
+        };
+        let result = await fetch('https://api.vasreseller.up-ng.com/v1/secure/pay/unified', {
+            method: 'POST',
+            headers: {
+                'X-API-KEY': 'process.env.REACT_APP_Key',
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+            },
+            body: JSON.stringify(item),
+        });
+        result = await result.json();
+        localStorage.setItem(JSON.stringify(result));
+        usenavigate('/dashboard');
     };
 
     return (
