@@ -32,10 +32,10 @@ function Electricity(props) {
         const item = {
             service, amount, month, cardNumber, phone,
         };
-        let result = await fetch('https://api.vasreseller.up-ng.com/v1/secure/pay/unified', {
+        let result = await fetch(`${process.env.REACT_APP_API_URL}/secure/pay/unified`, {
             method: 'POST',
             headers: {
-                'X-API-KEY': 'process.env.REACT_APP_Key',
+                'X-API-KEY': `${process.env.REACT_APP_Key}`,
                 'Content-Type': 'application/json',
                 Accept: 'application/json',
             },

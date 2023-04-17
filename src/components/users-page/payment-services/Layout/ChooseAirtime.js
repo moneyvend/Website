@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-indent */
 /* eslint-disable indent */
-import axios from 'axios';
+// import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -19,10 +19,10 @@ function ChooseAirtime() {
         const item = {
             provider, phone, amount
         };
-        let result = await fetch('https://api.vasreseller.up-ng.com/v1/secure/pay/unified', {
+        let result = await fetch(`${process.env.REACT_APP_API_URL}/secure/pay/unified`, {
             method: 'POST',
             headers: {
-                'X-API-KEY': 'process.env.REACT_APP_Key',
+                'X-API-KEY': `${process.env.REACT_APP_Key}`,
                 'Content-Type': 'application/json',
                 Accept: 'application/json',
             },
