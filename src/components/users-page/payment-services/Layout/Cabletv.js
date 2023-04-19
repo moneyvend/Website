@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-indent */
 /* eslint-disable react/jsx-no-undef */
-/* eslint-disable indent */
+/* eslint-disable */
 import axios from 'axios';
 import React, { useState } from 'react';
 import {
@@ -29,21 +29,25 @@ function Electricity(props) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const item = {
-            service, amount, month, cardNumber, phone,
-        };
-        let result = await fetch(`${process.env.REACT_APP_API_URL}/secure/pay/unified`, {
-            method: 'POST',
-            headers: {
-                'X-API-KEY': `${process.env.REACT_APP_Key}`,
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
+        await axios.post(`${process.env.REACT_APP_API_URL}/secure/pay/unified`,
+            {
+                'service': service,
+                'amount': amount,
+                'month': month,
+                'cardNumber': cardNumber,
+                'phone': phone,
             },
-            body: JSON.stringify(item),
-        });
-        result = await result.json();
-        localStorage.setItem(JSON.stringify(result));
-        navigate('/');
+            {
+                headers: {
+                    'X-API-KEY': `${process.env.REACT_APP_Key}`,
+                    'Content-Type': 'application/json',
+                },
+            }).then((res) => {
+                alert('success');
+                navigate('/dashboard');
+            }).catch((err) => {
+                alert(err.message);
+            });
     };
 
     return (

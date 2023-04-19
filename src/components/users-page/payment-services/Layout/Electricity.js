@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-indent */
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable indent */
-// import axios from 'axios';
+import axios from 'axios';
 import React, { useState } from 'react';
 import {
     Form,
@@ -21,24 +21,29 @@ function Electricity(props) {
     const [amount, setAmount] = useState('');
 
     const usenavigate = useNavigate;
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const item = {
-            accounttype, meterno, phone, amount
-        };
-        let result = await fetch(`${process.env.REACT_APP_API_URL}/secure/pay/unified`, {
-            method: 'POST',
+        await axios.post(`${process.env.REACT_APP_API_URL}/secure/pay/unified`,
+        {
+            'accounttype': accounttype,
+            'meterno': meterno,
+            'phone': phone,
+            'amount': amount
+        },
+        {
             headers: {
                 'X-API-KEY': `${process.env.REACT_APP_Key}`,
                 'Content-Type': 'application/json',
-                Accept: 'application/json',
-            },
-            body: JSON.stringify(item),
-        });
-        result = await result.json();
-        localStorage.setItem(JSON.stringify(result));
-        usenavigate('/dashboard');
-    };
+                'Accept': 'application/json',
+            },        
+        }).then((res) => {
+            alert('success');
+            usenavigate('/dashboard');
+        }).catch((err) => {
+            alert(err.message);
+        })
+    }
 
     return (
         <section>

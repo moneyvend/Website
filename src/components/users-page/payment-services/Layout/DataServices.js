@@ -20,26 +20,22 @@ function DataService() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const providerApi = 'https://api.staging.baxibap.com/services/databundle/providers';
-        const dataServiceApi = 'https://api.staging.baxibap.com/services/databundle/request';
-
-        const postProviderApi = axios.get(providerApi);
-        const postDataServiceApi = axios.post(dataServiceApi);
-
-        axios.all([postProviderApi, postDataServiceApi]).then(
-            axios.spread((...allData) => {
-                const service = allData.serviceProvider;
-                const phoneNumber = allData.phone;
-
-                setPhone(phoneNumber);
-                setServiceProvider(service);
+        await axios.post(`${process.env.REACT_APP_API_URL}/secure/pay/unified`,
+            {
+                'serviceProvider': service,
+                'phone': phone
+            },
+            {
+                headers: {
+                    'X-API-KEY': `${process.env.REACT_APP_Key}`,
+                    'Content-Type': 'application/json',
+                },
+            }).then((res) => {
                 alert('success');
-                usenavigate('/');
-            }).catch((error) => {
-                console.log(error);
-                alert('failed!');
-            }),
-        );
+                usenavigate('/dashboard');
+            }).catch((err) => {
+                alert(err.message);
+            });
     };
 
     return (
