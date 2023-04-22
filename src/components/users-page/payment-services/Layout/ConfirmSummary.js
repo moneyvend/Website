@@ -1,12 +1,18 @@
 /* eslint-disable max-len */
 /* eslint-disable react/jsx-indent */
-/* eslint-disable indent */
+/* eslint-disable */
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 import airtimeStyle from './ConfirmSummary.module.scss';
 import bankCard from '../../../../utilities/images/bankCard.svg';
+import { useNavigate } from 'react-router-dom';
 
 function ConfirmSummary() {
+
+    const navigate = useNavigate();
+    const handleNext = () => {
+        navigate('/dashboard/services/bank-payment');
+    }
     return (
         <section>
             <div className={airtimeStyle.holdAll}>
@@ -45,7 +51,7 @@ function ConfirmSummary() {
                         </Form.Group>
                         <div className={airtimeStyle.holdBankCard}>
                             <img src={bankCard} alt="Bank Card" />
-                            <Button variant="primary" type="submit" style={{ width: '100%' }}>
+                            <Button variant="primary" type="submit" style={{ width: '100%' }} onClick={handleNext}>
                                 Pay With Bank Transfer
                             </Button>
                         </div>

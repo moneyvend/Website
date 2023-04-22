@@ -29,7 +29,7 @@ function ChooseAirtime() {
                 }
             }).then((res) => {
                 console.log(res);
-                usenavigate('/dashboard');
+                usenavigate('/summary');
             }).catch((err) => {
                 alert(err.message);
             })

@@ -32,7 +32,7 @@ function DataService() {
                 },
             }).then((res) => {
                 alert('success');
-                usenavigate('/dashboard');
+                usenavigate('/summary');
             }).catch((err) => {
                 alert(err.message);
             });

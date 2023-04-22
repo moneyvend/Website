@@ -44,7 +44,7 @@ function Electricity(props) {
                 },
             }).then((res) => {
                 alert('success');
-                navigate('/dashboard');
+                navigate('/summary');
             }).catch((err) => {
                 alert(err.message);
             });
