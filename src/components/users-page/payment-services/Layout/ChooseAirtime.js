@@ -25,6 +25,7 @@ function ChooseAirtime() {
             {
                 headers: {
                     'X-API-KEY': `${process.env.REACT_APP_Key}`,
+                    'authorization':'PK_LIVE_B57A389B-D3FC-4CFC-9144-D2CCD89B6213',
                     'Content-Type': 'application/json'
                 }
             }).then((res) => {

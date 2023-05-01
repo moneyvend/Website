@@ -1,7 +1,15 @@
 /* eslint-disable */
-import React from 'react';
+import React, { useState } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import airtimeStyle from './ChooseAirtime.module.scss';
 
 const BankPayment = () => {
+    const [name, setName] = useState('');
+    const [number, setNumber] = useState('');
+    const [fullname, setFullName] = useState('');
+    const [expiry, setExpiry] = useState('');
+    const [cvv, setCvv] = useState('');
+
     const handleSubmit = (e) => {
         e.preventDefault();
         alert('succes');
@@ -11,30 +19,16 @@ const BankPayment = () => {
         <div className="form">
             <h2>Add Bank Account</h2>
             <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="name">Bank Name</label>
-                    <input type="text" name="name" className="form-control" placeholder='Enter Bank Name' />
-                </div>
+                <Form.Select aria-label="Default select example" className="mb-3" value={name} onChange={(e) => setName(e.target.value)}>
+                    <option value="Access Bank">Access Bank</option>
+                    <option value="United Bank for Africa">United Bank for Africa UBA</option>
+                    <option value="Key stone">Key stone</option>
+                    <option value="Sterlin Bank">Sterlin Bank</option>
+                </Form.Select>
 
                 <div className="form-group">
                     <label htmlFor="number">Account Number</label>
                     <input type="number" name="number" className="form-control" placeholder='Enter Account Number' />
-                </div>
-
-                <div className="form-group">
-                    <label htmlFor="fullname">Full Name</label>
-                    <input type="text" name="fullname" className="form-control" placeholder='Enter Full Name' />
-                </div>
-
-                <div className="row">
-                    <div className="form-group">
-                        <label htmlFor="expiry">Expiry</label>
-                        <input type="date" name="expiry" className="form-control" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="cvv">CVV</label>
-                        <input type="number" name="cvv" className="form-control" placeholder='Enter cvv' />
-                    </div>
                 </div>
                 <button type="submit" className='btn btn-primary'>Add</button>
             </form>
