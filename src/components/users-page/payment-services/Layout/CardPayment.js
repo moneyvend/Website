@@ -36,7 +36,7 @@ export default function profile() {
     // bank payment integration
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('',
+        axios.post('https://apidev.nownowpay.com.ng/mfs-transaction-management/balanceManagement/bank/balanceInquiry',
             {
                 'bankName': bankName,
                 'accountNumber': accountNumber
@@ -108,8 +108,10 @@ export default function profile() {
                 </TabPanel>
                 <TabPanel>
                     <div className="tab-content">
-                        <h2>Change Password</h2>
+                        <h2>Pay by Transfer</h2>
+                        <div className="card">
 
+                        </div>
                     </div>
                 </TabPanel>
             </Tabs>

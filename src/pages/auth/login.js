@@ -4,6 +4,7 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import AuthContext from '../../features/authentication/loginPhoneService';
+import { login, reset } from '../../features/authentication/signupSlice';
 import loginStyle from './login.module.scss';
 import AppImages from '../../utilities/images/images';
 
@@ -62,10 +63,13 @@ export default function RegisterPage({ setToken }) {
         localStorage.setItem('user-info', JSON.stringify(result));
         navigate('/dashboard');
       }).catch(error => {
-        alert('failed wrong credentials');
+        alert(error.message);
         console.log(deviceToken);
       })
   }
+  useEffect(() => {
+    emailLogin();
+  }, []);
 
   // const emailLogin = async (e) => {
   // e.preventDefault();
