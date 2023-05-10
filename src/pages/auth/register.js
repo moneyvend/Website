@@ -76,7 +76,7 @@ export default function RegisterPage() {
         email,
         phone: '+234' + phone,
         password,
-        frontendUrl: 'https://monievend.herokuapp.com',
+        frontendUrl: `${window.location.protocol}//${window.location.host}`,
       };
       // console.log(window.location.href);
       dispatch(register(userData));
