@@ -14,23 +14,27 @@ function ChooseAirtime() {
 
     const usenavigate = useNavigate;
 
-    const handlePayment = (e) => {
+    const handlePayment = async (e) => {
         e.preventDefault();
-        axios.post('https://vasreseller.gitbook.io/vas-reseller-docs/purchase/airtime', {
-            'provider': provider,
-            'phone': phone,
-            'amount': amount,
-        })
-            .then((result) => {
-                console.log(result);
-                alert('payment made successfully');
-                usenavigate('/dashboard');
+        await axios.post(`${process.env.REACT_APP_API_URL}/secure/pay/unified`,
+            {
+                'provider': provider,
+                'phone': phone,
+                'amount': amount,
+            },
+            {
+                headers: {
+                    'X-API-KEY': `${process.env.REACT_APP_Key}`,
+                    'authorization':'PK_LIVE_B57A389B-D3FC-4CFC-9144-D2CCD89B6213',
+                    'Content-Type': 'application/json'
+                }
+            }).then((res) => {
+                console.log(res);
+                usenavigate('/summary');
+            }).catch((err) => {
+                alert(err.message);
             })
-            .catch((error) => {
-                console.log(error);
-                alert('Payment Failed please try again');
-            });
-    };
+    }
 
     return (
         <section>
@@ -55,7 +59,7 @@ function ChooseAirtime() {
                                 <Form.Control value={amount} type="number" placeholder="Amount" onChange={(e) => setAmount(e.target.value)} />
                             </Form.Group>
                             <div>
-                                <Button variant="primary" type="submit" onClick={handlePayment} class="btn btn-primary" style={{ width: '100%' }}>
+                                <Button variant="primary" type="submit" onClick={handlePayment} className="btn btn-primary" style={{ width: '100%' }}>
                                     Proceed
                                 </Button>
                             </div>

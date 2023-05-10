@@ -13,6 +13,8 @@ import PaymentMethod from '../components/users-page/payment-services/Layout/Paym
 import DataServices from '../components/users-page/payment-services/Layout/DataServices';
 import Electricity from '../components/users-page/payment-services/Layout/Electricity';
 import Cabletv from '../components/users-page/payment-services/Layout/Cabletv';
+import BankPayment from '../components/users-page/payment-services/Layout/BankPayment';
+import CardPayment from '../components/users-page/payment-services/Layout/CardPayment';
 
 class DashboardRoutes {
   static routes =
@@ -22,11 +24,15 @@ class DashboardRoutes {
         <Route path="airtime">
           <Route index={true} element={<ChooseAirtime />} />
         </Route>
+        <Route path="card-payment" element={<CardPayment />} />
         <Route path="summary">
           <Route index={true} element={<ConfirmSummary />} />
         </Route>
         <Route path="payment-method">
           <Route index={true} element={<PaymentMethod />} />
+        </Route>
+        <Route path="bank-payment">
+          <Route index={true} element={<BankPayment />} />
         </Route>
         <Route path="data-services">
           <Route index={true} element={<DataServices />} />
