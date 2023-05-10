@@ -4,19 +4,19 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import AuthContext from '../../features/authentication/loginPhoneService';
-import { login, reset } from '../../features/authentication/signupSlice';
+// import { login, reset } from '../../features/authentication/signupSlice';
 import loginStyle from './login.module.scss';
 import AppImages from '../../utilities/images/images';
 
-async function LoginUser(credentials) {
-  return fetch('http://localhost:8080/login', {
-    method: 'POST',
-    header: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(credentials)
-  }).then(data => data.json())
-}
+// async function LoginUser(credentials) {
+// return fetch('http://localhost:8080/login', {
+// method: 'POST',
+// header: {
+// 'Content-Type': 'application/json'
+// },
+// body: JSON.stringify(credentials)
+// }).then(data => data.json())
+// }
 
 export default function RegisterPage({ setToken }) {
   /* eslint-disable */
@@ -48,28 +48,60 @@ export default function RegisterPage({ setToken }) {
 
   const emailLogin = async (e) => {
     e.preventDefault();
-    // console.log(email, password);
-    let item = { email, password };
-    let result = await fetch('https://monievend.herokuapp.com/api/auth/login/email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(item)
-    }).then((response) => response.json())
-      .then(() => {
-        result = result.json();
-        localStorage.setItem('user-info', JSON.stringify(result));
-        navigate('/dashboard');
-      }).catch(error => {
-        alert(error.message);
-        console.log(deviceToken);
-      })
+    if (validate()) {
+      // console.log(email, password);
+      let item = { email, password };
+      let result = await fetch('https://monievend.herokuapp.com/api/auth/login/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(item)
+        // }).then((response) => response.json())
+        // .then(() => {
+        // result = result.json();
+        // localStorage.setItem('user-info', JSON.stringify(result));
+        // navigate('/dashboard');
+        // }).catch(error => {
+        // alert(error.message);
+        // console.log(deviceToken);
+        // })
+      }).then((resp) => {
+        console.log(resp)
+        if (Object.keys(resp).length === 0) {
+          alert('Please Enter valid email');
+        } else {
+          if (resp.password === password) {
+            alert('Success');
+            sessionStorage.setItem('email', email);
+            sessionStorage.setItem('userrole', resp.role);
+            navigate('/')
+          } else {
+            alert('Please Enter valid credentials');
+          }
+        }
+      }).catch((err) => {
+        alert('Login Failed due to :' + err.message);
+      });
+    }
   }
   useEffect(() => {
     emailLogin();
   }, []);
+
+  const validate = () => {
+    let result = true;
+    if (email === '' || email === null) {
+      result = false;
+      toast.warning('Please Enter email');
+    }
+    if (password === '' || password === null) {
+      result = false;
+      toast.warning('Please Enter Password');
+    }
+    return result;
+  }
 
   // const emailLogin = async (e) => {
   // e.preventDefault();
