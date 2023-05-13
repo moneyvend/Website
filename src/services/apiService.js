@@ -3,13 +3,13 @@ import axios from 'axios';
 class ApiService {
   constructor() {
     this.client = axios.create({
-      baseURL: 'http://localhost:4000/',
+      baseURL: process.env.REACT_APP_API_BASE_URL,
     });
   }
 
    loginWithEmail = async (email, password) => {
      try {
-       const response = await this.client.post('/api/auth/login/email', {
+       const response = await this.client.post('/auth/login/email', {
          email,
          password,
          deviceToken: '1234567890',
@@ -22,7 +22,7 @@ class ApiService {
 
    loginWithPhoneNumber = async (phone, password) => {
      try {
-       const response = await this.client.post('/api/auth/login/phone', {
+       const response = await this.client.post('/auth/login/phone', {
          phone,
          password,
          deviceToken: '1234567890',
@@ -37,7 +37,7 @@ class ApiService {
      fullname, email, phone, password, frontendUrl,
    }) => {
      try {
-       const response = await this.client.post('/api/auth/signup', {
+       const response = await this.client.post('/auth/signup', {
          fullname,
          email,
          phone,
