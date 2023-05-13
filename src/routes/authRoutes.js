@@ -1,3 +1,4 @@
+/* eslint-disable import/named */
 import { Route } from 'react-router-dom';
 import VerifyFromEmail from '../pages/auth/verify-success';
 import {
