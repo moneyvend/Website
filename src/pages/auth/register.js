@@ -4,7 +4,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { Form, Button } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
+import { Box, Button } from '@chakra-ui/react';
 import { register, reset } from '../../features/authentication/signupSlice';
 import registerStyle from './register.module.scss';
 import AppImages from '../../utilities/images/images';
@@ -26,8 +27,6 @@ export default function RegisterPage() {
     phone: '',
     frontendUrl: `${window.location.protocol}//${window.location.host}`,
   });
-
-  // console.log(window.location.hostname);
 
   const {
     fullname,
@@ -74,7 +73,7 @@ export default function RegisterPage() {
       const userData = {
         fullname,
         email,
-        phone: '+234' + phone,
+        phone,
         password,
         frontendUrl: `${window.location.protocol}//${window.location.host}`,
       };
@@ -93,10 +92,10 @@ export default function RegisterPage() {
           <div className={registerStyle.holdImage}>
             <img src={AppImages.LOGO_VERT} alt="Logo" />
           </div>
-          <div>
+          <Box p="6">
             <h3>Creating payment solutions</h3>
             <p>A product which specializes in creating terminal solution products for customers, SME&apos;s and merchants. </p>
-          </div>
+          </Box>
         </div>
         <div className={registerStyle.holdForm}>
           <div className={registerStyle.holdImage}>

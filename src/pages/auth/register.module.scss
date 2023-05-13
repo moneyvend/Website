@@ -327,18 +327,20 @@
   align-items: center;
   height: 100vh;
   overflow-y: scroll;
+  
 }
 
 .holdFormNText {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 80vh;
   width: 80%;
+  box-shadow: 5px 5px 5px #ddd, -5px -5px 5px #ddd;
 }
 
 .holdText {
-  width: 45%;
+  width: 50%;
   height: 100%;
   background-color: #030a78;
   display: flex;
@@ -361,12 +363,12 @@
 }
 
 .holdForm {
-  width: 45%;
+  width: 50%;
   height: 100%;
   background-color: white;
-  padding: 20px;
   overflow-y: scroll;
-
+  padding: 32px;
+  color: #030968;
   .holdImage {
     display: none;
   }
@@ -395,6 +397,7 @@
     width: 100% !important;
     background-color: #030968 !important;
     border-color: #030968 !important;
+    color: #fff;
   }
 
   .dont {
