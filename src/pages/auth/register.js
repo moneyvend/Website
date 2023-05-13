@@ -92,7 +92,7 @@ export default function RegisterPage() {
           <div className={registerStyle.holdImage}>
             <img src={AppImages.LOGO_VERT} alt="Logo" />
           </div>
-          <Box p="6">
+          <Box p="12">
             <h3>Creating payment solutions</h3>
             <p>A product which specializes in creating terminal solution products for customers, SME&apos;s and merchants. </p>
           </Box>

@@ -32,5 +32,20 @@ class ApiService {
        return error.response.data;
      }
    }
+
+   registerWithEmail = async (fullname, email, phone, password, frontendUrl) => {
+     try {
+       const response = await this.client.post('/api/auth/signup', {
+         fullname,
+         email,
+         phone,
+         password,
+         frontendUrl,
+       });
+       return response.data;
+     } catch (error) {
+       return error.response.data;
+     }
+   }
 }
 export default new ApiService();

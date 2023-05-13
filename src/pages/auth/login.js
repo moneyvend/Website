@@ -3,7 +3,7 @@ import React, { useRef, useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 // import { useSelector, useDispatch } from 'react-redux';
 import { Form } from 'react-bootstrap';
-import { Button, Text } from '@chakra-ui/react';
+import { Button, Text,Box } from '@chakra-ui/react';
 import { useToast } from '@chakra-ui/react'
 import axios from 'axios';
 // import { login, reset } from '../../features/authentication/signupSlice';
@@ -106,10 +106,10 @@ export default function RegisterPage() {
           <div className={loginStyle.holdImage}>
             <img src={AppImages.LOGO_VERT} alt="Logo" />
           </div>
-          <div>
+          <Box p="12">
             <h3>Creating payment solutions</h3>
             <p>A product which specializes in creating terminal solution products for customers, SME&apos;s and merchants. </p>
-          </div>
+          </Box>
         </div>
         <div className={loginStyle.holdForm}>
           <div className={loginStyle.holdImage}>
