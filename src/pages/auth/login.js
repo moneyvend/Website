@@ -34,8 +34,6 @@ export default function RegisterPage({ setToken }) {
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
   const [success, setSuccess] = useState(false);
-  const [searchParams, setSearchParams] = useSearchParams();
-  const deviceToken = searchParams.get('token');
   const navigate = useNavigate();
 
   // Email Login Api integration
