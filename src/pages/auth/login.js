@@ -2,19 +2,23 @@
 import React, { useRef, useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 // import { useSelector, useDispatch } from 'react-redux';
-import { Form, Button } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
+import { Button, Text } from '@chakra-ui/react';
+import { useToast } from '@chakra-ui/react'
 import axios from 'axios';
 // import { login, reset } from '../../features/authentication/signupSlice';
 import AuthContext from '../../features/authentication/loginPhoneService';
 import loginStyle from './login.module.scss';
 import AppImages from '../../utilities/images/images';
+import apiService from '../../services/apiService';
 
 export default function RegisterPage() {
   /* eslint-disable */
   const [switchMe, setSwitchMe] = useState('Login with email');
-
+  const toast = useToast()
   const { setAuth } = useContext(AuthContext);
   const [email, setEmail] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const userRef = useRef();
   const errRef = useRef();
   const [errMsg, setErrMsg] = useState('');
@@ -22,77 +26,30 @@ export default function RegisterPage() {
   const [phone, setPhone] = useState('');
   const navigate = useNavigate();
 
-  // Email Login api integration
-  // useEffect(() => {
-  // userRef.current?.focus();
-  // }, [])
-  // 
-  // useEffect(() => {
-  // setErrMsg('');
-  // }, [email, password])
-  // 
-  // const emailLogin = async (e) => {
-  // e.preventDefault();
-  // 
-  // try {
-  // const response = await axios.post('https://monievend.herokuapp.com/api/auth/login/email',
-  // JSON.stringify({ email, password }),
-  // {
-  // headers: { 'Content-Type': 'application/json' },
-  // withCredentials: true
-  // }
-  // );
-  // console.log(JSON.stringify(response?.data));
-  // const accessToken = response?.data?.accessToken;
-  // const roles = response?.data?.roles;
-  // setAuth({ email, password, roles, accessToken });
-  // navigate('/dashboard');
-  // setEmail('');
-  // setPassword('');
-  // } catch (err) {
-  // if (!err?.response) {
-  // setErrMsg('No Server Response');
-  // } else if (err.response?.status === 400) {
-  // setErrMsg('Missing Username or Password');
-  // } else if (err.response?.status === 401) {
-  // setErrMsg('Unauthorized');
-  // } else {
-  // setErrMsg('Login Failed');
-  // }
-  // errRef.current?.focus();
-  // }
-  // }
-
-  // email verification
-  const myLogin = () => {
-    fetch('https://monievend.herokuapp.com/api/auth/login/email', {
-      method: 'POST',
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        navigate('/dashboard');
-        console.log(data);
-      })
-      .catch((err) => {
-        alert('wrong credentials');
-        console.error(err)
-      });
-  }
-  // Phone Login Api integration
-  const emailLogin = (e) => {
+  // Email Login Api integration
+  const emailLogin = async (e) => {
     e.preventDefault();
-    myLogin();
-    setPassword('');
-    setEmail('');
+    setIsLoading(true);
+    const response = await apiService.loginWithEmail(email, password)
+    setIsLoading(false);
+    if(!response.error) {
+      setAuth(true);
+      navigate('/dashboard');
+    } else {
+      toast({
+        title: response.error,
+        description: response.message,
+        status: 'error',
+        position:'top-right',
+        duration: 10000,
+        isClosable: true,
+      })
+      setErrMsg(response.data.message);
+      errRef.current.focus();
+    }
   };
 
+  // Phone Login Api integration
   const postLogin = () => {
     fetch('https://monievend.herokuapp.com/api/auth/login/phone', {
       method: 'POST',
@@ -116,11 +73,26 @@ export default function RegisterPage() {
   }
 
   // Phone Login Api integration
-  const handleSubmit = (e) => {
+  const loginWithPhoneNumber = async (e) => {
     e.preventDefault();
-    postLogin();
-    setPassword('');
-    setPhone('');
+    setIsLoading(true);
+    const response = await apiService.loginWithPhoneNumber(phone, password)
+    setIsLoading(false);
+    if(!response.error) {
+      setAuth(true);
+      navigate('/dashboard');
+    } else {
+      toast({
+        title: response.error,
+        description: response.message,
+        status: 'error',
+        position:'top-right',
+        duration: 10000,
+        isClosable: true,
+      })
+      setErrMsg(response.data.message);
+      errRef.current.focus();
+    }
   };
 
   const handleToggle = (index) => {
@@ -164,13 +136,13 @@ export default function RegisterPage() {
                 handleToggle('Login with phone number');
               }}
             >
-              Login with phone number
+              Login with phone
             </button>
           </div>
           {switchMe === 'Login with email'
             ? (
               <Form onSubmit={emailLogin}>
-                <p className={loginStyle.inSwi}>{switchMe}</p>
+                <Text className={loginStyle.inSwi}>{switchMe}</Text>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email</Form.Label>
                   <Form.Control value={email} type="email" placeholder="Enter email" name="email" onChange={(e) => setEmail(e.target.value)} />
@@ -190,13 +162,13 @@ export default function RegisterPage() {
                   <Link to="/auth/register">Sign up</Link>
                 </p>
 
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" isLoading={isLoading}>
                   Submit
                 </Button>
               </Form>
             )
             : (
-              <Form onSubmit={handleSubmit}>
+              <Form onSubmit={loginWithPhoneNumber}>
                 <p className={loginStyle.inSwi}>{switchMe}</p>
                 <Form.Group className="mb-3">
                   <Form.Label>Phone number</Form.Label>
@@ -217,14 +189,13 @@ export default function RegisterPage() {
                   <Link to="/auth/register">Sign up</Link>
                 </p>
 
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" isLoading={isLoading}>
                   Submit
                 </Button>
               </Form>
             )}
         </div>
       </div>
-      {/* {isLoading ? <Loader /> : null} */}
     </section>
   );
 }
