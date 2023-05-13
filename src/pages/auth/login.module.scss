@@ -178,12 +178,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 80vh;
   width: 80%;
+  max-width: 1241px;
+  box-shadow: 5px 8px 24px 8px #D1D1D1;
 }
 
 .holdText {
-  width: 45%;
+  width: 50%;
   height: 100%;
   background-color: #030a78;
   display: flex;
@@ -192,6 +194,7 @@
   align-items: center;
   text-align: center;
   color: white;
+  padding: 21px ;
 
   img {
     background-color: white;
@@ -206,7 +209,7 @@
 }
 
 .holdForm {
-  width: 45%;
+  width: 50%;
   height: 100%;
   background-color: white;
   padding: 20px;
@@ -253,7 +256,7 @@
   .already {
     text-align: center;
     font-size: 13px;
-
+    color: #030968;
     a {
       padding: 0 5px;
       color: #030968 !important;
@@ -296,6 +299,7 @@
     width: 100% !important;
     background-color: #030968 !important;
     border-color: #030968 !important;
+    color: #ffff;
   }
 }
 
