@@ -3,9 +3,7 @@ import React, { useRef, useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 // import { useSelector, useDispatch } from 'react-redux';
 import { Form } from 'react-bootstrap';
-import { Button, Text,Box } from '@chakra-ui/react';
-import { useToast } from '@chakra-ui/react'
-import axios from 'axios';
+import { Button, Text,Box,useToast } from '@chakra-ui/react';
 // import { login, reset } from '../../features/authentication/signupSlice';
 import AuthContext from '../../features/authentication/loginPhoneService';
 import loginStyle from './login.module.scss';

@@ -1,24 +1,20 @@
 /* eslint-disable prefer-template */
 /* eslint-disable max-len */
 /* eslint-disable indent */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
 import { Form } from 'react-bootstrap';
-import { Box, Button } from '@chakra-ui/react';
-import { register, reset } from '../../features/authentication/signupSlice';
+import { Box, Button, useToast } from '@chakra-ui/react';
 import registerStyle from './register.module.scss';
 import AppImages from '../../utilities/images/images';
-import ErrorModal from '../../components/Modals/errorModal';
-import Loader from '../../components/Loader/Loader';
+import apiService from '../../services/apiService';
 
 export default function RegisterPage() {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-
+  const toast = useToast();
   const [match, setMatch] = useState('');
   const [phone, setPhone] = useState('');
-  const [errorModal, setErrorModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [formDate, setFormDate] = useState({
     fullname: '',
     email: '',
@@ -39,25 +35,6 @@ export default function RegisterPage() {
     setPhone(phone.replace('0', ''));
   }
 
-  const {
-    user,
-    isLoading,
-    isError,
-    isSuccess,
-    message,
-  } = useSelector((state) => state.auth);
-
-  useEffect(() => {
-    if (isError) {
-      setErrorModal(true);
-    }
-    if (isSuccess || user) {
-      navigate(`/auth/complete/${email}`);
-    }
-
-    dispatch(reset());
-  }, [user, isError, isSuccess, message, navigate, dispatch]);
-
   const onChange = (e) => {
     setFormDate((prevState) => ({
       ...prevState,
@@ -65,10 +42,18 @@ export default function RegisterPage() {
     }));
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== password2) {
       setMatch('Password do not match');
+      toast({
+        title: 'Password do not match',
+        description: 'Please check your password and try again',
+        status: 'error',
+        position: 'top-right',
+        duration: 10000,
+        isClosable: true,
+      });
     } else {
       const userData = {
         fullname,
@@ -77,8 +62,36 @@ export default function RegisterPage() {
         password,
         frontendUrl: `${window.location.protocol}//${window.location.host}`,
       };
-      // console.log(window.location.href);
-      dispatch(register(userData));
+      setIsLoading(true);
+      const response = await apiService.register(userData);
+      setIsLoading(false);
+      if (!response.error) {
+        toast({
+          title: 'Account created successfully',
+          description: 'Please check your email to verify your account',
+          status: 'success',
+          position: 'top-right',
+          duration: 15000,
+          isClosable: true,
+        });
+        setFormDate({
+          fullname: '',
+          email: '',
+          password: '',
+          password2: '',
+          phone: '',
+        });
+        navigate(`/auth/complete/${email}`);
+      } else {
+        toast({
+          title: response.error,
+          description: response.message,
+          status: 'error',
+          position: 'top-right',
+          duration: 10000,
+          isClosable: true,
+        });
+      }
       setMatch('');
     }
   };
@@ -121,7 +134,7 @@ export default function RegisterPage() {
                 Phone number
                 <span className={registerStyle.dont}>(include country code i.e +235..)</span>
               </Form.Label>
-              <Form.Control type="number" placeholder="Phone number" value={phone} onChange={(e) => setPhone(e.target.value)} />
+              <Form.Control type="phone" placeholder="Phone number" value={phone} onChange={(e) => setPhone(e.target.value)} />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -142,14 +155,12 @@ export default function RegisterPage() {
               <Link to="/auth/login">Login</Link>
             </p>
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" isLoading={isLoading}>
               Submit
             </Button>
           </Form>
         </div>
       </div>
-      {isError ? <ErrorModal show={errorModal} onHide={() => setErrorModal(false)} errorMsg={message} /> : null}
-      {isLoading ? <Loader /> : null}
     </section>
   );
 }

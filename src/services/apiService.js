@@ -33,7 +33,9 @@ class ApiService {
      }
    }
 
-   registerWithEmail = async (fullname, email, phone, password, frontendUrl) => {
+   register = async ({
+     fullname, email, phone, password, frontendUrl,
+   }) => {
      try {
        const response = await this.client.post('/api/auth/signup', {
          fullname,
