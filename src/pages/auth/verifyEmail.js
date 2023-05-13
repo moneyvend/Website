@@ -16,6 +16,24 @@ import AppImages from '../../utilities/images/images';
 export default function RecoverPasswordPage() {
   const [email, setEmail] = useState('');
   const usenavigate = useNavigate();
+  const emailVerification = async (e) => {
+    /* eslint-disable */
+    e.preventDefault();
+    await axios.post('https://monievend.herokuapp.com/api/auth/verify-email', {
+      'email': email,
+    })
+      .then((result) => {
+        /* eslint-disable */
+        console.log(result);
+        alert('email verified successfully');
+        usenavigate('/auth/login');
+      })
+      .catch((error) => {
+        /* eslint-disable */
+        console.log(error);
+        alert('email verification Failed please try again');
+      });
+  };
 
   return (
     <section className={verifyEmailStyle.holdAll}>
