@@ -10,18 +10,32 @@ import loginStyle from './login.module.scss';
 import AppImages from '../../utilities/images/images';
 import apiService from '../../services/apiService';
 
-export default function RegisterPage() {
+async function LoginUser(credentials) {
+  return fetch('http://localhost:8080/login', {
+    method: 'POST',
+    header: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(credentials)
+  }).then(data => data.json())
+}
+
+export default function RegisterPage({ setToken }) {
   /* eslint-disable */
   const [switchMe, setSwitchMe] = useState('Login with email');
   const toast = useToast()
   const { setAuth } = useContext(AuthContext);
-  const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const userRef = useRef();
   const errRef = useRef();
+
+  const [email, setEmail] = useState('');
   const [errMsg, setErrMsg] = useState('');
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
+  const [success, setSuccess] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const deviceToken = searchParams.get('token');
   const navigate = useNavigate();
 
   // Email Login Api integration
@@ -143,12 +157,26 @@ export default function RegisterPage() {
                 <Text className={loginStyle.inSwi}>{switchMe}</Text>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control value={email} type="email" placeholder="Enter email" name="email" onChange={(e) => setEmail(e.target.value)} />
+                  <Form.Control
+                    value={email}
+                    type="email"
+                    placeholder="Enter email"
+                    name="email"
+                    autoComplete='off'
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
                 </Form.Group>
 
                 <Form.Group className="mb-2" controlId="formBasicPassword">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control value={password} type="password" placeholder="Password" name="password" onChange={(e) => setPassword(e.target.value)} />
+                  <Form.Control
+                    value={password}
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
                 </Form.Group>
 
                 <div className={loginStyle.holdRemember}>

@@ -18,7 +18,8 @@ function DataService() {
 
     const usenavigate = useNavigate;
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         const providerApi = 'https://api.staging.baxibap.com/services/databundle/providers';
         const dataServiceApi = 'https://api.staging.baxibap.com/services/databundle/request';
 
