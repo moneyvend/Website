@@ -103,7 +103,7 @@ export default function RegisterPage() {
           </div>
           <div className={registerStyle.headerText}>
             <h3>Create Account</h3>
-            <p>Please sign up by creating a personal account to  access all payment services and unique products</p>
+            <p>Please sign up by creating a personal account to  access all payment services and unique products.</p>
           </div>
           <Form onSubmit={onSubmit}>
             <Form.Group className="mb-3" controlId="formBasicFullName">
@@ -119,7 +119,7 @@ export default function RegisterPage() {
             <Form.Group className="mb-3" controlId="formBasicPhoneNumber">
               <Form.Label>
                 Phone number
-                <span className={registerStyle.dont}>(Please don&apos;t include the first 0 of your phone number)</span>
+                <span className={registerStyle.dont}>(include country code i.e +235..)</span>
               </Form.Label>
               <Form.Control type="number" placeholder="Phone number" value={phone} onChange={(e) => setPhone(e.target.value)} />
             </Form.Group>
