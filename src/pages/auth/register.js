@@ -11,17 +11,17 @@ import apiService from '../../services/apiService';
 
 export default function RegisterPage() {
   const navigate = useNavigate();
-  const toast = useToast();
   const [match, setMatch] = useState('');
   const [phone, setPhone] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const toast = useToast();
   const [formDate, setFormDate] = useState({
     fullname: '',
     email: '',
     password: '',
     password2: '',
     phone: '',
-    frontendUrl: `${window.location.protocol}//${window.location.host}`,
+    frontendUrl: window.location.href,
   });
 
   const {
@@ -60,7 +60,7 @@ export default function RegisterPage() {
         email,
         phone,
         password,
-        frontendUrl: `${window.location.protocol}//${window.location.host}`,
+        frontendUrl: window.location.href,
       };
       setIsLoading(true);
       const response = await apiService.register(userData);
