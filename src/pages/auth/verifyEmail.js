@@ -3,6 +3,8 @@
 /* eslint-disable max-len */
 /* eslint-disable indent */
 import React, { useState } from 'react';
+import { Box } from '@chakra-ui/react';
+
 // import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
@@ -42,13 +44,13 @@ export default function RecoverPasswordPage() {
           <div className={verifyEmailStyle.holdImage}>
             <img src={AppImages.LOGO_VERT} alt="Logo" />
           </div>
-          <div>
+          <Box p={16}>
             <h3>Creating payment solutions</h3>
             <p>
               A product which specializes in creating terminal
               solution products for customers, SME&apos;s and merchants.
             </p>
-          </div>
+          </Box>
         </div>
         <div className={verifyEmailStyle.holdForm}>
           <div className={verifyEmailStyle.holdImage}>
