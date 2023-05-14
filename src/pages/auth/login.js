@@ -43,7 +43,7 @@ export default function RegisterPage({ setToken }) {
     const response = await apiService.loginWithEmail(email, password)
     setIsLoading(false);
     if(!response.error) {
-      setAuth(true);
+      localStorage.setItem('token', response.data);
       navigate('/dashboard');
     } else {
       toast({
@@ -89,7 +89,7 @@ export default function RegisterPage({ setToken }) {
     const response = await apiService.loginWithPhoneNumber(phone, password)
     setIsLoading(false);
     if(!response.error) {
-      setAuth(true);
+      localStorage.setItem('token', response.data);
       navigate('/dashboard');
     } else {
       toast({
