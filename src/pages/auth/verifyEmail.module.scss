@@ -22,12 +22,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 80vh;
   width: 80%;
+  max-width: 1241px;
+  box-shadow: 5px 5px 5px #ddd, -5px -5px 5px #ddd;
 }
 
 .holdText {
-  width: 45%;
+  width: 50%;
   height: 100%;
   background-color: #030a78;
   display: flex;
@@ -50,7 +52,7 @@
 }
 
 .holdForm {
-  width: 45%;
+  width: 50%;
   height: 100%;
   background-color: white;
   padding: 20px;
@@ -58,7 +60,7 @@
   flex-direction: column;
   justify-content: center;
   line-height: 2em;
-
+ color: #030968;
   .holdImage {
     display: none;
   }
