@@ -24,16 +24,13 @@ export default function RegisterPage({ setToken }) {
   /* eslint-disable */
   const [switchMe, setSwitchMe] = useState('Login with email');
   const toast = useToast()
-  const { setAuth } = useContext(AuthContext);
   const [isLoading, setIsLoading] = useState(false);
-  const userRef = useRef();
   const errRef = useRef();
 
   const [email, setEmail] = useState('');
   const [errMsg, setErrMsg] = useState('');
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
-  const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
 
   // Email Login Api integration
@@ -43,6 +40,14 @@ export default function RegisterPage({ setToken }) {
     const response = await apiService.loginWithEmail(email, password)
     setIsLoading(false);
     if(!response.error) {
+      toast({
+        title: "Login Successful",
+        description: response.message,
+        status: 'success',
+        position:'top-right',
+        duration: 10000,
+        isClosable: true,
+      })
       localStorage.setItem('token', response.data);
       navigate('/dashboard');
     } else {
@@ -60,35 +65,20 @@ export default function RegisterPage({ setToken }) {
   };
 
   // Phone Login Api integration
-  const postLogin = () => {
-    fetch('https://monievend.herokuapp.com/api/auth/login/phone', {
-      method: 'POST',
-      body: JSON.stringify({
-        phone,
-        password,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        navigate('/dashboard');
-        console.log(data);
-      })
-      .catch((err) => {
-        alert('wrong credentials');
-        console.error(err)
-      });
-  }
-
-  // Phone Login Api integration
   const loginWithPhoneNumber = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     const response = await apiService.loginWithPhoneNumber(phone, password)
     setIsLoading(false);
     if(!response.error) {
+      toast({
+        title: "Login Successful",
+        description: response.message,
+        status: 'success',
+        position:'top-right',
+        duration: 10000,
+        isClosable: true,
+      })
       localStorage.setItem('token', response.data);
       navigate('/dashboard');
     } else {
