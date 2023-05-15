@@ -6,7 +6,9 @@ import React, { useState } from 'react';
 import { Box } from '@chakra-ui/react';
 
 // import { useSelector, useDispatch } from 'react-redux';
-import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import {
+ Link, useNavigate, useParams, useSearchParams,
+} from 'react-router-dom';
 import axios from 'axios';
 // import { useSelector, useDispatch } from 'react-redux';
 import { Button, Form } from 'react-bootstrap';
@@ -16,7 +18,7 @@ import AppImages from '../../utilities/images/images';
 // import Loader from '../../Loader/Loader';
 
 export default function RecoverPasswordPage() {
-  const [email, setEmail] = useState('');
+  const { email } = useParams();
   const usenavigate = useNavigate();
   const emailVerification = async (e) => {
     /* eslint-disable */
