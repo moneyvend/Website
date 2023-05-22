@@ -2,12 +2,15 @@
 import React, { useState } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
 import { Button, Box } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 import styles from './banner.modules.scss'; // eslint-disable-line no-unused-vars
 import AppImages from '../../../utilities/images/images';
 import JoinWaitlist from '../../Modals/waitlist';
 
 function Banner() {
   const [modalShow2, setModalShow2] = useState(false);
+  const navigate = useNavigate();
+
   const waitModal = () => {
     setModalShow2(true);
   };
@@ -25,7 +28,16 @@ function Banner() {
               </h1>
             </b>
             <button onClick={waitModal} className="payment" type="button">Join waitlist</button>
-            <Button className="merchant" rightIcon={<FiChevronRight className="greater" />} size="lg" variant="solid">Become a merchant</Button>
+            <Button
+              className="merchant"
+              rightIcon={<FiChevronRight className="greater" />}
+              size="lg"
+              variant="solid"
+              onClick={() => navigate('/merchants')}
+            >
+              Become a merchant
+
+            </Button>
           </div>
           <Box w="38%" backgroundImage={AppImages.IMAGE_ONE} height="60vh" bgRepeat="no-repeat" />
         </div>
