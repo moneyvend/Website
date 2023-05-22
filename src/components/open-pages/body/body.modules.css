@@ -62,10 +62,11 @@ h3 {
   display: flex;
   gap: 20px;
   justify-content: space-between;
+  padding: 2em 0;
 }
 
 .cc-2 {
-  border: 4px solid rgba(29, 30, 38, 0.05);
+  box-shadow: 5px 8px 24px 8px #D1D1D1;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -73,6 +74,10 @@ h3 {
   padding: 8px 15px;
   background-color: #fff;
   width: 27%;
+}
+.cc-2:hover {
+  border: 1px solid #030a78;
+  box-shadow: none;
 }
 
 @media only screen and (max-width: 425px) {
@@ -226,7 +231,6 @@ h4 {
   padding: 0 48px;
   gap: 10px;
   text-align: center;
-  width: 241px;
   height: 56px;
   border-style: none;
   color: white;
@@ -343,7 +347,7 @@ h4 {
 }
 
 .in-1 {
-  border: 2px solid rgba(29, 30, 38, 0.25);
+  border: 1px solid rgba(29, 30, 38, 0.25);
   border-radius: 8px;
   padding: 10px 20px;
   font-size: 12px;
@@ -459,7 +463,8 @@ footer {
   width: 70%;
   height: 60px;
   background: #fff;
-  border: 2px solid rgba(29, 30, 38, 0.25);
+  color: #000;
+  border: 1px solid rgba(29, 30, 38, 0.25);
   border-radius: 8px;
 }
 

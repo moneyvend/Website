@@ -1,24 +1,28 @@
 .waitHeader {
   text-align: center;
+  padding: 0 32px;
   width: 100%;
 }
 
 .joinText {
-  font-size: 35px;
-  margin-bottom: 15px;
+  font-size: 18px;
+  margin-bottom: 4px;
   color: #200e32;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
 }
 
 .update {
-  font-size: 20px;
+  font-size: 16px;
   color: #9a9dc9;
 }
 
 .submitButin {
-  width: 100%;
+  width: 60%;
   background-color: #030a78 !important;
   padding: 10px !important;
   border: 1px solid #030a78 !important;
+  margin: 0 24%;
 }
 
 .submitButin:focus-visible {
@@ -26,4 +30,31 @@
   border-color: #030a78 !important;
   outline: unset;
   box-shadow: none;
+}
+
+.modalBody{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 28px 32px;
+  font-family: "Poppins", sans-serif;
+  text-align: flex-start;
+  width: 100%;
+}
+.modalBody p {
+  width: 80%;
+  text-align: center;
+}
+.modalBody form {
+  width: 100%;
+  padding: 0 16px;
+}
+.modalBody form label{
+  font-size: 14px;
+  color: #200e32 !important;
+  text-align: left;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-align: left;
 }

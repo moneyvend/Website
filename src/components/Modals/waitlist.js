@@ -56,19 +56,17 @@ export default function JoinWaitlist(props) {
                 {...props}
                 onHide={props.onHide}
                 backdrop="static"
-                size="lg"
+                size="md"
                 keyboard={false}
                 centered
             >
                 <Modal.Header closeButton>
-                    <Modal.Title className={waitListStyle.waitHeader}>
-                        <h1 className={waitListStyle.joinText}>Join waiting list</h1>
-                        <p className={waitListStyle.update}>Join waiting list to get new updates once launched</p>
-                    </Modal.Title>
+                <h1 className={waitListStyle.joinText}>Join waiting list.</h1>
                 </Modal.Header>
-                <Modal.Body>
+                <Modal.Body className={waitListStyle.modalBody}>
+                 <p className={waitListStyle.update}>Join waiting list to get new updates once launched.</p>
                     <Form onSubmit={handleSubmit}>
-                        <Form.Group className="mb-3" controlId="formGridAddress1">
+                        <Form.Group controlId="formGridAddress1" className="mb-3">
                             <Form.Label>Full name</Form.Label>
                             <Form.Control
                                 type="text"
@@ -77,9 +75,11 @@ export default function JoinWaitlist(props) {
                                 value={fullname}
                                 onChange={onChange}
                                 required
+                                size="lg"
+                                style={{ fontSize: '16px' }}
                             />
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group controlId="formBasicEmail" className="mb-3">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control
                                 type="email"
@@ -88,6 +88,8 @@ export default function JoinWaitlist(props) {
                                 value={email}
                                 onChange={onChange}
                                 required
+                                size="lg"
+                                style={{ fontSize: '16px' }}
                             />
                         </Form.Group>
                         <Form.Group className="mb-4" controlId="formGridAddress1">
@@ -98,7 +100,9 @@ export default function JoinWaitlist(props) {
                                 name="phone"
                                 value={phone}
                                 onChange={onChange}
+                                size="lg"
                                 required
+                                style={{ fontSize: '16px' }}
                             />
                         </Form.Group>
                         <Button variant="primary" type="submit" className={waitListStyle.submitButin}>
