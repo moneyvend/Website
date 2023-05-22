@@ -11,6 +11,9 @@ ul {
 a {
   text-decoration: none;
 }
+.navList a.active{
+  color: #030a78 !important;
+}
 
 #anchorc {
   padding: 2px 7px;
