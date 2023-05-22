@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-indent */
 import React, { useState } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
+import { Button, Box } from '@chakra-ui/react';
 import styles from './banner.modules.scss'; // eslint-disable-line no-unused-vars
 import AppImages from '../../../utilities/images/images';
 import JoinWaitlist from '../../Modals/waitlist';
@@ -20,16 +21,13 @@ function Banner() {
             </p>
             <b>
               <h1 id="H-1">
-                The Simplest Way For Fast Payments
+                The Simplest Way For Fast Payments.
               </h1>
             </b>
-            <button type="button" className="payment" onClick={waitModal}>Join waitlist</button>
-            <button type="button" className="merchant">
-              Become a merchant
-              <FiChevronRight className="greater" />
-            </button>
+            <button onClick={waitModal} className="payment" type="button">Join waitlist</button>
+            <Button className="merchant" rightIcon={<FiChevronRight className="greater" />} size="lg" variant="solid">Become a merchant</Button>
           </div>
-          <img src={AppImages.IMAGE_ONE} id="image-one" alt="Logo" />
+          <Box w="38%" backgroundImage={AppImages.IMAGE_ONE} height="60vh" bgRepeat="no-repeat" />
         </div>
       </div>
       <div className="bod">

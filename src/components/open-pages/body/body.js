@@ -1,4 +1,5 @@
-import { Button, Layout } from 'antd';
+import { Layout } from 'antd';
+import { Button } from '@chakra-ui/react';
 import AppImages from '../../../utilities/images/images';
 import landpage from '../../../utilities/images/landpage.png';
 import Styles from './body.modules.css'; // eslint-disable-line no-unused-vars
@@ -61,7 +62,7 @@ const Body = () => (
             outcome based on how well it serves our customers.
           </p>
           <div className="b-3">
-            <Button className="b-2 be-2" type="button">
+            <Button className="b-2 be-2" size="lg">
               Become a Merchant
             </Button>
           </div>
