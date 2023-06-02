@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import {
   Box, Spinner, Text, useToast,
 } from '@chakra-ui/react';
@@ -8,6 +8,7 @@ import apiService from '../../services/apiService';
 const VerifyFromEmail = () => {
   const [searchParams] = useSearchParams();
   const token = searchParams.get('token');
+  const navigate = useNavigate();
   const toast = useToast();
   const emailVerification = async () => {
     const response = await apiService.verifyEmail(token);
@@ -21,7 +22,9 @@ const VerifyFromEmail = () => {
         isClosable: true,
 
       });
+      navigate('/auth/login');
     } else {
+      navigate('/auth/login');
       toast({
         title: response.error,
         description: response.message,
@@ -36,7 +39,7 @@ const VerifyFromEmail = () => {
     emailVerification();
   }, []);
   return (
-    <Box w="100%" h="100vh" d="flex" alignItems="center" justifyContent="center" flexDirection="column" color="blackAlpha.500">
+    <Box w="100%" h="100vh" display="flex" alignItems="center" justifyContent="center" flexDirection="column" color="blackAlpha.500">
       <Spinner />
       <Text>Verifying Email....</Text>
     </Box>
