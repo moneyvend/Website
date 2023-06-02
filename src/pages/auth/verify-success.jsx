@@ -8,17 +8,8 @@ const VerifyFromEmail = () => {
   const usenavigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const token = searchParams.get('token');
-  const emailVerification = async (e) => {
-    e.preventDefault();
-    await axios.post('https://monievend.herokuapp.com/api/auth/verify-email', {
-      token,
-    })
-      .then(() => {
-        usenavigate('/auth/login');
-      })
-      .catch(() => {
-        usenavigate('/auth/login');
-      });
+  const emailVerification = async () => {
+   
   };
   useEffect(() => {
     emailVerification();

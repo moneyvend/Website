@@ -1,44 +1,55 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable prefer-template */
-/* eslint-disable max-len */
-/* eslint-disable indent */
-import React, { useState } from 'react';
-import { Box } from '@chakra-ui/react';
-
-// import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { Box, Button, useToast } from '@chakra-ui/react';
 import {
- Link, useNavigate, useParams, useSearchParams,
+  Link, useParams,
 } from 'react-router-dom';
-import axios from 'axios';
-// import { useSelector, useDispatch } from 'react-redux';
-import { Button, Form } from 'react-bootstrap';
 import verifyEmailStyle from './verifyEmail.module.scss';
 import AppImages from '../../utilities/images/images';
-// import ErrorModal from '../../components/Modals/errorModal';
-// import Loader from '../../Loader/Loader';
+import apiService from '../../services/apiService';
 
 export default function RecoverPasswordPage() {
   const { email } = useParams();
-  const usenavigate = useNavigate();
-  const emailVerification = async (e) => {
-    /* eslint-disable */
-    e.preventDefault();
-    await axios.post('https://monievend.herokuapp.com/api/auth/verify-email', {
-      'email': email,
-    })
-      .then((result) => {
-        /* eslint-disable */
-        console.log(result);
-        alert('email verified successfully');
-        usenavigate('/auth/login');
-      })
-      .catch((error) => {
-        /* eslint-disable */
-        console.log(error);
-        alert('email verification Failed please try again');
-      });
-  };
+  const toast = useToast();
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [resend, setResend] = React.useState(false);
 
+  const resendVerification = async () => {
+    if (!resend) {
+      setIsLoading(true);
+      setResend(true);
+      const response = await apiService.resendVerifyEmail(email);
+      if (!response.error) {
+        toast({
+          title: 'Email Sent',
+          description: response.message,
+          status: 'success',
+          position: 'top-right',
+          duration: 10000,
+          isClosable: true,
+        });
+      } else {
+        toast({
+          title: response.error,
+          description: response.message,
+          status: 'error',
+          position: 'top-right',
+          duration: 10000,
+          isClosable: true,
+        });
+      }
+      setIsLoading(false);
+    } else {
+      toast({
+        title: 'Email Sent',
+        description: 'Please wait for 5 minutes before trying again',
+        status: 'error',
+        position: 'top-right',
+        duration: 10000,
+        isClosable: true,
+      });
+    }
+  };
   return (
     <section className={verifyEmailStyle.holdAll}>
       <div className={verifyEmailStyle.holdFormNText}>
@@ -70,7 +81,7 @@ export default function RecoverPasswordPage() {
             className={verifyEmailStyle.already}
           >
             Didn&apos;t receive an email ?
-            <Link to=" ">Resend</Link>
+            <Button onClick={resendVerification} disabled={resend} variant="ghost">Resend</Button>
           </p>
         </div>
       </div>

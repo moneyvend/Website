@@ -8,6 +8,7 @@ import { Box, Button, useToast } from '@chakra-ui/react';
 import registerStyle from './register.module.scss';
 import AppImages from '../../utilities/images/images';
 import apiService from '../../services/apiService';
+import Utils from '../../utilities';
 
 export default function RegisterPage() {
   const navigate = useNavigate();
@@ -60,7 +61,7 @@ export default function RegisterPage() {
         email,
         phone,
         password,
-        frontendUrl: window.location.href,
+        frontendUrl: Utils.getBaseURL(),
       };
       setIsLoading(true);
       const response = await apiService.register(userData);

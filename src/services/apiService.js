@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Utils from '../utilities';
 
 class ApiService {
   constructor() {
@@ -43,6 +44,29 @@ class ApiService {
          phone,
          password,
          frontendUrl,
+       });
+       return response.data;
+     } catch (error) {
+       return error.response.data;
+     }
+   }
+
+   verifyEmail = async (token) => {
+     try {
+       const response = await this.client.post('/auth/verify-email', {
+         token,
+       });
+       return response.data;
+     } catch (error) {
+       return error.response.data;
+     }
+   }
+
+   resendVerifyEmail = async (email) => {
+     try {
+       const response = await this.client.post('/auth/verify/resend', {
+         email,
+         frontendUrl: Utils.getBaseURL(),
        });
        return response.data;
      } catch (error) {
