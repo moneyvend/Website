@@ -36,7 +36,7 @@ const VerifyFromEmail = () => {
     emailVerification();
   }, []);
   return (
-    <Box w="100%" h="100vh" d="flex" alignItems="center" justifyContent="center" flexDirection="column">
+    <Box w="100%" h="100vh" d="flex" alignItems="center" justifyContent="center" flexDirection="column" color="blackAlpha.500">
       <Spinner />
       <Text>Verifying Email....</Text>
     </Box>
