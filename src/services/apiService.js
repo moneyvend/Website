@@ -73,5 +73,14 @@ class ApiService {
        return error.response.data;
      }
    }
+
+   signUpNewsletter = async (email) => this.client.post('/newsletter/register', {
+     email,
+   }).then((res) => {
+     if (res.status === 201) {
+       return Promise.resolve(res.data);
+     }
+     return Promise.reject(res);
+   })
 }
 export default new ApiService();
