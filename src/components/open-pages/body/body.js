@@ -1,13 +1,44 @@
+import React, { useState } from 'react';
 import { Layout } from 'antd';
-import { Button } from '@chakra-ui/react';
+import { Button, Input, useToast } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
+import { useMutation } from 'react-query';
 import AppImages from '../../../utilities/images/images';
 import landpage from '../../../utilities/images/landpage.png';
 import Styles from './body.modules.css'; // eslint-disable-line no-unused-vars
 import Footer from './footer';
+import apiService from '../../../services/apiService';
+import Utils from '../../../utilities';
 
 const Body = () => {
   const navigate = useNavigate();
+  const toast = useToast();
+  const [newsLetterEmail, setNewsLetterEmail] = useState('');
+
+  const { mutate, isLoading } = useMutation('Newsletter', () => apiService.signUpNewsletter(newsLetterEmail), {
+    onSuccess: () => {
+      setNewsLetterEmail('');
+      toast({
+        title: 'Success',
+        description: 'User signed up Fetched  Successfully',
+        status: 'success',
+        duration: 9000,
+        isClosable: true,
+        position: 'top-right',
+
+      });
+    },
+    onError: (error) => {
+      toast({
+        title: error.response.data.error ?? 'Error Occured',
+        description: error.response.data.message ?? 'Something went wrong, please try again',
+        status: 'error',
+        duration: 9000,
+        isClosable: true,
+        position: 'top-right',
+      });
+    },
+  });
 
   return (
     <Layout>
@@ -158,8 +189,41 @@ const Body = () => {
         <h2 className="letter">Newsletter</h2>
         <p className="p-7 sign">Sign up for our newsletter to be the first to know about our services</p>
         <form className="f-1">
-          <input type="email" id="email" name="email" className="in-1" placeholder="Email Address" />
-          <button type="button" className="b-4">Sign-Up</button>
+          <Input type="email" id="email" name="email" placeholder="Email Address" onChange={(e) => setNewsLetterEmail(e.target.value)} />
+          <Button
+            type="button"
+            className="b-4"
+            colorScheme="brand"
+            size="lg"
+            h="60px"
+            isLoading={isLoading}
+            onClick={() => {
+              if (!newsLetterEmail) {
+                toast({
+                  title: 'Email is Required ',
+                  description: 'Please enter a valid email address',
+                  status: 'error',
+                  duration: 9000,
+                  isClosable: true,
+                  position: 'top-right',
+                });
+              } else if (!Utils.validateEmail(newsLetterEmail)) {
+                toast({
+                  title: 'Email not Valid',
+                  description: 'Please enter a valid email address',
+                  status: 'error',
+                  duration: 9000,
+                  isClosable: true,
+                  position: 'top-right',
+                });
+              } else {
+                mutate();
+              }
+            }}
+          >
+            Sign-Up
+
+          </Button>
         </form>
       </section>
       <Footer />
