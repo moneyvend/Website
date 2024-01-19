@@ -11,9 +11,9 @@ function Banner() {
   const [modalShow2, setModalShow2] = useState(false);
   const navigate = useNavigate();
 
-  const waitModal = () => {
-    setModalShow2(true);
-  };
+  // const waitModal = () => {
+  //   setModalShow2(true);
+  // };
   return (
     <div>
       <div className="sect">
@@ -27,15 +27,15 @@ function Banner() {
                 The Simplest Way For Fast Payments.
               </h1>
             </b>
-            <button onClick={waitModal} className="payment" type="button">Join waitlist</button>
+            <button onClick={() => navigate('/auth/register')} className="payment" type="button">Sign Up</button>
             <Button
               className="merchant"
               rightIcon={<FiChevronRight className="greater" />}
               size="lg"
               variant="solid"
-              onClick={() => navigate('/merchants')}
+              onClick={() => navigate('/auth/login')}
             >
-              Become a merchant
+              Buy Electricity
 
             </Button>
           </div>
