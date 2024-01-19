@@ -10,7 +10,6 @@ import JoinWaitlist from '../../Modals/waitlist';
 function Banner() {
   const [modalShow2, setModalShow2] = useState(false);
   const navigate = useNavigate();
-
   // const waitModal = () => {
   //   setModalShow2(true);
   // };
